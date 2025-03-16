@@ -1,0 +1,51 @@
+{
+  "tor_proxy": "socks5h://127.0.0.1:9050",
+  "tor_control_port": 9051,
+  "tor_control_password": null,
+  "max_requests_per_circuit": 15,
+  "request_delay_min": 15,
+  "request_delay_max": 45,
+  "headless": true,
+  "targets": [
+    {
+      "name": "DreadForum",
+      "urls": [
+        "http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/d/CryptoCurrency",
+        "http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/d/DarkNetMarkets"
+      ],
+      "use_playwright": true
+    },
+    {
+      "name": "AlphaBay",
+      "urls": [
+        "http://alphabay522szl32u4ci5e3iokdsyth56ei7rwngr2wm7i5jo54j2eid.onion/categories/fraud",
+        "http://alphabay522szl32u4ci5e3iokdsyth56ei7rwngr2wm7i5jo54j2eid.onion/categories/services"
+      ],
+      "use_playwright": true
+    },
+    {
+      "name": "ExploitForum",
+      "urls": [
+        "http://exploitivzcm5dawzhe6c32bbylyggbjvh5dyvsvb5lkuz5ptmunkmqd.onion/forums/general-discussions",
+        "http://exploitivzcm5dawzhe6c32bbylyggbjvh5dyvsvb5lkuz5ptmunkmqd.onion/forums/marketplace"
+      ],
+      "use_playwright": false
+    },
+    {
+      "name": "ViceCity",
+      "urls": [
+        "http://vice2e3gr3pmaikukidllstulxvkb7a247gkguihzvyk3gqwduwbqad.onion/category/1",
+        "http://vice2e3gr3pmaikukidllstulxvkb7a247gkguihzvyk3gqwduwbqad.onion/category/2"
+      ],
+      "use_playwright": true
+    },
+    {
+      "name": "Tor2Door",
+      "urls": [
+        "http://t2donion2zuhy6fpizsdxj6incnptekcxzkdwz4rwrprivcjbgx7i2qd.onion/category/drugs",
+        "http://t2donion2zuhy6fpizsdxj6incnptekcxzkdwz4rwrprivcjbgx7i2qd.onion/category/fraud"
+      ],
+      "use_playwright": false
+    }
+  ]
+}
