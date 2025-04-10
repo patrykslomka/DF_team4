@@ -1,0 +1,21 @@
+# SuprBay OpSec-Related Thread URLs
+
+# Format: One URL per line
+# Lines starting with # are comments and will be ignored
+
+# VPN and Anonymity Discussions
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-Which-VPN-Providers-Take-Anonymity-Seriously
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-Pirate-Bay-Proxies
+
+# Privacy and Censorship Discussions
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-Are-there-any-tube-sites-that-don-t-care-what-you-upload
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-free-VPN-anyone
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-TikTok-is-banned-and-VPNs-aren-t-working-so
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-My-Month-with-DuckDuckGo-A-Search-Engine-Switch
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-I-stumbled-on-this-article-which-links-gandhi-and-censorship
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-Escape-the-Tech-Giants
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-Which-VPN-Services-Keep-You-Anonymous-in-2018
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-Windows-10-privacy-markmonitor
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-Pirate-Browser-No-more-censorship
+http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-Windows-10-Might-Soon-Track-Absolutely-Everything-You-Do-for-Your-Own-Good

@@ -1,3 +1,10 @@
 requests
 beautifulsoup4
-useragent
+PySocks
+nltk
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+wordcloud
