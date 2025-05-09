@@ -1,0 +1,400 @@
+[
+  {
+    "id": "1jvnst2",
+    "title": "Fully-remote BYOD job suddenly says I can’t work outside the country. I’m debating on doing it anyway.",
+    "author": "StartledByCheesecake",
+    "permalink": "https://old.reddit.com/r/opsec/comments/1jvnst2/fullyremote_byod_job_suddenly_says_i_cant_work/",
+    "content": "Operations Security, or OPSEC, OPSEC is about minimizing attack surfaces and single points of failure through proper habits and policies. It's a systematic and proven process that we can use to deny adversaries information they need to do us harm or interrupt our plans. It's also a mindset that can be applied to any mission or plan. Although the term originated in the military, OPSEC is now used for so much more. This includes law enforcement, computer and network security, home safety, travel, and so much more. OPSEC isn't a list of rules, and it's not as simple as using a VPN and keeping your mouth shut. It includes elements of INFOSEC, APPSEC, NETSEC, COMSEC[TRANSEC/SIGSEC/EMSEC], PHYSEC[PERSEC], and (CO)INTEL. 1. Identify the information you need to protect 2. Analyze the threats 3. Analyze your vulnerabilities 4. Assess the risk 5. Apply countermeasures Understand your own risk/threat model: Who is your adversary? What needs protecting? The OPSEC Two-Step: Know what to protect and know how to protect it. The Operations Security Professional's Association (OSPA) Defense Security Service OPSEC Awareness Course Navy OPSEC Don't post without reading the rules thread or your post will be removed, and you may be banned. Don't give advice without knowing the user's threat model first. If you proceed to give advice when the OP has not explained their threat model, you will be banned. Don't offer single tool solutions (e.g. VPN, bitcoin, Signal) when the threat model isn't clear Don't give bad, ridiculous, or misleading advice (e.g. \"you can't get arrested if you use Tor\") Don't ask for help or help others in illicit and unlawful activities (e.g. \"I want to buy drugs on the internet\"). Don't post without mentioning your threat model, unless it's a post about how to threat model.",
+    "comments": [
+      {
+        "author": "Chongulator",
+        "content": "With all the economic uncertainty right now, this might be a bad time to take risks at work. Also, as an infosec guy, I'd be remiss if I didn't point out that bringing company data to some countries creates security risk for the company. In some cases it might introduce contractual or compliance risk for the company as well."
+      },
+      {
+        "author": "NorthRoseGold",
+        "content": "Would you bother hiring 1099 contractors then? because they have a lot less control over contractors actions. Once they try to exert too much control they become in violation of the IRS designation of contractor versus employee. Idk if this guy is indeed ..if that's what he's talking about though"
+      },
+      {
+        "author": "onan",
+        "content": "There are a lot of things that can contribute to contractors being evaluated as de facto employees. You have to work these hours of these days, you participate in our standard employee performance review process, you're subject to our vacation and sick time policies, even down to attending the company christmas party. But there is nothing at all preventing the contract with a contractor requiring that no company data be stored or processed outside specific countries. That's a perfectly normal clause to have in a contract with any vendor."
+      },
+      {
+        "author": "StartledByCheesecake",
+        "content": "Both very good points. I don’t take this lightly. I’m thinking the remote access method would be a lot less risk in terms of data storage, because you’re right—the company does like to keep things within the country. If my devices can get searched and there’s no obvious path back to the data, that would be a lot safer for me and the company."
+      },
+      {
+        "author": "NoPhilosopher1222",
+        "content": "What happen if a bug develops on your home computer while you are traveling? Would you have someone that could come service said computer in the event it goes off line or some other problem arises? That’s putting your eggs in one basket for sure"
+      },
+      {
+        "author": "Dry_Job_4748",
+        "content": "I hope that you realise that accessing data from another location transfer said data to that location in some form. So, in a regulatory or contractual context you are in violation and opening the possibility for customers to sue / regulatory bodies to issue fines to your company and for your company to sue you."
+      },
+      {
+        "author": "ManuTh3Great",
+        "content": "This ^ And if I ever found out that someone at work was putting the company at jeopardy, I’d be that snitch. I like my paycheck."
+      },
+      {
+        "author": "fragileirl",
+        "content": "Also worth mentioning what’s happening at airports right now. Your laptop could arbitrarily get confiscated. Come on now."
+      },
+      {
+        "author": "StartledByCheesecake",
+        "content": "Yup, you’re not the first to point this out. That’s another reason I was thinking of having the data stored at home and strictly accessing work resources via a remote connection. If there is no obvious path back to it (e.g. I have to manually enter the login details), there is no way for anyone with my confiscated laptop to access that work data."
+      },
+      {
+        "author": "guri256",
+        "content": "One company I worked for in the past considered customs to be so high of risk, that they would not allow most company data through customs. Evidently some countries would regularly do corporate espionage to help their country compete with US countries. Instead, you would take a clean[1] laptop through customs, and once you were in the country, you would use the sensitive data that you need through a VPN connection. “Clean” means that it has the normal company image and domain connection, with full description, but without all of the documents you would normally find in someone’s profile and scattered on the desktop."
+      },
+      {
+        "author": "lit_associate",
+        "content": "Lots of good comments here. Also remember that any device you cross a border with will be subject to search upon arrival and return. This puts proprietary or sensitive information at risk. Companies can deal with this by providing clean devices for travel and set up a secure way to retrieve data after arrival. Or they can simply tell employees not to cross borders. As a BYOD job, it seems logical they'd choose the latter option. I'd guess that, at least in part, your employer might have introduced this policy as security measure against this. It could be that they aren't truly concerned about where you work but are being wheedled by their insurance company/lawyers to put the policy in place. Simply having the policy would protect the employer from some liability in the event something were to happen. Without more info about your employer, it's hard to guess whether they're actually working hard to enforce the policy or they just want to be able to point the finger if something goes wrong."
+      },
+      {
+        "author": "StartledByCheesecake",
+        "content": "No-one on my immediate team wants this, or even knows why the policy was changed, so my guess is that they’re not going to work extra-hard to enforce it. Very good point about searching devices. This gives more weight to the option of leaving a device behind and remoting into it, or using a server host to provide something more readily-available."
+      },
+      {
+        "author": "lit_associate",
+        "content": "Yeah, your plan, if effective, would likely mitigate a lot of these concerns. I doubt they'd give you a green light if you outlined it in advance, but it would go a long way in showing you weren't being wreckless if they caught on. Might even help save you your job."
+      },
+      {
+        "author": "ReefHound",
+        "content": "I think it might be just the opposite. Because this is a new policy and because it is not welcomed, IT may be anticipating attempts to circumvent it and looking especially close for signs of that."
+      },
+      {
+        "author": "nonlinear_nyc",
+        "content": "Having computer on designated area and just remote accessing it is the safest bet. You’re technically compliant (against any international search, I mean) and you don’t need to clean your steps every moment."
+      },
+      {
+        "author": "siasl_kopika",
+        "content": "first off: be prepared to get caught. Any voice calls or chats you do will have a little lag in them, which is a dead giveaway that you are physically far away. Unless your home office is equidistant from your current home and european destination, you cant hide it. how contact intensive is your work? if you have to use video chat often, its going to be pretty clear you are in a different time zone very quick from hints like the sun or visible/audible foreign language, etc. any half baked armchair detective could figure out your location in a minute. Unless your plan is to work from a bunker with no windows, no decorations, and a locked door. (in that case, why even travel) > and configured Windows myself is this required for work? Remember that windows is unsecurable and will help any opponent against you. > Configuring a VPN at my home internet connection, or maybe Tailscale, which I hear is good. it will be down sometimes, and so will your home internet, if you arent there to babysit. If you plan to hide your IP this way, you will need to start using a 3rd party vpn right away while you are home. In fact, most of your points have to do with obscuring your IP; does your company closely monitor IP addresses? If your company does close monitoring and has any decent network devs, your new european latency will be easy to spot and impossible to hide due to limitations of the speed of light. also all known VPN source addresses are tagged and easy to automatically detect, so by starting to use them you will automatically draw attention right away. physics is not your friend here."
+      },
+      {
+        "author": "oromis95",
+        "content": "I will say, I've run unraid for years, and I think my downtime with the exception of upgrades has been no more than a half hour a year."
+      },
+      {
+        "author": "gauc39",
+        "content": "Same, big selhost guy and there's a lot of pretty stable products for nearly anything you would need to achieve a solution to something like this. Probably the most unstable thing in any setup would be a Windows client doing Windows things. But now you can even use something as a JetKVM to complement any setup or as an emergency access for such filthy devices."
+      },
+      {
+        "author": "RemoteToHome-io",
+        "content": "You're not wrong that latency will increase, but it should not cause video lag in a proper setup. Modern video algos can easily cover up to 300ms latency with smooth resolution. I worked \"stealth\" remote from the US while travelling the world for over a decade using a dual-router setup while working for F100 tech companies with zero issues. Being in IT myself I had the advantage I could examine my own employee profile from the IT side and look for giveaways. Our company had over 300k employees working from over 80 countries. My latency wasn't even noticeable compared to all the employees we had working from home, from customer sites, business travel etc. More importantly, out of the terabytes of login/IP metadata we collected from employees, absolutely no one had time to go \"monitor\" latency for employees. It would only be looked into if there was a specific issue we were trying to troubleshoot or HR asked us to investigate someone. I now have hundreds of clients successfully doing the same as OP is proposing for years without issue."
+      },
+      {
+        "author": "StartledByCheesecake",
+        "content": "What you're doing sounds interesting for sure. I have a gl.inet travel router in my backpack at all times and am not going to any country that has heavy internet restrictions, and I am almost never asked to be on video, only audio. So while I don't want to underestimate the risk factor, I think that whether I set up a mini PC at home or I use my travel router as a VPN AP, I should be able to pass as being at home pretty easily. Things I'm most worried about are being unexpectedly called to an in-person event, which very occasionally does happen; and having something obvious happen in the background of one of my calls. Do you happen to know if Microsoft 365 allows the domain admin to see the exact IP addresses of logged in users? You seem like you might be positioned to know that. If not, I know who I can ask, so don't worry about it."
+      }
+    ],
+    "thread_title": "Fully-remote BYOD job suddenly says I can’t work outside the country. I’m debating on doing it anyway.",
+    "thread_url": "https://old.reddit.com/r/opsec/comments/1jvnst2/fullyremote_byod_job_suddenly_says_i_cant_work/",
+    "username": "StartledByCheesecake",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:49:18.939442"
+  },
+  {
+    "id": "1hi5eru",
+    "title": "M365 Security 24/7: Download ThreatLocker’s Free eBook on How to Secure Your Microsoft 365 cloud environment🛡️",
+    "author": "ThreatLocker",
+    "permalink": "https://alb.reddit.com/cr?za=4e0gesatrYMEaQRjzuU3xa-v_eqw6f_BZWEt3y1cElKnT_jslmqaYu5NrVCnfHEqyZw_5JGiA7JFmdAdForB126BRD-YGwNhUR6mZ1swv4NS_PEe_uPHFJa4SA3LvWT2xDuTEiTsRH6fjqto6TKkslxOr-Q6dRoo6ndWfi1HqwKvdIvvHjb1fW7EzN6OWHLdg4zJtYjwFnRXHSRoYNzZNyw6PxCSxiLXgGvY0V5uClrG9GPsF8df_teX0oUl_9pf0e-UlMpy0OvBUJOZGoBtHmFbdpQFOfEwRvkly4p2yKBPaAHKrxoBH3g7YDPt8qoYsdytGbfhJN0XdI2cjeQ_x3BhRAcO7bbA_VE8mdr10Kwm8ZHY9hqbi-oYLpm63K3gsr0N2t84lTVHluNe5d6movM7Jw4gNrCy2-Df-qHxEEX0a_WBjB-Eadlq_NNWSU9nn9QPjKOTa513RFOyNAybPAMUC8VBgRqD0RatMsCUmM9veTk2EGN2Ap26UCA4URLgzmqQO8WBRpCa--YTHRK7TDQSwYMa5-9oXDl5WEraozpqofXMi8HHAFvKQbzroL76wO_RzlfQbjQdVPIBxN28nDcdxJl3&zp=00Rs3htHTpdi9af2KLEKC_Qt_f4fg2cC88lKS-xHxDztxG_E9Tp9VKDhjyyE1hLBs_IgFneeCSwEzv6VNs0LEGjwhHWJFWuRFcxqAdSLREQbJ07JZjfK9qmAs1X798ghOE7-pBUHvFehRMiGTTuUYiVlAcgSBowsDHkaKetGPJtgSODsQ5k2OMrfZoSHNDpB-0kRGPJoKFIzVYq3hN0Wvm9Mnj-9YIpR8KDbCIgVYTHOuV_4Q0vv_Utmk7gf6k2E086i4ah9-ZdY69sWbfeIgufRdfkLlFG4WFnnTwaCFnEkN7aSIduO4M6beX-dBcq6iAYTFytMKClavISonRdvD0Yh11dvUrdYo_82822WdghIYgDTGrZ7AFAeiS_xZe9VJIYYOc53pDmCnpFosC9-PmeNLoEIgK-tt9OjeeSGCTId7FVYxMeTzUAMIC8zKQqLVdMvw2sd5g4zHubmvRGRTaImNpy0T0n9mJ6zJgLH0VOFwkDwFmxb0oMOPr3-AFpED4UYee_EvXPSUcsqjb9iV869z_p_ms5Z75ONu3fSR-NqyV5bRRy11WJAb_s-TM14T2FdjuDqs1JBSWEzHgbm_EfsxnzRG6ClvwA",
+    "content": "",
+    "comments": [],
+    "thread_title": "M365 Security 24/7: Download ThreatLocker’s Free eBook on How to Secure Your Microsoft 365 cloud environment🛡️",
+    "thread_url": "https://alb.reddit.com/cr?za=4e0gesatrYMEaQRjzuU3xa-v_eqw6f_BZWEt3y1cElKnT_jslmqaYu5NrVCnfHEqyZw_5JGiA7JFmdAdForB126BRD-YGwNhUR6mZ1swv4NS_PEe_uPHFJa4SA3LvWT2xDuTEiTsRH6fjqto6TKkslxOr-Q6dRoo6ndWfi1HqwKvdIvvHjb1fW7EzN6OWHLdg4zJtYjwFnRXHSRoYNzZNyw6PxCSxiLXgGvY0V5uClrG9GPsF8df_teX0oUl_9pf0e-UlMpy0OvBUJOZGoBtHmFbdpQFOfEwRvkly4p2yKBPaAHKrxoBH3g7YDPt8qoYsdytGbfhJN0XdI2cjeQ_x3BhRAcO7bbA_VE8mdr10Kwm8ZHY9hqbi-oYLpm63K3gsr0N2t84lTVHluNe5d6movM7Jw4gNrCy2-Df-qHxEEX0a_WBjB-Eadlq_NNWSU9nn9QPjKOTa513RFOyNAybPAMUC8VBgRqD0RatMsCUmM9veTk2EGN2Ap26UCA4URLgzmqQO8WBRpCa--YTHRK7TDQSwYMa5-9oXDl5WEraozpqofXMi8HHAFvKQbzroL76wO_RzlfQbjQdVPIBxN28nDcdxJl3&zp=00Rs3htHTpdi9af2KLEKC_Qt_f4fg2cC88lKS-xHxDztxG_E9Tp9VKDhjyyE1hLBs_IgFneeCSwEzv6VNs0LEGjwhHWJFWuRFcxqAdSLREQbJ07JZjfK9qmAs1X798ghOE7-pBUHvFehRMiGTTuUYiVlAcgSBowsDHkaKetGPJtgSODsQ5k2OMrfZoSHNDpB-0kRGPJoKFIzVYq3hN0Wvm9Mnj-9YIpR8KDbCIgVYTHOuV_4Q0vv_Utmk7gf6k2E086i4ah9-ZdY69sWbfeIgufRdfkLlFG4WFnnTwaCFnEkN7aSIduO4M6beX-dBcq6iAYTFytMKClavISonRdvD0Yh11dvUrdYo_82822WdghIYgDTGrZ7AFAeiS_xZe9VJIYYOc53pDmCnpFosC9-PmeNLoEIgK-tt9OjeeSGCTId7FVYxMeTzUAMIC8zKQqLVdMvw2sd5g4zHubmvRGRTaImNpy0T0n9mJ6zJgLH0VOFwkDwFmxb0oMOPr3-AFpED4UYee_EvXPSUcsqjb9iV869z_p_ms5Z75ONu3fSR-NqyV5bRRy11WJAb_s-TM14T2FdjuDqs1JBSWEzHgbm_EfsxnzRG6ClvwA",
+    "username": "ThreatLocker",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:49:30.382080"
+  },
+  {
+    "id": "1k87vte",
+    "title": "Crypto Opsec",
+    "author": "EmbarrassedFile5761",
+    "permalink": "https://old.reddit.com/r/opsec/comments/1k87vte/crypto_opsec/",
+    "content": "Operations Security, or OPSEC, OPSEC is about minimizing attack surfaces and single points of failure through proper habits and policies. It's a systematic and proven process that we can use to deny adversaries information they need to do us harm or interrupt our plans. It's also a mindset that can be applied to any mission or plan. Although the term originated in the military, OPSEC is now used for so much more. This includes law enforcement, computer and network security, home safety, travel, and so much more. OPSEC isn't a list of rules, and it's not as simple as using a VPN and keeping your mouth shut. It includes elements of INFOSEC, APPSEC, NETSEC, COMSEC[TRANSEC/SIGSEC/EMSEC], PHYSEC[PERSEC], and (CO)INTEL. 1. Identify the information you need to protect 2. Analyze the threats 3. Analyze your vulnerabilities 4. Assess the risk 5. Apply countermeasures Understand your own risk/threat model: Who is your adversary? What needs protecting? The OPSEC Two-Step: Know what to protect and know how to protect it. The Operations Security Professional's Association (OSPA) Defense Security Service OPSEC Awareness Course Navy OPSEC Don't post without reading the rules thread or your post will be removed, and you may be banned. Don't give advice without knowing the user's threat model first. If you proceed to give advice when the OP has not explained their threat model, you will be banned. Don't offer single tool solutions (e.g. VPN, bitcoin, Signal) when the threat model isn't clear Don't give bad, ridiculous, or misleading advice (e.g. \"you can't get arrested if you use Tor\") Don't ask for help or help others in illicit and unlawful activities (e.g. \"I want to buy drugs on the internet\"). Don't post without mentioning your threat model, unless it's a post about how to threat model.",
+    "comments": [
+      {
+        "author": "EducationNeverStops",
+        "content": "Good stuff. Really."
+      },
+      {
+        "author": "EmbarrassedFile5761",
+        "content": "Thank you ! Here is the full guide if it interests you https://ghostopsec.gumroad.com/l/emhdmk Have an awesome day !"
+      },
+      {
+        "author": "Chongulator",
+        "content": "[removed]"
+      },
+      {
+        "author": "Chongulator",
+        "content": "What does Tor have to do with OP's threat model?"
+      },
+      {
+        "author": "opsec-ModTeam",
+        "content": "Don’t give bad, ridiculous, or misleading advice."
+      },
+      {
+        "author": "TheAutisticSlavicBoy",
+        "content": "You have to install VPN server to use it"
+      }
+    ],
+    "thread_title": "Crypto Opsec",
+    "thread_url": "https://old.reddit.com/r/opsec/comments/1k87vte/crypto_opsec/",
+    "username": "EmbarrassedFile5761",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:49:47.277766"
+  },
+  {
+    "id": "1jxkt6t",
+    "title": "OPSEC Discussion: Integrating Past Data Breach Exposure into Current Threat Models",
+    "author": "Electrical-Wish-4221",
+    "permalink": "https://old.reddit.com/r/opsec/comments/1jxkt6t/opsec_discussion_integrating_past_data_breach/",
+    "content": "Operations Security, or OPSEC, OPSEC is about minimizing attack surfaces and single points of failure through proper habits and policies. It's a systematic and proven process that we can use to deny adversaries information they need to do us harm or interrupt our plans. It's also a mindset that can be applied to any mission or plan. Although the term originated in the military, OPSEC is now used for so much more. This includes law enforcement, computer and network security, home safety, travel, and so much more. OPSEC isn't a list of rules, and it's not as simple as using a VPN and keeping your mouth shut. It includes elements of INFOSEC, APPSEC, NETSEC, COMSEC[TRANSEC/SIGSEC/EMSEC], PHYSEC[PERSEC], and (CO)INTEL. 1. Identify the information you need to protect 2. Analyze the threats 3. Analyze your vulnerabilities 4. Assess the risk 5. Apply countermeasures Understand your own risk/threat model: Who is your adversary? What needs protecting? The OPSEC Two-Step: Know what to protect and know how to protect it. The Operations Security Professional's Association (OSPA) Defense Security Service OPSEC Awareness Course Navy OPSEC Don't post without reading the rules thread or your post will be removed, and you may be banned. Don't give advice without knowing the user's threat model first. If you proceed to give advice when the OP has not explained their threat model, you will be banned. Don't offer single tool solutions (e.g. VPN, bitcoin, Signal) when the threat model isn't clear Don't give bad, ridiculous, or misleading advice (e.g. \"you can't get arrested if you use Tor\") Don't ask for help or help others in illicit and unlawful activities (e.g. \"I want to buy drugs on the internet\"). Don't post without mentioning your threat model, unless it's a post about how to threat model.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Congratulations on your first post in r/opsec! OPSEC is a mindset and thought process, not a single solution — meaning, when asking a question it's a good idea to word it in a way that allows others to teach you the mindset rather than a single solution. Here's an example of a bad question that is far too vague to explain the threat model first: I want to stay safe on the internet. Which browser should I use? Here's an example of a good question that explains the threat model without giving too much private information: I don't want to have anyone find my home address on the internet while I use it. Will using a particular browser help me? Here's a bad answer (it depends on trusting that user entirely and doesn't help you learn anything on your own) that you should report immediately: You should use X browser because it is the most secure. Here's a good answer to explains why it's good for your specific threat model and also teaches the mindset of OPSEC: Y browser has a function that warns you from accidentally sharing your home address on forms, but ultimately this is up to you to control by being vigilant and no single tool or solution will ever be a silver bullet for security. If you follow this, technically you can use any browser! If you see anyone offering advice that doesn't feel like it is giving you the tools to make your own decisions and rather pushing you to a specific tool as a solution, feel free to report them. Giving advice in the form of a \"silver bullet solution\" is a bannable offense. I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      }
+    ],
+    "thread_title": "OPSEC Discussion: Integrating Past Data Breach Exposure into Current Threat Models",
+    "thread_url": "https://old.reddit.com/r/opsec/comments/1jxkt6t/opsec_discussion_integrating_past_data_breach/",
+    "username": "Electrical-Wish-4221",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:49:59.855602"
+  },
+  {
+    "id": "1kaievw",
+    "title": "Zero-access encryption in my open-source mobile app",
+    "author": "wasowski02",
+    "permalink": "https://old.reddit.com/r/opsec/comments/1kaievw/zeroaccess_encryption_in_my_opensource_mobile_app/",
+    "content": "Operations Security, or OPSEC, OPSEC is about minimizing attack surfaces and single points of failure through proper habits and policies. It's a systematic and proven process that we can use to deny adversaries information they need to do us harm or interrupt our plans. It's also a mindset that can be applied to any mission or plan. Although the term originated in the military, OPSEC is now used for so much more. This includes law enforcement, computer and network security, home safety, travel, and so much more. OPSEC isn't a list of rules, and it's not as simple as using a VPN and keeping your mouth shut. It includes elements of INFOSEC, APPSEC, NETSEC, COMSEC[TRANSEC/SIGSEC/EMSEC], PHYSEC[PERSEC], and (CO)INTEL. 1. Identify the information you need to protect 2. Analyze the threats 3. Analyze your vulnerabilities 4. Assess the risk 5. Apply countermeasures Understand your own risk/threat model: Who is your adversary? What needs protecting? The OPSEC Two-Step: Know what to protect and know how to protect it. The Operations Security Professional's Association (OSPA) Defense Security Service OPSEC Awareness Course Navy OPSEC Don't post without reading the rules thread or your post will be removed, and you may be banned. Don't give advice without knowing the user's threat model first. If you proceed to give advice when the OP has not explained their threat model, you will be banned. Don't offer single tool solutions (e.g. VPN, bitcoin, Signal) when the threat model isn't clear Don't give bad, ridiculous, or misleading advice (e.g. \"you can't get arrested if you use Tor\") Don't ask for help or help others in illicit and unlawful activities (e.g. \"I want to buy drugs on the internet\"). Don't post without mentioning your threat model, unless it's a post about how to threat model.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Congratulations on your first post in r/opsec! OPSEC is a mindset and thought process, not a single solution — meaning, when asking a question it's a good idea to word it in a way that allows others to teach you the mindset rather than a single solution. Here's an example of a bad question that is far too vague to explain the threat model first: I want to stay safe on the internet. Which browser should I use? Here's an example of a good question that explains the threat model without giving too much private information: I don't want to have anyone find my home address on the internet while I use it. Will using a particular browser help me? Here's a bad answer (it depends on trusting that user entirely and doesn't help you learn anything on your own) that you should report immediately: You should use X browser because it is the most secure. Here's a good answer to explains why it's good for your specific threat model and also teaches the mindset of OPSEC: Y browser has a function that warns you from accidentally sharing your home address on forms, but ultimately this is up to you to control by being vigilant and no single tool or solution will ever be a silver bullet for security. If you follow this, technically you can use any browser! If you see anyone offering advice that doesn't feel like it is giving you the tools to make your own decisions and rather pushing you to a specific tool as a solution, feel free to report them. Giving advice in the form of a \"silver bullet solution\" is a bannable offense. I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "daidoji70",
+        "content": "Check out a project I work on called KERI where they have a paradigm called \"signing at the edge\" allowing for a much more secure and versatile solution but very similar to your \"partial RSA\". However, we mostly use Ed25519/Ed448/secp256 curves rather than RSA for a variety of reasons I won't go into. You probably should too. Here's a tutorial on doing a short demo https://medium.com/finema/keri-tutorial-sign-and-verify-with-signify-keria-833dabfd356b Here's the client repo of this \"signing at the edge\" concept: ://github.com/WebOfTrust/signify-ts Here's the agent (server) repo: https://github.com/WebOfTrust/keria and its built using a new DPKI set of protocols called \"KERI\" that can be used for all manner of zero-trust architectures (in a way that many zero-trust architectures can't be). https://keri.one/ https://github.com/WebOfTrust/keri This is a community of open source developers that may help you develop such an application better than doing one yourself. There are community meetings every week. If you don't use KERI you might consider using OIDC or other trusted and built platforms for doing stuff like this. Its all extremely hard to get right."
+      },
+      {
+        "author": "wasowski02",
+        "content": "Thank you! This looks like just the thing I'm looking for, will take a deeper dive into it"
+      }
+    ],
+    "thread_title": "Zero-access encryption in my open-source mobile app",
+    "thread_url": "https://old.reddit.com/r/opsec/comments/1kaievw/zeroaccess_encryption_in_my_opensource_mobile_app/",
+    "username": "wasowski02",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:50:15.169512"
+  },
+  {
+    "id": "1k81ur9",
+    "title": "OPSEC Tool that gave recommendations",
+    "author": "cobraac21",
+    "permalink": "https://old.reddit.com/r/opsec/comments/1k81ur9/opsec_tool_that_gave_recommendations/",
+    "content": "Operations Security, or OPSEC, OPSEC is about minimizing attack surfaces and single points of failure through proper habits and policies. It's a systematic and proven process that we can use to deny adversaries information they need to do us harm or interrupt our plans. It's also a mindset that can be applied to any mission or plan. Although the term originated in the military, OPSEC is now used for so much more. This includes law enforcement, computer and network security, home safety, travel, and so much more. OPSEC isn't a list of rules, and it's not as simple as using a VPN and keeping your mouth shut. It includes elements of INFOSEC, APPSEC, NETSEC, COMSEC[TRANSEC/SIGSEC/EMSEC], PHYSEC[PERSEC], and (CO)INTEL. 1. Identify the information you need to protect 2. Analyze the threats 3. Analyze your vulnerabilities 4. Assess the risk 5. Apply countermeasures Understand your own risk/threat model: Who is your adversary? What needs protecting? The OPSEC Two-Step: Know what to protect and know how to protect it. The Operations Security Professional's Association (OSPA) Defense Security Service OPSEC Awareness Course Navy OPSEC Don't post without reading the rules thread or your post will be removed, and you may be banned. Don't give advice without knowing the user's threat model first. If you proceed to give advice when the OP has not explained their threat model, you will be banned. Don't offer single tool solutions (e.g. VPN, bitcoin, Signal) when the threat model isn't clear Don't give bad, ridiculous, or misleading advice (e.g. \"you can't get arrested if you use Tor\") Don't ask for help or help others in illicit and unlawful activities (e.g. \"I want to buy drugs on the internet\"). Don't post without mentioning your threat model, unless it's a post about how to threat model.",
+    "comments": [
+      {
+        "author": "siasl_kopika",
+        "content": "he was harvesting data from people here and got what he wanted If you want opsec platform advice, its actually super simple: * dont use closed source operating systems or software * dont use cell phones And thats pretty much regardless of your threat level."
+      },
+      {
+        "author": "cobraac21",
+        "content": "Hmm, well I was more interested in some of the newer messaging apps he was listing like element, etc it was really the only time I saw a nice comprehensive list. Then again I wasn’t looking hard for one. Also seems stupid to put a nice sit together to harvest nominal data, maybe user agent strings and an ad id."
+      },
+      {
+        "author": "AutoModerator",
+        "content": "Congratulations on your first post in r/opsec! OPSEC is a mindset and thought process, not a single solution — meaning, when asking a question it's a good idea to word it in a way that allows others to teach you the mindset rather than a single solution. Here's an example of a bad question that is far too vague to explain the threat model first: I want to stay safe on the internet. Which browser should I use? Here's an example of a good question that explains the threat model without giving too much private information: I don't want to have anyone find my home address on the internet while I use it. Will using a particular browser help me? Here's a bad answer (it depends on trusting that user entirely and doesn't help you learn anything on your own) that you should report immediately: You should use X browser because it is the most secure. Here's a good answer to explains why it's good for your specific threat model and also teaches the mindset of OPSEC: Y browser has a function that warns you from accidentally sharing your home address on forms, but ultimately this is up to you to control by being vigilant and no single tool or solution will ever be a silver bullet for security. If you follow this, technically you can use any browser! If you see anyone offering advice that doesn't feel like it is giving you the tools to make your own decisions and rather pushing you to a specific tool as a solution, feel free to report them. Giving advice in the form of a \"silver bullet solution\" is a bannable offense. I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "cobraac21",
+        "content": "[deleted]"
+      },
+      {
+        "author": "cobraac21",
+        "content": "Nice looks like the website is not found now."
+      }
+    ],
+    "thread_title": "OPSEC Tool that gave recommendations",
+    "thread_url": "https://old.reddit.com/r/opsec/comments/1k81ur9/opsec_tool_that_gave_recommendations/",
+    "username": "cobraac21",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:50:27.254953"
+  },
+  {
+    "id": "1k0w9yc",
+    "title": "Signing up for a VPS exposed an email I didn't use. How and how to do better?",
+    "author": "MillerQLite",
+    "permalink": "https://old.reddit.com/r/opsec/comments/1k0w9yc/signing_up_for_a_vps_exposed_an_email_i_didnt_use/",
+    "content": "Operations Security, or OPSEC, OPSEC is about minimizing attack surfaces and single points of failure through proper habits and policies. It's a systematic and proven process that we can use to deny adversaries information they need to do us harm or interrupt our plans. It's also a mindset that can be applied to any mission or plan. Although the term originated in the military, OPSEC is now used for so much more. This includes law enforcement, computer and network security, home safety, travel, and so much more. OPSEC isn't a list of rules, and it's not as simple as using a VPN and keeping your mouth shut. It includes elements of INFOSEC, APPSEC, NETSEC, COMSEC[TRANSEC/SIGSEC/EMSEC], PHYSEC[PERSEC], and (CO)INTEL. 1. Identify the information you need to protect 2. Analyze the threats 3. Analyze your vulnerabilities 4. Assess the risk 5. Apply countermeasures Understand your own risk/threat model: Who is your adversary? What needs protecting? The OPSEC Two-Step: Know what to protect and know how to protect it. The Operations Security Professional's Association (OSPA) Defense Security Service OPSEC Awareness Course Navy OPSEC Don't post without reading the rules thread or your post will be removed, and you may be banned. Don't give advice without knowing the user's threat model first. If you proceed to give advice when the OP has not explained their threat model, you will be banned. Don't offer single tool solutions (e.g. VPN, bitcoin, Signal) when the threat model isn't clear Don't give bad, ridiculous, or misleading advice (e.g. \"you can't get arrested if you use Tor\") Don't ask for help or help others in illicit and unlawful activities (e.g. \"I want to buy drugs on the internet\"). Don't post without mentioning your threat model, unless it's a post about how to threat model.",
+    "comments": [
+      {
+        "author": "BTC-brother2018",
+        "content": "The most likely explanation the bank or virtual card provider leaked metadata which was then resold or scraped by scammers. The payment included billing info — which probably included your friend's real email (or at least was linked to a profile that did). Many virtual card services (even privacy-focused ones) still tie back to the user's legal identity, email, and phone. VPS providers often log everything, including payment metadata. Even if you didn’t enter the email manually, the payment processor might have auto-filled it from your bank’s record."
+      },
+      {
+        "author": "val4ha",
+        "content": "If you want privacy and/or anonimity on your vps - look at something like 1984 hosting. Based in Iceland - strict laws regarding privacy, and purchasable with XMR. If you have not dealt with self-hosting a server and using XMR(Monero) the right way, I suggest reading through this subreddit and SethForPrivacy's blog for starters. To be real - none of this is going to be easy and you will get headaches on every corner, but in the end its worth the trouble."
+      },
+      {
+        "author": "rumi1000",
+        "content": "Use VPS provider that accepts monero, like Njalla, or use proxy service like MyNymBox. Email aliases can leak, best setup a brand new email account to setup a nym. Use a provider that doesn't require a phone nr."
+      }
+    ],
+    "thread_title": "Signing up for a VPS exposed an email I didn't use. How and how to do better?",
+    "thread_url": "https://old.reddit.com/r/opsec/comments/1k0w9yc/signing_up_for_a_vps_exposed_an_email_i_didnt_use/",
+    "username": "MillerQLite",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:50:38.756603"
+  },
+  {
+    "id": "1k86dba",
+    "title": "What can I use to store my sensitive information and passwords",
+    "author": "NULLBASED",
+    "permalink": "https://old.reddit.com/r/opsec/comments/1k86dba/what_can_i_use_to_store_my_sensitive_information/",
+    "content": "Operations Security, or OPSEC, OPSEC is about minimizing attack surfaces and single points of failure through proper habits and policies. It's a systematic and proven process that we can use to deny adversaries information they need to do us harm or interrupt our plans. It's also a mindset that can be applied to any mission or plan. Although the term originated in the military, OPSEC is now used for so much more. This includes law enforcement, computer and network security, home safety, travel, and so much more. OPSEC isn't a list of rules, and it's not as simple as using a VPN and keeping your mouth shut. It includes elements of INFOSEC, APPSEC, NETSEC, COMSEC[TRANSEC/SIGSEC/EMSEC], PHYSEC[PERSEC], and (CO)INTEL. 1. Identify the information you need to protect 2. Analyze the threats 3. Analyze your vulnerabilities 4. Assess the risk 5. Apply countermeasures Understand your own risk/threat model: Who is your adversary? What needs protecting? The OPSEC Two-Step: Know what to protect and know how to protect it. The Operations Security Professional's Association (OSPA) Defense Security Service OPSEC Awareness Course Navy OPSEC Don't post without reading the rules thread or your post will be removed, and you may be banned. Don't give advice without knowing the user's threat model first. If you proceed to give advice when the OP has not explained their threat model, you will be banned. Don't offer single tool solutions (e.g. VPN, bitcoin, Signal) when the threat model isn't clear Don't give bad, ridiculous, or misleading advice (e.g. \"you can't get arrested if you use Tor\") Don't ask for help or help others in illicit and unlawful activities (e.g. \"I want to buy drugs on the internet\"). Don't post without mentioning your threat model, unless it's a post about how to threat model.",
+    "comments": [
+      {
+        "author": "Chongulator",
+        "content": "Just use a damn password manager. You'd have to have an unusual threat model for avoiding password managers to make sense. Since you didn't provide a threat model (as explained in this sub's rules), I'm assuming yours is nothing unusual."
+      },
+      {
+        "author": "holyknight00",
+        "content": "Use a local password manager if you are super paranoid (EG: Keepass), but at this point not having a password manager at all is borderline irresponsible. You are currently either re-using passwords, using super stupidly unsafe passwords or both. If you are somewhat techsavy you can set up your own bitwarden instance on your server and you would have almost the same usability as a SaaS password manager. from any of the companies, but with everything in total control by you."
+      },
+      {
+        "author": "The4rt",
+        "content": "Well bitwarden or keepass are way safer than your paper notes."
+      },
+      {
+        "author": "1stRoom",
+        "content": "just use keepassxc."
+      },
+      {
+        "author": "eyepoker4ever",
+        "content": "Anything like this for mobile? When I search for that in the Play store there are two possible matches, actually a few name knockoffs."
+      },
+      {
+        "author": "de_Mike_333",
+        "content": "KeePassium or Strongbox on iOS and Keepass2Android for Android"
+      },
+      {
+        "author": "BillBaileysBalls",
+        "content": "Also KeePassDX is a good android alternative. I've used it for a few years and it's been solid."
+      },
+      {
+        "author": "btt101",
+        "content": "Use typewriter to list all passwords. Take types paper and store it in safety deposit box in bank. Can't get any more secure than that."
+      },
+      {
+        "author": "nmj95123",
+        "content": "You use a password manager that is local only, rather than one that relies on cloud storage, like Keepass. If you want to go the web app route, Vaultwarden is a self hosted equivalent."
+      },
+      {
+        "author": "AutoModerator",
+        "content": "Congratulations on your first post in r/opsec! OPSEC is a mindset and thought process, not a single solution — meaning, when asking a question it's a good idea to word it in a way that allows others to teach you the mindset rather than a single solution. Here's an example of a bad question that is far too vague to explain the threat model first: I want to stay safe on the internet. Which browser should I use? Here's an example of a good question that explains the threat model without giving too much private information: I don't want to have anyone find my home address on the internet while I use it. Will using a particular browser help me? Here's a bad answer (it depends on trusting that user entirely and doesn't help you learn anything on your own) that you should report immediately: You should use X browser because it is the most secure. Here's a good answer to explains why it's good for your specific threat model and also teaches the mindset of OPSEC: Y browser has a function that warns you from accidentally sharing your home address on forms, but ultimately this is up to you to control by being vigilant and no single tool or solution will ever be a silver bullet for security. If you follow this, technically you can use any browser! If you see anyone offering advice that doesn't feel like it is giving you the tools to make your own decisions and rather pushing you to a specific tool as a solution, feel free to report them. Giving advice in the form of a \"silver bullet solution\" is a bannable offense. I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "Ty0305",
+        "content": "I would highly suggest using keepass. Also dont forget to make regular db backups. Best of luck."
+      },
+      {
+        "author": "malcarada",
+        "content": "KeePassXC.org free, open source, no cloud."
+      },
+      {
+        "author": "oromis95",
+        "content": "Vaultwarden"
+      },
+      {
+        "author": "dhardyuk",
+        "content": "Use a zero knowledge password manager or roll your own with a text file in password protected zip. I recommend the zero knowledge password manager route because there is nothing to be hacked if the vendor is compromised - different story if they get backdoored and their code gets fiddled with. Potential for plain text copies being left laying around with the zip file method."
+      },
+      {
+        "author": "DanRanCan",
+        "content": "KeepassXC is best. It had undergone external audits as well."
+      },
+      {
+        "author": "Affectionate_Top_76",
+        "content": "People recommend local password managers but the thing is you can often just reverse engineer them, they use encryption not hashing, so once you know how the decryption process works you can recreate it and unlock the passwords even without any flaws in the encryption. if someone can get access to the same version of the program and encrypted passwords they can eventually decrypt the data by recreating the password manager decryption process. Also if the password manager is protected by a password and that password gets keylogged then if the attacker has access to the encrypted files and reverse engineered the decryption process of your version of the password manager software, then they can decrypt all your passwords. Honestly the best password manager is your brain its not hackable and cant be reverse engineered so maybe the real question is how secure is your own memory and how much do you trust it with your sensitive info. keep in mind this is assuming the worst possible threat model that is extremely unlikely to happen, but opsec is all about what ifs and scenarios where everything is just right that lets someone exploit your privacy."
+      },
+      {
+        "author": "ProceduralTexture",
+        "content": "I keep anything I want safe in a VeraCrypt container with a solid password. It's free and open. All your other passwords? Stash them in a plaintext file, consult as needed. Any files or digital documents? In they go, safe from prying eyes. Heck, put your entire porn collection in there, if you want. There's no limit on container size."
+      },
+      {
+        "author": "No-Carpenter-9184",
+        "content": "Paper and pen 👍🏼"
+      }
+    ],
+    "thread_title": "What can I use to store my sensitive information and passwords",
+    "thread_url": "https://old.reddit.com/r/opsec/comments/1k86dba/what_can_i_use_to_store_my_sensitive_information/",
+    "username": "NULLBASED",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:50:50.806956"
+  },
+  {
+    "id": "1k0uplv",
+    "title": "Purchasing from Depop uk anonymously",
+    "author": "floatandmeander",
+    "permalink": "https://old.reddit.com/r/opsec/comments/1k0uplv/purchasing_from_depop_uk_anonymously/",
+    "content": "Operations Security, or OPSEC, OPSEC is about minimizing attack surfaces and single points of failure through proper habits and policies. It's a systematic and proven process that we can use to deny adversaries information they need to do us harm or interrupt our plans. It's also a mindset that can be applied to any mission or plan. Although the term originated in the military, OPSEC is now used for so much more. This includes law enforcement, computer and network security, home safety, travel, and so much more. OPSEC isn't a list of rules, and it's not as simple as using a VPN and keeping your mouth shut. It includes elements of INFOSEC, APPSEC, NETSEC, COMSEC[TRANSEC/SIGSEC/EMSEC], PHYSEC[PERSEC], and (CO)INTEL. 1. Identify the information you need to protect 2. Analyze the threats 3. Analyze your vulnerabilities 4. Assess the risk 5. Apply countermeasures Understand your own risk/threat model: Who is your adversary? What needs protecting? The OPSEC Two-Step: Know what to protect and know how to protect it. The Operations Security Professional's Association (OSPA) Defense Security Service OPSEC Awareness Course Navy OPSEC Don't post without reading the rules thread or your post will be removed, and you may be banned. Don't give advice without knowing the user's threat model first. If you proceed to give advice when the OP has not explained their threat model, you will be banned. Don't offer single tool solutions (e.g. VPN, bitcoin, Signal) when the threat model isn't clear Don't give bad, ridiculous, or misleading advice (e.g. \"you can't get arrested if you use Tor\") Don't ask for help or help others in illicit and unlawful activities (e.g. \"I want to buy drugs on the internet\"). Don't post without mentioning your threat model, unless it's a post about how to threat model.",
+    "comments": [
+      {
+        "author": "jopie_syncus",
+        "content": "OP buying clothing from a female he knows"
+      },
+      {
+        "author": "floatandmeander",
+        "content": "And if I was?..."
+      },
+      {
+        "author": "AutoModerator",
+        "content": "Congratulations on your first post in r/opsec! OPSEC is a mindset and thought process, not a single solution — meaning, when asking a question it's a good idea to word it in a way that allows others to teach you the mindset rather than a single solution. Here's an example of a bad question that is far too vague to explain the threat model first: I want to stay safe on the internet. Which browser should I use? Here's an example of a good question that explains the threat model without giving too much private information: I don't want to have anyone find my home address on the internet while I use it. Will using a particular browser help me? Here's a bad answer (it depends on trusting that user entirely and doesn't help you learn anything on your own) that you should report immediately: You should use X browser because it is the most secure. Here's a good answer to explains why it's good for your specific threat model and also teaches the mindset of OPSEC: Y browser has a function that warns you from accidentally sharing your home address on forms, but ultimately this is up to you to control by being vigilant and no single tool or solution will ever be a silver bullet for security. If you follow this, technically you can use any browser! If you see anyone offering advice that doesn't feel like it is giving you the tools to make your own decisions and rather pushing you to a specific tool as a solution, feel free to report them. Giving advice in the form of a \"silver bullet solution\" is a bannable offense. I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "LinuxTux01",
+        "content": "Ship to an inpost locker"
+      },
+      {
+        "author": "floatandmeander",
+        "content": "Thanks but it's the payment I'm not sure about (tbf though, I didn't know what the current post options were so thanks for saying inpost). If I put my payment details on depop won't they object to a fake name on the account, or as well, is there are chance my real name gets passed on to the seller?"
+      },
+      {
+        "author": "fdskyogre",
+        "content": "Use a visa gift card"
+      },
+      {
+        "author": "TheAutisticSlavicBoy",
+        "content": "1) cash in envelope? 2) if likeness is not a problem face2face"
+      },
+      {
+        "author": "Less_Oil9766",
+        "content": "Consider researching which types of prepaid debit/credit cards depop accepts. Or an alternate google/apple pay account could work."
+      },
+      {
+        "author": "Exciting_Debate8721",
+        "content": "how would it cause \"awkwardness\"?"
+      }
+    ],
+    "thread_title": "Purchasing from Depop uk anonymously",
+    "thread_url": "https://old.reddit.com/r/opsec/comments/1k0uplv/purchasing_from_depop_uk_anonymously/",
+    "username": "floatandmeander",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:51:02.949651"
+  },
+  {
+    "id": "1k7lhio",
+    "title": "$230M Vanished — Don’t Let It Be Your Wallet Next",
+    "author": "EmbarrassedFile5761",
+    "permalink": "https://open.substack.com/pub/ghostopsec/p/230m-vanished-dont-let-it-be-your",
+    "content": "",
+    "comments": [],
+    "thread_title": "$230M Vanished — Don’t Let It Be Your Wallet Next",
+    "thread_url": "https://open.substack.com/pub/ghostopsec/p/230m-vanished-dont-let-it-be-your",
+    "username": "EmbarrassedFile5761",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:51:14.493152"
+  }
+]

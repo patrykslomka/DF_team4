@@ -1,0 +1,226 @@
+{
+    "darkweb": {
+        "text_stats": {
+            "avg_words_per_text": 162.71572580645162,
+            "avg_sentences_per_text": 9.83266129032258,
+            "avg_word_length": 4.598250461546087,
+            "avg_lexical_diversity": 0.7984444127474322,
+            "median_words_per_text": 52.0,
+            "median_sentences_per_text": 3.0
+        },
+        "top_keywords": [
+            [
+                "vpn",
+                0.05537849998478962
+            ],
+            [
+                "use",
+                0.0426858925450477
+            ],
+            [
+                "free",
+                0.03620542842418031
+            ],
+            [
+                "proxy",
+                0.03073890183411166
+            ],
+            [
+                "wrote",
+                0.030643984959223942
+            ],
+            [
+                "using",
+                0.028647909995358593
+            ],
+            [
+                "like",
+                0.02780520748607537
+            ],
+            [
+                "thanks",
+                0.024879453823916903
+            ],
+            [
+                "just",
+                0.02477106166379105
+            ],
+            [
+                "good",
+                0.023063638886106824
+            ],
+            [
+                "pm",
+                0.022541555980535484
+            ],
+            [
+                "vpns",
+                0.02049696545709157
+            ],
+            [
+                "privacy",
+                0.019669657594697222
+            ],
+            [
+                "slow",
+                0.01959722552230168
+            ],
+            [
+                "know",
+                0.019538667416384735
+            ],
+            [
+                "way",
+                0.01907233011716531
+            ],
+            [
+                "don",
+                0.018747170391218218
+            ],
+            [
+                "blocklists",
+                0.018638948933252162
+            ],
+            [
+                "ip",
+                0.01857241528909341
+            ],
+            [
+                "think",
+                0.017713373629140276
+            ]
+        ],
+        "topic_keywords": [
+            [
+                "vpn",
+                "servers",
+                "data",
+                "use",
+                "users",
+                "ip",
+                "user",
+                "logs",
+                "dns",
+                "server"
+            ],
+            [
+                "vpn",
+                "free",
+                "data",
+                "wrote",
+                "like",
+                "apple",
+                "just",
+                "pm",
+                "good",
+                "privacy"
+            ],
+            [
+                "use",
+                "said",
+                "wrote",
+                "police",
+                "windows",
+                "spyware",
+                "pm",
+                "using",
+                "just",
+                "assured"
+            ],
+            [
+                "vpn",
+                "use",
+                "ip",
+                "using",
+                "like",
+                "blocklists",
+                "torrent",
+                "don",
+                "blocking",
+                "proxy"
+            ],
+            [
+                "traffic",
+                "trolls",
+                "blocklists",
+                "com",
+                "use",
+                "actually",
+                "filter",
+                "cpu",
+                "copyright",
+                "money"
+            ]
+        ],
+        "sentiment": {
+            "mean": {
+                "neg": 0.0680483870967742,
+                "neu": 0.8045947580645162,
+                "pos": 0.1273266129032258,
+                "compound": 0.255623185483871
+            },
+            "median": {
+                "neg": 0.049,
+                "neu": 0.812,
+                "pos": 0.107,
+                "compound": 0.4404
+            }
+        },
+        "security_focus": {
+            "total_security_mentions": 6196,
+            "docs_with_security_mentions": 738,
+            "docs_with_mentions_pct": 74.39516129032258,
+            "avg_mentions_per_doc": 6.245967741935484,
+            "top_security_keywords": [
+                [
+                    "vpn",
+                    1686
+                ],
+                [
+                    "tor",
+                    1132
+                ],
+                [
+                    "data",
+                    652
+                ],
+                [
+                    "privacy",
+                    354
+                ],
+                [
+                    "information",
+                    354
+                ],
+                [
+                    "protect",
+                    208
+                ],
+                [
+                    "security",
+                    202
+                ],
+                [
+                    "government",
+                    198
+                ],
+                [
+                    "leak",
+                    188
+                ],
+                [
+                    "private",
+                    166
+                ]
+            ]
+        }
+    },
+    "reddit": {
+        "text_stats": {},
+        "top_keywords": [],
+        "topic_keywords": [],
+        "sentiment": {},
+        "security_focus": {}
+    },
+    "comparison": {}
+}

@@ -1,0 +1,1362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking</title>
+
+<link rel="alternate" type="application/rss+xml" title="Latest Threads (RSS 2.0)" href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="Latest Threads (Atom 1.0)" href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="/jscripts/jquery.js?ver=1823"></script>
+<script type="text/javascript" src="/jscripts/jquery.plugins.min.js?ver=1821"></script>
+<script type="text/javascript" src="/jscripts/general.js?ver=1827"></script>
+
+<link type="text/css" rel="stylesheet" href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/cache/themes/theme1/star_ratings.min.css?t=1736046033" />
+<link type="text/css" rel="stylesheet" href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/cache/themes/theme1/showthread.min.css?t=1736046033" />
+<link type="text/css" rel="stylesheet" href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/cache/themes/theme2/css3.min.css?t=1736046033" />
+<link type="text/css" rel="stylesheet" href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/cache/themes/theme2/color_calm.min.css?t=1736046033" />
+<link type="text/css" rel="stylesheet" href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/cache/themes/theme2/TPBLink.min.css?t=1736046033" />
+<link type="text/css" rel="stylesheet" href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/css.php?stylesheet%5B0%5D=18&stylesheet%5B1%5D=108" />
+
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "An unknown error has occurred.";
+	lang.confirm_title = "Please Confirm";
+	lang.expcol_collapse = "[-]";
+	lang.expcol_expand = "[+]";
+	lang.select2_match = "One result is available, press enter to select it.";
+	lang.select2_matches = "{1} results are available, use up and down arrow keys to navigate.";
+	lang.select2_nomatches = "No matches found";
+	lang.select2_inputtooshort_single = "Please enter one or more character";
+	lang.select2_inputtooshort_plural = "Please enter {1} or more characters";
+	lang.select2_inputtoolong_single = "Please delete one character";
+	lang.select2_inputtoolong_plural = "Please delete {1} characters";
+	lang.select2_selectiontoobig_single = "You can only select one item";
+	lang.select2_selectiontoobig_plural = "You can only select {1} items";
+	lang.select2_loadmore = "Loading more results&hellip;";
+	lang.select2_searching = "Searching&hellip;";
+
+	var templates = {
+		modal: '<div class=\"modal\">\
+	<div style=\"overflow-y: auto; max-height: 400px;\">\
+		<table border=\"0\" cellspacing=\"0\" cellpadding=\"5\" class=\"tborder\">\
+			<tr>\
+				<td class=\"thead\"><strong>__title__</strong></td>\
+			</tr>\
+			<tr>\
+				<td class=\"trow1\">__message__</td>\
+			</tr>\
+			<tr>\
+				<td class=\"tfoot\">\
+					<div style=\"text-align: center\" class=\"modal_buttons\">__buttons__</div>\
+				</td>\
+			</tr>\
+		</table>\
+	</div>\
+</div>',
+		modal_button: '<input type=\"submit\" class=\"button\" value=\"__title__\"/>&nbsp;'
+	};
+
+	var cookieDomain = "";
+	var cookiePath = "/";
+	var cookiePrefix = "";
+	var cookieSecureFlag = "0";
+	var deleteevent_confirm = "Are you sure you want to delete this event?";
+	var removeattach_confirm = "Are you sure you want to remove the selected attachment from this post?";
+	var loading_text = 'Loading. <br />Please Wait&hellip;';
+	var saving_changes = 'Saving changes&hellip;';
+	var use_xmlhttprequest = "1";
+	var my_post_key = "64ec40f4e06141a70fb995fc4e27efab";
+	var rootpath = "http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion";
+	var imagepath = "http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/images";
+  	var yes_confirm = "Yes";
+	var no_confirm = "No";
+	var MyBBEditor = null;
+	var spinner_image = "http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/images/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+
+function dismissANN(id)
+{
+	if(!$("Ann_"+id))
+	{
+		return false;
+	}
+	
+	if(use_xmlhttprequest != 1)
+	{
+		return true;
+	}
+
+	new Ajax.Request("index.php?action=ann_dismiss", {method: "post", postBody: "ajax=1&my_post_key="+my_post_key+"&id="+id});
+	Element.remove("Ann_"+id);
+	return false;
+}
+// -->
+</script>
+
+<script type="text/javascript">
+<!--
+	var quickdelete_confirm = "Are you sure you want to delete this post?";
+	var quickrestore_confirm = "Are you sure you want to restore this post?";
+	var allowEditReason = "1";
+	lang.save_changes = "Save Changes";
+	lang.cancel_edit = "Cancel Edit";
+	lang.quick_edit_update_error = "There was an error editing your reply:";
+	lang.quick_reply_post_error = "There was an error posting your reply:";
+	lang.quick_delete_error = "There was an error deleting your reply:";
+	lang.quick_delete_success = "The post was deleted successfully.";
+	lang.quick_delete_thread_success = "The thread was deleted successfully.";
+	lang.quick_restore_error = "There was an error restoring your reply:";
+	lang.quick_restore_success = "The post was restored successfully.";
+	lang.editreason = "Edit Reason";
+	lang.post_deleted_error = "You can not perform this action to a deleted post.";
+	lang.softdelete_thread = "Soft Delete Thread";
+	lang.restore_thread = "Restore Thread";
+// -->
+</script>
+<!-- jeditable (jquery) -->
+<script type="text/javascript" src="/jscripts/report.js?ver=1820"></script>
+<script src="/jscripts/jeditable/jeditable.min.js"></script>
+<script type="text/javascript" src="/jscripts/thread.js?ver=1827"></script>
+<meta name="description" content="Over the past 18 years, ever since P2P clients made their run into the big time, users have been trying to figure out a way to avoid expensive lawsuits. At the beginning, no real solutions were availa" />
+<link rel="canonical" href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking" />
+</head>
+<body>
+	
+<div id="container">
+		<a name="top" id="top"></a>
+		<div id="header">
+			<div id="logo">
+				<div class="wrapper">
+<!-- start: suprbay search -->
+	<form method="post" name="post_search_box" action="search.php">
+		<table class="float_right">
+			<tr class="suprbaylogotext">
+				<td colspan="2" align="left" valign="middle">
+<span style="color:white"><strong>Search:</strong><label><input type="radio" class="radio" name="postthread" value="1" checked="checked">posts</label><label><input type="radio" class="radio" name="postthread" value="2">titles</label>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Results:</strong><label><input type="radio" class="radio" name="showresults" value="posts">posts</label><label><input type="radio" class="radio" name="showresults" value="threads" checked="checked">threads</label><input type="hidden" name="sortby" value="lastpost"><input type="hidden" name="sortordr" value="desc"></span>
+				</td>
+			</tr>
+			<tr>
+				<td align="left">
+					<input type="text" class="textbox" name="keywords" size="30" maxlength="120" />
+				</td>
+				<td align="right">
+					<input type="hidden" name="action" value="do_search" />
+					<input type="submit" class="button" name="submit" value=" Search " />
+				</td>
+			</tr>
+		</table>
+
+		<span class="float_right" style="font-weight: bold; padding: 30px 40px 0;"><a href="https://www.torproject.org/download/" style="color: yellow;" >Download Tor Browser</a></span>
+
+	</form>
+<!-- end: suprbay -->
+					<a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/index.php"><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/images/suprbay/logo2.png" alt="SuprBay: The PirateBay Forum" title="SuprBay: The PirateBay Forum" /></a>
+				</div>
+			</div>
+			<div id="panel">
+				<div class="upper">
+					<div class="wrapper">
+						<ul class="menu top_links">
+                                                        <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/status" style="color: yellow">TPB Status</a>
+                                                        <li><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-FAQs-Frequently-Asked-Questions" class="help">FAQ</a></li>
+
+<!-- efnet advanced chat
+							<li><a href="http://chat.efnet.org:9090/?channels=thepiratebay.org&amp;uio=Mj10cnVlJjEwPXRydWUmMTI9dHJ1ZQ8a" class="chat">Chat</a></li>
+-->
+<!-- basic chat 
+							<li><a href="http://chat.efnet.org/irc.cgi?Channel=%23thepiratebay.org&amp;chan=%23thepiratebay.org&amp;nick=" class="chat">Chat</a></li>
+-->
+<!-- kiwi IRC client -->
+							<li><a href="/misc.php?page=chat" class="chat" target="_blank">Chat</a></li>
+							<li><a href="/showteam.php" class="forumteam">Forum Team</a></li>
+							<li><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/memberlist.php" class="memberlist">Member List</a></li>
+							<li><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/search.php" class="search">Advanced Search</a></li>
+						</ul>
+						
+						<!-- Continuation of div(class="upper") as opened in the header template -->
+						<span class="welcome">Hello There, Guest! <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/member.php?action=login" onclick="$('#quick_login').modal({ fadeDuration: 250, keepelement: true, zIndex: (typeof modal_zindex !== 'undefined' ? modal_zindex : 9999) }); return false;" class="login">Login</a> <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/member.php?action=register" class="register">Register</a></span>
+					</div>
+				</div>
+				<div class="modal" id="quick_login" style="display: none;">
+					<form method="post" action="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/member.php">
+						<input name="action" type="hidden" value="do_login" />
+						<input name="url" type="hidden" value="" />
+						<input name="quick_login" type="hidden" value="1" />
+						<input name="my_post_key" type="hidden" value="64ec40f4e06141a70fb995fc4e27efab" />
+						<table width="100%" cellspacing="0" cellpadding="5" border="0" class="tborder">
+							<tr>
+								<td class="thead" colspan="2"><strong>Login</strong></td>
+							</tr>
+							
+<tr>
+	<td class="trow1" width="25%"><strong>Username:</strong></td>
+	<td class="trow1"><input name="quick_username" id="quick_login_username" type="text" value="" class="textbox initial_focus" /></td>
+</tr>
+<tr>
+	<td class="trow2"><strong>Password:</strong></td>
+	<td class="trow2">
+		<input name="quick_password" id="quick_login_password" type="password" value="" class="textbox" /><br />
+		<a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/member.php?action=lostpw" class="lost_password">Lost Password?</a>
+	</td>
+</tr>
+<tr>
+	<td class="trow1">&nbsp;</td>
+	<td class="trow1 remember_me">
+		<input name="quick_remember" id="quick_login_remember" type="checkbox" value="yes" class="checkbox" checked="checked" />
+		<label for="quick_login_remember">Remember me</label>
+	</td>
+</tr>
+<tr>
+	<td class="trow2" colspan="2">
+		<div align="center"><input name="submit" type="submit" class="button" value="Login" /></div>
+	</td>
+</tr>
+
+						</table>
+					</form>
+				</div>
+				<script type="text/javascript">
+					$("#quick_login input[name='url']").val($(location).attr('href'));
+				</script>
+
+					<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+				<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+			</div>
+		</div>
+		<div id="content">
+			<div class="wrapper">
+				 
+                                
+				
+				
+				
+				
+				
+				
+
+<div class="navigation">
+
+<a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/index.php">SuprBay: The PirateBay Forum</a>
+&rsaquo;
+
+
+<a href="Forum-Member-Forums">Member Forums</a>
+&rsaquo;
+
+
+<a href="Forum-Online-Privacy-Censorship-Busting">Online Privacy &amp; Censorship Busting</a>
+ <img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/images/arrow_down.png" alt="v" title="" class="pagination_breadcrumb_link" id="breadcrumb_multipage" />
+<div id="breadcrumb_multipage_popup" class="pagination pagination_breadcrumb" style="display: none;">
+
+ <a href="forumdisplay.php?fid=51" class="pagination_current">1</a>
+
+<a href="forumdisplay.php?fid=51&amp;page=2" class="pagination_page">2</a>
+
+<a href="forumdisplay.php?fid=51&amp;page=3" class="pagination_page">3</a>
+
+<a href="forumdisplay.php?fid=51&amp;page=4" class="pagination_page">4</a>
+
+<a href="forumdisplay.php?fid=51&amp;page=5" class="pagination_page">5</a>
+
+&hellip;  <a href="forumdisplay.php?fid=51&amp;page=16" class="pagination_last">16</a>
+
+<a href="forumdisplay.php?fid=51&amp;page=2" class="pagination_next">Next &raquo;</a>
+
+</div>
+<script type="text/javascript">
+// <!--
+	if(use_xmlhttprequest == "1")
+	{
+		$("#breadcrumb_multipage").popupMenu();
+	}
+// -->
+</script>
+
+
+
+<br /><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/images/nav_bit.png" alt="" />
+
+<span class="active">BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking</span>
+
+</div>
+
+				<br />
+
+	
+	
+	<div class="float_left">
+		
+<div class="pagination">
+<span class="pages">Pages (2):</span>
+
+ <span class="pagination_current">1</span>
+
+<a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?page=2" class="pagination_page">2</a>
+
+<a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?page=2" class="pagination_next">Next &raquo;</a>
+
+</div>
+
+	</div>
+	<div class="float_right">
+		
+	</div>
+	
+	<table border="0" cellspacing="0" cellpadding="5" class="tborder tfixed clear">
+		<tr>
+			<td class="thead">
+				<div>
+					<strong>BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking</strong>
+				</div>
+			</td>
+		</tr>
+<tr><td id="posts_container">
+	<div id="posts">
+		
+
+
+<a name="pid259501" id="pid259501"></a>
+<div class="post classic " style="" id="post_259501">
+<div class="post_author scaleimages">
+	
+
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-Ernesto">Ernesto</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+				Freaky Bot
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: Mar 31, 2020<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=5399">818</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=5399">1,207</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=5399"><strong class="reputation_positive">33</strong></a>
+
+
+
+<div id="TPB_user_links"></div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=259501#pid259501" title="BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#1</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Dec 31, 2018, 18:25 pm <span class="post_edit" id="edited_by_259501"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_259501">
+		<img src="http://torrentfreak.com/images/deniedblocked.jpg" loading="lazy"  alt="[Image: deniedblocked.jpg]" class="mycode_img" /><br />
+<br />
+Over the past 18 years, ever since P2P clients made their run into the big time, users have been trying to figure out a way to avoid expensive lawsuits.<br />
+<br />
+At the beginning, no real solutions were available, so it was a roll of the dice from start to finish. People either got lucky, or they didn’t. The majority did but a significant number didn’t feel like taking so many chances.<br />
+<br />
+Somewhere along the way, so-called ‘peer-blocking’ applications raised their head. These pieces of software act like a firewall on a user’s computer, with the aim of preventing ‘hostile’ IP addresses from connecting to a torrent client, for example, thus preventing lawsuits.<br />
+<br />
+Over the years, millions of users installed these programs (along with the blocklists containing the supposed IP addresses of anti-piracy groups) believing that no ‘bad players’ could access their machines. Unfortunately for those using them, these blocklists were completely ineffective and remain so today.<br />
+<br />
+Peer-blocking applications should have died a death more than a decade ago but for some inexplicable reason, torrent users on many public forums continue to post about them, asking whether they’re doing the job they’re supposed to and if additional precautions are needed.<br />
+<br />
+Despite plenty of information to the contrary, some still swear by these lists and a few stubbornly believe they are “better than nothing”. If locking every window on a house but leaving the front door open is “better than nothing” to prevent burglars, then it’s difficult to disagree. If making sure is the aim, blocklists should be thrown in the trash can marked ‘placebo’.<br />
+<br />
+The problem is the way these things work. Peer-blocking applications use lists of IP addresses (generally compiled by volunteers) which are thought to be connected to anti-piracy, copyright trolls, government bodies, and others interested in stopping piracy. The aim is that if all of these IP addresses can be blocked, the problem can be solved.<br />
+<br />
+Years ago, when people had less understanding of these matters, blocklists seemed like the tool everyone needed. However, blocklists are massively incomplete, woefully out-of-date, and cannot ever hope to ‘know’ every IP address used by every anti-P2P group. For those that still aren’t convinced, let’s take site-blocking as an example.<br />
+<br />
+When ISPs block ‘pirate’ websites, they prevent users from accessing either their domain names, IP addresses, or DNS. When customers try to access any or all of these things, a firewall on the ISP’s end prevents the connection. No further explanation is necessary because after a decade of blocking, most proficient users generally understand how these things work.<br />
+<br />
+Now think for a moment how easily these blocks are defeated. As soon as an order is handed down, sites can grab a new domain, a new IP address, or have their traffic funneled through any number of proxies and mirrors. Users, for their part, can evade bans by using these modified services or utilizing tools like VPNs. Blocking is very easily bypassed.<br />
+<br />
+Now for the big non-surprise: anti-piracy groups can deploy just as many and more techniques to ensure that their entries on blocklists are out-of-date or completely irrelevant. Their tracking machines can be shifted around IP addresses in the blink of an eye, through datacenters or even residential ISPs, if there is a real need for stealth.<br />
+<br />
+No one anywhere on the planet – no matter how clever or resourceful – has the skill or resources to keep up with these changes and/or make a blocklist that deals with them all. A hundred people couldn’t manage it, nor could a thousand. The information required simply isn’t made public and the result is the publication of blocklists that massively overblock legitimate resources while letting through who-knows-what.<br />
+<br />
+The only real way to ensure that your IP address is never connected to ‘bad players’ while using torrents is to use something <a href="https://torrentfreak.com/vpn-services-keep-anonymous-2018/" target="_blank" rel="noopener" class="mycode_url">like a VPN</a>. Or, of course, don’t share copyrighted content in the first place.<br />
+<br />
+Blocklists have never worked to the extent required and will never work in the future. Anyone who trusts them may as well use a fishing net as a rain hat. It’ll still catch some fish but don’t expect it to keep you dry.<br />
+<br />
+<br />
+Source: <a href="http://torrentfreak.com/" target="_blank" rel="noopener" class="mycode_url">TF</a>, for the latest info on copyright, file-sharing, <a href="https://torrentfreak.com/top-10-most-popular-torrent-sites-of-2018-180107/" target="_blank" rel="noopener" class="mycode_url">torrent sites</a> and more. We also have <a href="https://torrentfreak.com/vpn-services-keep-anonymous-2018/" target="_blank" rel="noopener" class="mycode_url">VPN reviews, </a><a href="https://torrentfreak.com/vpn-discount-coupon-offer-torguard-nordvpn-expressvpn-pia/" target="_blank" rel="noopener" class="mycode_url">discounts, offers and coupons</a>.<br />
+<br />
+<br />
+Originally Published: Mon, 31 Dec 2018 16:15:00 +0000<br />
+<a href="http://feed.torrentfreak.com/~r/Torrentfreak/~3/mubSARSWFuM/" target="_blank" rel="noopener" class="mycode_url">source</a>
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_259501">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=5399" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=259501" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+
+
+<a name="pid259561" id="pid259561"></a>
+<div class="post classic " style="" id="post_259561">
+<div class="post_author scaleimages">
+	
+<div class="author_avatar"><a href="User-contrail"><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/uploads/avatars/avatar_180723.jpg?dateline=1503364213" alt="" width="100" height="76" /></a></div>
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-contrail">contrail</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+					<img src="images/suprbay/trusted.png">
+					<br>
+				
+				penis whore
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: Sep 12, 2021<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=180723">28</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=180723">2,898</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=180723"><strong class="reputation_positive">36</strong></a>
+
+
+
+<div id="TPB_user_links">
+<div id="tpb_user_torrents"><a href="https://thepiratebay.org/user/contrail">Torrents</a></div>
+</div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=259561#pid259561" title="RE: BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#2</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Jan 01, 2019, 03:34 am <span class="post_edit" id="edited_by_259561"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_259561">
+		These blocklists are so ineffective they slow you down, the only way to sty secure is by using a VPN.
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_259561">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=180723" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=259561" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+
+
+<a name="pid259718" id="pid259718"></a>
+<div class="post classic " style="" id="post_259718">
+<div class="post_author scaleimages">
+	
+<div class="author_avatar"><a href="User-wwary4"><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/uploads/avatars/avatar_189594.jpeg?dateline=1547283130" alt="" width="72" height="100" /></a></div>
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-wwary4">wwary4</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+				
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: Jan 14, 2020<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=189594">2</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=189594">28</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=189594"><strong class="reputation_positive">2</strong></a>
+
+
+
+<div id="TPB_user_links"></div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=259718#pid259718" title="RE: BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#3</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Jan 02, 2019, 05:08 am <span class="post_edit" id="edited_by_259718"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_259718">
+		there is that client 'Tribler'. It has some support for better privacy. Unfortunately, its somewhat slow, seems not quite complete.
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_259718">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=189594" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=259718" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+
+
+<a name="pid260041" id="pid260041"></a>
+<div class="post classic " style="" id="post_260041">
+<div class="post_author scaleimages">
+	
+<div class="author_avatar"><a href="User-Aaron-Walkhouse"><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/uploads/avatars/avatar_344.gif?dateline=1382766631" alt="" width="100" height="90" /></a></div>
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-Aaron-Walkhouse">Aaron.Walkhouse</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+				Tinfoil Hat Aficionado
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: Mar 31, 2020<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=344">134</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=344">1,831</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=344"><strong class="reputation_positive">13</strong></a>
+
+
+
+<div id="TPB_user_links">
+<div id="tpb_user_torrents"><a href="https://thepiratebay.org/user/LegendaryAxeman">Torrents</a></div>
+</div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260041#pid260041" title="RE: BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#4</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Jan 05, 2019, 04:48 am <span class="post_edit" id="edited_by_260041"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_260041">
+		Note that TF has an obvious financial interest in steering you to their "partner solutions", so<br />
+that is why they keep repeating already-debunked theories why "you can't protect yourself" <br />
+and "blocklists can't possibly work" without spending money in the partner VPNs they advertise.<br />
+VPNs do work, to be sure, but everyone knows even the best are a slight drag on performance<br />
+and, of course, none of them will let you heavy P2P users ride for free. ‌ Money to be made, see? ‌ ‌ ‌ <img src="http://www3.telus.net/Aaron_Walkhouse/tongue3.gif" loading="lazy"  alt="[Image: tongue3.gif]" class="mycode_img" /><br />
+<br />
+TF already knows, because they have been told, that large commercial operations tend to stick<br />
+to IP address ranges without a lot of flailing about because they have to pay for each twitch, only <br />
+to be caught and blocked every time they move [sometimes in a matter of hours, not days] and<br />
+use of residential ranges was tried, found inefficient and abandoned many years ago. ‌ What was<br />
+posted here is just the stubborn opinions of one guy who refused to learn from those actually in<br />
+the scene and dug in his heels instead of listening to people who have more experience watching<br />
+and responding to those copyright "enforcement" operations over the past [roughly] eighteen years.<br />
+That's the difference between a blogger and active workers. ‌ We actually learn and gain experience.  ‌ ‌ ‌ <img src="http://www3.telus.net/Aaron_Walkhouse/tongue3.gif" loading="lazy"  alt="[Image: tongue3.gif]" class="mycode_img" /><br />
+<br />
+If trolls see your IP address in a tracker or DHT but can't connect they move on to easier victims from<br />
+whom they can at least claim to have gathered "evidence" because there are always plenty of those.<br />
+Some weaker rackets may try to send extortionate "settlement notices" but most know to ignore them.<br />
+<br />
+<hr class="mycode_hr" />
+<br />
+Contrail: Blocklists don't actually slow you down because they are the simplest digital filter which <br />
+consumes nearly zero CPU cycles compared to the OS and applications running at the same time.<br />
+In fact, they do the opposite because they effortlessly quench all hostile traffic in both directions if<br />
+the offenders are in your list. ‌ If you are sharing and downloading files in which copyright trolls are<br />
+interested, the use of such a filter subtracts all their traffic at very little cost in CPU and memory.<br />
+<br />
+I have been using blocklists since P2P was invented and consistently enjoy hundreds of gigabytes <br />
+of unrestricted traffic every month. ‌ Not only that but the trolls haven't sent any complaints at all.
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_260041">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=344" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=260041" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+
+
+<a name="pid260261" id="pid260261"></a>
+<div class="post classic " style="" id="post_260261">
+<div class="post_author scaleimages">
+	
+<div class="author_avatar"><a href="User-contrail"><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/uploads/avatars/avatar_180723.jpg?dateline=1503364213" alt="" width="100" height="76" /></a></div>
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-contrail">contrail</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+					<img src="images/suprbay/trusted.png">
+					<br>
+				
+				penis whore
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: Sep 12, 2021<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=180723">28</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=180723">2,898</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=180723"><strong class="reputation_positive">36</strong></a>
+
+
+
+<div id="TPB_user_links">
+<div id="tpb_user_torrents"><a href="https://thepiratebay.org/user/contrail">Torrents</a></div>
+</div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260261#pid260261" title="RE: BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#5</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Jan 07, 2019, 03:14 am <span class="post_edit" id="edited_by_260261"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_260261">
+		<blockquote class="mycode_quote"><cite><span> (Jan 05, 2019, 04:48 am)</span>Aaron.Walkhouse Wrote:  <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260041#pid260041" class="quick_jump"></a></cite>Blocklists don't actually slow you down because they are the simplest digital filter which <br />
+consumes nearly zero CPU cycles compared to the OS and applications running at the same time.<br />
+In fact, they do the opposite because they effortlessly quench all hostile traffic in both directions if<br />
+the offenders are in your list. ‌ If you are sharing and downloading files in which copyright trolls are<br />
+interested, the use of such a filter subtracts all their traffic at very little cost in CPU and memory.<br />
+<br />
+I have been using blocklists since P2P was invented and consistently enjoy hundreds of gigabytes <br />
+of unrestricted traffic every month. ‌ Not only that but the trolls haven't sent any complaints at all.</blockquote><br />
+Ok probably should try it again and see because I could have been doing something wrong, but yes in this day and age still to be 100% sure and safe it still is the best option to use VPN.
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_260261">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=180723" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=260261" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+
+
+<a name="pid260304" id="pid260304"></a>
+<div class="post classic " style="" id="post_260304">
+<div class="post_author scaleimages">
+	
+<div class="author_avatar"><a href="User-wwary4"><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/uploads/avatars/avatar_189594.jpeg?dateline=1547283130" alt="" width="72" height="100" /></a></div>
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-wwary4">wwary4</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+				
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: Jan 14, 2020<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=189594">2</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=189594">28</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=189594"><strong class="reputation_positive">2</strong></a>
+
+
+
+<div id="TPB_user_links"></div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260304#pid260304" title="RE: BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#6</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Jan 07, 2019, 08:58 am <span class="post_edit" id="edited_by_260304"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_260304">
+		I think that would depend on the VPN/proxy you use. nothing is 100%.
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_260304">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=189594" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=260304" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+
+
+<a name="pid260307" id="pid260307"></a>
+<div class="post classic " style="" id="post_260307">
+<div class="post_author scaleimages">
+	
+<div class="author_avatar"><a href="User-politux"><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/uploads/avatars/avatar_1337.png?dateline=1549816100" alt="" width="100" height="100" /></a></div>
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-politux">politux</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+					<img src="images/suprbay/vip.png">
+					<br>
+				
+				FLAC ftw!
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: Mar 08, 2019<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=1337">415</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=1337">3,499</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=1337"><strong class="reputation_positive">47</strong></a>
+
+
+
+<div id="TPB_user_links">
+<div id="tpb_user_torrents"><a href="https://thepiratebay.org/user/politux">Torrents</a></div>
+</div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260307#pid260307" title="RE: BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#7</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Jan 07, 2019, 09:37 am <span class="post_edit" id="edited_by_260307"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_260307">
+		<blockquote class="mycode_quote"><cite><span> (Jan 07, 2019, 08:58 am)</span>wwary4 Wrote:  <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260304#pid260304" class="quick_jump"></a></cite>I think that would depend on the VPN/proxy you use. nothing is 100%.</blockquote><br />
+Do you do anything but come along and try to one up people?
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_260307">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=1337" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=260307" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+
+
+<a name="pid260825" id="pid260825"></a>
+<div class="post classic " style="" id="post_260825">
+<div class="post_author scaleimages">
+	
+<div class="author_avatar"><a href="User-wwary4"><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/uploads/avatars/avatar_189594.jpeg?dateline=1547283130" alt="" width="72" height="100" /></a></div>
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-wwary4">wwary4</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+				
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: Jan 14, 2020<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=189594">2</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=189594">28</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=189594"><strong class="reputation_positive">2</strong></a>
+
+
+
+<div id="TPB_user_links"></div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260825#pid260825" title="RE: BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#8</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Jan 10, 2019, 12:13 pm <span class="post_edit" id="edited_by_260825">
+<span class="edited_post">(This post was last modified: Jan 10, 2019, 12:42 pm by <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-wwary4">wwary4</a>. Edited 1 time in total.)</span>
+</span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_260825">
+		<blockquote class="mycode_quote"><cite><span> (Jan 07, 2019, 09:37 am)</span>politux Wrote:  <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260307#pid260307" class="quick_jump"></a></cite><blockquote class="mycode_quote"><cite><span> (Jan 07, 2019, 08:58 am)</span>wwary4 Wrote:  <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260304#pid260304" class="quick_jump"></a></cite>I think that would depend on the VPN/proxy you use. nothing is 100%.</blockquote><br />
+Do you do anything but come along and try to one up people?</blockquote><br />
+You're implying that I'm trolling? playing smartas? intentionally being contrarian?<br />
+did I say something incorrect? <br />
+<br />
+One obviously has to trust the owner of VPN/proxy, if it ain't so, please explain.
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_260825">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=189594" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=260825" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+
+
+<a name="pid391579" id="pid391579"></a>
+<div class="post classic " style="" id="post_391579">
+<div class="post_author scaleimages">
+	
+<div class="author_avatar"><a href="User-lustrous"><img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/uploads/avatars/avatar_231161.gif?dateline=1707762623" alt="" width="100" height="100" /></a></div>
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-lustrous">lustrous</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+				BeatBopper30
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: May 06, 2024<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=231161">139</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=231161">1,062</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=231161"><strong class="reputation_positive">7</strong></a>
+
+
+
+<div id="TPB_user_links">
+<div id="tpb_user_torrents"><a href="https://thepiratebay.org/user/lustrous">Torrents</a></div>
+</div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=391579#pid391579" title="RE: BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#9</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Feb 01, 2024, 18:33 pm <span class="post_edit" id="edited_by_391579">
+<span class="edited_post">(This post was last modified: Feb 01, 2024, 18:41 pm by <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-lustrous">lustrous</a>. Edited 1 time in total.)</span>
+</span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_391579">
+		<blockquote class="mycode_quote"><cite>Quote:</cite><span style="font-style: italic;" class="mycode_i">Over the past 18 years, ever since P2P clients made their run into the big time, users have been trying to figure out a way to avoid expensive lawsuits.</span></blockquote>
+<br />
+The most effortless solution to this dilemma lies in embracing a <a href="https://torrentfreak.com/best-vpn-anonymous-no-logging/" target="_blank" rel="noopener" class="mycode_url">VPN</a>. As for those bittorrent block-list tools, I must admit, they have never proven to be of any assistance to me, neither in the year 2016 nor in our present day.
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_391579">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=231161" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=391579" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+
+
+<a name="pid401456" id="pid401456"></a>
+<div class="post classic " style="" id="post_401456">
+<div class="post_author scaleimages">
+	
+
+
+	<div class="author_information">
+			<strong><span class="largetext"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-reeboker">reeboker</a></span></strong><br />
+			<span class="smalltext">
+				
+				
+				
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		
+	Last Active: Jun 09, 2024<br />
+	Threads: <a href="search.php?action=finduserthreads&uid=240499">0</a><br />
+	Posts: <a href="search.php?action=finduser&amp;uid=240499">3</a><br />
+	
+<br />Reputation: 
+<a href="reputation.php?uid=240499"><strong class="reputation_neutral">0</strong></a>
+
+
+
+<div id="TPB_user_links"></div>
+
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		
+<div class="float_right" style="vertical-align: top">
+<strong><a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=401456#pid401456" title="RE: BitTorrent Blocklists Are Even Less Effective Than Pirate Site Blocking">#10</a></strong>
+
+</div>
+
+		
+		<span class="post_date">Jun 09, 2024, 12:18 pm <span class="post_edit" id="edited_by_401456"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_401456">
+		<blockquote class="mycode_quote"><cite><span> (Jan 05, 2019, 04:48 am)</span>Aaron.Walkhouse Wrote:  <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?pid=260041#pid260041" class="quick_jump"></a></cite>If trolls see your IP address in a tracker or DHT but can't connect they move on to easier victims from<br />
+whom they can at least claim to have gathered "evidence" because there are always plenty of those.<br />
+Some weaker rackets may try to send extortionate "settlement notices" but most know to ignore them.</blockquote><br />
+My point of view also.  <img src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/images/smilies/cool.png" alt="Cool" title="Cool" class="smilie smilie_3" />
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_401456">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		
+<a href="search.php?action=finduser&amp;uid=240499" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		
+<a href="newreply.php?tid=105655&amp;replyto=401456" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+
+	</div>
+</div>
+</div>
+
+
+	</div>
+</td></tr>
+		<tr>
+			<td class="tfoot">
+				
+	<div class="float_right">
+		<form action="search.php" method="post">
+			<input type="hidden" name="action" value="thread" />
+			<input type="hidden" name="tid" value="105655" />
+			<input type="text" name="keywords" value="Enter Keywords" onfocus="if(this.value == 'Enter Keywords') { this.value = ''; }" onblur="if(this.value=='') { this.value='Enter Keywords'; }" class="textbox" size="25" />
+			<input type="submit" class="button" value="Search Thread" />
+		</form>
+	</div>
+
+				<div>
+					<strong>&laquo; <a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?action=nextoldest">Next Oldest</a> | <a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?action=nextnewest">Next Newest</a> &raquo;</strong>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="float_left">
+		
+<div class="pagination">
+<span class="pages">Pages (2):</span>
+
+ <span class="pagination_current">1</span>
+
+<a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?page=2" class="pagination_page">2</a>
+
+<a href="Thread-BitTorrent-Blocklists-Are-Even-Less-Effective-Than-Pirate-Site-Blocking?page=2" class="pagination_next">Next &raquo;</a>
+
+</div>
+
+	</div>
+	<div style="padding-top: 4px;" class="float_right">
+		
+	</div>
+	<br class="clear" />
+	
+	
+	
+<br />
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<tr>
+<td class="thead" align="center" colspan="6"><strong>Possibly Related Threads&hellip;</strong></td>
+</tr>
+<tr>
+<td class="tcat" align="center" colspan="2"><span class="smalltext"><strong>Thread</strong></span></td>
+<td class="tcat" align="center"><span class="smalltext"><strong>Author</strong></span></td>
+<td class="tcat" align="center"><span class="smalltext"><strong>Replies</strong></span></td>
+<td class="tcat" align="center"><span class="smalltext"><strong>Views</strong></span></td>
+<td class="tcat" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+
+<tr>
+	<td align="center" class="trow1" width="2%">&nbsp;</td>
+	<td class="trow1"><a href="Thread-Apple-is-tracking-you-even-when-its-own-privacy-settings-say-it%E2%80%99s-not">Apple is tracking you even when its own privacy settings say it’s not</a></td>
+	<td align="center" class="trow1"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-Resurgence">Resurgence</a></td>
+	<td align="center" class="trow1"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/misc.php?action=whoposted&tid=133962" onclick="MyBB.whoPosted(133962); return false;">4</a></td>
+	<td align="center" class="trow1">14,973</td>
+	<td class="trow1" style="white-space: nowrap">
+		<span class="smalltext">Nov 11, 2023, 06:54 am<br />
+		<a href="Thread-Apple-is-tracking-you-even-when-its-own-privacy-settings-say-it%E2%80%99s-not?action=lastpost">Last Post</a>: <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-lustrous">lustrous</a></span>
+	</td>
+	</tr>
+
+<tr>
+	<td align="center" class="trow2" width="2%">&nbsp;</td>
+	<td class="trow2"><a href="Thread-92-of-LinkedIn-users%E2%80%99-data-found-on-hackers-site-for-sale">92% of LinkedIn users’ data found on hackers site for sale</a></td>
+	<td align="center" class="trow2"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-Resurgence">Resurgence</a></td>
+	<td align="center" class="trow2"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/misc.php?action=whoposted&tid=126848" onclick="MyBB.whoPosted(126848); return false;">0</a></td>
+	<td align="center" class="trow2">17,167</td>
+	<td class="trow2" style="white-space: nowrap">
+		<span class="smalltext">Jul 01, 2021, 20:18 pm<br />
+		<a href="Thread-92-of-LinkedIn-users%E2%80%99-data-found-on-hackers-site-for-sale?action=lastpost">Last Post</a>: <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-Resurgence">Resurgence</a></span>
+	</td>
+	</tr>
+
+<tr>
+	<td align="center" class="trow1" width="2%">&nbsp;</td>
+	<td class="trow1"><a href="Thread-Tor-users-under-attack-Hackers-were-controlling-more-than-24-Tor-exit-nodes">Tor users under attack! Hackers were controlling more than 24% Tor exit nodes</a></td>
+	<td align="center" class="trow1"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-azerakimoju">azerakimoju</a></td>
+	<td align="center" class="trow1"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/misc.php?action=whoposted&tid=122386" onclick="MyBB.whoPosted(122386); return false;">2</a></td>
+	<td align="center" class="trow1">18,765</td>
+	<td class="trow1" style="white-space: nowrap">
+		<span class="smalltext">Sep 28, 2020, 07:02 am<br />
+		<a href="Thread-Tor-users-under-attack-Hackers-were-controlling-more-than-24-Tor-exit-nodes?action=lastpost">Last Post</a>: <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-azerakimoju">azerakimoju</a></span>
+	</td>
+	</tr>
+
+<tr>
+	<td align="center" class="trow2" width="2%">&nbsp;</td>
+	<td class="trow2"><a href="Thread-Popular-VPN-and-ad-blocking-apps-are-secretly-harvesting-user-data">Popular VPN and ad-blocking apps are secretly harvesting user data</a></td>
+	<td align="center" class="trow2"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-Resurgence">Resurgence</a></td>
+	<td align="center" class="trow2"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/misc.php?action=whoposted&tid=118992" onclick="MyBB.whoPosted(118992); return false;">2</a></td>
+	<td align="center" class="trow2">16,820</td>
+	<td class="trow2" style="white-space: nowrap">
+		<span class="smalltext">Mar 10, 2020, 20:51 pm<br />
+		<a href="Thread-Popular-VPN-and-ad-blocking-apps-are-secretly-harvesting-user-data?action=lastpost">Last Post</a>: <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-waregim">waregim</a></span>
+	</td>
+	</tr>
+
+<tr>
+	<td align="center" class="trow1" width="2%">&nbsp;</td>
+	<td class="trow1"><a href="Thread-Even-mask-wearers-can-be-ID-d-China-facial-recognition-firm-says">Even mask-wearers can be ID'd, China facial recognition firm says</a></td>
+	<td align="center" class="trow1"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-Resurgence">Resurgence</a></td>
+	<td align="center" class="trow1"><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/misc.php?action=whoposted&tid=118967" onclick="MyBB.whoPosted(118967); return false;">2</a></td>
+	<td align="center" class="trow1">16,121</td>
+	<td class="trow1" style="white-space: nowrap">
+		<span class="smalltext">Mar 10, 2020, 15:16 pm<br />
+		<a href="Thread-Even-mask-wearers-can-be-ID-d-China-facial-recognition-firm-says?action=lastpost">Last Post</a>: <a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/User-Resurgence">Resurgence</a></span>
+	</td>
+	</tr>
+
+</table>
+
+	<br />
+	<div class="float_left">
+		<ul class="thread_tools">
+			
+<li class="printable"><a href="printthread.php?tid=105655">View a Printable Version</a></li>
+
+			
+			
+			
+		</ul>
+	</div>
+
+	<div class="float_right" style="text-align: right;">
+		
+		
+	</div>
+	<br class="clear" />
+	
+<br />
+<span class="smalltext">Users browsing this thread: 2 Guest(s)</span>
+<br />
+
+	
+
+	</div>
+</div>
+<div id="footer">
+
+    <div class="upper tpb_links">
+        <div class="wrapper">
+            <ul class="menu bottom_links">
+                <li><strong>The Pirate Bay:</strong></li>
+                <li><a href="https://thepiratebay.org">thepiratebay.org</a></li>
+                <!-- <!-><a href="https://thepiratebay.se">thepiratebay.se</a></li>
+                <li><a href="https://thepiratebay.ms">thepiratebay.ms</a></li>
+                <li><a href="https://thepiratebay.gd">thepiratebay.gd</a></li>
+                <li><a href="https://thepiratebay.la">thepiratebay.la</a></li>
+                <li><a href="https://thepiratebay.mn">thepiratebay.mn</a></li>
+                <li><a href="https://thepiratebay.vg">thepiratebay.vg</a></li> -->
+                <li><a href="http://piratebayztemzmv.onion">piratebayztemzmv.onion (deprecated onion v2)</a></li>
+                <li><a href="http://piratebayo3klnzokct3wt5yyxb2vpebbuyjl7m623iaxmqhsd52coid.onion">piratebayo3klnzokct3wt5yyxb2vpebbuyjl7m623iaxmqhsd52coid.onion</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="upper sb_links">
+        <div class="wrapper">
+            <ul class="menu bottom_links">
+                <li><strong>Forum:</strong></li>
+                <li><a href="https://pirates-forum.org">pirates-forum.org</a></li>
+                <li><a href="https://forum.suprbay.org">forum.suprbay.org</a></li>
+                <li><a href="http://suprbayoubiexnmp.onion">suprbayoubiexnmp.onion (deprecated onion v2)</a></li>
+                <li><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion">suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion</a></li>
+            </ul>
+        </div>
+    </div>
+
+	<div class="upper contact">
+		<div class="wrapper">
+			
+			
+			<ul class="menu bottom_links">
+				
+<li><a href="/misc.php?page=chat" target="_blank">Contact Us</a></li>
+
+				<li><a href="/">SuprBay</a></li>
+				<li><a href="#top">Return to Top</a></li>
+				<li><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/archive/index.php?thread-105655.html">Lite (Archive) Mode</a></li>
+				<li><a href="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/misc.php?action=syndication">RSS Syndication</a></li>
+				<li><a href="stats.php">Forum Statistics</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="lower">
+		<div class="wrapper">
+			<span id="current_time"><strong>Current time:</strong> May 09, 2025, 13:33 pm</span>
+			<span id="copyright">
+				<!-- MyBB is free software developed and maintained by a volunteer community.
+					It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact,
+					to show your support for MyBB.  If you choose to remove or modify the copyright below,
+					you may be refused support on the MyBB Community Forums.
+
+					This is free software, support us and we'll support you. -->
+				Powered By <a href="https://mybb.com" target="_blank" rel="noopener">MyBB</a>, &copy; 2002-2025 <a href="https://mybb.com" target="_blank" rel="noopener">MyBB Group</a>.
+				<!-- End powered by -->
+			</span>
+		</div>
+	</div>
+</div>
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE --><!-- End task image code -->
+
+</div>
+<script type="text/javascript" src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/jscripts/onion_swap.js"></script>
+<script type="text/javascript" src="http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/jscripts/TPBLink_forms.js?ver=1.5"></script>
+	<script type="text/javascript">
+		var thread_deleted = "0";
+		if(thread_deleted == "1")
+		{
+			$("#quick_reply_form, .new_reply_button, .thread_tools, .inline_rating").hide();
+			$("#moderator_options_selector option.option_mirage").attr("disabled","disabled");
+		}
+	</script>
+</body>
+</html>

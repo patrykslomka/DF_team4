@@ -1,6 +1,6 @@
 {
-  "tor_proxy": "socks5h://127.0.0.1:9050",
-  "tor_control_port": 9051,
+  "tor_proxy": "socks5h://127.0.0.1:9150",
+  "tor_control_port": 9151,
   "tor_control_password": null,
   "max_requests_per_circuit": 15,
   "request_delay_min": 15,
@@ -8,44 +8,96 @@
   "headless": true,
   "targets": [
     {
-      "name": "DreadForum",
+      "name": "SuprBay",
       "urls": [
-        "http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/d/CryptoCurrency",
-        "http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/d/DarkNetMarkets"
+        "http://suprbaydvdcaynfo4dgdzgxb4zuso7rftlil5yg5kqjefnw4wq4ulcad.onion/Forum-Online-Privacy-Censorship-Busting"
       ],
-      "use_playwright": true
+      "use_playwright": false,
+      "selectors": {
+        "thread_selector": "tr[id^='thread_']",
+        "thread_link_selector": "td.threadcol a, a.topictitle",
+        "post_selector": "table.tborder tr:has(.post_body_scaleimages)",
+        "username_selector": ".post_author strong, .username, .name",
+        "timestamp_selector": ".post_date, .postdate, .post-time",
+        "content_selector": ".post_body_scaleimages, [id^='pid_'], .post_content"
+      },
+      "scraping_params": {
+        "max_section_pages": 5,
+        "max_thread_pages": 10,
+        "thread_limit": 25,
+        "delay_min": 8,
+        "delay_max": 15
+      }
     },
     {
-      "name": "AlphaBay",
-      "urls": [
-        "http://alphabay522szl32u4ci5e3iokdsyth56ei7rwngr2wm7i5jo54j2eid.onion/categories/fraud",
-        "http://alphabay522szl32u4ci5e3iokdsyth56ei7rwngr2wm7i5jo54j2eid.onion/categories/services"
+      "name": "Reddit",
+      "subreddits": [
+        "opsec",
+        "privacy",
+        "cybersecurity",
+        "privacytoolsIO",
+        "encryption",
+        "TOR",
+        "VPN",
+        "netsec",
+        "security",
+        "tails",
+        "anonymity",
+        "InfoSec",
+        "darknetdiaries"
       ],
-      "use_playwright": true
-    },
-    {
-      "name": "ExploitForum",
-      "urls": [
-        "http://exploitivzcm5dawzhe6c32bbylyggbjvh5dyvsvb5lkuz5ptmunkmqd.onion/forums/general-discussions",
-        "http://exploitivzcm5dawzhe6c32bbylyggbjvh5dyvsvb5lkuz5ptmunkmqd.onion/forums/marketplace"
+      "keywords": [
+        "opsec",
+        "operational security",
+        "privacy",
+        "anonymity",
+        "encryption",
+        "tor",
+        "vpn",
+        "security",
+        "surveillance",
+        "tracking",
+        "fingerprinting",
+        "metadata"
       ],
-      "use_playwright": false
-    },
-    {
-      "name": "ViceCity",
-      "urls": [
-        "http://vice2e3gr3pmaikukidllstulxvkb7a247gkguihzvyk3gqwduwbqad.onion/category/1",
-        "http://vice2e3gr3pmaikukidllstulxvkb7a247gkguihzvyk3gqwduwbqad.onion/category/2"
-      ],
-      "use_playwright": true
-    },
-    {
-      "name": "Tor2Door",
-      "urls": [
-        "http://t2donion2zuhy6fpizsdxj6incnptekcxzkdwz4rwrprivcjbgx7i2qd.onion/category/drugs",
-        "http://t2donion2zuhy6fpizsdxj6incnptekcxzkdwz4rwrprivcjbgx7i2qd.onion/category/fraud"
-      ],
-      "use_playwright": false
+      "use_playwright": false,
+      "scraping_params": {
+        "limit": 100,
+        "time_filter": "month",
+        "sort": "top",
+        "comments_limit": 50,
+        "delay_min": 5,
+        "delay_max": 10,
+        "keyword_filter": true
+      }
     }
-  ]
+  ],
+  "analysis_params": {
+    "n_topics": 7,
+    "topic_method": "lda",
+    "n_keywords_per_topic": 15,
+    "custom_stopwords": [
+      "just", "like", "get", "one", "use", "using", 
+      "know", "think", "want", "need", "make", "time", 
+      "really", "thing", "point", "way", "dont", "lot",
+      "edit", "deleted", "removed", "comment", "post", "thread"
+    ],
+    "security_keywords": [
+      "encryption", "vpn", "tor", "proxy", "anonymous", "privacy",
+      "security", "tracking", "surveillance", "monitor", "protect",
+      "secure", "cipher", "private", "trace", "identity", "hide",
+      "mask", "conceal", "data", "information", "breach", "leak",
+      "vulnerability", "exploit", "attack", "threat", "risk",
+      "exposure", "compromise", "hacker", "adversary", "agency", 
+      "government", "law enforcement", "backdoor", "fingerprint",
+      "metadata", "authentication", "authorization", "firewall",
+      "malware", "phishing", "2fa", "mfa", "biometric", "keylogger",
+      "zero-day", "zero-knowledge", "end-to-end", "e2ee", "pgp", "ssh",
+      "https", "tls", "password", "token", "cookie", "browser",
+      "ip address", "mac address", "dns", "vpn", "proxy", "relay",
+      "compartmentalization", "burner", "throwaway", "signal", "wire",
+      "telegram", "session", "matrix", "element", "whonix", "qubes",
+      "linux", "tails", "usb", "airgap", "physical security"
+    ]
+  }
 }

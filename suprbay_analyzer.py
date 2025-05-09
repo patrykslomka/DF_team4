@@ -2,12 +2,12 @@
 SuprBay OpSec Discourse Analyzer
 --------------------------------
 A specialized tool for analyzing OpSec discussions from SuprBay Dark Web forum
-and comparing them with Surface Web discourse.
+and comparing them with Reddit discourse.
 
 This script provides:
 - Specialized topic modeling for OpSec discussions
 - Dark Web specific terminology analysis
-- Comparison with Surface Web data
+- Comparison with Reddit data
 - Visualizations focused on comparative discourse analysis
 """
 
@@ -70,7 +70,6 @@ class SuprBayAnalyzer:
     """Analyzer for SuprBay OpSec discourse data"""
 
     def __init__(self, darkweb_dir="data/darkweb",
-                 surfaceweb_dir="data/surfaceweb",
                  reddit_dir="data/reddit",
                  output_dir="analysis_results"):
         """
@@ -78,12 +77,10 @@ class SuprBayAnalyzer:
 
         Args:
             darkweb_dir (str): Directory containing Dark Web data
-            surfaceweb_dir (str): Directory containing Surface Web data
             reddit_dir (str): Directory containing Reddit data
             output_dir (str): Directory to store analysis results
         """
         self.darkweb_dir = darkweb_dir
-        self.surfaceweb_dir = surfaceweb_dir
         self.reddit_dir = reddit_dir
         self.output_dir = output_dir
 
@@ -116,9 +113,7 @@ class SuprBayAnalyzer:
 
         # Initialize data storage
         self.darkweb_data = None
-        self.surfaceweb_data = None
         self.reddit_data = None
-        self.combined_surface_data = None
 
     def load_data(self):
         """
@@ -129,16 +124,13 @@ class SuprBayAnalyzer:
         """
         # Find all JSON files
         darkweb_files = glob.glob(os.path.join(self.darkweb_dir, "*.json"))
-        surfaceweb_files = glob.glob(os.path.join(self.surfaceweb_dir, "*.json"))
         reddit_files = glob.glob(os.path.join(self.reddit_dir, "*.json"))
 
         logger.info(f"Found {len(darkweb_files)} Dark Web data files")
-        logger.info(f"Found {len(surfaceweb_files)} Surface Web data files")
         logger.info(f"Found {len(reddit_files)} Reddit data files")
 
         # Load data
         darkweb_data = []
-        surfaceweb_data = []
         reddit_data = []
 
         # Load Dark Web data
@@ -147,15 +139,6 @@ class SuprBayAnalyzer:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                     darkweb_data.extend(data)
-            except Exception as e:
-                logger.error(f"Error loading file {file_path}: {e}")
-
-        # Load Surface Web data
-        for file_path in surfaceweb_files:
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    surfaceweb_data.extend(data)
             except Exception as e:
                 logger.error(f"Error loading file {file_path}: {e}")
 
@@ -170,29 +153,14 @@ class SuprBayAnalyzer:
 
         # Convert to DataFrames
         self.darkweb_data = pd.DataFrame(darkweb_data) if darkweb_data else pd.DataFrame()
-        self.surfaceweb_data = pd.DataFrame(surfaceweb_data) if surfaceweb_data else pd.DataFrame()
         self.reddit_data = pd.DataFrame(reddit_data) if reddit_data else pd.DataFrame()
 
-        # Combine surface web and reddit data
-        if not self.surfaceweb_data.empty and not self.reddit_data.empty:
-            self.combined_surface_data = pd.concat([self.surfaceweb_data, self.reddit_data])
-        elif not self.surfaceweb_data.empty:
-            self.combined_surface_data = self.surfaceweb_data
-        elif not self.reddit_data.empty:
-            self.combined_surface_data = self.reddit_data
-        else:
-            self.combined_surface_data = pd.DataFrame()
-
         logger.info(f"Loaded {len(self.darkweb_data)} Dark Web posts")
-        logger.info(f"Loaded {len(self.surfaceweb_data)} Surface Web posts")
         logger.info(f"Loaded {len(self.reddit_data)} Reddit posts")
-        logger.info(f"Combined Surface Web data: {len(self.combined_surface_data)} posts")
 
         return {
             'darkweb': self.darkweb_data,
-            'surfaceweb': self.surfaceweb_data,
-            'reddit': self.reddit_data,
-            'combined_surface': self.combined_surface_data
+            'reddit': self.reddit_data
         }
 
     def preprocess_text(self, text):
@@ -556,56 +524,56 @@ class SuprBayAnalyzer:
             dict: Analysis results
         """
         # Load data if not already loaded
-        if self.darkweb_data is None or self.combined_surface_data is None:
+        if self.darkweb_data is None or self.reddit_data is None:
             self.load_data()
 
         # Check if we have data to analyze
-        if self.darkweb_data.empty and self.combined_surface_data.empty:
+        if self.darkweb_data.empty and self.reddit_data.empty:
             logger.error("No data available for analysis")
             return {}
 
         # Clean and prepare data
         darkweb_clean, darkweb_docs, darkweb_preprocessed = self.clean_corpus(self.darkweb_data)
-        surface_clean, surface_docs, surface_preprocessed = self.clean_corpus(self.combined_surface_data)
+        reddit_clean, reddit_docs, reddit_preprocessed = self.clean_corpus(self.reddit_data)
 
         logger.info("Performing comparative analysis...")
         results = {
             'darkweb': {},
-            'surface': {},
+            'reddit': {},
             'comparison': {}
         }
 
         # 1. Basic text statistics
         logger.info("Analyzing text statistics...")
         results['darkweb']['text_stats'] = self.analyze_linguistic_complexity(darkweb_docs)
-        results['surface']['text_stats'] = self.analyze_linguistic_complexity(surface_docs)
+        results['reddit']['text_stats'] = self.analyze_linguistic_complexity(reddit_docs)
 
         # 2. Keyword extraction
         logger.info("Extracting keywords...")
         results['darkweb']['top_keywords'] = self.extract_keywords(darkweb_docs)
-        results['surface']['top_keywords'] = self.extract_keywords(surface_docs)
+        results['reddit']['top_keywords'] = self.extract_keywords(reddit_docs)
 
         # 3. OpSec-specific terminology
         logger.info("Identifying OpSec-specific terminology...")
         results['darkweb']['opsec_terms'] = self.extract_opsec_specific_terminology(
-            darkweb_docs, surface_docs)
-        results['surface']['opsec_terms'] = self.extract_opsec_specific_terminology(
-            surface_docs, darkweb_docs)
+            darkweb_docs, reddit_docs)
+        results['reddit']['opsec_terms'] = self.extract_opsec_specific_terminology(
+            reddit_docs, darkweb_docs)
 
         # 4. Topic modeling
         logger.info("Performing topic modeling...")
         darkweb_model, darkweb_vectorizer, darkweb_topics, darkweb_features = self.perform_topic_modeling(
             darkweb_docs)
-        surface_model, surface_vectorizer, surface_topics, surface_features = self.perform_topic_modeling(
-            surface_docs)
+        reddit_model, reddit_vectorizer, reddit_topics, reddit_features = self.perform_topic_modeling(
+            reddit_docs)
 
         results['darkweb']['topic_keywords'] = self.get_topic_keywords(darkweb_model, darkweb_features)
-        results['surface']['topic_keywords'] = self.get_topic_keywords(surface_model, surface_features)
+        results['reddit']['topic_keywords'] = self.get_topic_keywords(reddit_model, reddit_features)
 
         # 5. Sentiment analysis
         logger.info("Analyzing sentiment...")
         darkweb_sentiment = self.perform_sentiment_analysis(darkweb_docs)
-        surface_sentiment = self.perform_sentiment_analysis(surface_docs)
+        reddit_sentiment = self.perform_sentiment_analysis(reddit_docs)
 
         if not darkweb_sentiment.empty:
             results['darkweb']['sentiment'] = {
@@ -615,13 +583,13 @@ class SuprBayAnalyzer:
         else:
             results['darkweb']['sentiment'] = {}
 
-        if not surface_sentiment.empty:
-            results['surface']['sentiment'] = {
-                'mean': surface_sentiment.mean().to_dict(),
-                'median': surface_sentiment.median().to_dict()
+        if not reddit_sentiment.empty:
+            results['reddit']['sentiment'] = {
+                'mean': reddit_sentiment.mean().to_dict(),
+                'median': reddit_sentiment.median().to_dict()
             }
         else:
-            results['surface']['sentiment'] = {}
+            results['reddit']['sentiment'] = {}
 
         # 6. Security focus analysis
         logger.info("Analyzing security focus...")
@@ -638,50 +606,50 @@ class SuprBayAnalyzer:
         ]
 
         results['darkweb']['security_focus'] = self.analyze_security_focus(darkweb_docs, security_keywords)
-        results['surface']['security_focus'] = self.analyze_security_focus(surface_docs, security_keywords)
+        results['reddit']['security_focus'] = self.analyze_security_focus(reddit_docs, security_keywords)
 
         # 7. Comparative metrics
         logger.info("Computing comparative metrics...")
 
         # Find common and unique keywords
         darkweb_keywords = [kw[0] for kw in results['darkweb']['top_keywords']]
-        surface_keywords = [kw[0] for kw in results['surface']['top_keywords']]
+        reddit_keywords = [kw[0] for kw in results['reddit']['top_keywords']]
 
-        common_keywords = set(darkweb_keywords).intersection(set(surface_keywords))
-        unique_darkweb_keywords = set(darkweb_keywords).difference(set(surface_keywords))
-        unique_surface_keywords = set(surface_keywords).difference(set(darkweb_keywords))
+        common_keywords = set(darkweb_keywords).intersection(set(reddit_keywords))
+        unique_darkweb_keywords = set(darkweb_keywords).difference(set(reddit_keywords))
+        unique_reddit_keywords = set(reddit_keywords).difference(set(darkweb_keywords))
 
         results['comparison']['common_keywords'] = list(common_keywords)
         results['comparison']['unique_darkweb_keywords'] = list(unique_darkweb_keywords)
-        results['comparison']['unique_surface_keywords'] = list(unique_surface_keywords)
+        results['comparison']['unique_reddit_keywords'] = list(unique_reddit_keywords)
 
         # Compare sentiment
-        if results['darkweb']['sentiment'] and results['surface']['sentiment']:
+        if results['darkweb']['sentiment'] and results['reddit']['sentiment']:
             results['comparison']['sentiment_diff'] = {
-                k: results['darkweb']['sentiment']['mean'][k] - results['surface']['sentiment']['mean'][k]
+                k: results['darkweb']['sentiment']['mean'][k] - results['reddit']['sentiment']['mean'][k]
                 for k in results['darkweb']['sentiment']['mean'].keys()
             }
 
         # Compare text complexity
-        if results['darkweb']['text_stats'] and results['surface']['text_stats']:
+        if results['darkweb']['text_stats'] and results['reddit']['text_stats']:
             results['comparison']['complexity_diff'] = {
-                k: results['darkweb']['text_stats'][k] - results['surface']['text_stats'][k]
+                k: results['darkweb']['text_stats'][k] - results['reddit']['text_stats'][k]
                 for k in results['darkweb']['text_stats'].keys()
-                if k in results['surface']['text_stats']
+                if k in results['reddit']['text_stats']
             }
 
         # Compare security focus
-        if results['darkweb']['security_focus'] and results['surface']['security_focus']:
+        if results['darkweb']['security_focus'] and results['reddit']['security_focus']:
             results['comparison']['security_focus_diff'] = {
                 'avg_mentions_diff': (results['darkweb']['security_focus']['avg_mentions_per_doc'] -
-                                     results['surface']['security_focus']['avg_mentions_per_doc']),
+                                     results['reddit']['security_focus']['avg_mentions_per_doc']),
                 'docs_with_mentions_pct_diff': (results['darkweb']['security_focus']['docs_with_mentions_pct'] -
-                                               results['surface']['security_focus']['docs_with_mentions_pct'])
+                                               results['reddit']['security_focus']['docs_with_mentions_pct'])
             }
 
         # 8. Generate visualizations
         logger.info("Generating visualizations...")
-        self.generate_visualizations(results, darkweb_clean, surface_clean)
+        self.generate_visualizations(results, darkweb_clean, reddit_clean)
 
         # Save the results
         self.save_results(results)
@@ -703,51 +671,51 @@ class SuprBayAnalyzer:
 
         logger.info(f"Analysis results saved to {filepath}")
 
-    def generate_visualizations(self, results, darkweb_df, surface_df):
+    def generate_visualizations(self, results, darkweb_df, reddit_df):
         """
         Generate visualizations for the analysis results
 
         Args:
             results (dict): Analysis results
             darkweb_df (pd.DataFrame): Dark Web data
-            surface_df (pd.DataFrame): Surface Web data
+            reddit_df (pd.DataFrame): Reddit data
         """
         # 1. Topic Distribution Comparison
         self.generate_topic_comparison(
             results['darkweb']['topic_keywords'],
-            results['surface']['topic_keywords'],
+            results['reddit']['topic_keywords'],
             os.path.join(self.viz_dir, "topic_comparison.png")
         )
 
         # 2. Security Focus Comparison
-        if 'security_focus' in results['darkweb'] and 'security_focus' in results['surface']:
+        if 'security_focus' in results['darkweb'] and 'security_focus' in results['reddit']:
             self.generate_security_focus_comparison(
                 results['darkweb']['security_focus'],
-                results['surface']['security_focus'],
+                results['reddit']['security_focus'],
                 os.path.join(self.viz_dir, "security_focus_comparison.png")
             )
 
         # 3. Sentiment Comparison
-        if 'sentiment' in results['darkweb'] and 'sentiment' in results['surface']:
+        if 'sentiment' in results['darkweb'] and 'sentiment' in results['reddit']:
             self.generate_sentiment_comparison(
                 results['darkweb']['sentiment'],
-                results['surface']['sentiment'],
+                results['reddit']['sentiment'],
                 os.path.join(self.viz_dir, "sentiment_comparison.png")
             )
 
         # 4. Text Complexity Comparison
-        if 'text_stats' in results['darkweb'] and 'text_stats' in results['surface']:
+        if 'text_stats' in results['darkweb'] and 'text_stats' in results['reddit']:
             self.generate_complexity_comparison(
                 results['darkweb']['text_stats'],
-                results['surface']['text_stats'],
+                results['reddit']['text_stats'],
                 os.path.join(self.viz_dir, "complexity_comparison.png")
             )
 
         # 5. OpSec-Specific Terminology Comparison
-        if 'opsec_terms' in results['darkweb'] and 'opsec_terms' in results['surface']:
+        if 'opsec_terms' in results['darkweb'] and 'opsec_terms' in results['reddit']:
             self.generate_opsec_terminology_comparison(
                 results['darkweb']['opsec_terms'],
-                results['surface']['opsec_terms'],
+                results['reddit']['opsec_terms'],
                 os.path.join(self.viz_dir, "opsec_terminology_comparison.png")
             )
 
@@ -758,36 +726,36 @@ class SuprBayAnalyzer:
                 os.path.join(self.viz_dir, "darkweb_thread_topics.png")
             )
 
-        if not surface_df.empty and 'thread_title' in surface_df.columns:
+        if not reddit_df.empty and 'thread_title' in reddit_df.columns:
             self.generate_thread_topics_wordcloud(
-                surface_df['thread_title'].tolist(),
-                os.path.join(self.viz_dir, "surface_thread_topics.png"),
+                reddit_df['thread_title'].tolist(),
+                os.path.join(self.viz_dir, "reddit_thread_topics.png"),
                 is_darkweb=False
             )
 
-    def generate_topic_comparison(self, darkweb_topics, surface_topics, output_path):
+    def generate_topic_comparison(self, darkweb_topics, reddit_topics, output_path):
         """
         Generate topic comparison visualization
 
         Args:
             darkweb_topics (list): Dark Web topic keywords
-            surface_topics (list): Surface Web topic keywords
+            reddit_topics (list): Reddit topic keywords
             output_path (str): Path to save the visualization
         """
-        if not darkweb_topics or not surface_topics:
+        if not darkweb_topics or not reddit_topics:
             logger.warning("Not enough data for topic comparison visualization")
             return
 
         # Configure the visualization
-        num_topics = min(len(darkweb_topics), len(surface_topics), 5)  # Compare up to 5 topics
+        num_topics = min(len(darkweb_topics), len(reddit_topics), 5)  # Compare up to 5 topics
 
         # Set up the figure
         fig, axes = plt.subplots(2, num_topics, figsize=(5*num_topics, 10))
-        fig.suptitle('Dark Web vs. Surface Web OpSec Topics', fontsize=22, y=0.98)
+        fig.suptitle('Dark Web vs. Reddit OpSec Topics', fontsize=22, y=0.98)
 
         # Define color maps
         darkweb_cmap = plt.cm.Reds
-        surface_cmap = plt.cm.Blues
+        reddit_cmap = plt.cm.Blues
 
         # Plot Dark Web topics
         for i in range(num_topics):
@@ -804,20 +772,20 @@ class SuprBayAnalyzer:
             ax.axis('off')
             ax.set_title(f'Dark Web Topic {i+1}', color='white', fontsize=16)
 
-        # Plot Surface Web topics
+        # Plot Reddit topics
         for i in range(num_topics):
             ax = axes[1, i] if num_topics > 1 else axes[1]
-            topic_dict = {word: 1 for word in surface_topics[i][:15]}
+            topic_dict = {word: 1 for word in reddit_topics[i][:15]}
             wc = WordCloud(
                 width=400, height=300,
                 background_color='black',
-                colormap=surface_cmap,
+                colormap=reddit_cmap,
                 max_words=50
             ).generate_from_frequencies(topic_dict)
 
             ax.imshow(wc, interpolation='bilinear')
             ax.axis('off')
-            ax.set_title(f'Surface Web Topic {i+1}', color='white', fontsize=16)
+            ax.set_title(f'Reddit Topic {i+1}', color='white', fontsize=16)
 
         plt.tight_layout(rect=[0, 0, 1, 0.95])
         plt.savefig(output_path, dpi=300, bbox_inches='tight')
@@ -825,16 +793,16 @@ class SuprBayAnalyzer:
 
         logger.info(f"Topic comparison visualization saved to {output_path}")
 
-    def generate_security_focus_comparison(self, darkweb_security, surface_security, output_path):
+    def generate_security_focus_comparison(self, darkweb_security, reddit_security, output_path):
         """
         Generate security focus comparison visualization
 
         Args:
             darkweb_security (dict): Dark Web security focus metrics
-            surface_security (dict): Surface Web security focus metrics
+            reddit_security (dict): Reddit security focus metrics
             output_path (str): Path to save the visualization
         """
-        if not darkweb_security or not surface_security:
+        if not darkweb_security or not reddit_security:
             logger.warning("Not enough data for security focus comparison visualization")
             return
 
@@ -850,13 +818,13 @@ class SuprBayAnalyzer:
         labels = ['Avg. Security Mentions per Post', '% Posts with Security Mentions']
 
         darkweb_values = [darkweb_security.get(m, 0) for m in metrics]
-        surface_values = [surface_security.get(m, 0) for m in metrics]
+        reddit_values = [reddit_security.get(m, 0) for m in metrics]
 
         x = np.arange(len(labels))
         width = 0.35
 
         ax1.bar(x - width/2, darkweb_values, width, label='Dark Web', color='crimson')
-        ax1.bar(x + width/2, surface_values, width, label='Surface Web', color='royalblue')
+        ax1.bar(x + width/2, reddit_values, width, label='Reddit', color='royalblue')
 
         ax1.set_ylabel('Value')
         ax1.set_title('Security Focus Metrics', fontsize=18)
@@ -868,7 +836,7 @@ class SuprBayAnalyzer:
         for i, v in enumerate(darkweb_values):
             ax1.text(i - width/2, v + 0.1, f'{v:.2f}', ha='center', va='bottom', color='white')
 
-        for i, v in enumerate(surface_values):
+        for i, v in enumerate(reddit_values):
             ax1.text(i + width/2, v + 0.1, f'{v:.2f}', ha='center', va='bottom', color='white')
 
         # 2. Top security keywords - Dark Web
@@ -887,20 +855,20 @@ class SuprBayAnalyzer:
             for i, v in enumerate(counts_dark):
                 ax2.text(v + 0.5, i, str(v), va='center', color='white')
 
-        # 3. Top security keywords - Surface Web
+        # 3. Top security keywords - Reddit
         ax3 = plt.subplot(gs[1, 1])
 
-        if 'top_security_keywords' in surface_security and surface_security['top_security_keywords']:
-            kw_surface = surface_security['top_security_keywords'][:8]  # Top 8 keywords
-            keywords_surface = [item[0] for item in kw_surface]
-            counts_surface = [item[1] for item in kw_surface]
+        if 'top_security_keywords' in reddit_security and reddit_security['top_security_keywords']:
+            kw_reddit = reddit_security['top_security_keywords'][:8]  # Top 8 keywords
+            keywords_reddit = [item[0] for item in kw_reddit]
+            counts_reddit = [item[1] for item in kw_reddit]
 
-            ax3.barh(keywords_surface, counts_surface, color='royalblue')
-            ax3.set_title('Top Surface Web Security Keywords', fontsize=16)
+            ax3.barh(keywords_reddit, counts_reddit, color='royalblue')
+            ax3.set_title('Top Reddit Security Keywords', fontsize=16)
             ax3.set_xlabel('Frequency')
 
             # Add values at the end of bars
-            for i, v in enumerate(counts_surface):
+            for i, v in enumerate(counts_reddit):
                 ax3.text(v + 0.5, i, str(v), va='center', color='white')
 
         plt.tight_layout()
@@ -909,16 +877,16 @@ class SuprBayAnalyzer:
 
         logger.info(f"Security focus comparison visualization saved to {output_path}")
 
-    def generate_sentiment_comparison(self, darkweb_sentiment, surface_sentiment, output_path):
+    def generate_sentiment_comparison(self, darkweb_sentiment, reddit_sentiment, output_path):
         """
         Generate sentiment comparison visualization
 
         Args:
             darkweb_sentiment (dict): Dark Web sentiment metrics
-            surface_sentiment (dict): Surface Web sentiment metrics
+            reddit_sentiment (dict): Reddit sentiment metrics
             output_path (str): Path to save the visualization
         """
-        if not darkweb_sentiment or not surface_sentiment:
+        if not darkweb_sentiment or not reddit_sentiment:
             logger.warning("Not enough data for sentiment comparison visualization")
             return
 
@@ -928,16 +896,16 @@ class SuprBayAnalyzer:
         categories = ['Negative', 'Neutral', 'Positive', 'Compound']
         keys = ['neg', 'neu', 'pos', 'compound']
 
-        if 'mean' in darkweb_sentiment and 'mean' in surface_sentiment:
+        if 'mean' in darkweb_sentiment and 'mean' in reddit_sentiment:
             dark_values = [darkweb_sentiment['mean'].get(k, 0) for k in keys]
-            surface_values = [surface_sentiment['mean'].get(k, 0) for k in keys]
+            reddit_values = [reddit_sentiment['mean'].get(k, 0) for k in keys]
 
             x = np.arange(len(categories))
             width = 0.35
 
             # Plot bars
             plt.bar(x - width/2, dark_values, width, label='Dark Web', color='crimson')
-            plt.bar(x + width/2, surface_values, width, label='Surface Web', color='royalblue')
+            plt.bar(x + width/2, reddit_values, width, label='Reddit', color='royalblue')
 
             # Customize plot
             plt.ylabel('Score')
@@ -949,7 +917,7 @@ class SuprBayAnalyzer:
             for i, v in enumerate(dark_values):
                 plt.text(i - width/2, v + 0.01, f'{v:.2f}', ha='center', va='bottom', color='white')
 
-            for i, v in enumerate(surface_values):
+            for i, v in enumerate(reddit_values):
                 plt.text(i + width/2, v + 0.01, f'{v:.2f}', ha='center', va='bottom', color='white')
 
             plt.tight_layout()
@@ -958,16 +926,16 @@ class SuprBayAnalyzer:
 
             logger.info(f"Sentiment comparison visualization saved to {output_path}")
 
-    def generate_complexity_comparison(self, darkweb_stats, surface_stats, output_path):
+    def generate_complexity_comparison(self, darkweb_stats, reddit_stats, output_path):
         """
         Generate text complexity comparison visualization
 
         Args:
             darkweb_stats (dict): Dark Web text statistics
-            surface_stats (dict): Surface Web text statistics
+            reddit_stats (dict): Reddit text statistics
             output_path (str): Path to save the visualization
         """
-        if not darkweb_stats or not surface_stats:
+        if not darkweb_stats or not reddit_stats:
             logger.warning("Not enough data for complexity comparison visualization")
             return
 
@@ -990,7 +958,7 @@ class SuprBayAnalyzer:
 
         # Get values
         darkweb_values = [darkweb_stats.get(m, 0) for m in metrics]
-        surface_values = [surface_stats.get(m, 0) for m in metrics]
+        reddit_values = [reddit_stats.get(m, 0) for m in metrics]
 
         # Set up bars
         x = np.arange(len(labels))
@@ -998,7 +966,7 @@ class SuprBayAnalyzer:
 
         # Create plot
         plt.bar(x - width/2, darkweb_values, width, label='Dark Web', color='crimson')
-        plt.bar(x + width/2, surface_values, width, label='Surface Web', color='royalblue')
+        plt.bar(x + width/2, reddit_values, width, label='Reddit', color='royalblue')
 
         # Customize plot
         plt.ylabel('Value')
@@ -1010,7 +978,7 @@ class SuprBayAnalyzer:
         for i, v in enumerate(darkweb_values):
             plt.text(i - width/2, v + 0.02, f'{v:.2f}', ha='center', va='bottom', color='white')
 
-        for i, v in enumerate(surface_values):
+        for i, v in enumerate(reddit_values):
             plt.text(i + width/2, v + 0.02, f'{v:.2f}', ha='center', va='bottom', color='white')
 
         plt.tight_layout()
@@ -1019,16 +987,16 @@ class SuprBayAnalyzer:
 
         logger.info(f"Complexity comparison visualization saved to {output_path}")
 
-    def generate_opsec_terminology_comparison(self, darkweb_terms, surface_terms, output_path):
+    def generate_opsec_terminology_comparison(self, darkweb_terms, reddit_terms, output_path):
         """
         Generate OpSec terminology comparison visualization
 
         Args:
             darkweb_terms (list): Dark Web-specific OpSec terms
-            surface_terms (list): Surface Web-specific OpSec terms
+            reddit_terms (list): Reddit-specific OpSec terms
             output_path (str): Path to save the visualization
         """
-        if not darkweb_terms or not surface_terms:
+        if not darkweb_terms or not reddit_terms:
             logger.warning("Not enough data for OpSec terminology comparison visualization")
             return
 
@@ -1041,8 +1009,8 @@ class SuprBayAnalyzer:
         dark_terms = [t[0] for t in darkweb_terms[:num_terms]]
         dark_scores = [t[1] for t in darkweb_terms[:num_terms]]
 
-        surface_terms = [t[0] for t in surface_terms[:num_terms]]
-        surface_scores = [t[1] for t in surface_terms[:num_terms]]
+        reddit_terms = [t[0] for t in reddit_terms[:num_terms]]
+        reddit_scores = [t[1] for t in reddit_terms[:num_terms]]
 
         # Create subplots
         plt.subplot(1, 2, 1)
@@ -1053,10 +1021,10 @@ class SuprBayAnalyzer:
         plt.xlabel('Distinctiveness Score')
 
         plt.subplot(1, 2, 2)
-        y_pos = np.arange(len(surface_terms))
-        plt.barh(y_pos, surface_scores, color='royalblue')
-        plt.yticks(y_pos, surface_terms)
-        plt.title('Surface Web-Specific OpSec Terms', fontsize=16)
+        y_pos = np.arange(len(reddit_terms))
+        plt.barh(y_pos, reddit_scores, color='royalblue')
+        plt.yticks(y_pos, reddit_terms)
+        plt.title('Reddit-Specific OpSec Terms', fontsize=16)
         plt.xlabel('Distinctiveness Score')
 
         plt.tight_layout()
@@ -1101,7 +1069,7 @@ class SuprBayAnalyzer:
                 colormap='Blues',
                 max_words=100
             ).generate(processed_text)
-            title = 'Surface Web OpSec Discussion Topics'
+            title = 'Reddit OpSec Discussion Topics'
 
         # Display word cloud
         plt.figure(figsize=(12, 8))
@@ -1129,12 +1097,12 @@ class SuprBayAnalyzer:
 
         # Create report header
         report = """
-        # OpSec Discourse Analysis: Dark Web vs. Surface Web
+        # OpSec Discourse Analysis: Dark Web vs. Reddit
         
         ## Executive Summary
         
         This report presents a comparative analysis of Operational Security (OpSec) discussions
-        on Dark Web forums versus Surface Web communities. The analysis reveals distinct patterns
+        on Dark Web forums versus Reddit communities. The analysis reveals distinct patterns
         in how security practices, tools, and advice are discussed across these environments.
         
         """
@@ -1144,15 +1112,15 @@ class SuprBayAnalyzer:
 
         # Topic differences
         if ('darkweb' in results and 'topic_keywords' in results['darkweb'] and
-            'surface' in results and 'topic_keywords' in results['surface']):
+            'reddit' in results and 'topic_keywords' in results['reddit']):
             report += "### Topic Differences\n\n"
 
             report += "**Dark Web Primary Topics:**\n"
             for i, topic in enumerate(results['darkweb']['topic_keywords'][:3]):
                 report += f"- Topic {i+1}: {', '.join(topic[:5])}\n"
 
-            report += "\n**Surface Web Primary Topics:**\n"
-            for i, topic in enumerate(results['surface']['topic_keywords'][:3]):
+            report += "\n**Reddit Primary Topics:**\n"
+            for i, topic in enumerate(results['reddit']['topic_keywords'][:3]):
                 report += f"- Topic {i+1}: {', '.join(topic[:5])}\n"
 
             report += "\n"
@@ -1165,11 +1133,11 @@ class SuprBayAnalyzer:
             compound_diff = results['comparison']['sentiment_diff'].get('compound', 0)
 
             if abs(compound_diff) < 0.05:
-                sentiment_finding = "Similar overall sentiment between Dark Web and Surface Web discussions."
+                sentiment_finding = "Similar overall sentiment between Dark Web and Reddit discussions."
             elif compound_diff > 0:
-                sentiment_finding = "Dark Web discussions show more positive sentiment than Surface Web discussions."
+                sentiment_finding = "Dark Web discussions show more positive sentiment than Reddit discussions."
             else:
-                sentiment_finding = "Surface Web discussions show more positive sentiment than Dark Web discussions."
+                sentiment_finding = "Reddit discussions show more positive sentiment than Dark Web discussions."
 
             report += f"{sentiment_finding}\n\n"
 
@@ -1183,14 +1151,14 @@ class SuprBayAnalyzer:
             if avg_mentions_diff > 0:
                 security_finding = "Dark Web discussions contain more security-related terminology and focus more explicitly on OpSec concepts."
             else:
-                security_finding = "Surface Web discussions contain more security-related terminology, though they may approach the topics differently."
+                security_finding = "Reddit discussions contain more security-related terminology, though they may approach the topics differently."
 
             report += f"{security_finding}\n\n"
 
         # Distinct terminology
         if ('comparison' in results and
             'unique_darkweb_keywords' in results['comparison'] and
-            'unique_surface_keywords' in results['comparison']):
+            'unique_reddit_keywords' in results['comparison']):
 
             report += "### Distinct Terminology\n\n"
 
@@ -1198,9 +1166,9 @@ class SuprBayAnalyzer:
             dark_terms = results['comparison']['unique_darkweb_keywords'][:7]
             report += f"{', '.join(dark_terms)}\n\n"
 
-            report += "**Surface Web-Specific Terms:**\n"
-            surface_terms = results['comparison']['unique_surface_keywords'][:7]
-            report += f"{', '.join(surface_terms)}\n\n"
+            report += "**Reddit-Specific Terms:**\n"
+            reddit_terms = results['comparison']['unique_reddit_keywords'][:7]
+            report += f"{', '.join(reddit_terms)}\n\n"
 
         # Linguistic complexity differences
         if ('comparison' in results and 'complexity_diff' in results['comparison']):
@@ -1213,12 +1181,12 @@ class SuprBayAnalyzer:
             if diversity_diff > 0:
                 diversity_finding = "Dark Web discussions show greater linguistic diversity, suggesting more specialized or technical discourse."
             else:
-                diversity_finding = "Surface Web discussions show greater linguistic diversity, possibly indicating more varied participants or topics."
+                diversity_finding = "Reddit discussions show greater linguistic diversity, possibly indicating more varied participants or topics."
 
             if words_per_post_diff > 0:
                 length_finding = "Dark Web posts tend to be longer on average."
             else:
-                length_finding = "Surface Web posts tend to be longer on average."
+                length_finding = "Reddit posts tend to be longer on average."
 
             report += f"{diversity_finding} {length_finding}\n\n"
 
@@ -1226,7 +1194,7 @@ class SuprBayAnalyzer:
         report += """
         ## Implications
         
-        The differences in OpSec discourse between Dark Web and Surface Web environments reflect distinct security cultures and threat models. Dark Web participants appear to approach security with different assumptions and priorities compared to Surface Web communities, likely influenced by the perceived higher stakes and different adversarial models.
+        The differences in OpSec discourse between Dark Web and Reddit environments reflect distinct security cultures and threat models. Dark Web participants appear to approach security with different assumptions and priorities compared to Reddit communities, likely influenced by the perceived higher stakes and different adversarial models.
         
         These findings suggest that comprehensive OpSec education should account for these different discourse patterns and security cultures, addressing both the technical details emphasized in one environment and the practical considerations highlighted in the other.
         """
@@ -1242,7 +1210,6 @@ def main():
     parser = argparse.ArgumentParser(description="SuprBay OpSec Discourse Analyzer")
 
     parser.add_argument("--darkweb-dir", default="data/darkweb", help="Directory containing Dark Web data")
-    parser.add_argument("--surfaceweb-dir", default="data/surfaceweb", help="Directory containing Surface Web data")
     parser.add_argument("--reddit-dir", default="data/reddit", help="Directory containing Reddit data")
     parser.add_argument("--output-dir", default="analysis_results", help="Directory to store analysis results")
     parser.add_argument("--report", default="opsec_comparative_analysis.md", help="Output file for summary report")
@@ -1252,7 +1219,6 @@ def main():
     # Create analyzer
     analyzer = SuprBayAnalyzer(
         darkweb_dir=args.darkweb_dir,
-        surfaceweb_dir=args.surfaceweb_dir,
         reddit_dir=args.reddit_dir,
         output_dir=args.output_dir
     )
@@ -1262,7 +1228,7 @@ def main():
     data = analyzer.load_data()
 
     # Check if we have enough data
-    if data['darkweb'].empty and data['combined_surface'].empty:
+    if data['darkweb'].empty and data['reddit'].empty:
         logger.error("No data found for analysis. Please ensure your data directories are correct.")
         return 1
 

@@ -1,0 +1,1095 @@
+[
+  {
+    "id": "1k82j9t",
+    "title": "ICE Can Now Enter Your Home Without a Warrant to Look for Migrants, DOJ Memo Says",
+    "author": "twotimefind",
+    "permalink": "https://dailyboulder.com/ice-can-now-enter-your-home-without-a-warrant-to-find-migrants-doj-memo-says/",
+    "content": "",
+    "comments": [],
+    "thread_title": "ICE Can Now Enter Your Home Without a Warrant to Look for Migrants, DOJ Memo Says",
+    "thread_url": "https://dailyboulder.com/ice-can-now-enter-your-home-without-a-warrant-to-find-migrants-doj-memo-says/",
+    "username": "twotimefind",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:51:35.373094"
+  },
+  {
+    "id": "1k01lok",
+    "title": "\"Get You Ass To Linux!\" Microsoft Recall returns",
+    "author": "Shoddy-Childhood-511",
+    "permalink": "https://old.reddit.com/r/privacy/comments/1k01lok/get_you_ass_to_linux_microsoft_recall_returns/",
+    "content": "Dedicated to the intersection of technology, privacy, and freedom in the digital world. \"I don't have anything to hide but I don't have anything I want to show you either\" - @CryptopartyBLN \"Privacy is not a sign of wrongdoing. Privacy is a sign of freedom.\" - /u/blackhawk_12 (updated 2023-04-27) Before posting in /r/privacy, read the Sidebar Rules. Enjoy our Wiki! It has all sorts of nifty advice and explains most topics you’re interested in if you’re reading this. Consider donating to one of the organizations that fight for your rights.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Hello u/Shoddy-Childhood-511, please make sure you read the sub rules if you haven't already. (This is an automatic reminder left on all new posts.) Check out the r/privacy FAQ I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "Shoddy-Childhood-511",
+        "content": "Recall would impact your personal data being handled on Windows machines elsewhere of course. Would Microsoft Recall be illegal under the EU's AI restrictions? At least when used by governments or companies who handle PII?"
+      },
+      {
+        "author": "janisprefect",
+        "content": "Recall could already be practically illegal in the EU before the AI restrictions even come in effect. It already may violate basic Privacy laws. A software that can snapshot private data like whatsapp messages, contacts, emails etc can't be legally used without the third-parties' consent. I'm not sure if it actually is illegal, I'm not a lawyer, but it's at least a privacy nightmare. The AI Act might complicate this way more, but I don't know much abouth that unfortunately"
+      },
+      {
+        "author": "MC_chrome",
+        "content": "can't be legally used without the third-parties' consent What are the chances that Microsoft's legal team snuck something into the TOS for Microsoft Accounts that gives your consent if you use or sign up for a Microsoft Account in order to use your Windows 11 machine?"
+      },
+      {
+        "author": "Stunning_Repair_7483",
+        "content": "Exactly!!! Lots of companies have done exactly this for years."
+      },
+      {
+        "author": "somebody_odd",
+        "content": "Joan is Awful, but in real life. You have to read the 3,000 page TOS very carefully."
+      },
+      {
+        "author": "over26letters",
+        "content": "That's not explicit informed consent and thus doesn't count. Unfortunately this doesn't stop anyone."
+      },
+      {
+        "author": "P_Jamez",
+        "content": "GDPR has stopped companies multiple times…"
+      },
+      {
+        "author": "janisprefect",
+        "content": "AFAIK Facebook has been fined for this practice (but they don't care, the fines are huge but still too low)."
+      },
+      {
+        "author": "PringlesDuckFace",
+        "content": "I mean, what if some kid is using the webcam to check out a mole on their butt or something? Now Microsoft has a bunch of nude images of children they're monetizing? Seems whack."
+      },
+      {
+        "author": "YourFavouriteGayGuy",
+        "content": "It looks like they don’t care. Microsoft is banking on the fact that Windows and Office 365 are so universal that the EU will be forced to reduce the restrictions or give Copilot an exemption. Microsoft is basically impossible to prosecute for all this, because technically it’s the individuals and businesses that are willingly breaking privacy law. Microsoft is just making that the default, and businesses that get in trouble are on their own because they didn’t read the fine print when they signed the terms of use."
+      },
+      {
+        "author": "Professional-Run8649",
+        "content": "Okay but the story literally says the feature is opt in and will not be enabled by default. \"But but it's Microsoft, give it time they will enable it by default\", by that time someone found a way to remove it."
+      },
+      {
+        "author": "twin-hoodlum3",
+        "content": "Security and data privacy experts at companies don‘t care if it‘s opt-in or not. Even the mere possibility of the existence of such a feature rules out Windows in critical environments in the future. Maybe Microsoft will have to learn it the hard way."
+      },
+      {
+        "author": "disignore",
+        "content": "is there a certainty this is not placebo switch"
+      },
+      {
+        "author": "MairusuPawa",
+        "content": "Yeah sure, keep hacking into the hostile OS and hoping it's tolerable enough, keep rejecting the IT that actually wants good stuff for you."
+      },
+      {
+        "author": "TheGrumpyGent",
+        "content": "Its also only on Copilot+ PCs. You can't get this through regular channels on any other machine (with the caveat \"for now\", of course)"
+      },
+      {
+        "author": "Coffee_Ops",
+        "content": "No it wouldn't, because it processes locally. Further, if it were an issue, they'd already be trouble because the existing telemetry is far worse."
+      },
+      {
+        "author": "KevlarUnicorn",
+        "content": "I do recommend people move to Linux in order to preserve their privacy and even improve their mental health, as Microsoft is taking more and more liberties with people's attention, putting ads in places on the OS itself, and making what was once something that was definitely a part of your system now works independently of you, the end user, and makes the experience stressful and frustrating. That said, stepping into Linux takes a little bit of work, and some people just aren't going to want to have to learn a few new things, even among privacy advocates. Plus, while most games will now work on Linux (as a Linux user I have hundreds of games I play with no trouble at all), there are some which don't and that can be a dealbreaker if you want to buy the new AAA game that has Denuvo or some garbage on it. Regardless, Microsoft has long since made it clear they don't give two shits what their users want, they're just going to keep hoovering up that data and making bigger back doors for agencies to see everything you do."
+      },
+      {
+        "author": "Stunning_Repair_7483",
+        "content": "Microsoft has so much bloat, and malware and is much more buggy now then what it used to be."
+      },
+      {
+        "author": "KevlarUnicorn",
+        "content": "Agreed. Back when I first started using it on 2.0, it was a solid piece of office software. When 3.11 came out a few years later, Windows became an essential operating system that did everything it needed to do, and did it with a minimum of fuss. Over the years, Microsoft made mistakes, but they always seemed to push for the professional and polished be all end all of operating systems. As far as I'm concerned, Windows 7 was their last truly great OS. After that, they gave in to the enshittification all corporations eventually succumb to, where it became more important to maximize shareholder value at the expense of literally everything else, including the user experience. Nowadays, I don't recommend Windows to anyone."
+      }
+    ],
+    "thread_title": "\"Get You Ass To Linux!\" Microsoft Recall returns",
+    "thread_url": "https://old.reddit.com/r/privacy/comments/1k01lok/get_you_ass_to_linux_microsoft_recall_returns/",
+    "username": "Shoddy-Childhood-511",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:51:49.193332"
+  },
+  {
+    "id": "1k6u44k",
+    "title": "TSA Face Scanning Forced by Agent",
+    "author": "hoboCheese",
+    "permalink": "https://old.reddit.com/r/privacy/comments/1k6u44k/tsa_face_scanning_forced_by_agent/",
+    "content": "Dedicated to the intersection of technology, privacy, and freedom in the digital world. \"I don't have anything to hide but I don't have anything I want to show you either\" - @CryptopartyBLN \"Privacy is not a sign of wrongdoing. Privacy is a sign of freedom.\" - /u/blackhawk_12 (updated 2023-04-27) Before posting in /r/privacy, read the Sidebar Rules. Enjoy our Wiki! It has all sorts of nifty advice and explains most topics you’re interested in if you’re reading this. Consider donating to one of the organizations that fight for your rights.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Hello u/hoboCheese, please make sure you read the sub rules if you haven't already. (This is an automatic reminder left on all new posts.) Check out the r/privacy FAQ I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "Ok_Muffin_925",
+        "content": "When I was in the military I traveled a lot. I had concerns about those body scanners and opted out at every airport. It was my right to do it but I then had to go through a traditional pat down search which I preferred over the scan. Pat down searches are still a thing and done randomly on a daily basis. The number of times I got blowback from the TSA employees was amazing. They would often do what I call a \"reprisal search.\" They'd loudly and dramatically remove me from the area, dump all my things from a bag which was not even going to go through the body scanner and was already searched by xray, then take their time patting me down and sometimes be rough about it. Passengers in a hurry look at you like you are dirt. Each airport has a TSA site manager. Two of my friends hold these positions at different airports and they are responsible for all of TSA at their airports. They told me to not go through the chain of command next time I have an issue but to demand to see airport TSA supervisor. They have to ask for them and will fix it immediately."
+      },
+      {
+        "author": "dankney",
+        "content": "I’ve never had any friction from opting out. Sometimes a delay while they call somebody on a radio to do it, but never friction. The closest is being asked why I opt led out. It’s happened once in however long it’s been a thing (ten years?), and I answered “because once people stop opting out, the right to opt out will go away.” It just confused than, so they did their thing and sent me on my way."
+      },
+      {
+        "author": "SlaterVBenedict",
+        "content": "Yeah, I've been lucky enough to deal with TSA agents who are pretty chill about it when I say I don't want to do my face scan. I simply hold onto my ID and do not hand it to them, and say politely with a slight (but not shit-eating or smirk-y or disingenuous) smile on my face, \"Oh, no face scan, but happy to do your alternative check process though!\" I also find that the catching more flies with honey approach works well in most situations in which folks are performing a service they are required to to do for a million customers, and generally if you demonstrate through body language, facial expression, tone of voice, and ultimately words and actions that you're sympathetic to their job requirements, but also have your own boundaries, AND that you're willing to meet them halfway, they'll usually be cool with you. It's an act of good faith in a time of very bad faith, and I've found it's received fairly well."
+      },
+      {
+        "author": "haleontology",
+        "content": "So true! I got VERY lucky when I moved back here from Australia and FORGOT about the mini-pocket knife in my bra.... What's hilarious is that I went through the scanners at BOTH Melbourne and Sydney, had already forgotten about it and they didn't see it somehow?! But LAX sure did, a TSA gal patted me down and found it, and I said \"Holy shit I'm SO SORRY, I'll go ahead and forfeit that right now!\" I was polite and knew I messed up so I didn't ask for it back (bummer, but my mistake!). She told me \"Remember, you're not in Australia anymore!\" and sent me on my way. I totally could have ended up in a Meet the Fockers room over that situation, I was grateful! Why I had it to begin with, bc I'm not a psychopath LOL: it belonged to my grandpa, when he passed I carried it for years, and I saw it last minute, grabbed it intending to throw it in my checked luggage when I got a chance- and threw in my shirt bc I thought \"there's NO way I'll forget to put it away\"..Oops!"
+      },
+      {
+        "author": "Serene-Arc",
+        "content": "Carrying a mini pocket knife like that is illegal in Australia though?"
+      },
+      {
+        "author": "allocx",
+        "content": "In some states it is unless you have a reasonable excuse"
+      },
+      {
+        "author": "Serene-Arc",
+        "content": "Yeah but self defence isn’t a reasonable excuse so what could you say for a little pocket knife concealed in a bra?"
+      },
+      {
+        "author": "allocx",
+        "content": "If you carry an apple you can say you brought it to cut the apple. Of course that wouldn't fly in an airport though."
+      },
+      {
+        "author": "Serene-Arc",
+        "content": "I wouldn't want to tell the police that my knife concealed in my bra is for cutting an apple. If you had it in a lunchbox, sure, but the fact that you're concealing it doesn't help your case."
+      },
+      {
+        "author": "haleontology",
+        "content": "Yes, highly illegal, and I had no idea for years, until a few weeks before I moved back to the U.S.- I never actually used it, just carried it because it belonged to my grandfather. The hilarious thing is that I had to get some paperwork from court, and the person who drove me was a cop...When we got there I said \"hey, I should probably not take my pocketknife in\"....That's when I got a huge lecture LOL, I had no idea! I probably should have known though, as many other things aren't allowed over there- I didn't think of it much bc I didn't think of it as a weapon, and I've never carried anything else like that before. It's also the reason I carried it in my shirt to the airport, I thought if anything happened on the way there, everyone would know it was mine and mine alone...I think the TSA agent may have had Crocodile Dundee in her head when she told me to remember that I'm not in Australia anymore, I can't think of another reason she would have said that!"
+      },
+      {
+        "author": "Serene-Arc",
+        "content": "Yeah, knives are illegal in all states. Interestingly, pepper spray is legal in some. Not in mine though. Wild that the Australian side of customs either didn't see it or didn't care. In general I'm supportive of Australian weapon laws, but it would be nice to just put a Leatherman or multitool in my handbag, just to have. Lots of useful stuff but if I'm caught with the knife, there'd be problems. Even if I wasn't charged, they take it, and then I'd be out a $200 leatherman :("
+      },
+      {
+        "author": "DaLadderman",
+        "content": "Weird, police in Western Australia never had an issue with my multitool, even just a few weeks ago my car was part of a random search (drug smuggling crackdown checkpoint) and they took the leatherman I had on my belt whilst they had the sniffer dog going over the car but gave it back afterwards which is understandable. One of the police even found my handmade 10inch machete knife (a kuriki) in the backseat and asked what I had it for, me being a dumbass just said \"because it's cool\" instead of the actual gardening related reasons I used it for but they just shrugged and put it back lol."
+      },
+      {
+        "author": "Serene-Arc",
+        "content": "Fair. I’m in a city and Queensland has been cracking down on knives. Doing random searches and stuff. I feel like having a multi tool in my handbag with no intent of using it regularly might be treated differently."
+      },
+      {
+        "author": "ScreamingLightspeed",
+        "content": "You don't need an \"I'm not a psychopath!\" disclaimer for why you were carrying a knife on you. Carrying a knife on you doesn't make you a psychopath."
+      },
+      {
+        "author": "Dfndr612",
+        "content": "What is the downside of a face scan at the airport? I’m not familiar with this process at all."
+      },
+      {
+        "author": "mikew_reddit",
+        "content": "Not much. If you get scanned just once at the airport, they have a picture of you on file forever. Your passport has a picture. If you have a driver's license, your state (or equivalent) has a picture of you on file. If you go outside, cameras have a video of you. I guess having fewer images and videos on file might be slightly better for privacy; but practically speaking, there's probably no difference since the government most likely already has a picture, but they also have more effective ways to track people down."
+      },
+      {
+        "author": "3jake",
+        "content": "There’s a huge difference - a photo is not the same as biometric facial datapoints, and the government just having a huge unregulated database of everyone’s biometrics is a gross violation of public privacy. Any agency looking to track your movements can use that data against camera feeds, etc. and it makes keeping tabs on individuals obscenely easy. I know that networked cameras with “AI” (looking at you, flock) and things like gait-tracking are making it harder and harder to prevent surveillance, but the more info your give them willingly, the worse you make it for everyone. Do not comply before you are forced to."
+      },
+      {
+        "author": "daydaymcloud",
+        "content": "They don’t save the photo, but conveniently there’s no mention of the retention period for any metadata or processing results that are captured before the photo is deleted"
+      },
+      {
+        "author": "SufficientlyRested",
+        "content": "They don’t need to save the photo; because it’s the metadata from the scan that’s the issue."
+      }
+    ],
+    "thread_title": "TSA Face Scanning Forced by Agent",
+    "thread_url": "https://old.reddit.com/r/privacy/comments/1k6u44k/tsa_face_scanning_forced_by_agent/",
+    "username": "hoboCheese",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:52:02.774930"
+  },
+  {
+    "id": "1kanmmb",
+    "title": "Soms wil je geen salade. Soms wil je een sappige burger, met gesmolten kaas, knapperige friet en nul afwas. 🍔 Dus waar wacht je op? Eerst iets lekkers. Lekker Uber Eats.",
+    "author": "ubereats",
+    "permalink": "https://alb.reddit.com/cr?za=rddj-BXDrJyp26DGp3ndbjTtw4sqOUHMyVzyH_D_TfmClMaSx-gWPnQsBGuFWwM4yvlFaM9A3LmosnkeqqluiNFso1z6sAmmjcBZeau9Wl0GmTiT2Ttc6OvjJYNrhY6ElY0w46_oh1akO-5-tTQ4-DYFLWh4NCGy3zL0qWvRkLm4gP3YYV44jERY6mzD02__QnlOr794XMJ455uIimIMIfh8qXufglKB8_S43O3m8FdSYAwTqe9BYoOCQw0UZ7TTZaDyJBcECU8fsPGUefbn_HPuCL20rMzS7KlEdbx1hwxxxsUUAROp5KFja5ra0sAzKNXMDgdAP3Pm8vcJPeC76Rm-gT_c_n5rJj0ukAhdxWTJ1LL8G5glfR6vGnMUC22X1NHvEze3B5TanMQfqhNhivAKHy-zgDfemHC6QoKmVLt6oEWyY-eQahdRneYketvXNnNBRGVHYb0Iquqao9_vN64Hps5wtOuPooiLHgvVxrH4bSKnpcYO5Gpv5Mt4IYajDzC3r0L7WfqZ47ECM2wgpKbwO_g6kKi5nrO2RLeQbQdDvkujbpKFtpHQTkMbHA-J2WX5xBVIBJoWdx9Kc74r8oU51WYuKoBY&zp=ZemtTYPtqq2lg8l5jGWEj4_FKu4xYKWj-n0ZNBU-uuetwmbazh2YBT0fpV8KQWDi0vmShjwNhjy3UYmaPBbCov5lOYlIaeUyRxxuo0-63dMnCo1zGamLPbL4wplKIyiZL5ItzJwltTI4vzDe4XDsDVyu6qLaZYTh0AJviKjs6WAktUGcSb-6vz6bSZdBpOCabucY0jdNWwJyhebq6qB2EZp1Pev5h_XiPqcU5D5BlXT5HZvugdAib3g_pBgonQizqNwWFWwXdAvKhoAggSZEo6fx0672qLNvYhmUCVfg-40F8KAOp14oNXOxLiPsEYCRNRv8JmJDK3wE3NLTvtO7Zg-bFWEHY6b_l-8clcdtMceIrtePaXtQD8UZj8ae6aGkvuiVOpsU0Wn-F2XS3MEnBhp8TY1Ll7xYrE1liUslrWkFILR-uohDPhdvTcNIQid0_ZiVbzZvBJkCKOmXvHJFJXh6TB27OsuVe1rGwvHXAB1NXDYS8Q",
+    "content": "",
+    "comments": [],
+    "thread_title": "Soms wil je geen salade. Soms wil je een sappige burger, met gesmolten kaas, knapperige friet en nul afwas. 🍔 Dus waar wacht je op? Eerst iets lekkers. Lekker Uber Eats.",
+    "thread_url": "https://alb.reddit.com/cr?za=rddj-BXDrJyp26DGp3ndbjTtw4sqOUHMyVzyH_D_TfmClMaSx-gWPnQsBGuFWwM4yvlFaM9A3LmosnkeqqluiNFso1z6sAmmjcBZeau9Wl0GmTiT2Ttc6OvjJYNrhY6ElY0w46_oh1akO-5-tTQ4-DYFLWh4NCGy3zL0qWvRkLm4gP3YYV44jERY6mzD02__QnlOr794XMJ455uIimIMIfh8qXufglKB8_S43O3m8FdSYAwTqe9BYoOCQw0UZ7TTZaDyJBcECU8fsPGUefbn_HPuCL20rMzS7KlEdbx1hwxxxsUUAROp5KFja5ra0sAzKNXMDgdAP3Pm8vcJPeC76Rm-gT_c_n5rJj0ukAhdxWTJ1LL8G5glfR6vGnMUC22X1NHvEze3B5TanMQfqhNhivAKHy-zgDfemHC6QoKmVLt6oEWyY-eQahdRneYketvXNnNBRGVHYb0Iquqao9_vN64Hps5wtOuPooiLHgvVxrH4bSKnpcYO5Gpv5Mt4IYajDzC3r0L7WfqZ47ECM2wgpKbwO_g6kKi5nrO2RLeQbQdDvkujbpKFtpHQTkMbHA-J2WX5xBVIBJoWdx9Kc74r8oU51WYuKoBY&zp=ZemtTYPtqq2lg8l5jGWEj4_FKu4xYKWj-n0ZNBU-uuetwmbazh2YBT0fpV8KQWDi0vmShjwNhjy3UYmaPBbCov5lOYlIaeUyRxxuo0-63dMnCo1zGamLPbL4wplKIyiZL5ItzJwltTI4vzDe4XDsDVyu6qLaZYTh0AJviKjs6WAktUGcSb-6vz6bSZdBpOCabucY0jdNWwJyhebq6qB2EZp1Pev5h_XiPqcU5D5BlXT5HZvugdAib3g_pBgonQizqNwWFWwXdAvKhoAggSZEo6fx0672qLNvYhmUCVfg-40F8KAOp14oNXOxLiPsEYCRNRv8JmJDK3wE3NLTvtO7Zg-bFWEHY6b_l-8clcdtMceIrtePaXtQD8UZj8ae6aGkvuiVOpsU0Wn-F2XS3MEnBhp8TY1Ll7xYrE1liUslrWkFILR-uohDPhdvTcNIQid0_ZiVbzZvBJkCKOmXvHJFJXh6TB27OsuVe1rGwvHXAB1NXDYS8Q",
+    "username": "ubereats",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:52:12.338985"
+  },
+  {
+    "id": "1kc2g28",
+    "title": "I've deleted my Facebook account in 2016, and today I... logged in?",
+    "author": "sushi-dll",
+    "permalink": "https://old.reddit.com/r/privacy/comments/1kc2g28/ive_deleted_my_facebook_account_in_2016_and_today/",
+    "content": "Dedicated to the intersection of technology, privacy, and freedom in the digital world. \"I don't have anything to hide but I don't have anything I want to show you either\" - @CryptopartyBLN \"Privacy is not a sign of wrongdoing. Privacy is a sign of freedom.\" - /u/blackhawk_12 (updated 2023-04-27) Before posting in /r/privacy, read the Sidebar Rules. Enjoy our Wiki! It has all sorts of nifty advice and explains most topics you’re interested in if you’re reading this. Consider donating to one of the organizations that fight for your rights.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Hello u/sushi-dll, please make sure you read the sub rules if you haven't already. (This is an automatic reminder left on all new posts.) Check out the r/privacy FAQ I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "bannedByTencent",
+        "content": "If you’re in Europe you can report GDPR violation."
+      },
+      {
+        "author": "KlatsBoem",
+        "content": "Do this, OP, it's the least you can do for yourself and everyone in the same boat"
+      },
+      {
+        "author": "Faun4box",
+        "content": "Facebook: oh no! Anyway."
+      },
+      {
+        "author": "7Seyo7",
+        "content": "I for one would look forward to the massive fine. Meta is currently the record holder for the largest GDPR fine at 1.2 billion EUR. They also hold the #3 & #4 spots, but Amazon snatched second place :) https://www.enforcementtracker.com/"
+      },
+      {
+        "author": "sushi-dll",
+        "content": "I can't comprehend how these companies got so many fines and public demands and they still have the same anti privacy measures. Even if I asked authorities for an action, I'm still unsure. In their privacy criteria, how can authorities know the difference between a user making a deletion on the platform and this entity itself making legal actions to get this account deleted? I mean, how can we know if the only thing they did, was actually make it invisible again but with a little more difficulty to access even for authorities?"
+      },
+      {
+        "author": "quaderrordemonstand",
+        "content": "As long as the fine is less money than they make from the data, they will just carry on. It's simple mathematics. Of course, they'd rather not have the fine. So it might be worth paying a lot of expensive lawyers to argue the case. But the fine still isn't worth the value of the data."
+      },
+      {
+        "author": "1zzie",
+        "content": "Exactly, here's today's Financial Times summary of Zuck at the earnings call by Hannah Murphy (subscription only): Revenues in the company’s first quarter rose 16 per cent from a year ago to $42.3bn, beating expectations of $41.4bn, the group said late on Wednesday. Net income jumped 35 per cent to $16.7bn, well above consensus estimates of $13.5bn. Meta shares were up more than 6 per cent in pre-market trading on Thursday. The tech giant forecast its second-quarter revenues would be between $42.5bn and $45.5bn, with the midpoint of that range slightly higher than Wall Street’s forecast of $43.8bn. When the FTC fined them $5 billion dollars, their shares went up because they had set aside $7 billion, so they had \"saved\" $2b. Honestly, fines cannot be big enough. They need to be regulated into oblivion if the behavior actually needs to stop. If you're a drunk driver you get pulled off the road. You don't pay a fine and drive home."
+      },
+      {
+        "author": "acceptablemango",
+        "content": "A fine means legal for a price. If the fine isn’t significant enough to notably cut into profit then companies will not care. To them, fines are just the cost of doing business."
+      },
+      {
+        "author": "SirDouglasMouf",
+        "content": "If you think mera's \"pay to play\" fines are bad, look at the big banks and hedge funds in the US. Billions of dollars in fraud and a fine worth ~ 4 minutes of their time doing the said crime and zero enforcement."
+      },
+      {
+        "author": "meowisaymiaou",
+        "content": "2016 would have gdpr requirements. The best practice standard from 1995 to 2017 was to never delete any I formation under any situation, only set \"is deleted\" flag for any information. Outside EU, that's still the way most deal with accounts. Too much risk actually deleting data. If data can't be deleted by any process it's harder for a bad actor to erase data, and harder for bad coding to accidentally over -erase data. And a good number of clients \"accidentally\" delete data and want it back."
+      },
+      {
+        "author": "foxxiter",
+        "content": "Fines are too low."
+      },
+      {
+        "author": "LNLV",
+        "content": "It should be a massive fine AND an equal payment to the victim. MAYBE they’d start doing something about it."
+      },
+      {
+        "author": "Xzenor",
+        "content": "Can we add tariffs to fines? That'd be nice.. if we're lucky, Meta decides to leave Europe... Sorry... I was just dreaming.. nice dream though"
+      },
+      {
+        "author": "martianul_furios",
+        "content": "Did you say thank you?"
+      },
+      {
+        "author": "Xzenor",
+        "content": "No. It was a dream. They thanked me"
+      },
+      {
+        "author": "OldFloridaTrees",
+        "content": "😂 GOLD 🪙"
+      },
+      {
+        "author": "Anonymity4meisgood",
+        "content": "Unless the fine results in changed behavior it doesn't mean much. Good for the EU and they're billion euro windfall though."
+      },
+      {
+        "author": "Coffee_Ops",
+        "content": "They work when people use the system enough."
+      },
+      {
+        "author": "mickeythefist_",
+        "content": "Will Meta actually pay this though, and also what happens if they don’t?"
+      }
+    ],
+    "thread_title": "I've deleted my Facebook account in 2016, and today I... logged in?",
+    "thread_url": "https://old.reddit.com/r/privacy/comments/1kc2g28/ive_deleted_my_facebook_account_in_2016_and_today/",
+    "username": "sushi-dll",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:52:25.555724"
+  },
+  {
+    "id": "1jxli62",
+    "title": "ChatGPT Has Receipts, Will Now Remember Everything You've Ever Told It",
+    "author": "MetaKnowing",
+    "permalink": "https://www.pcmag.com/news/chatgpt-memory-will-remember-everything-youve-ever-told-it",
+    "content": "",
+    "comments": [],
+    "thread_title": "ChatGPT Has Receipts, Will Now Remember Everything You've Ever Told It",
+    "thread_url": "https://www.pcmag.com/news/chatgpt-memory-will-remember-everything-youve-ever-told-it",
+    "username": "MetaKnowing",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:52:41.591701"
+  },
+  {
+    "id": "1k8zrth",
+    "title": "Telegram pledges to exit the market rather than \"undermine encryption with backdoors\"",
+    "author": "greendream375",
+    "permalink": "https://www.techradar.com/vpn/vpn-privacy-security/telegram-pledges-to-exit-the-market-rather-than-undermine-encryption-with-backdoors",
+    "content": "",
+    "comments": [],
+    "thread_title": "Telegram pledges to exit the market rather than \"undermine encryption with backdoors\"",
+    "thread_url": "https://www.techradar.com/vpn/vpn-privacy-security/telegram-pledges-to-exit-the-market-rather-than-undermine-encryption-with-backdoors",
+    "username": "greendream375",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:52:50.418032"
+  },
+  {
+    "id": "1khv5vw",
+    "title": "Facebook Allegedly Detected When Teen Girls Deleted Selfies So It Could Serve Them Beauty Ads",
+    "author": "Mups21",
+    "permalink": "https://futurism.com/facebook-beauty-targeted-ads",
+    "content": "",
+    "comments": [],
+    "thread_title": "Facebook Allegedly Detected When Teen Girls Deleted Selfies So It Could Serve Them Beauty Ads",
+    "thread_url": "https://futurism.com/facebook-beauty-targeted-ads",
+    "username": "Mups21",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:53:02.987946"
+  },
+  {
+    "id": "1jwz6h5",
+    "title": "That groan you hear is users’ reaction to Recall going back into Windows, Ars Technica",
+    "author": "mo_leahq",
+    "permalink": "https://arstechnica.com/security/2025/04/microsoft-is-putting-privacy-endangering-recall-back-into-windows-11/",
+    "content": "",
+    "comments": [],
+    "thread_title": "That groan you hear is users’ reaction to Recall going back into Windows, Ars Technica",
+    "thread_url": "https://arstechnica.com/security/2025/04/microsoft-is-putting-privacy-endangering-recall-back-into-windows-11/",
+    "username": "mo_leahq",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:53:15.497783"
+  },
+  {
+    "id": "1k8w8vy",
+    "title": "Hundreds of smartphone apps are monitoring users through their microphones",
+    "author": "Stunning-Skill-2742",
+    "permalink": "https://www.the-independent.com/tech/smartphone-apps-listening-privacy-alphonso-shazam-advertising-pool-3d-honey-quest-a8139451.html",
+    "content": "",
+    "comments": [],
+    "thread_title": "Hundreds of smartphone apps are monitoring users through their microphones",
+    "thread_url": "https://www.the-independent.com/tech/smartphone-apps-listening-privacy-alphonso-shazam-advertising-pool-3d-honey-quest-a8139451.html",
+    "username": "Stunning-Skill-2742",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:53:28.661815"
+  },
+  {
+    "id": "1k4cs3p",
+    "title": "The mentality of “i have nothing to hide” is why companies will never prioritize our privacy.",
+    "author": "naffe1o2o",
+    "permalink": "https://old.reddit.com/r/privacy/comments/1k4cs3p/the_mentality_of_i_have_nothing_to_hide_is_why/",
+    "content": "Dedicated to the intersection of technology, privacy, and freedom in the digital world. \"I don't have anything to hide but I don't have anything I want to show you either\" - @CryptopartyBLN \"Privacy is not a sign of wrongdoing. Privacy is a sign of freedom.\" - /u/blackhawk_12 (updated 2023-04-27) Before posting in /r/privacy, read the Sidebar Rules. Enjoy our Wiki! It has all sorts of nifty advice and explains most topics you’re interested in if you’re reading this. Consider donating to one of the organizations that fight for your rights.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Hello u/naffe1o2o, please make sure you read the sub rules if you haven't already. (This is an automatic reminder left on all new posts.) Check out the r/privacy FAQ I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "ElephantWithBlueEyes",
+        "content": "Being privacy-aware is not because you have something to hide or that you are criminal. it is because you don’t want your data collected and monetized As i get older, i understand that my cognitive capacity is kind of limited and i don't have that much energy to check every app, site, whatever, if it's spying on me or continues to spy after i asked not to or disabled telemetry and such. For me it's enough to use uBlock so i don't see ads and other annoying things. I think the only way to get it straight is to control it on a law level, as already mentioned."
+      },
+      {
+        "author": "PopFun7873",
+        "content": "That's not really so much you being older as much as the landscape has changed significantly in the last decade and this behavior is nearly impossible to avoid outside of very small non-monitized projects or complex and potentially unsupported projects. People don't have the mental capacity to deal with this, and that's what they count on. You also don't have the capacity to deal with this and still talk to your friends or stay in contact with your family. They put all of that in the way of it now. So people silently accept and let every aspect of their lives become published to organizations that would use it to manipulate them or do harm. And they do. It's not that there's nothing you can do about it. It's that the alternative is being a hermit."
+      },
+      {
+        "author": "Deitaphobia",
+        "content": "Ever notice that every person that says this is wearing pants?"
+      },
+      {
+        "author": "PuzzleheadedDuck3981",
+        "content": "A couple of times I've said \"so you'll be fine with me watching you have a shower\". Start from there then try to get them to work forwards to what they would find acceptable. It gets them thinking a little more about the risks."
+      },
+      {
+        "author": "LiveFastDieRich",
+        "content": "If you have nothing to hide, What’s your mother’s maiden name? And the name of your first pet? Also what’s the most expensive thing in your house and what times are you usually not home?"
+      },
+      {
+        "author": "JohnnyDan22",
+        "content": "What would you say for those people who say those examples aren’t the same (to them). Like if they said they’re wouldn’t tell you that cause they wouldn’t offer someone or you their bank username/password or mothers maiden name cause they know your intentions would be bad and they would have their money stolen. Meanwhile, they’ve entered this same information on dozens of sites and have never had an issue to this day?"
+      },
+      {
+        "author": "LiveFastDieRich",
+        "content": "Well I wouldn’t ask so direct if I wanted that information I would ease it into a conversation and try make it seem relatable and normal to divulge such things"
+      },
+      {
+        "author": "[deleted]",
+        "content": "That’s a good one 😂"
+      },
+      {
+        "author": "Mr_Lumbergh",
+        "content": "And curtains or blinds on the windows?"
+      },
+      {
+        "author": "Rick_M_Hamburglar",
+        "content": "I have nothing to hide but it's my choice to have privacy, I'm so sick of no privacy laws in the US!"
+      },
+      {
+        "author": "Herban_Myth",
+        "content": "Guilt-shame-fear"
+      },
+      {
+        "author": "not_so_plausible",
+        "content": "I work as a Privacy Analyst and it bothers me just how uninformed people are about privacy laws in the US. No, we don't have a federal law, but we have a LOT of state privacy laws. California, Colorado, Connecticut, Delaware, Indiana, Iowa, Kentucky, Maryland, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, Rhode Island, Tennessee, Texas, Utah, and Virginia ALL have data privacy laws. I've asked moderators to pin this to the sidebar or to the top but it's never been done. Millions of Americans have privacy rights and can make request to opt out of targeted advertising, delete their data, and more, yet they have no idea. Here is a comprehensive list of all state laws that have been passed, that are currently in congress (state level), that failed to pass, and the rights all of these laws give you. It drives me crazy that we don't have any subreddit dedicated to pushing strong state privacy laws. EVERYONE wants a federal law but I can promise you that anything the federal government gives us is going to be some watered down bullshit. If your state has a bill currently in congress, READ IT AND WRITE YOUR REPRESENTATIVE. Actually read it. Make sure it gives you the rights you want. Let them know if you think it should be stronger. These are STATE level representatives, they are much easier to persuade."
+      },
+      {
+        "author": "NotMilitaryAI",
+        "content": "The \"I have nothing to hide\" mindset basically relies upon the person having a narrow and naive mindset of what constitutes \"worth hiding\". In my experience, most people will assume only criminals wish to hide their actions, but once one actually gives relatable examples of things that are simply personal or embarrassing, they begin to understand. A good go-to is medical stuff. That info is intimate and protected in other aspects of our lives, but it's easy for folks to overlook the things they casually Google. E.g. Everyone has done searches along those lines and can even imagine their mother/grandmother doing so, yet they would be horrified at the prospect of such intimate info being made public for anyone to see."
+      },
+      {
+        "author": "JohnnyDan22",
+        "content": "What would you say to someone who tries to cope and say they don’t care about faceless corporations knowing this information, as their family friends will never hear about it, but they do care if someone like you does. In their minds, it’s not like Facebook is openly sharing medical information with their family/friends"
+      },
+      {
+        "author": "hipocampito435",
+        "content": "Trackers should be filtered at the ISP level and this be enforced by law. The user shouldn't have to perform massive efforts just to have basic privacy on the internet, not everyone has the time and the educational background to take effective privacy measures"
+      },
+      {
+        "author": "Ok_Muffin_925",
+        "content": "Totally agree. I remember back in the early 2000's when doing Google searches was considered by many an extension of your personal inner ramblings and no one had an idea of what you were searching for other than some unknown objective, disinterested IT employee somewhere in CA who would never connect the dots on anyone let alone some person they do not know personally. Now entering a simple, esoteric or weird Google search while bored can end up serving as evidence against you in a court case as proof of motive or intent when it was really nothing more than meaningless mental ramblings spurred perhaps by a conservation at work or a movie you saw."
+      },
+      {
+        "author": "hipocampito435",
+        "content": "sometimes I like to write short fictional stories about evil people and groups and I don't know if it's safe for me to use search engines to research about unethical or violent things, as that might one day be used against me if I were to be the victim of false accusations! For example, what if I want to know what are the most common poisons used in murder or by oppressive regimens to eliminate dissidents?"
+      },
+      {
+        "author": "Ok_Muffin_925",
+        "content": "Exactly. That is very true."
+      },
+      {
+        "author": "Melodic_Armadillo710",
+        "content": "This is exactly the kind of danger privacy invasion brings. And not being able to get medical insurance because you once looked up toe-ache, or cancer. Or being denied a loan because you looked up how to spell 'insolvency' for business essay. I could go on..."
+      }
+    ],
+    "thread_title": "The mentality of “i have nothing to hide” is why companies will never prioritize our privacy.",
+    "thread_url": "https://old.reddit.com/r/privacy/comments/1k4cs3p/the_mentality_of_i_have_nothing_to_hide_is_why/",
+    "username": "naffe1o2o",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:53:40.558028"
+  },
+  {
+    "id": "1kd241x",
+    "title": "TikTok Fined €530 Million in Ireland Over Data Transfers to China",
+    "author": "gordon22",
+    "permalink": "https://cyberinsider.com/tiktok-fined-e530-million-in-ireland-over-data-transfers-to-china/",
+    "content": "",
+    "comments": [],
+    "thread_title": "TikTok Fined €530 Million in Ireland Over Data Transfers to China",
+    "thread_url": "https://cyberinsider.com/tiktok-fined-e530-million-in-ireland-over-data-transfers-to-china/",
+    "username": "gordon22",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:53:55.234886"
+  },
+  {
+    "id": "1kdno6o",
+    "title": "[Sweden] Proposal to Allow Wiretapping of Children Under 15 Without Criminal Suspicion",
+    "author": "Busy-Measurement8893",
+    "permalink": "https://swedenherald.com/article/proposal-to-allow-wiretapping-of-minors-without-crime-suspicion",
+    "content": "",
+    "comments": [],
+    "thread_title": "[Sweden] Proposal to Allow Wiretapping of Children Under 15 Without Criminal Suspicion",
+    "thread_url": "https://swedenherald.com/article/proposal-to-allow-wiretapping-of-minors-without-crime-suspicion",
+    "username": "Busy-Measurement8893",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:54:07.638496"
+  },
+  {
+    "id": "1k7lx2o",
+    "title": "Speel de game en win een gouden Doritos!",
+    "author": "DoritosBenelux",
+    "permalink": "https://alb.reddit.com/cr?za=FF3sGpCiz5ZnJO3HYogXF739fb0tIhza8INc5PvP32JpiSo62I98ggZKZcxBMMHL0bvHdfwn1C0jMjDfEfszHoGQ-x9DaWJKF-qq7NPlwbcPPGMnSn6Nt3ZDXpua1EU584C4gXa_aUIX6oRPEnU8RQHiV1-yD-LhgYSENYcgzAj1eDBIFIj5WNcl374ILzGI-MtUozSwOYRMfI3tN_sJ__5jmYUGx82ThUIkk8Lr8EWYRdfzdPzqT02DjDlqxPtN1F4n5PeL82A2EPPwxh31HKxmBNQQ38YUo3mHTVq72wOt0nxHmwUyjphC3YFhjRnqri6AR2YKnu4g9XM77xdVIP_m40ZDZSfI1QFsg76rk4qxKHP2urIs49h4iyQ1QX4zILquQkgFMfFy55Pplubbt9ZuFeZMma6Qiq_npVd4_srrIO4sE3gL46Zw7z4S3wx1aP5vAb6MsT-9VSKtNx8bfBlYtQm_S5HUdLEChhCRstfFtuRSyfsKd0Qapb4jtyvCdXOsadtlzpzAOc9wWASRKos-xXV0AbA0_MMgnt1ffxYfOkUS5hZR7xgrKtdodb3j03XyupTakfcrK1v-1PgSG7qqw0K4a_HScA&zp=Xoy--yb2iR6xKMS9-qKze1iZoUyXvi1jRqJGR-Ggocq_hya9ObQclwXM5A3sIGws3J_9A2iS5wr5n0islq5OEkEQJfEqhdf77j0dcEjURQlhxmJvuitfF41hxiQaVGKCvEvz4G4-MkZ1PUcky_TmSzjs_kJSsza1X8OUOfx6migpJi2w5R1XDjrFsbjkXvT3e-_-n4XRQ-zjRUomH-ycqwe0tmOa9SoTUoZHA6iVglZSp1OGLcozWBOt9218LY8IqvaBXfsNFUT9eChZPSbSvYINWqds5Q3fd7pWgY9sfAPjSekiE5ZymrD7nJKvWYNrdevbWK-sR3zTubXJ6S4PNyAFLPC4qNFVAzsTVcONh5rr-U-PajVZanK3MH8yo3Og0g",
+    "content": "",
+    "comments": [],
+    "thread_title": "Speel de game en win een gouden Doritos!",
+    "thread_url": "https://alb.reddit.com/cr?za=FF3sGpCiz5ZnJO3HYogXF739fb0tIhza8INc5PvP32JpiSo62I98ggZKZcxBMMHL0bvHdfwn1C0jMjDfEfszHoGQ-x9DaWJKF-qq7NPlwbcPPGMnSn6Nt3ZDXpua1EU584C4gXa_aUIX6oRPEnU8RQHiV1-yD-LhgYSENYcgzAj1eDBIFIj5WNcl374ILzGI-MtUozSwOYRMfI3tN_sJ__5jmYUGx82ThUIkk8Lr8EWYRdfzdPzqT02DjDlqxPtN1F4n5PeL82A2EPPwxh31HKxmBNQQ38YUo3mHTVq72wOt0nxHmwUyjphC3YFhjRnqri6AR2YKnu4g9XM77xdVIP_m40ZDZSfI1QFsg76rk4qxKHP2urIs49h4iyQ1QX4zILquQkgFMfFy55Pplubbt9ZuFeZMma6Qiq_npVd4_srrIO4sE3gL46Zw7z4S3wx1aP5vAb6MsT-9VSKtNx8bfBlYtQm_S5HUdLEChhCRstfFtuRSyfsKd0Qapb4jtyvCdXOsadtlzpzAOc9wWASRKos-xXV0AbA0_MMgnt1ffxYfOkUS5hZR7xgrKtdodb3j03XyupTakfcrK1v-1PgSG7qqw0K4a_HScA&zp=Xoy--yb2iR6xKMS9-qKze1iZoUyXvi1jRqJGR-Ggocq_hya9ObQclwXM5A3sIGws3J_9A2iS5wr5n0islq5OEkEQJfEqhdf77j0dcEjURQlhxmJvuitfF41hxiQaVGKCvEvz4G4-MkZ1PUcky_TmSzjs_kJSsza1X8OUOfx6migpJi2w5R1XDjrFsbjkXvT3e-_-n4XRQ-zjRUomH-ycqwe0tmOa9SoTUoZHA6iVglZSp1OGLcozWBOt9218LY8IqvaBXfsNFUT9eChZPSbSvYINWqds5Q3fd7pWgY9sfAPjSekiE5ZymrD7nJKvWYNrdevbWK-sR3zTubXJ6S4PNyAFLPC4qNFVAzsTVcONh5rr-U-PajVZanK3MH8yo3Og0g",
+    "username": "DoritosBenelux",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:54:20.926974"
+  },
+  {
+    "id": "1jv6jfy",
+    "title": "Reddit’s tracking data is deeper than i though",
+    "author": "Top_Juggernaut_9719",
+    "permalink": "https://old.reddit.com/r/privacy/comments/1jv6jfy/reddits_tracking_data_is_deeper_than_i_though/",
+    "content": "Dedicated to the intersection of technology, privacy, and freedom in the digital world. \"I don't have anything to hide but I don't have anything I want to show you either\" - @CryptopartyBLN \"Privacy is not a sign of wrongdoing. Privacy is a sign of freedom.\" - /u/blackhawk_12 (updated 2023-04-27) Before posting in /r/privacy, read the Sidebar Rules. Enjoy our Wiki! It has all sorts of nifty advice and explains most topics you’re interested in if you’re reading this. Consider donating to one of the organizations that fight for your rights.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Hello u/Top_Juggernaut_9719, please make sure you read the sub rules if you haven't already. (This is an automatic reminder left on all new posts.) I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "Severe_Extent_9526",
+        "content": "They track how long you hover over a post before you continue scrolling. They track the distance your finger moves as you scroll."
+      },
+      {
+        "author": "Top_Juggernaut_9719",
+        "content": "Really, i also found similar evidence when i examined the payload tab in devtools, they log timestamps to milliseconds, know that i watched 75% of a video, the scrolling behaviour and dwell time!"
+      },
+      {
+        "author": "RCrl",
+        "content": "It’s a free to use site so you (we) are the product. They will collect as much as they can to sell targeted ads. Millisecond time stamps seem unnecessary but it’s also easy to collect timing that precise. It probably helps correlate behaviors or matters at scale for little additional compute power."
+      },
+      {
+        "author": "hectorgarabit",
+        "content": "The timestamp datatype is at the millisecond level so counting seconds, tenth of a second or millisecond is exactly the same from a data standpoint. Doing differently is probably more complicated"
+      },
+      {
+        "author": "Matrix5353",
+        "content": "Right, people surprised about the millisecond timestamps have probably never worked in software development before. No way are they building custom code to handle time. There's a standard library for that for a reason."
+      },
+      {
+        "author": "BeYeCursed100Fold",
+        "content": "The ads they show me suck...just a bunch of Jesus ads I reported. Maybe because I am an Antitheist? Send more ads of buffoon slogans Spez."
+      },
+      {
+        "author": "Devil-Eater24",
+        "content": "Go to settings > preferences > limit ads in selected categories and uncheck \"Allow religion and spirituality ads\" Better to use an adblocker though"
+      },
+      {
+        "author": "AnAwkwardOrchid",
+        "content": "Reddit has been a dream since using revanced. No more ads"
+      },
+      {
+        "author": "Art_by_Nabes",
+        "content": "On Reddit or on your device?"
+      },
+      {
+        "author": "Devil-Eater24",
+        "content": "I use the web version on desktop mostly, so I use an adblock in the browser"
+      },
+      {
+        "author": "Art_by_Nabes",
+        "content": "Oh ya I use an adblocker website such as brave but the app on my phone."
+      },
+      {
+        "author": "apokrif1",
+        "content": "Which ads don\"t suck?"
+      },
+      {
+        "author": "derpdeedee",
+        "content": "That's pretty funny though. They are clearly angry at you for your lack of adherence and you're being punished, * just like the Ol'mighty himself!"
+      },
+      {
+        "author": "putmeinthetrash420",
+        "content": "It’s quite satisfying when you do stupid shit on purpose to make the data not reflect what you actually think, and then get related targeted ads/content. Feels like a small victory against the evil data overlords"
+      },
+      {
+        "author": "krinklychipbag",
+        "content": "FYI, every website you use, every phone app, etc does this. These are essentially part of the basics of developing a user facing product. Why, you might ask would a company want to know this information? It’s not necessarily nefarious (although it can be). Let’s say you’re a laptop manufacturer, and you have a website. You’d track how users navigate through your site, to see what flows they take to eventually buy a laptop, or conversely what pages or images correlate with users closing your site and not buying a laptop. Anyway, I’m not endorsing the use of these practices, but just letting you know this type of tracking exists on basically everything you do on the internet. Also, these metrics can be used nefariously to fingerprint you (i.e. use clues to figure out your identity)."
+      },
+      {
+        "author": "Top_Juggernaut_9719",
+        "content": "Alright, got it, thank you sir!"
+      },
+      {
+        "author": "[deleted]",
+        "content": "Through any browser?"
+      },
+      {
+        "author": "Eeka_Droid",
+        "content": "They are tracking us at this very moment and.. Hey, hello Reddit, how are you doing guys?"
+      },
+      {
+        "author": "Evol_Etah",
+        "content": "Checkout RedditMetis.com"
+      }
+    ],
+    "thread_title": "Reddit’s tracking data is deeper than i though",
+    "thread_url": "https://old.reddit.com/r/privacy/comments/1jv6jfy/reddits_tracking_data_is_deeper_than_i_though/",
+    "username": "Top_Juggernaut_9719",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:54:29.608790"
+  },
+  {
+    "id": "1kgqex4",
+    "title": "Jury orders Israel's NSO Group to pay $167 million for hacking thousands of WhatsApp users",
+    "author": "redditissahasbaraop",
+    "permalink": "https://arstechnica.com/security/2025/05/jury-orders-nso-to-pay-167-million-for-hacking-whatsapp-users/",
+    "content": "",
+    "comments": [],
+    "thread_title": "Jury orders Israel's NSO Group to pay $167 million for hacking thousands of WhatsApp users",
+    "thread_url": "https://arstechnica.com/security/2025/05/jury-orders-nso-to-pay-167-million-for-hacking-whatsapp-users/",
+    "username": "redditissahasbaraop",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:54:41.907327"
+  },
+  {
+    "id": "1k0kkr6",
+    "title": "I just realized all my passwords were saved in the clipboard history of my Galaxy S24 Ultra",
+    "author": "gabrielknaked",
+    "permalink": "https://us.community.samsung.com/t5/Suggestions/Implement-Auto-Delete-Clipboard-History-to-Prevent-Sensitive/m-p/3200743",
+    "content": "",
+    "comments": [],
+    "thread_title": "I just realized all my passwords were saved in the clipboard history of my Galaxy S24 Ultra",
+    "thread_url": "https://us.community.samsung.com/t5/Suggestions/Implement-Auto-Delete-Clipboard-History-to-Prevent-Sensitive/m-p/3200743",
+    "username": "gabrielknaked",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:54:53.525726"
+  },
+  {
+    "id": "1k7qcm9",
+    "title": "Perplexity CEO says its browser will track everything users do online to sell ‘hyper personalized’ ads",
+    "author": "totallynotabot1011",
+    "permalink": "https://www.msn.com/en-us/news/technology/perplexity-ceo-says-its-browser-will-track-everything-users-do-online-to-sell-hyper-personalized-ads/ar-AA1DzdOD",
+    "content": "",
+    "comments": [],
+    "thread_title": "Perplexity CEO says its browser will track everything users do online to sell ‘hyper personalized’ ads",
+    "thread_url": "https://www.msn.com/en-us/news/technology/perplexity-ceo-says-its-browser-will-track-everything-users-do-online-to-sell-hyper-personalized-ads/ar-AA1DzdOD",
+    "username": "totallynotabot1011",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:55:10.794627"
+  },
+  {
+    "id": "1k1k1ia",
+    "title": "DoJ Wins Another Victory: Google's Ad Tech Empire Violates Antitrust Laws",
+    "author": "Consistent-Age5347",
+    "permalink": "https://www.macrumors.com/2025/04/17/google-ad-tech-antitrust-ruling/",
+    "content": "",
+    "comments": [],
+    "thread_title": "DoJ Wins Another Victory: Google's Ad Tech Empire Violates Antitrust Laws",
+    "thread_url": "https://www.macrumors.com/2025/04/17/google-ad-tech-antitrust-ruling/",
+    "username": "Consistent-Age5347",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:55:21.021056"
+  },
+  {
+    "id": "1jyafyi",
+    "title": "It’s not a matter of “I don’t have anything to hide”, it’s just that the threats aren’t tangible and people don’t feel the effects yet.",
+    "author": "RecentMatter3790",
+    "permalink": "https://old.reddit.com/r/privacy/comments/1jyafyi/its_not_a_matter_of_i_dont_have_anything_to_hide/",
+    "content": "Dedicated to the intersection of technology, privacy, and freedom in the digital world. \"I don't have anything to hide but I don't have anything I want to show you either\" - @CryptopartyBLN \"Privacy is not a sign of wrongdoing. Privacy is a sign of freedom.\" - /u/blackhawk_12 (updated 2023-04-27) Before posting in /r/privacy, read the Sidebar Rules. Enjoy our Wiki! It has all sorts of nifty advice and explains most topics you’re interested in if you’re reading this. Consider donating to one of the organizations that fight for your rights.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Hello u/RecentMatter3790, please make sure you read the sub rules if you haven't already. (This is an automatic reminder left on all new posts.) Check out the r/privacy FAQ I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "Sparcky_McFizzBoom",
+        "content": "Caring about online privacy feels “softer” than caring about anything else in life, if you know what I mean? It’s difficult to explain. When the stance on abortion suddenly changed in some states in the U.S., knowing who had access to the data of your period tracking app became very fucking real really fucking fast. We can't predict the future, but any data can be used as leverage currently, or in the future. Against you, or maybe another group of people. It's not about I, it's about US as as a group of people. Privacy is not about protecting yourself, it's about protecting everyone, for current, and future threats. Sure, you may not be impacted today. Or maybe you're not aware of how it impacts you today. But some people are, and some people will be in the future. So yes, it may not be an immediate problem for most of people (once again, that they are aware of). So maybe the solution is to either:"
+      },
+      {
+        "author": "lopgir",
+        "content": "The best argument I've found that works on most people: If you wouldn't send every single porn you've ever watched to all your friends, coworkers, and family, then you care about privacy."
+      },
+      {
+        "author": "Little_Bishop1",
+        "content": "Lmao what?"
+      },
+      {
+        "author": "lopgir",
+        "content": "Think about this: If a hacker sends you an email and says he has proof of every porn you've watched in the last five years with logs, and he's gonna send that to everyone you know, along with links to the porn, unless you pay him would you want to pay him? If you would, you want your private information to remain private to such a degree that you can be blackmailed about it."
+      },
+      {
+        "author": "Tanukifever",
+        "content": "I started reading \"when stance on abortion suddenly changed\" thinking this is it, we're talking who had capabilties to influence peoples mindset. Maybe even things like was the change in stance even real. But then it went on with this app, the government has access to it and you can just stop using it. I didn't even realize it was something you needed an app for. Don't forget people operate on the mindset of it's only a problem if they are informed there's a problem. Like TikTok wouldn't have been an issue of lives being lost right? Can't be because they would have informed everyone. You can see evidence of lives lost from the challenges but that can't be the reason for the ban."
+      },
+      {
+        "author": "---Cloudberry---",
+        "content": "I’m a bit confused. There’s more than one Period tracking app and as far as I know government doesn’t automatically have access? Or do you mean hypothetically? And yes it makes sense to stop using something that compromises you although this does sound a bit dismissive about the use for period tracking. It’s actually pretty helpful for a bunch of reasons."
+      },
+      {
+        "author": "omniumoptimus",
+        "content": "I think you are all thinking about this wrong, and it’s because there doesn’t seem to be any underlying principle here. Rule of law. That’s why we need privacy—full stop. Here is the rationale: If you want laws that everyone follows, and not just the oppressed, then you need democracy. Why? Because you will always have bad leadership. Always. But with democracy, you can vote them out. You can have checks and balances. To have democracy, you need privacy. You need to be able to complain without fear of reprisal. You need to be able to criticize those in power. To have privacy, you need to have it all the time, in all instances. Once you start making exceptions, you create loopholes. Once you have loopholes, those in power create laws to exploit those loopholes. Years ago, an attorney wrote a book called Three Felonies a Day. I learned about this through my work, doing research in the US court system, where a prosecutor once told me a favorite saying of prosecutors: “show me the perp and I’ll show you the crime.” That means anyone can be imprisoned if the prosecution is motivated enough. The book I was referred to, Three Felonies, describes how there are over 4000 statutes that any one of us can violate every single day—so many that we all unwittingly commit, roughly, three felonies a day, even sitting at home doing nothing. A motivated, adversarial prosecution just needs to look at all the information collected on you to create an effective case against you. This is why, as time progresses, cases against people in detention (current circumstances, for instance), become more robust: they’re on a fishing expedition through everything you’ve ever done, trying to fit your behaviors into criminal definitions. This is why your information and activities must remain private: they can be weaponized against you, ESPECIALLY if you seek to promote democratic change. I’m not saying anyone’s beliefs are right or wrong, but we all must have the right to have beliefs—even wrong ones. Once upon a time, people who disagreed with slavery were considered dissidents! Troublemakers. And history is full of examples of this. From Galileo to Martin Luther King Jr. We just do not seem to know, as a society, when we are wrong about something. (And so we need people to be free to disagree.) Edit: ultimately, “I have nothing to hide” is inane. If you believe in democracy, you have everything to hide. Innocent until proven guilty: if you believe I’m doing something illegal by being private, prove it in court."
+      },
+      {
+        "author": "insertnickhere",
+        "content": "I hope you already have an ActBlue donation page on behalf of your candidacy or, failing that, will one day."
+      },
+      {
+        "author": "---Cloudberry---",
+        "content": "Once upon a time people were brutally murdered for “wrong” beliefs or behaviours that should be private and affect no one else. Some countries will still do this."
+      },
+      {
+        "author": "Such_Reference_8186",
+        "content": "I agree that this is being looked at wrong. If you were born after 1990, your privacy never existed in the 1st place. As soon as you started participating in social media, whatever was left of it, you willingly gave away. To think you can post online and opine about the troubles of our times anonymously is naive. There is no privacy and hasn't been for decades. Want privacy? Dump your phone, don't drive a car don't use any type of electronic communication of any type."
+      },
+      {
+        "author": "NuQ",
+        "content": "Hell nah. They're starving for data, it's what drives their business model. Give them data! According to \"them\" i'm either dead after jumping the shark, or i'm a master sock puppeteer living on the outskirts of bruges, or... you get the idea. Social media was always about presentation, aka lying. Go big! live out your most cherished random hypothetical situation within the minds of your subscribers! it would be rude not to."
+      },
+      {
+        "author": "gatornatortater",
+        "content": "I strongly disagree with this fatalistic opinion."
+      },
+      {
+        "author": "mikew_reddit",
+        "content": "I don’t have anything to hide I do. I've seen enough identity theft, to not want any info publicly available. So yes I'd prefer hiding personal information from the public."
+      },
+      {
+        "author": "Responsible_Divide86",
+        "content": "I might not have anything to hide, but I don't trust there will never be a time where I will need to hide things, or someone else will, for reasons I agree with"
+      },
+      {
+        "author": "cheap_dates",
+        "content": "You have nothing to hide until its too late to hide it."
+      },
+      {
+        "author": "Ttyybb_",
+        "content": "I have nothing to hide, but furthermore I have nothing to share."
+      },
+      {
+        "author": "West-One5944",
+        "content": "A thief may have the key to my house, and know what's inside, but I'm still going to change the locks so they don't have access to anything."
+      },
+      {
+        "author": "cheap_dates",
+        "content": "Its a specious argument. You have nothing to hide until its too late to hide it. Whenever you are pumped about: You are begin targeted in some way. Maybe for now, its just for Whole Life Insurance but in a few years, who knows how that information may be used against you. Remember on the Internet, you are often the product."
+      },
+      {
+        "author": "quaderrordemonstand",
+        "content": "But they do have plenty of things to hide. Would they share their porn browsing history with their parents? Would they tell us all their social security number? The last three things they went to a doctor about? The most humiliating thing that ever happened to them? Their address? Exactly how much money they owe?"
+      }
+    ],
+    "thread_title": "It’s not a matter of “I don’t have anything to hide”, it’s just that the threats aren’t tangible and people don’t feel the effects yet.",
+    "thread_url": "https://old.reddit.com/r/privacy/comments/1jyafyi/its_not_a_matter_of_i_dont_have_anything_to_hide/",
+    "username": "RecentMatter3790",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:55:34.909341"
+  },
+  {
+    "id": "1kdo2w8",
+    "title": "PSA: Be careful when sharing links from Instagram if you don't want to reveal your identity!",
+    "author": "thedeadfungus",
+    "permalink": "https://old.reddit.com/r/privacy/comments/1kdo2w8/psa_be_careful_when_sharing_links_from_instagram/",
+    "content": "Dedicated to the intersection of technology, privacy, and freedom in the digital world. \"I don't have anything to hide but I don't have anything I want to show you either\" - @CryptopartyBLN \"Privacy is not a sign of wrongdoing. Privacy is a sign of freedom.\" - /u/blackhawk_12 (updated 2023-04-27) Before posting in /r/privacy, read the Sidebar Rules. Enjoy our Wiki! It has all sorts of nifty advice and explains most topics you’re interested in if you’re reading this. Consider donating to one of the organizations that fight for your rights.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Hello u/thedeadfungus, please make sure you read the sub rules if you haven't already. (This is an automatic reminder left on all new posts.) Check out the r/privacy FAQ I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "JovialJem",
+        "content": "Good reminder that it's typically a good habit to just remove any query strings from shared links in general"
+      },
+      {
+        "author": "Bitter_Pay_6336",
+        "content": "Unfortunately every website does things slightly differently. If you remove the wrong query parameter, the link might not work anymore, and some don't use query strings at all. reddit for example gives you a special URL like reddit.com/r/privacy/s/4D23jikF, which includes a unique tracking ID that also encodes the post being linked to. You can't remove any part of that ID without breaking the link. On YouTube, the si parameter is your sharing incident ID that tracks you, but if you were to remove the v parameter, then the link would not work anymore because that's the video ID. Stack Overflow inserts your user ID into sharing links as part of the path, at the end. If you know what it is, you can remove it, or just know not to use the sharing buttons. You'd basically need to be a web developer to figure all this shit out on your own."
+      },
+      {
+        "author": "_cdk",
+        "content": "old.reddit.com doesn't do it like that btw"
+      },
+      {
+        "author": "bannedByTencent",
+        "content": "Anything after „?” mark can be and should be removed."
+      },
+      {
+        "author": "_cdk",
+        "content": "sure.. but the comment i replied to is talking about how new reddit does it with s/ right after the .com, in the spot where r/ normally goes"
+      },
+      {
+        "author": "CrystalMeath",
+        "content": "reddit for example gives you a special URL starting with reddit.com/s/ , which includes a unique tracking ID that also encodes the post being linked to. You can’t remove any part of that ID without breaking the link. Is that just on the Reddit mobile app? Apollo doesn’t do that for me, nor does the Reddit website. Edit: Yeah just checked, it’s only the mobile app. You can get around it by opening the link in Brave Browser and then tapping “Copy Clean Link” from the address bar. But it’s a hassle. Or you can sideload Apollo which copies the clean link by default."
+      },
+      {
+        "author": "Bitter_Pay_6336",
+        "content": "As far as I know it's just the mobile app, for now. I wouldn't be surprised if they roll this out to the website at some point"
+      },
+      {
+        "author": "justsomefatwhiteguy",
+        "content": "Wait hasn’t Apollo been dead for like 2 years?"
+      },
+      {
+        "author": "CrystalMeath",
+        "content": "Retired but not dead. You can sideload it and use your own Reddit API key."
+      },
+      {
+        "author": "apokrif1",
+        "content": "you are connected to Instagram and share a post using the share button to copy a link for example, it adds a parameter to the query string called igsh which I believe is the one holding some information about the person sharing If one doesn't know, one should check in each case."
+      },
+      {
+        "author": "JovialJem",
+        "content": "It's often easy to tell when it is or isn't needed for the link to function. YouTube, Instagram, and Spotify make their tracking links super obvious, whereas others are a bit sneakier. But it's common for it to be as simple as removing the random jumble of garbage text at the end of a link"
+      },
+      {
+        "author": "InvestigatorMajor899",
+        "content": "or just play with a lot of code and break things like I did lol"
+      },
+      {
+        "author": "Minteck",
+        "content": "Or just copy the URL manually instead of using the share option"
+      },
+      {
+        "author": "OldManBrodie",
+        "content": "I'm glad I'm not the only weirdo that does this"
+      },
+      {
+        "author": "Jayden_Ha",
+        "content": "Just simply don’t use it"
+      },
+      {
+        "author": "thedeadfungus",
+        "content": "The best solution in fact but just sharing for those who do use that crap (like me 😅)"
+      },
+      {
+        "author": "Jayden_Ha",
+        "content": "On Firefox you can use the container to have separate profiles"
+      },
+      {
+        "author": "CovetingArc",
+        "content": "I was going to say.. isn't Instagram one of those not so private related apps..."
+      },
+      {
+        "author": "PONT05",
+        "content": "yeah i got exposed in a discord server once when i shared an instagram reel… how fun"
+      }
+    ],
+    "thread_title": "PSA: Be careful when sharing links from Instagram if you don't want to reveal your identity!",
+    "thread_url": "https://old.reddit.com/r/privacy/comments/1kdo2w8/psa_be_careful_when_sharing_links_from_instagram/",
+    "username": "thedeadfungus",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:55:46.160419"
+  },
+  {
+    "id": "1k4w3jz",
+    "title": "RFK Jr.'s autism study to amass medical records of many Americans",
+    "author": "feed_meknowledge",
+    "permalink": "https://www.cbsnews.com/news/rfk-jr-autism-study-medical-records/?fbclid=IwY2xjawJz0WFleHRuA2FlbQIxMQBicmlkETB5YVpFOTBlTDRqVlVoSDNRAR7Pfx6CNjaK4kjzAm0nyZlJcwM3r_l-_6RdANoS0A4Io0NVtHWtOWaTlpD-DQ_aem_ksYvbYjIxrYRNuj1cuv4WQ",
+    "content": "",
+    "comments": [],
+    "thread_title": "RFK Jr.'s autism study to amass medical records of many Americans",
+    "thread_url": "https://www.cbsnews.com/news/rfk-jr-autism-study-medical-records/?fbclid=IwY2xjawJz0WFleHRuA2FlbQIxMQBicmlkETB5YVpFOTBlTDRqVlVoSDNRAR7Pfx6CNjaK4kjzAm0nyZlJcwM3r_l-_6RdANoS0A4Io0NVtHWtOWaTlpD-DQ_aem_ksYvbYjIxrYRNuj1cuv4WQ",
+    "username": "feed_meknowledge",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:55:55.458155"
+  },
+  {
+    "id": "1kdqln6",
+    "title": "How Palantir, the secretive tech company, is rising in the Trump era",
+    "author": "0x070",
+    "permalink": "https://www.npr.org/2025/05/01/nx-s1-5372776/palantir-tech-contracts-trump",
+    "content": "",
+    "comments": [],
+    "thread_title": "How Palantir, the secretive tech company, is rising in the Trump era",
+    "thread_url": "https://www.npr.org/2025/05/01/nx-s1-5372776/palantir-tech-contracts-trump",
+    "username": "0x070",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:56:05.053820"
+  },
+  {
+    "id": "1jltc2f",
+    "title": "Marvel Rivals just got a whole lot more… fantastic.",
+    "author": "MarvelRivals",
+    "permalink": "https://alb.reddit.com/cr?za=PTRjq3orO8kneurXb_ykRo7oGtfVO1w8-keBKE911Gq90XlVDHkMBS4U_LMaak0FykM-SO8rLpzItV0pu41XEIO_01-uK7UgCBswRTC0Fl9zDp-XEScnpBIfmHfOUEDHr4rIkYydkUqHyMZeibHvAVoT3crcAJKjY-0Pn9kLW5N-SP96LAAG8XxxbsWLL1keyTScWaFf-DHe0EDCITvm4rvm1OhTcOZAGRF-nUE4M-0s5WgnZpXuHsB72HWQ2wHrn8oz5r_JQxsBMSMGkOxDvPkR8zbRHj2072fa2OsYKCbm9PJyZvOsF0vm2Nprg4JlCRb4FADccUUdYEcSuZUCDj8NjIt5xP9vDDEYnnhk97VCuqX_BCA3Hu53fxb4f7wS41vy8_CBfVfCnYuQbZcEwJVVbsnczXO2hfnNZFofWDSrAYpJMSAC1WCCihlV8xfx-6JGtUu0SNa6EgsgAvGgn54hqMaAUpTR4L-Gx5X2Re2gex63Ayg3sti9oooenjViVigikM8q4Ljl-NuvuRqkXUimTsCGZDHtyxlw70sYhRoYm9DVNadCeTYfIQA2nDDeLvnmflPjkxgM59KUDwlkwxTO_dMXAsmW5H8&zp=6GZOPNUeYYwh2qIF_8IPOt-uT78tBjRuSkHHULuaV_t47wY_JraqLOc99LBRwC_rgF-d7cqh8FMIQVxqrDMh21ribQLzV3DG4EnB-3fgHf3WPQooemAPFJULNuqC8ZgXBeI7mhAz5O45kt6lLQk_nPHuG4J5oZarSML3guM6FSoh71Ho_GpfCEqMdsHgKatZRC9CcT40Q5HcqCelfHeBSenEKegt0oQMjR_Kt9wYUeJYERZhVkEWVjXed9snisd4SdNlDH8xiJabQ7yu8ZNA6Pw9I2FG9iuNZ_FW0SHus4xAz_lb0KL9GILty0doJpGyCgKXhdRJ1m1KEBABJ0USjSD6BvsQXQMK8AqGXkpi2jkKebwan5FLnXo-xoP90ONgRc-4gndK1qu_SMRyNWfxbnXdFVgazrss1O5MYdAC4ZfMh2PUpZfFXk6aaURVpwfwTlf3aIRwONGn5gwcDik1Ok1eKMx7DXv4SRru0QtI-yXQSYsaTKwzmB9lRvKJToCccWnGpRD1qZBwmubR7hBoTNK68FtrRrh411-onCD01KpPfw-Bwox2azsk3OOgSF4xjf3h4SC1-jz9RxnioawemHOxyqu6awIrMVb2Hg2FOAmyOPCXPKUdU7fxRWYLNrMXwTOZ8Y6-Eg",
+    "content": "",
+    "comments": [],
+    "thread_title": "Marvel Rivals just got a whole lot more… fantastic.",
+    "thread_url": "https://alb.reddit.com/cr?za=PTRjq3orO8kneurXb_ykRo7oGtfVO1w8-keBKE911Gq90XlVDHkMBS4U_LMaak0FykM-SO8rLpzItV0pu41XEIO_01-uK7UgCBswRTC0Fl9zDp-XEScnpBIfmHfOUEDHr4rIkYydkUqHyMZeibHvAVoT3crcAJKjY-0Pn9kLW5N-SP96LAAG8XxxbsWLL1keyTScWaFf-DHe0EDCITvm4rvm1OhTcOZAGRF-nUE4M-0s5WgnZpXuHsB72HWQ2wHrn8oz5r_JQxsBMSMGkOxDvPkR8zbRHj2072fa2OsYKCbm9PJyZvOsF0vm2Nprg4JlCRb4FADccUUdYEcSuZUCDj8NjIt5xP9vDDEYnnhk97VCuqX_BCA3Hu53fxb4f7wS41vy8_CBfVfCnYuQbZcEwJVVbsnczXO2hfnNZFofWDSrAYpJMSAC1WCCihlV8xfx-6JGtUu0SNa6EgsgAvGgn54hqMaAUpTR4L-Gx5X2Re2gex63Ayg3sti9oooenjViVigikM8q4Ljl-NuvuRqkXUimTsCGZDHtyxlw70sYhRoYm9DVNadCeTYfIQA2nDDeLvnmflPjkxgM59KUDwlkwxTO_dMXAsmW5H8&zp=6GZOPNUeYYwh2qIF_8IPOt-uT78tBjRuSkHHULuaV_t47wY_JraqLOc99LBRwC_rgF-d7cqh8FMIQVxqrDMh21ribQLzV3DG4EnB-3fgHf3WPQooemAPFJULNuqC8ZgXBeI7mhAz5O45kt6lLQk_nPHuG4J5oZarSML3guM6FSoh71Ho_GpfCEqMdsHgKatZRC9CcT40Q5HcqCelfHeBSenEKegt0oQMjR_Kt9wYUeJYERZhVkEWVjXed9snisd4SdNlDH8xiJabQ7yu8ZNA6Pw9I2FG9iuNZ_FW0SHus4xAz_lb0KL9GILty0doJpGyCgKXhdRJ1m1KEBABJ0USjSD6BvsQXQMK8AqGXkpi2jkKebwan5FLnXo-xoP90ONgRc-4gndK1qu_SMRyNWfxbnXdFVgazrss1O5MYdAC4ZfMh2PUpZfFXk6aaURVpwfwTlf3aIRwONGn5gwcDik1Ok1eKMx7DXv4SRru0QtI-yXQSYsaTKwzmB9lRvKJToCccWnGpRD1qZBwmubR7hBoTNK68FtrRrh411-onCD01KpPfw-Bwox2azsk3OOgSF4xjf3h4SC1-jz9RxnioawemHOxyqu6awIrMVb2Hg2FOAmyOPCXPKUdU7fxRWYLNrMXwTOZ8Y6-Eg",
+    "username": "MarvelRivals",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:56:18.254536"
+  },
+  {
+    "id": "1kayaee",
+    "title": "I'm Google Brainwashed",
+    "author": "Puzzleheaded-Drag290",
+    "permalink": "https://old.reddit.com/r/privacy/comments/1kayaee/im_google_brainwashed/",
+    "content": "Dedicated to the intersection of technology, privacy, and freedom in the digital world. \"I don't have anything to hide but I don't have anything I want to show you either\" - @CryptopartyBLN \"Privacy is not a sign of wrongdoing. Privacy is a sign of freedom.\" - /u/blackhawk_12 (updated 2023-04-27) Before posting in /r/privacy, read the Sidebar Rules. Enjoy our Wiki! It has all sorts of nifty advice and explains most topics you’re interested in if you’re reading this. Consider donating to one of the organizations that fight for your rights.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Hello u/Puzzleheaded-Drag290, please make sure you read the sub rules if you haven't already. (This is an automatic reminder left on all new posts.) Check out the r/privacy FAQ I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "cheap_dates",
+        "content": "If I have \"nothing to hide\" then why does it matter? You don't have to change anything if you are comfortable with Google but the \"nothing to hide\" argument is a weak one. You won't know if you have anything to hide until its too late to hide it! You should still be a little leery when asked about: There is often more to this than target marketing."
+      },
+      {
+        "author": "TeslasElectricBill",
+        "content": "If I have \"nothing to hide\" then why does it matter? \"Arguing that you don’t care about the right to privacy because you have nothing to hide is no different than saying you don’t care about free speech because you have nothing to say.\" —Edward Snowden"
+      },
+      {
+        "author": "urdhvareta",
+        "content": "this is powerful"
+      },
+      {
+        "author": "primalbluewolf",
+        "content": "Not powerful enough. Ive more than once had someone turn around and say \"yeah, and? Who cares about free speech?\""
+      },
+      {
+        "author": "DethByte64",
+        "content": "Leave quietly when that happens. Leaving in silence is more powerful than making an argument to a stupid question."
+      },
+      {
+        "author": "Average-Addict",
+        "content": "I've also had this experience. At that point I don't think there's really anything you can do to change their mind."
+      },
+      {
+        "author": "urdhvareta",
+        "content": "I said powerful, not miraculous hahaha"
+      },
+      {
+        "author": "NormalAccounts",
+        "content": "Well, they're spouting a profoundly UN-American ideal. And if they're not American, you can say they don't believe in freedom."
+      },
+      {
+        "author": "primalbluewolf",
+        "content": "To be fair, Im not American, and generally the same is true for those Im discussing it with. Sadly, freedom seems not to be an ideal valued overmuch. To be honest, what I see online suggests the same is true for many Americans."
+      },
+      {
+        "author": "NormalAccounts",
+        "content": "Lot of propaganda working its magic"
+      },
+      {
+        "author": "jarrabayah",
+        "content": "TIL only Americans believe in freedom."
+      },
+      {
+        "author": "Puzzleheaded-Drag290",
+        "content": "Only half of Americans, actually."
+      },
+      {
+        "author": "urdhvareta",
+        "content": "nothing to do with being American, pal"
+      },
+      {
+        "author": "MaraThunderClap",
+        "content": "It's about the principle!"
+      },
+      {
+        "author": "uap_gerd",
+        "content": "Yeah but that's about the right to privacy. Which we should have and do not. But OP is asking a different question, he's asking why he should care. Whether or not he cares about privacy is different than the right to privacy."
+      },
+      {
+        "author": "SSUPII",
+        "content": "The counter claim I hear/read about this mention is that they \"don't have anything to say too\""
+      },
+      {
+        "author": "Oli99uk",
+        "content": "\"nothing to hide\" argument is a weak one. Yeah. When people tell me the nothing to hide peice, I ask them if they get along with their boss or team lead a little later. Thankfully most people I know have a good working relationship with their manager and a level or trust. Almost like a friend but still a colleague. I then ask them how would you feel if you boss asked to see your phone, look at you browsing history, bookmarks, who you have messaged and when (not content), your location history on a days you reported as sick. Maybe biometrics from health trackers either first party on on apps like strava. Or all of that for your attractive partner. His / her photos maybe. Her location when she is out with friends. Which friends? it's not something people would hand over to someone known, with a face that they have a good, professional relationship with. So why is it OK to faceless, profit driven corporation that will also pool that data with all the people you connect with are location tagged with."
+      },
+      {
+        "author": "That-Acanthisitta572",
+        "content": "Addng to this (these days) depending on where you are; location (medical clinics, political locations, embassys) medical info (heart health, weight, cycle - especially for women) and monetary information (payments, transfers, bank details/interest/investors). Certain governmental bodies, lawmakers and insurance/medical coverage companies want to know that info not just because it's valueable, but because it can directly alter or even deny your cricial needs, like insurance coverage or available medicines and stores."
+      },
+      {
+        "author": "cheap_dates",
+        "content": "Exactly!"
+      }
+    ],
+    "thread_title": "I'm Google Brainwashed",
+    "thread_url": "https://old.reddit.com/r/privacy/comments/1kayaee/im_google_brainwashed/",
+    "username": "Puzzleheaded-Drag290",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:56:28.502208"
+  },
+  {
+    "id": "1k3cja8",
+    "title": "One Tech Tip: Locking down your device when crossing borders",
+    "author": "wewewawa",
+    "permalink": "https://apnews.com/article/internet-privacy-smartphones-travel-e0a3146ae7966ea0e4157dbfae1f6a81",
+    "content": "",
+    "comments": [],
+    "thread_title": "One Tech Tip: Locking down your device when crossing borders",
+    "thread_url": "https://apnews.com/article/internet-privacy-smartphones-travel-e0a3146ae7966ea0e4157dbfae1f6a81",
+    "username": "wewewawa",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:56:37.651859"
+  },
+  {
+    "id": "1jvy51x",
+    "title": "Western Intelligence Agencies Expose Chinese Spyware Targeting Civil Society",
+    "author": "gordon22",
+    "permalink": "https://cyberinsider.com/western-intelligence-agencies-expose-chinese-spyware-targeting-civil-society/",
+    "content": "",
+    "comments": [],
+    "thread_title": "Western Intelligence Agencies Expose Chinese Spyware Targeting Civil Society",
+    "thread_url": "https://cyberinsider.com/western-intelligence-agencies-expose-chinese-spyware-targeting-civil-society/",
+    "username": "gordon22",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:56:48.316341"
+  },
+  {
+    "id": "1k9pzyj",
+    "title": "You Don’t Have to Be a Privacy Purist to Care About Privacy",
+    "author": "IWHBYD_skull",
+    "permalink": "https://old.reddit.com/r/privacy/comments/1k9pzyj/you_dont_have_to_be_a_privacy_purist_to_care/",
+    "content": "Dedicated to the intersection of technology, privacy, and freedom in the digital world. \"I don't have anything to hide but I don't have anything I want to show you either\" - @CryptopartyBLN \"Privacy is not a sign of wrongdoing. Privacy is a sign of freedom.\" - /u/blackhawk_12 (updated 2023-04-27) Before posting in /r/privacy, read the Sidebar Rules. Enjoy our Wiki! It has all sorts of nifty advice and explains most topics you’re interested in if you’re reading this. Consider donating to one of the organizations that fight for your rights.",
+    "comments": [
+      {
+        "author": "AutoModerator",
+        "content": "Hello u/IWHBYD_skull, please make sure you read the sub rules if you haven't already. (This is an automatic reminder left on all new posts.) Check out the r/privacy FAQ I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns."
+      },
+      {
+        "author": "londonc4ll1ng",
+        "content": "...chasing some impossible standard(s). omg, that should be the tagline of this sub."
+      },
+      {
+        "author": "HotSwampBanana",
+        "content": "Too bad they are not talking about privacy. They are confused between privacy and security. Two completely different things."
+      },
+      {
+        "author": "ru_strappedbrother",
+        "content": "My sentiments exactly. Not caring is how they win. We’ll never have 100% perfect privacy but that doesn’t mean we give up everything. We take the wins where we can get them!"
+      },
+      {
+        "author": "Ok-Inspection-5768",
+        "content": "I like to think that caring is always good and being vigilant is important in a world where our data and privacy are a currency. So why not care, at least in those aspects where we can? Am I gonna attempt to wipe and and all data of mine that's ever existed? No. And I can't. But I can try and learn from it, and move forward with the new knowledge I have, and at least try and protect myself."
+      },
+      {
+        "author": "HotSwampBanana",
+        "content": "I think they even failed step 1. Understanding the definition of privacy. They are talking about data security not privacy."
+      },
+      {
+        "author": "DeaDm0nk3y",
+        "content": "We are all going to die, my friend, why do you care so much about privacy as if the anti-Christ were ruling the world. Life is too short for that."
+      },
+      {
+        "author": "Ok_Muffin_925",
+        "content": "What I get tired of hearing is, 'Bro they already have all your info, give it up.\""
+      },
+      {
+        "author": "WoodsBeatle513",
+        "content": "oh i agree"
+      },
+      {
+        "author": "cantstandtoknowpool",
+        "content": "defeatist attitudes that enable this shit to begin with edit: Also I think it’s deeply concerning that people don’t realize it’s not just about privacy and security, but the fact that it’s literally public knowledge that these platforms are using data to try and manipulate you. And humans are incredibly easy to manipulate, we’re not that special. Saying “bro they already have all your data” like, okay but why should that make it okay"
+      },
+      {
+        "author": "looped_around",
+        "content": "My response is always: they don't have this years data!"
+      },
+      {
+        "author": "TopExtreme7841",
+        "content": "You Don’t Have to Be a Privacy Purist to Care About Privacy Exactly, it's like work smart not hard. You don't have to be the most efficient worker in the world, but don't be a wreckless fuckup either! Too many attempt to go from 0 to batshit, can't do that. I'm closer to batshit myself, but that happens naturally overtime. Can't start out that way, that's how privacy fatigue will take you out and you'll give up on the whole thing."
+      },
+      {
+        "author": "Other-Educator-9399",
+        "content": "Yes, we all have different threat models and we all sacrifice some privacy for convenience. I haven't felt a need for Microsoft for personal computing for a long time (I'm forced to use it for work). Google is nearly impossible to avoid 100%, but I've reduced it by about 80%."
+      },
+      {
+        "author": "hefty-990",
+        "content": "Yes. What is feasible and sustainable is important. I want my phone to really cut the microphone for all data collection purposes. Simple."
+      },
+      {
+        "author": "zeitness",
+        "content": "In America, there is no such thing as Privacy, only harm. All your data is everywhere, free or for fee. What matters is harm. If you can prove use of your data hurt you in any way -- materially, literally, or by its manipulation -- you have recourse in the court of law. (But probably not since it will be forced into arbitration.) Current great example is automobile monitoring systems with driving data sold to Insurance Companies who use it to adjust your rates. Despite HIPPA, most of your health data is open to pharmaceutical, pharmacy benefits managers, and insurance companies. They may say this \"data is anonymized to protect PII\" but that is easily cracked with a minimum of cross referencing. Mortgage redlining is still a thing for certain classes of people."
+      },
+      {
+        "author": "Quereller",
+        "content": "I think the sentence about security is a bit unfounded. However I agree that you can do much with very little effort. If you use google go through your account settings and switch off timeline etc. Disabling privacy invasive setting when you use an app/ service brings you at least to 50 %."
+      },
+      {
+        "author": "HotSwampBanana",
+        "content": "They are confusing security with privacy. I think that's a huge problem. If people don't even know the difference between the two then how can we fight the privacy fight."
+      },
+      {
+        "author": "TapirOfZelph",
+        "content": "They aren’t unrelated. A user can be more comfortable giving contsent to a provider to use their personal data when that provider has a history of securing said data correctly. I think that’s all OP is getting at."
+      },
+      {
+        "author": "EquipLordBritish",
+        "content": "But how will I be able to feel morally superior if I can't gatekeep and tell people that some arbitrary thing they do isn't good enough?"
+      },
+      {
+        "author": "HotSwampBanana",
+        "content": "You are talking about security. Data privacy and data security are two completely different things. You are mixing them up. While they go hand and hand they are not interchangeable. Everything you mention is data security."
+      }
+    ],
+    "thread_title": "You Don’t Have to Be a Privacy Purist to Care About Privacy",
+    "thread_url": "https://old.reddit.com/r/privacy/comments/1k9pzyj/you_dont_have_to_be_a_privacy_purist_to_care/",
+    "username": "IWHBYD_skull",
+    "timestamp": "2025-05-09",
+    "scrape_time": "2025-05-09T23:56:57.589986"
+  }
+]
