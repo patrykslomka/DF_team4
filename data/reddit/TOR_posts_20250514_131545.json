@@ -1,0 +1,1397 @@
+[
+  {
+    "id": "1jzzzwc",
+    "title": "How was this dark web user caught?",
+    "author": "AfraidPomegranate751",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1jzzzwc/how_was_this_dark_web_user_caught/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "one-knee-toe",
+        "content": "From the article, \"Kidder possessed images and videos ... which were stored on his cellular telephone\". Without reading more into the case, I would *guess\\* that TOR had nothing to do with it, but instead it was his cell that did him in; maybe a file made it's way to a cloud drive by accident - apparently it was a Samsung. From this press release, it says that the FBI was notified of an IP with Tor traffic (so not necessarily cell phone relate); 5months later FBI then got a search warrant. So, why did the FBI want to be notified specifically about an IP with tor traffic? Seems more targeted. idk, but it is a little fun to play \"connect the dots\"."
+      },
+      {
+        "author": "ChrisofCL24",
+        "content": "Could also be a case of stored it on a Windows PC and OneDrive backed it up"
+      },
+      {
+        "author": "a_way_with_turds",
+        "content": "This would be my guess as well. I’ve heard that services like OneDrive and iCloud are scanned for checksums of known CSAM material."
+      },
+      {
+        "author": "Darkorder81",
+        "content": "Onedrive sucks man, just started one day uploading my stuff docs,pics etc which I have my own backups, they never even asked so had to kill the service, I'm not even sure how since I dont have a MS email account which I thought you needed for this, its a modified win11, with no online account."
+      },
+      {
+        "author": "RevolutionaryShow786",
+        "content": "Yeah you give them an inch and they'll literally sync everything into their cloud lol"
+      },
+      {
+        "author": "a_way_with_turds",
+        "content": "So I did some brazen Google searching and apparently Apple publishes exactly how they scan for CSAM. It's more interesting than I thought (i.e., they use a different hashing mechanism, on the device(!), that generates a hash based on content. So if the media is transcoded or changed it can still be detected). See: https://www.apple.com/child-safety/pdf/CSAM_Detection_Technical_Summary.pdf"
+      },
+      {
+        "author": "Pleasant-Shallot-707",
+        "content": "All major US based cloud storage providers probably do this because CSAM isn’t protected by section 230."
+      },
+      {
+        "author": "The_Snakey_Road",
+        "content": "OneDrive is one of the main reasons I abandoned Windows and became a content Linux user. That and if I want to take myself seriously as an aspiring developer I think Linux is the way to go."
+      },
+      {
+        "author": "Bella_Vita_E_Morte",
+        "content": "I do know that cell providers have a sort of image database specifically for stuff like this. For example, Verizon has a backup for their network. When people upload to the cloud, there is software that scans it for things like child abuse, CSA, and CP materials in the images. If they don't catch anything, it's business as usual, but if they detect something, they notify the authorities. This is a very grossly condensed short version of the process, but you get the gist. So if he had it on his phone, he caught himself."
+      },
+      {
+        "author": "nikowek",
+        "content": "Most of providers can not snoop into your trafić, because it's https encrypted. Encryption has not yet be broken. But cloud stored data often is not decrypted, because of deduplication to save storage."
+      },
+      {
+        "author": "kmai0",
+        "content": "Has not yet “publicly” been broken. That assumes that (a) there has never been a backdoor and that (b) agencies and companies disclose any findings."
+      },
+      {
+        "author": "nikowek",
+        "content": "HTTPS can not be backdoored and safe at once. There are people who understands how it works, because most of HTTPS servers are open source. If you spent some time you can understand it too - There's are great materials on YT about how it works and encryption algorithms. OpenSSL code is clean and well commented if you wish to read it."
+      },
+      {
+        "author": "kmai0",
+        "content": "I’m not talking about the encryption suite, I’m talking about algorithms per se. I’d recommend you to avoid sending people to read if you don’t know their background."
+      },
+      {
+        "author": "Mast3rL0rd145",
+        "content": "I mean tbf it's probably better to assume someone doesn't know and send them to learn more about a subject and then get proven wrong by them then to assume that people do know and just treat them like an idiot instead of telling them where they could learn more. I can always be proven wrong about what I think I know but if I just tell them they're wrong without elaborating or helping them become less wrong then I'm just another asshole with an opinion on the internet."
+      },
+      {
+        "author": "Ansky11",
+        "content": "Most cellphones give unrestricted and uncontrolled direct memory access (DMA) to the modem, which runs its own OS and is controlled by the manufacturer. In other words, the manufacturer can spy on you at any time and it bypasses the OS, tapping straight into memory. Computers have similar : Intel Management Engine and AMD PSP."
+      },
+      {
+        "author": "M01bz",
+        "content": "Would they get access to your RAM if it was a computer with INTEL/AMD? Quite new to all this, sorry if it’s a noob question."
+      },
+      {
+        "author": "Ansky11",
+        "content": "Yes, but it's harder to do since computers don't have wireless networking built in. So they can't access your RAM whenever they want. It's very possible that both Intel ME and AMD PSP are configured in a way to constantly scan the RAM in search for a special script, and when found, it just executes it. This script could be given to you over a web page, that normally would do nothing and that both the browser and OS would ignore. The script could instruct the Intel ME or AMD PSP to send all encryption keys you ever used to a remote server, which is then used to decrypt all your past internet activity."
+      },
+      {
+        "author": "M01bz",
+        "content": "Thank you for the comprehensive response. When you say “It’s very possible that both the Intel ME and AMD PSP are configured in a way to constantly scan the RAM, in search for a special script…” do you mean this is configured by default or it would have to be manipulated to do this somehow?"
+      },
+      {
+        "author": "Ansky11",
+        "content": "By default. But it's all speculation on my part."
+      },
+      {
+        "author": "The_Snakey_Road",
+        "content": "If one could prove this it would change... Nothing, sadly. But I would love to read the technical report if this ever gets out in the open."
+      }
+    ],
+    "thread_title": "How was this dark web user caught?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1jzzzwc/how_was_this_dark_web_user_caught/",
+    "username": "AfraidPomegranate751",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:10:31.208312"
+  },
+  {
+    "id": "1klldcz",
+    "title": "Stel: je mag zelf de code schrijven voor je droombaan. Wat komt er bovenaan? Groei? Logisch. Leuke collega’s? Check. Impactvolle projecten? Yes please. Was het maar zo simpel. Maar goed nieuws: bij YER vind je de baan die perfect bij je ambities past.",
+    "author": "YERrecruitment",
+    "permalink": "https://alb.reddit.com/cr?za=Xvvs4VX_vEHjdd2NSrsr8LcIh_jcN1CBjUpK5CI1dbKeDpmi28CYOUxmF4i72NVQrI7Gp6NINonlU0Rcl4EtLhL3Z-oNQor_4K5ot3W7N9TrIU_4iNZ-GzYdMyhKRTg3WgsJ6YCLbmSn-Q55SbkohWnuUeNPAtE9oPuHXsRmrOvBA_x_pexXeD0WaEEKE3bDdlsE7cCVf08Ir1FikQQfWgaUOtn0tPgCfiMCPC1iKuGvTfNVyf1yyiXOrwUr7SSLP7nA7bKdfCVi5cYe7F5liB7au44M_Q9VID1CgYbCAbgiDdmn0mZFgQIcaKXSM05oNQQxsZPW4IkcfFKtl8RzyOFLWYhsECmUPX_DCKvPdaygiLtcTSRKvadsrb6tcJoXo33l4RUeC0mC3bG4k5tq-bV_MdqP24T9Cb3hyR0q1Ijgf8_yOgXzD41mXuqz4kW59PhZwXx2dv_Vhctt6rWfQO4S_vj7U_AuY1XPwTsz3BgI53KfZjgIMknmlMxKvhgSfX-lshO29SZgDiq5AYo6ZQCMUi0ateMsmV-qy1lBXP8r9u05F1p_rcI&zp=oYM38hTiIylbg2pi_3Q5EBRUmxbmCiuR2yM3aXpDyg0ewxGaGSt0idOVRIlyripsU7DsuqTqcSFN0tLqTfuZoesJNmAo2IJYXd00Lrij7GGO6HILHxaLlqy7Y2tuqbi65qR6RdABzQ47TdNGq3oHaZUt2Lafjib5grSv48dkkCf7HY2b_xlA09WdIMOTUM7mtPurOuDHX2mLpPd7zb21KKi-nv8smGPLsqp_Ck_g4yOVApP3cfhU-6n8cZJb1fAn_gYSowmedgfITv32Rg3crKru_nf4gZpajBBUGbfBGAX5vw6I9oaFtb3UNzC099ZJjI9QB-00YeSxf8unld0agW7YIRZZYS9kRROtpky0sCNYZMeIBx7j_d-iODFsHkfWhIORM5TP4LRCvVhOAJwIFw",
+    "content": "",
+    "comments": [],
+    "thread_title": "Stel: je mag zelf de code schrijven voor je droombaan. Wat komt er bovenaan? Groei? Logisch. Leuke collega’s? Check. Impactvolle projecten? Yes please. Was het maar zo simpel. Maar goed nieuws: bij YER vind je de baan die perfect bij je ambities past.",
+    "thread_url": "https://alb.reddit.com/cr?za=Xvvs4VX_vEHjdd2NSrsr8LcIh_jcN1CBjUpK5CI1dbKeDpmi28CYOUxmF4i72NVQrI7Gp6NINonlU0Rcl4EtLhL3Z-oNQor_4K5ot3W7N9TrIU_4iNZ-GzYdMyhKRTg3WgsJ6YCLbmSn-Q55SbkohWnuUeNPAtE9oPuHXsRmrOvBA_x_pexXeD0WaEEKE3bDdlsE7cCVf08Ir1FikQQfWgaUOtn0tPgCfiMCPC1iKuGvTfNVyf1yyiXOrwUr7SSLP7nA7bKdfCVi5cYe7F5liB7au44M_Q9VID1CgYbCAbgiDdmn0mZFgQIcaKXSM05oNQQxsZPW4IkcfFKtl8RzyOFLWYhsECmUPX_DCKvPdaygiLtcTSRKvadsrb6tcJoXo33l4RUeC0mC3bG4k5tq-bV_MdqP24T9Cb3hyR0q1Ijgf8_yOgXzD41mXuqz4kW59PhZwXx2dv_Vhctt6rWfQO4S_vj7U_AuY1XPwTsz3BgI53KfZjgIMknmlMxKvhgSfX-lshO29SZgDiq5AYo6ZQCMUi0ateMsmV-qy1lBXP8r9u05F1p_rcI&zp=oYM38hTiIylbg2pi_3Q5EBRUmxbmCiuR2yM3aXpDyg0ewxGaGSt0idOVRIlyripsU7DsuqTqcSFN0tLqTfuZoesJNmAo2IJYXd00Lrij7GGO6HILHxaLlqy7Y2tuqbi65qR6RdABzQ47TdNGq3oHaZUt2Lafjib5grSv48dkkCf7HY2b_xlA09WdIMOTUM7mtPurOuDHX2mLpPd7zb21KKi-nv8smGPLsqp_Ck_g4yOVApP3cfhU-6n8cZJb1fAn_gYSowmedgfITv32Rg3crKru_nf4gZpajBBUGbfBGAX5vw6I9oaFtb3UNzC099ZJjI9QB-00YeSxf8unld0agW7YIRZZYS9kRROtpky0sCNYZMeIBx7j_d-iODFsHkfWhIORM5TP4LRCvVhOAJwIFw",
+    "username": "YERrecruitment",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:10:43.871838"
+  },
+  {
+    "id": "1k864eh",
+    "title": "Has Tor's security theory become outdated?",
+    "author": "Sprint1999",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1k864eh/has_tors_security_theory_become_outdated/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "stingraycharles",
+        "content": "This is why a Tor connection uses multiple nodes. Chances of a threat actor controlling all of them is low. And I also believe that geography is taken into consideration when building a connection."
+      },
+      {
+        "author": "torrio888",
+        "content": "It isn't, a lot of the times you get all three nodes in Germany."
+      },
+      {
+        "author": "stingraycharles",
+        "content": "Then at the very least it is a configuration option. I vividly remember this being possible. Edit: seems that it’s not really possible, but here’s an interesting discussion: https://forum.torproject.org/t/never-use-any-two-countries-in-the-same-circuit/12974/3"
+      },
+      {
+        "author": "Patient-Tech",
+        "content": "It might be because of the hassles of running a first and third node. And some ISP’s are more lenient than others, along with different local laws. I’ve seen Hetzner is also a popular host for TOR. Security conspiracy, or value ISP making it affordable and easy for regular Joes to volunteer CPU?"
+      },
+      {
+        "author": "ThaisaGuilford",
+        "content": "By multiple you mean 3"
+      },
+      {
+        "author": "Liquid_Hate_Train",
+        "content": "Or six for an onion service."
+      },
+      {
+        "author": "RythenGlyth",
+        "content": "[deleted]"
+      },
+      {
+        "author": "RythenGlyth",
+        "content": "Afaik \"with enough requests\" doesn't really help because the exit node is swapped every request."
+      },
+      {
+        "author": "Mobile-Breakfast8973",
+        "content": "Hi No it hasn't TOR uses bridges and other tools to obfuscate that you're using the TOR-network, if you're in a jusidiction where ISP's could be a problem. Which mechanism? The FBI has literally relied on hacking speciffic dark web sites to track users. There hasn't faults in the TOR network or protocol which has let to unmasking of users in bulk. Also, if you're doing crime on a level where the FBI, NSA, CIA or FSB is on your ass, then it's good to remember that TOR is only one tool in your privacy toolbox. You could for example use a VPN in concert with your TOR-connection to \"hide in plain sight\". It's also waaaay cheaper to just spin up more TOR nodes in VM's these days and super easy. A docker image, 5 minutes and a cold beer is all it requires. TOR is being updated actively, and when ever there's a security issue, it's fixed pretty fast. Even though the principle is the same as for 20 years ago, it's a whole other software stack. Dont forget that the United States, Russia and other big nations' own intelligence, state and diplomacy efforts also rely on TOR being available and secure. It was litterally developed by the US Naval Research Lab to protect US diplomats and the state departments envoys from surveillance while deployed overseas."
+      },
+      {
+        "author": "svoboda_center",
+        "content": "in countries where ISP is really a problem (China, Russia, Iran), Tor bridges don't work sadly. Bridges are banned, bridge protocols are detected by passive DPI/active probing."
+      },
+      {
+        "author": "Mobile-Breakfast8973",
+        "content": "Neither China, Russia or Iran really has an \"internet\" as we know it it's more like a really really big intranet But yeah you're right I should've added Bridges and snowflake to circumvent blocked bridges"
+      },
+      {
+        "author": "rCNGJcgCy",
+        "content": "Adding bridges does not solve the congestion problem in China, relays must be used."
+      },
+      {
+        "author": "rCNGJcgCy",
+        "content": "100% OK, I am in China and need a relay to access Tor."
+      },
+      {
+        "author": "Chuckychinster",
+        "content": "My understanding is currently the only way I've seen them arrest people was some pedo ring in Europe. They basically matched the suspects activity to Tor entrance/exits based on physically observing him. Then they raided and got all of his electronics and it was basically a done deal by then. So I believe if they even are able to trace it digitally all the way through, they still need to do extensive physical surveillance to even make the link that it's you. Which, if you have good virtual and physical opsec and aren't running an international pedo ring, is probably extremely unlikely. I'll see if I can find the article I read. Update: found it, about 6-7 months old now though so outdated slightly but recent. https://www.bleepingcomputer.com/news/security/tor-says-its-still-safe-amid-reports-of-police-deanonymizing-users/"
+      },
+      {
+        "author": "Mobile-Breakfast8973",
+        "content": "The asshole running that CSAM-filth was using unmaintained deprecated software, which meant that he could be demasked. Which is why you should always use updated software."
+      },
+      {
+        "author": "Chuckychinster",
+        "content": "Ahh I see. Thanks for the info, so basically always update your shit, practice good opsec, and don't operate international kiddie shit rings."
+      },
+      {
+        "author": "Future-sight-5829",
+        "content": "So he didn't update TOR, he was using a TOR that simply hadn't been updated and that's how they demasked him?"
+      },
+      {
+        "author": "Mobile-Breakfast8973",
+        "content": "He used a chat software that wasn’t maintained anymore, which connected to the internet with an old version of Tor that has known security issues"
+      },
+      {
+        "author": "Dry-Permission8441",
+        "content": "you should alway use updated software unless you operate a CSAM platform. Then just use admin/admin as credentials"
+      },
+      {
+        "author": "Mobile-Breakfast8973",
+        "content": "i know you're making a joke right now But ever since i started working in cybersec, my trust in the abilities of humans to not do dumb shit on purpose has fallen considerably."
+      }
+    ],
+    "thread_title": "Has Tor's security theory become outdated?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1k864eh/has_tors_security_theory_become_outdated/",
+    "username": "Sprint1999",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:10:58.989520"
+  },
+  {
+    "id": "1kcupj1",
+    "title": "Update: German authorities usage of IP-Catching against TOR remains nontransparent",
+    "author": "EbbExotic971",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kcupj1/update_german_authorities_usage_of_ipcatching/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "TeamSupportSponsor",
+        "content": "The government is not gonna just tell people they’re trying to get rid of all privacy."
+      },
+      {
+        "author": "SignificantBall7768",
+        "content": "Germany probably has an edge at this over other countries, i believe most tor nodes are located in Germany."
+      },
+      {
+        "author": "EbbExotic971",
+        "content": "That is certainly correct, Germany has special circumstances: On the one hand, there are strong civil rights, including data protection and informal self-determination, but on the other, there are also authorities that are powerful and willing. And secondly, there are so many nodes in Germany that it is quite likely to go through a complete circuit inside Germany. But it is certainly not the only country to which this applies, just a little less likely. Besides, this was a purely German operation, so theoretically it is also possible to carry out something like this throughout the EU..."
+      },
+      {
+        "author": "Dear_Replacement_632",
+        "content": "It doesn't come as a surprise this individual was identified, the suspect slipped up big time more than once, renting a vps under his full name being only one of them"
+      },
+      {
+        "author": "EbbExotic971",
+        "content": "That's correct, the criminal made several mistakes, but it was still a first (as far as we know) that Tor users were deanonymised by such an attack."
+      },
+      {
+        "author": "Dear_Replacement_632",
+        "content": "Indeed, from what we know. I would not even call this a real attack, rather a drag net data request : the ISP is asked to hand over all IPs connected to (in this case:) tor during a specific time window. The attack occurs in the second step, where they likely used a timing attack including his activity on the messenger and the information of step 1 to double down on his true identity"
+      },
+      {
+        "author": "EbbExotic971",
+        "content": "Surely more lawyers than technicians were involved in this \"hack\", but a time correlation attack is still a \"real\" attack. Just because it doesn't look like Matrix doesn't make it any less dangerous. 😀"
+      },
+      {
+        "author": "noob-nine",
+        "content": "everytime i read about that, I am still impressed that germany managed this. i mean, we talk about germany. not talking about german engineers and patents but when it comes to networking and digitalization, paperless stuff or remote requests that are not a fax, it reads like germany is stuck in 1995. not sure if this is just a running gag or really true. can a german confirm or deny? but it this really is true, then much respect from the technical point of view to the authorities"
+      },
+      {
+        "author": "EbbExotic971",
+        "content": "So you're not from Germany either? But you still hit the spot! And you're right, it's sometimes surprising what's still possible DESPITE the bureaucracy. I'm a team leader in software development, half the time I was in the public sector, I can tell stories about digitalisation; you'd think I m a fairytale teller... Fortunately, not everything is bad."
+      },
+      {
+        "author": "AfraidPomegranate751",
+        "content": "Even if we don't know specifically how often government agencies use timing analysis, it seems to me that they're shifting more towards blockchain analysis and crypto tracing due to how illicit dark web marketplaces have been increasingly relying on crypto in recent years. I saw recent news on the takedown of \"kidflix\" led by German law enforcement and Europol back in March 2025, and this particular article has some good info on how it was seized using crypto tracing. This other case (not in Germany but still somewhat relevant) also used crypto tracing to track down a dark web operator and occurred around the same timeframe. It also seems that law enforcement are working to develop ways of \"accessing encrypted data in a lawful manner, safeguarding cybersecurity and fundamental rights\" starting in 2026 (mentioned at the bottom of another kidflix article). IMO, I don't think authorities will continue leveraging traffic analysis or the use of NITs as often as before due to the backlash they receive over privacy concerns and that they will have to keep playing this reckless arms race against Tor developers. That's just my speculation."
+      },
+      {
+        "author": "EbbExotic971",
+        "content": "That could be true, and true to the principles of Cui bono or also Follow the Money it might be more successful; Ethically anyway."
+      },
+      {
+        "author": "st3ll4r-wind",
+        "content": "The deprecated Ricochet chat program was uniquely vulnerable to timing attacks, which was probably the avenue exploited by investigators. For a technical explanation for how timing attacks work on the Tor network infrastructure, this is a good video to watch (skip to the 22:20 mark)."
+      },
+      {
+        "author": "EbbExotic971",
+        "content": "As always in such cases, it was a chain of mistakes that led to the success of the \"attackers\"; Ricochat was certainly the most important, but not the only one. Apart from that, the article and my post are not about the technical implications, but about the question of how often the authorities use this type of analysis and what the legal framework is like."
+      },
+      {
+        "author": "Ornery-You-5937",
+        "content": "“NSA Tor Sinks” is an internal slideshow explaining how they’re doing this (since at least 2013)."
+      },
+      {
+        "author": "one-knee-toe",
+        "content": "Just ask ChatGPT 😉 TLDR: Tor’s encryption hides content and routes, but not timing. If someone’s watching both ends, they can line up the traffic and unmask users. Detail: Timing analysis is one of the most effective passive attacks against Tor. It exploits the fact that, despite encryption and layered routing, timing patterns of packets entering and exiting the Tor network can still correlate. Here's how it works, no fluff: 1. Basic Principle If an adversary can observe traffic at both ends — the client side (entry node) and the server side (exit node or destination) — they can correlate the timing and volume of packets. Tor doesn’t add significant artificial delay or pad packet timing, so traffic patterns often remain identifiable. 2. Passive Correlation Attack An observer (like a global adversary or a well-positioned ISP or state actor) logs timestamps and sizes of packets entering the Tor network from a user. Simultaneously, they log packets leaving exit nodes to destinations. They then perform statistical analysis (like cross-correlation) to match those flows. 3. Active Timing Attacks In some cases, attackers can inject specific timing signatures (bursts, delays, or packet manipulation) at one end and look for those fingerprints on the other side. This makes the correlation easier and faster. 4. End-to-End Correlation Feasibility Tor is vulnerable here because: It doesn't obscure packet timing well. Many users don’t use padding or defenses like traffic obfuscation tools (e.g., obfs4). The number of users on a specific circuit might be small enough to make identification feasible. 5. Real-World Example The 2014 Operation Onymous takedown of darknet markets likely involved some form of traffic correlation (among other things), though full details were never disclosed. 6. Limitations This attack usually requires significant surveillance capability — like monitoring major ISPs, having control of guard or exit nodes, or operating large-scale network sensors. Not cheap, but doable for state actors or well-funded entities. //"
+      },
+      {
+        "author": "one-knee-toe",
+        "content": "If they're watching you specifically, you're definitely at risk. Let's play around with a hypothetical: Let's say authorities believe me to be doing some illicit activities using Tor. My take away, if authorities are at Step 1, you've already done enough \"in the open\" to have shot yourself in the foot."
+      },
+      {
+        "author": "Visible_Bake_5792",
+        "content": "Definitely, when authorities starts suspecting you, you are in dire straights. The question of TOR de-anonymization becomes irrelevant as you are no longer anonymous for them."
+      }
+    ],
+    "thread_title": "Update: German authorities usage of IP-Catching against TOR remains nontransparent",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kcupj1/update_german_authorities_usage_of_ipcatching/",
+    "username": "EbbExotic971",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:11:10.063149"
+  },
+  {
+    "id": "1kl159u",
+    "title": "Whats so bad about the dark web?",
+    "author": "Serious-Produce-4318",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kl159u/whats_so_bad_about_the_dark_web/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "Character-Bid-5089",
+        "content": "The dark net has been very over exaggerated by urban legends andthings like that over the years. Yes there's naughty stuff there but u haveto know what ur looking for. Also the darknet and the deepnet are slightly different but people get them confused."
+      },
+      {
+        "author": "scubaro",
+        "content": "Would you mind defining them? I always thought the deep net is that part of the web that requires login. Is that correct? Then, is the dark net a part of the deep net, or is a part of the deep net also publicly accessible without login?"
+      },
+      {
+        "author": "techKnowGeek",
+        "content": "Generally correct definition for the deep net; login or other barriers to entry, access, discovery etc. Dark web is about being separated from the way the general public accesses the internet and being intentionally obfuscated/hidden using non-standard protocols, so TOR protocol and how you can only access something you already know exists"
+      },
+      {
+        "author": "Character-Bid-5089",
+        "content": "Thanks. I just knew they were different but didnt know how to explain it."
+      },
+      {
+        "author": "scubaro",
+        "content": "Thanks, that is clear!"
+      },
+      {
+        "author": "ohisama",
+        "content": "how you can only access something you already know exists Mind elaborating on this? Is it literally just about knowing or not if something exists or actually not being able to access?"
+      },
+      {
+        "author": "Fred_Krueger_Jr",
+        "content": "Pay walls. That's it."
+      },
+      {
+        "author": "Toasteee_",
+        "content": "And logins, and anything that can't be indexed on a search engine."
+      },
+      {
+        "author": "tar_tis",
+        "content": "Just got clarification: Any web page that isn't indexed into search engines such as Google, are considered \"deep web\". Google (and other search engines) uses bots known as spiders to \"crawl\" the web in order to build the index. Basically spiders visit known URL's and click on every link in the web page that leads to another web page, and then they click on every link in that web page and they all get indexed. Website owners can tell spiders to ignore certain pages. But spiders can only \"click\" on links. They can't type, so they can't, for example, log into your private Facebook page, so that won't get indexed and will be considered part of the deep web. Darknets are parts of the internet that require special programs to enter, like TOR or Freenet. They are specifically build to keep it's users as anonymous as possible. So naturally it's going to be used by criminals a lot. Think of market places for drugs, weapons and illegal porn."
+      },
+      {
+        "author": "CromulentSlacker",
+        "content": "I think the people who do know are unlikely to discuss it in public especially on a site like Reddit."
+      },
+      {
+        "author": "Haunting-Instance93",
+        "content": "You need to know where to look. I know where."
+      },
+      {
+        "author": "Major_Negotiation356",
+        "content": "Where?"
+      },
+      {
+        "author": "smoothshudder",
+        "content": "Under there."
+      },
+      {
+        "author": "All_Might_Senpai",
+        "content": "Under....YOUR WHERE"
+      },
+      {
+        "author": "No-Examination-610",
+        "content": "No under your wear."
+      },
+      {
+        "author": "MeMeLeeAnn",
+        "content": "That’s my no no square"
+      },
+      {
+        "author": "DesignerDirection389",
+        "content": "It's not like the surface web, you don't necessarily navigate it. Webpages aren't as simple as .com websites, you kind of have to know what you're looking for. There are repositories of links for various marketplaces but its not indexed like the surface web is Like everything it has positive uses and nefarious uses, my professional experience as an DF investigator highlights mostly nefarious, specifically purchasing and accessing CSAM. If you have no need to be on the dark web then don't be on it, is my advice."
+      },
+      {
+        "author": "IAmAGuy",
+        "content": "CSAM some pedo acronym?"
+      },
+      {
+        "author": "DesignerDirection389",
+        "content": "Not used by paedophiles, It's used in professional settings more, as an alternative to child pornography because it's not pornography, it's child sexual abuse, so CSAM is Child Sexual Abuse Material."
+      },
+      {
+        "author": "lonememe",
+        "content": "And here I thought it was something cool like a Cool-ass Surface to Air Missile."
+      }
+    ],
+    "thread_title": "Whats so bad about the dark web?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kl159u/whats_so_bad_about_the_dark_web/",
+    "username": "Serious-Produce-4318",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:11:20.454915"
+  },
+  {
+    "id": "1k5uwib",
+    "title": "No more user-agent spoofing from 14.5 onwards?",
+    "author": "prophecyb3",
+    "permalink": "https://youtu.be/Ml99dXffRXk",
+    "content": "",
+    "comments": [],
+    "thread_title": "No more user-agent spoofing from 14.5 onwards?",
+    "thread_url": "https://youtu.be/Ml99dXffRXk",
+    "username": "prophecyb3",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:11:31.319239"
+  },
+  {
+    "id": "1kh8qk3",
+    "title": "Is it safe for a non-experienced person to visit TOR?",
+    "author": "PomeloNew1657",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kh8qk3/is_it_safe_for_a_nonexperienced_person_to_visit/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "stay_fr0sty",
+        "content": "What authentic media do you seek? The Onion sites that YOU will have access to will be no different from the regular web, but worse in almost every way aside from your posts being more anonymous. Any “interesting” sites are going to require payment and they’ll likely have illegal content, otherwise they’d be hosted on the web. I haven’t been on an onion site in YEARS, but that’s because I never found anything worthwhile while I was on it."
+      },
+      {
+        "author": "Agile_Schedule_3305",
+        "content": "What authentic media do you seek? Hahaha, doing anti-opsec against beginners is wild. \"Hey, tell everyone online what website you will visiting with TOR, so it's not private anymore\""
+      },
+      {
+        "author": "stay_fr0sty",
+        "content": "Ummm, no. He didn’t tell me the website. And even if he would have said PornHub or underground porn sites, whatever, I still wouldn’t know his identity or IP from his post. Responding to my question didn’t cost him his privacy in any way."
+      },
+      {
+        "author": "sswam",
+        "content": "Reddit is hella less private than tor."
+      },
+      {
+        "author": "PomeloNew1657",
+        "content": "Authentic in the sense that I can find information that I wouldn't elsewhere or information that would get censored on regular platforms. Like real news reports for example."
+      },
+      {
+        "author": "stay_fr0sty",
+        "content": "Unless you are restricted from mainstream news sites in your country, TOR isn’t going to help you find real news. TOR can get you around some geo-restrictions and hide your online behavior from your snooping ISP. If you only use HTTPS sites it’ll also encrypt your traffic along the TOR network and help you stay anonymous. You can safely get the TOR Browser and click the “connect to TOR network” and just surf the net normally. No risk at all (assuming that it your IP leaks, it’s no big deal) doing that and you learn TOR. TOR also enables access to “Onion sites” that are hosted anonymously, and you need to be on TOR to get to them. But, those sites come and go quickly and are more for illegal things, or the discussion of something illegal that mainstream sites don’t allow. They aren’t worth your time IMHO, but using TOR to surf the web anonymously might benefit you."
+      },
+      {
+        "author": "numblock699",
+        "content": "Real news is in the «independent» mainstream media done by experienced and unbiased journalists who quote their sources and does the work. Fake news is made by influencers, content creators and paid shills. There is no authentic news on TOR that is not on the normal web. The authentic and true reporting is not hidden from you."
+      },
+      {
+        "author": "DrTheBlueLights",
+        "content": "Trust the mainstream media bro. They have your best interests in mind. They can’t lie either it’s like against the Mainstream Media Creed."
+      },
+      {
+        "author": "NYX_T_RYX",
+        "content": "The BBC regularly refuse to call the systematic destruction of Gaza genocide, despite sexual* UN reports to the contrary. The press lie. Edit: several 🤦‍♂️ quite the typo"
+      },
+      {
+        "author": "numblock699",
+        "content": "Don’t be silly. Here’s a list of BBC articles that are critical or analytical of Israel’s handling of the Gaza situation: Israel-Gaza war: Latest news and analysis https://www.bbc.com/news/topics/c2vdnvdg6xxt Gaza: More than 50,000 killed since Israeli offensive began, says Hamas-run health ministry https://www.bbc.com/news/articles/clyz4nnqgvdo Israel faces international criticism over blocking Gaza aid https://www.bbc.com/news/articles/c70e6rye9nxo Israeli reservists criticise Gaza war and increase pressure on Netanyahu https://www.bbc.com/news/articles/crldw5gklrro Jeremy Bowen analysis: Netanyahu’s Gaza strategy risks splitting Israel and killing more civilians https://www.bbc.com/news/articles/cd020j97l79o These articles cover international criticism, humanitarian concerns, internal dissent within Israel, and BBC’s own analytical perspectives."
+      },
+      {
+        "author": "NYX_T_RYX",
+        "content": "I don't see the word \"genocide\" in any of these. Don’t be silly Read what I said, instead of reading what you wanted to see."
+      },
+      {
+        "author": "RatzzDE",
+        "content": "This is now how media works. Professional news articles are neutral. They don’t say \"Donald Trump did some dumb shit again\", they rather say something like \"Criticism among Donald Trump grows as he did XY. Pro-side says this, con-side says this\". A word like \"genocide\" is opinionated and should therefore not be used. It‘s not the job of the news outlets to show the opinion of the random author, it‘s their job to show the facts. (There are special \"author‘s opinion\" posts, but they should always be taken with a grain of salt) The reader‘s job is to make their opinion based on the facts. Of course if facts are purposefully missing that’s not neutral. But I still haven’t seen evidence of actual facts (not rumors) strategically being hidden by neutral media."
+      },
+      {
+        "author": "numblock699",
+        "content": "So you are silly."
+      },
+      {
+        "author": "NYX_T_RYX",
+        "content": "Let's review this wonderful example of why Reddit isn't a good place for a reasoned debate: I say they refuse to refer to it as genocide, despite evidence. You say \"but they've reported on the issue!\", despite me never saying they hadn't reported on it I point out that they haven't called it genocide, so your reply doesn't refute my original claim. Instead of finding any evidence to refute my claim, you insult me. Insulting during a discussion is the pinnacle of \"I have no rebuttal\". Besides which, there was no need to insult me for pointing out that you're wrong. At what point have I insulted you? Nowhere. Away and shite."
+      },
+      {
+        "author": "numblock699",
+        "content": "It’s not my fault that you want your news to be a mirror of your opinions rather than objectively reporting. BBC’s reporting and journalism has been excellent and the truth is obviously there. Stop being silly."
+      },
+      {
+        "author": "Sad-Reach7287",
+        "content": "Just use your regular browser with duckduckgo as the search engine"
+      },
+      {
+        "author": "Still_Lobster_8428",
+        "content": "Use Yandex search engine, it doesn't curate search results anywhere near like most mainstream search engines. I still see glimpses of how the Web used to be during the inception decade when using Yandex with what you can dig up. It still curates a bit though."
+      },
+      {
+        "author": "Haunting_Chef1379",
+        "content": "This. Google will pretend a site doesn't exist if the algorithm deems it so. Yandex barely filters English searches. You get a few more junk results but also more results in general"
+      },
+      {
+        "author": "stay_fr0sty",
+        "content": "Agreed, Yandex is great for finding copyrighted stuff that google just hides."
+      },
+      {
+        "author": "nemo24601",
+        "content": "I would also recommend hyphanet (formerly freenet) for a taste of early internet counterculture."
+      }
+    ],
+    "thread_title": "Is it safe for a non-experienced person to visit TOR?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kh8qk3/is_it_safe_for_a_nonexperienced_person_to_visit/",
+    "username": "PomeloNew1657",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:11:43.535832"
+  },
+  {
+    "id": "1kg91e6",
+    "title": "For 11 Months, Tor Users Thought They Were Safe",
+    "author": "SpezCanEatMyCum",
+    "permalink": "https://youtu.be/ooNmubCA680?si=Ka7BwNZS2-AZgfCj",
+    "content": "",
+    "comments": [],
+    "thread_title": "For 11 Months, Tor Users Thought They Were Safe",
+    "thread_url": "https://youtu.be/ooNmubCA680?si=Ka7BwNZS2-AZgfCj",
+    "username": "SpezCanEatMyCum",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:11:55.875850"
+  },
+  {
+    "id": "1k0s2ka",
+    "title": "New Release: Tor Browser 14.5 | Tor Project",
+    "author": "Kl--------k",
+    "permalink": "https://blog.torproject.org/new-release-tor-browser-145/",
+    "content": "",
+    "comments": [],
+    "thread_title": "New Release: Tor Browser 14.5 | Tor Project",
+    "thread_url": "https://blog.torproject.org/new-release-tor-browser-145/",
+    "username": "Kl--------k",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:12:04.206698"
+  },
+  {
+    "id": "1kag6bw",
+    "title": "Should I use Tor if I do not necessarily need the level of security?",
+    "author": "Apprehensive_Log9560",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kag6bw/should_i_use_tor_if_i_do_not_necessarily_need_the/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "zarlo5899",
+        "content": "torrenting/downloading/pirating use i2p for that not tor"
+      },
+      {
+        "author": "Apprehensive_Log9560",
+        "content": "Hi! thank you for your contribution, could you briefly explain why? I can’t find much differences between them except one has an extra layer?"
+      },
+      {
+        "author": "zarlo5899",
+        "content": "i2p is a p2p network so for the most part more people using it the faster it can become, it been p2p does also mean it has a warming up time as your node maps the network Both TCP and UDP transports are supported https://geti2p.net/en/comparison/tor"
+      },
+      {
+        "author": "Apprehensive_Log9560",
+        "content": "i will look into that, thank you :)"
+      },
+      {
+        "author": "solitude_walker",
+        "content": "i thought using tor as much as possible for anything would make it more secure for others? since its harder to trace, if we just use it to buy drugs and then browse about gardening on normal browser it would be easier to trace?"
+      },
+      {
+        "author": "move_machine",
+        "content": "Use I2P to torrent, use Tor for things like libgen and other traffic. Is this correct, as I have a fear that I am taking the bandwidth and resources from people who need it? By using the Tor network responsibly, you actually help people who need it by obfuscating their sensitive traffic with your own."
+      },
+      {
+        "author": "Apprehensive_Log9560",
+        "content": "Ah, that makes sense. Thank you!"
+      },
+      {
+        "author": "Electrical-Run9926",
+        "content": "First, security and anonymity are different things. Second, TOR make encryption too."
+      },
+      {
+        "author": "S1anda",
+        "content": "This was my thought. You'll be pretty obscured by either solution, you won't be super secure from either alone."
+      },
+      {
+        "author": "Tipikael",
+        "content": "Use any level of security. Its on you"
+      },
+      {
+        "author": "Huge_Monk8722",
+        "content": "It’s slow even on a gig network."
+      },
+      {
+        "author": "JontesReddit",
+        "content": "Run a node."
+      },
+      {
+        "author": "Huge_Monk8722",
+        "content": "Nope relay."
+      },
+      {
+        "author": "JontesReddit",
+        "content": "Yes a relay node. Not an exit node."
+      },
+      {
+        "author": "Huge_Monk8722",
+        "content": "Been running one for several years."
+      },
+      {
+        "author": "Intelligent-Ear-8772",
+        "content": "what's the use of the \"tor services\" app ?"
+      },
+      {
+        "author": "Jayden_Ha",
+        "content": "Please don’t get us tor exit operators more trouble by pirating over it"
+      },
+      {
+        "author": "Proper_Bison66",
+        "content": "You're absolutely right, you're unnecessary taking up bandwidth. Use i2p or bind qbittorrent to a VPN like Mullvad for privacy. If you find what you need on clearnet, that is. Else, use i2p."
+      },
+      {
+        "author": "one-knee-toe",
+        "content": "A VPN should be good enough."
+      },
+      {
+        "author": "fantaz1986",
+        "content": "a more users use tor the better i use tor a lot because it is free VPN app and you can jump over a world on one click"
+      }
+    ],
+    "thread_title": "Should I use Tor if I do not necessarily need the level of security?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kag6bw/should_i_use_tor_if_i_do_not_necessarily_need_the/",
+    "username": "Apprehensive_Log9560",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:12:11.754961"
+  },
+  {
+    "id": "1k4ceiz",
+    "title": "Googling with Tor",
+    "author": "_SAMURAI_95",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1k4ceiz/googling_with_tor/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "dopergan",
+        "content": "When using Google through Tor, you will end up allowing scripts, which can facilitate your tracking. On the Surface, the common internet you use every day; you can use Tor, but it will be very difficult to access Google services, such as its search engine, which will ask you to verify that you are not a robot. Not only Google, but numerous websites deny access via Tor on the Surface. YouTube itself may require you to log in to verify your identity if you use Tor. By logging in, you lose your anonymity. The issue is that on the Surface, Tor loses efficiency in anonymity; one of the reasons is that the traffic may not be end-to-end encrypted, and the exit node reveals your traffic. So always use HTTPS sites. If you use Tor on the Surface, use it more for privacy than anonymity, and do not log in to sites through Tor. You can switch to DuckDuckGo, but the search results will be less relevant. One way to hide your IP while still using the Tor network and maintain a certain level of anonymity and privacy in your searches is by using Orbot, selecting Portugal {PT} as the exit node, and setting it to work with your browser. Portugal may not be on the list of countries; you need to go to the settings and in node settings, enter/write {PT} in the exit node, restart Orbot, and you will be browsing through Portugal. You will significantly reduce the blocks that occur when browsing with a specific exit node, as many nodes are blocked due to misuse by many users. Portugal does not have this problem; at least until today, it works well on YouTube, but Google will always require robot verification, no matter which node you use. Using the Tor network more for privacy than anonymity is feasible. However, you may still encounter issues on websites due to the use of Tor's DNS, which is on port 5400. You can use DNSCrypt to redirect only the DNS to an alternative DNS. DNSCrypt can also hide your DNS traffic. You have some options like InviziblePro for Android or Rethink DNS; both can use the Tor network or connect Orbot and still redirect only the DNS to another of your choice. You can find these apps on F-Droid. These are ways to use the Tor network for privacy on the Surface and not real anonymity. For true anonymity, nothing replaces the Tor browser."
+      },
+      {
+        "author": "_SAMURAI_95",
+        "content": "Thanks for your response! I see that you have knowledge... And I have a few things to investigate! These types of details are interesting, thanks again!"
+      },
+      {
+        "author": "GM4Iife",
+        "content": "TOR isn't meant to use the clearnet trough it. It is possible but that's how it works. Google won't allow you to bypass data collecting, identity verification etc. Use DuckDuckGo instead, it uses Google engines as well."
+      },
+      {
+        "author": "one-knee-toe",
+        "content": "Accessing clearnet sites is indeed one of tor’s purposes. Tor is a tool that provides anonymity between you and the destination. There is nothing inherently wrong with accessing clearnet sites or even logging into your clearnet accounts. It all depends on what you are doing and why you are using tor. Someone living in a country that highly censors, including no access to a VPN, could potentially use Tor to access clearnet sites. The need to stay anonymous at the destination doesn’t really exist for them. It’s being anonymous getting to the destination that matters."
+      },
+      {
+        "author": "SeabassDan",
+        "content": "So someone in China on Tor trying to see censored sites there won't be tracked as being in China?"
+      },
+      {
+        "author": "one-knee-toe",
+        "content": "... won't be tracked as being in China? Without going too deep in how Tor works, Tor has \"exit nodes\", and the IP of the Exit Node is what the destination will see - As of today, I am not aware of any exit nodes within China. You can check this for yourself: Why does the country not always change? --- China --- Since you brought up China, understand that any agency / company (like ISP) will know that an IP has Tor traffic, just like they will know if an IP address has VPN traffic. All they know is that your IP has Tor traffic, but in some countries, this is enough for authorities to visit you to ask questions, if not more. This is why obfs4 bridges were introduced - it attempts to make the Tor traffic look like random data, and by using a non-public Tor server, it is not as obvious that the traffic from your IP is in fact Tor traffic."
+      },
+      {
+        "author": "ColdCompetition0",
+        "content": "By the website in question? No they won't. By the Chinese government? It is not impossible. China is constantly trying to block Tor, and they've gone to incredible lengths to do that. When they see an open pathway to Tor (for example a bridge address they haven't censored), then they immediately block it. But in theory they may also be able to know who used the bridge before it was blocked."
+      },
+      {
+        "author": "GM4Iife",
+        "content": "If you need it to browse the whole web then yeah. Being anonymous just to visit Google doesn't make any sense, that's what I meant. There is many cases when Tor is needed, for example living in censored Country like China."
+      },
+      {
+        "author": "dopergan",
+        "content": "Encouraging those who use Tor to log into accounts puts their anonymity at risk. (If the use of Tor is solely for privacy purposes, that's fine.) However, if the intention is anonymity, you are essentially telling them to reveal their exact location. The question here is twofold: what do they intend to achieve with Tor—anonymity or privacy? If the goal is anonymity, they should not log in while using Tor. The reason is that the websites they visit, if they have logged in before, already have their true IP address! It's like trying to make a purchase on an online shopping site, providing your CPF, personal information, and location, but accessing it through Tor—what's the point? It’s pointless. Additionally, accessing certain accounts with Tor may lead websites to recognize inappropriate access, significantly increasing the chances of losing the account or even being blocked. There is also the issue of scripts. Suppose they log into an account on a site like Facebook or any other social network or website; if there is a specific script, it can track them across the internet, and even if they are not logged in, it will know who they are through IP association, since they logged into their account where their real identity is already registered. If they use Tor solely for privacy, it means they only intend to hide their IP and encrypt their traffic. The second aspect of traffic encryption, nowadays with HTTPS being standard on websites, already provides encryption for traffic, and hiding the IP is useful for privacy. However, they would still be at risk of having their account blocked if they log into certain sites or social networks due to access with Tor, which has its IPs associated with inappropriate use. Additionally, they may encounter issues with sites asking them to confirm they are not a robot. In summary, if they seek only privacy using Tor, it is feasible, but it won't be easy, and the more precise the security, privacy, and anonymity they want, the less comfort they will have in their browsing. It is not advisable to make it seem acceptable to log in on Tor. This poses a huge risk for those who believe it is fine, leading their trust to result in a self-inflicted wound. The example given about China and bypassing country or regional blocks can be resolved with a VPN; there is no need to use Tor. Tor is for specific use, and many who use it solely for privacy face challenges in navigating the web. Furthermore, for just privacy, it requires advanced configuration and significantly reduces the level of anonymity!"
+      },
+      {
+        "author": "ColdCompetition0",
+        "content": "TOR isn't meant to use the clearnet trough it Yeah it is. Google blocking Tor requests doesn't change that."
+      },
+      {
+        "author": "GM4Iife",
+        "content": "Not only Google does that thing. To be honest browsing the clearnet is a real nightmare without javascript turned on."
+      },
+      {
+        "author": "_SAMURAI_95",
+        "content": "Thanks for your response! DuckDuckGo is the alternative that I thought of, I have no problem using Dorks but I needed to know how much information Google can collect from a person with a simple search on the web with JavaScript activated. Using Tor in Tails you have a good degree of anonymity, but even when searching under another IP that is not the real one thanks to Tor, I am not very sure to what extent a search could detect your IP or even geolocate you. All the best!"
+      },
+      {
+        "author": "GM4Iife",
+        "content": "Yup, Tails is an easy way to browse anonymously. If you're not committing any crime but just browsing then you're safe. The most dangerous thing is Javascript. That needs to be turned off all the time, onion tracing does the rest but above that you may get compromised if using Windows or MacOS to connect with Tor networks."
+      }
+    ],
+    "thread_title": "Googling with Tor",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1k4ceiz/googling_with_tor/",
+    "username": "_SAMURAI_95",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:12:24.355511"
+  },
+  {
+    "id": "1jls0g2",
+    "title": "Is hardlopen écht slecht voor je knieën? Check alle fabels en feiten over hardlopen en kom ook in beweging.",
+    "author": "nn_nederland",
+    "permalink": "https://alb.reddit.com/cr?za=OYq-UOGpgTIPzrxBWQ2gEyr8pwMpwLTCryB0zp1twydzesIQJbV_Swy1EGob-zFvTm0isFZb7N0qj4zlvc2uBZakHmcupkuv8QueAW5vX1jsjD7z1-Cy9YOpQqvViWzOF9U3dh3CJVZZHGOudPrHr0mnQm51CXSYZ21MYKM0K0T_C_mG2yy5TA8cxPUaimAsNIjcqIY6Moax03MhQiMjXsIKSFkP3trsFnsnd4HXyKzb4NKYsn7zSqKVppegjVEV3u_oTU9EteEZ0dv6GtbVZvdUdv9wdEbLJPTrPzZrJ9nF5b92aViz7uSNTn9hafIF7xLOOtPwyluYrOQbdrOot-PyajtIIGL1HxhTpJ7t27ZhGU0vgN80VD18_pPUaJFsYQff6J88czFG_7QzPuRwIidOctXjReSC39KV6kQc4eUZaEahTeY3gSXGV_37QdMBcrJyQtsQ2ZougACeBXyjuD6qg8g5AAifjP49m_UeEWalSdHlSnQNPO6xxeWfp2pD6jMtPTcAx4xTuPn5_zRUXumNYt3TLd7p6NV9-FzV6heVONwsakgPz-4&zp=M3fu1BgM10E06RQPG-A2MmYYOpbf5jPK3gHZRF3aYA8DpKI0Kk3RK5BTsi3bRL4jQA65s2SC_iOpJ60FGWBnU0hM5BTJYCbsAHIiA32bx_BwWFQFGtbJ1GgAWq2sC57IiBZyQylWdK3p7X4dhh_e3A-yEIBYQ3fFxSWeTyGw5UzEGw8b3ZuWIULyUAHnoUgMe_h_8MIA6HlLD2bG-e46KDS1QyUoSVpcGItkhvJwiO5bkWqqGntsXsuLsgGQJddJTVATpJjH-nepGsvTPmiZWDLfy-t93nsTVo-FoD9hBRMMBvMKMsTlTuvcTD7XjTEYRBiHLjRGVpwe1CfwkTtJ0sfbZhejQRCE6tgM6ku0SuQXBoThqCQ2Yo_ZSaME84vIok6fKrzqacuSJBmuBgrCEPHFF2ketXVRHNSRzpm2kL3VXpETHML8BqhGra7KGWKPSDSF1u2kYZEjMgXbWMG7d-AsUmWzQcDpAptMMs46kQ7X2FD-SHEzfMFM0dnrwFt731DkyPs",
+    "content": "",
+    "comments": [],
+    "thread_title": "Is hardlopen écht slecht voor je knieën? Check alle fabels en feiten over hardlopen en kom ook in beweging.",
+    "thread_url": "https://alb.reddit.com/cr?za=OYq-UOGpgTIPzrxBWQ2gEyr8pwMpwLTCryB0zp1twydzesIQJbV_Swy1EGob-zFvTm0isFZb7N0qj4zlvc2uBZakHmcupkuv8QueAW5vX1jsjD7z1-Cy9YOpQqvViWzOF9U3dh3CJVZZHGOudPrHr0mnQm51CXSYZ21MYKM0K0T_C_mG2yy5TA8cxPUaimAsNIjcqIY6Moax03MhQiMjXsIKSFkP3trsFnsnd4HXyKzb4NKYsn7zSqKVppegjVEV3u_oTU9EteEZ0dv6GtbVZvdUdv9wdEbLJPTrPzZrJ9nF5b92aViz7uSNTn9hafIF7xLOOtPwyluYrOQbdrOot-PyajtIIGL1HxhTpJ7t27ZhGU0vgN80VD18_pPUaJFsYQff6J88czFG_7QzPuRwIidOctXjReSC39KV6kQc4eUZaEahTeY3gSXGV_37QdMBcrJyQtsQ2ZougACeBXyjuD6qg8g5AAifjP49m_UeEWalSdHlSnQNPO6xxeWfp2pD6jMtPTcAx4xTuPn5_zRUXumNYt3TLd7p6NV9-FzV6heVONwsakgPz-4&zp=M3fu1BgM10E06RQPG-A2MmYYOpbf5jPK3gHZRF3aYA8DpKI0Kk3RK5BTsi3bRL4jQA65s2SC_iOpJ60FGWBnU0hM5BTJYCbsAHIiA32bx_BwWFQFGtbJ1GgAWq2sC57IiBZyQylWdK3p7X4dhh_e3A-yEIBYQ3fFxSWeTyGw5UzEGw8b3ZuWIULyUAHnoUgMe_h_8MIA6HlLD2bG-e46KDS1QyUoSVpcGItkhvJwiO5bkWqqGntsXsuLsgGQJddJTVATpJjH-nepGsvTPmiZWDLfy-t93nsTVo-FoD9hBRMMBvMKMsTlTuvcTD7XjTEYRBiHLjRGVpwe1CfwkTtJ0sfbZhejQRCE6tgM6ku0SuQXBoThqCQ2Yo_ZSaME84vIok6fKrzqacuSJBmuBgrCEPHFF2ketXVRHNSRzpm2kL3VXpETHML8BqhGra7KGWKPSDSF1u2kYZEjMgXbWMG7d-AsUmWzQcDpAptMMs46kQ7X2FD-SHEzfMFM0dnrwFt731DkyPs",
+    "username": "nn_nederland",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:12:34.249454"
+  },
+  {
+    "id": "1kcx2dv",
+    "title": "Unusual Tor Circuit",
+    "author": "Single-Inspection640",
+    "permalink": "https://i.redd.it/rrwo4xj6ccye1.jpeg",
+    "content": "",
+    "comments": [],
+    "thread_title": "Unusual Tor Circuit",
+    "thread_url": "https://i.redd.it/rrwo4xj6ccye1.jpeg",
+    "username": "Single-Inspection640",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:12:43.252925"
+  },
+  {
+    "id": "1kg4p2b",
+    "title": "Next Tor Relay Operator Meetup - Saturday, May 10th @ 1800 UTC",
+    "author": "0xggus",
+    "permalink": "https://forum.torproject.org/t/tor-relays-next-tor-relay-operator-meetup-saturday-may-10th-1800-utc/18771",
+    "content": "",
+    "comments": [],
+    "thread_title": "Next Tor Relay Operator Meetup - Saturday, May 10th @ 1800 UTC",
+    "thread_url": "https://forum.torproject.org/t/tor-relays-next-tor-relay-operator-meetup-saturday-may-10th-1800-utc/18771",
+    "username": "0xggus",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:12:57.457290"
+  },
+  {
+    "id": "1k20v4y",
+    "title": "How safe is it to have Tor as your main browser?",
+    "author": "Sonic436342523",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1k20v4y/how_safe_is_it_to_have_tor_as_your_main_browser/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "Smart-Raccoon-6887",
+        "content": "Safe from what?"
+      },
+      {
+        "author": "Sonic436342523",
+        "content": "Just it being secure and private"
+      },
+      {
+        "author": "Lazy-Meringue6399",
+        "content": "Secure and private from who?"
+      },
+      {
+        "author": "hohoreindeer",
+        "content": "In some places, it raises alarm bells, because someone like your ISP (or authorities who have asked your ISP) can see that you’re using Tor. It’s possible to use bridges to try to hide that, but personally I don’t understand that - wouldn’t the bridges themselves be on a list, and traffic going to them raise flags in places where Tor use is not allowed / monitored?"
+      },
+      {
+        "author": "Lazy-Meringue6399",
+        "content": "You're supposed to get a set of custom bridges or you can use snowflake which, I believe, makes it look like some kind of Facebook communication or something."
+      },
+      {
+        "author": "RevolutionaryShow786",
+        "content": "It's the best option you have but you need to understand that allot of websites block Tor, so you either have to seem like your using another browser or you just have to use another browser. Usually it goes: Tor > Firefox > chromium"
+      },
+      {
+        "author": "Sonic436342523",
+        "content": "[deleted]"
+      },
+      {
+        "author": "Sonic436342523",
+        "content": "I've heard that you shouldn't set Tor as a default browser before, which is why I asked"
+      },
+      {
+        "author": "haakon",
+        "content": "If you can point to where you heard that, it would be easier to answer."
+      },
+      {
+        "author": "TeamSupportSponsor",
+        "content": "It’s safe but inconvenient regarding using any accounts."
+      },
+      {
+        "author": "Sonic436342523",
+        "content": "Are there any exploits when it comes to having it set to your main browser?"
+      },
+      {
+        "author": "Sonic436342523",
+        "content": "They aren't going to waste a 0day on your wife's lovehoney order."
+      },
+      {
+        "author": "Sonic436342523",
+        "content": "🤣"
+      },
+      {
+        "author": "Astazha",
+        "content": "If you connect to an http site on clear net or accept an unrecognized certificate you could be attacked by a malicious exit node."
+      },
+      {
+        "author": "haakon",
+        "content": "Tor Browser ships in HTTPS-Only Mode, meaning it will not connect to non-https sites (non of which exist anymore anyway)."
+      },
+      {
+        "author": "Sonic436342523",
+        "content": "What are the chances of this happening if it's just the HTTP part?"
+      },
+      {
+        "author": "Astazha",
+        "content": "I don't know how to give you odds, but it isn't that uncommon for an exit node to be run by a hostile actor. Running an unencrypted connection through them allows them to intercept, hijack, spoof, whatever. Never ever ever use Tor for http"
+      },
+      {
+        "author": "TeamSupportSponsor",
+        "content": "They would compromise security so it’s not recommended."
+      },
+      {
+        "author": "Sonic436342523",
+        "content": "Hmmm...in what way?"
+      },
+      {
+        "author": "imlosingmyreality",
+        "content": "Fingerprinting"
+      }
+    ],
+    "thread_title": "How safe is it to have Tor as your main browser?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1k20v4y/how_safe_is_it_to_have_tor_as_your_main_browser/",
+    "username": "Sonic436342523",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:13:04.603175"
+  },
+  {
+    "id": "1kf5qno",
+    "title": "\"If Tor Browser is always private, why does it even have a 'New Private Window' option?\"",
+    "author": "Late-Drama-360",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kf5qno/if_tor_browser_is_always_private_why_does_it_even/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "one-knee-toe",
+        "content": "From my limited understanding, the default Tor Browser windows is just a Private Browser Window - i..e. they're identical. I'm guessing it's due to the fact that TorBrowser is based on Mozilla."
+      },
+      {
+        "author": "Yuzu_aihara80",
+        "content": "default tor window is actually on private mode"
+      },
+      {
+        "author": "slumberjack24",
+        "content": "I think OP already knows."
+      },
+      {
+        "author": "nagyerzsi",
+        "content": "Because it is the most privatest window in the whole history of private windows. Ever."
+      },
+      {
+        "author": "Tiger_Widow",
+        "content": "Ermageerd, nooo waay!"
+      },
+      {
+        "author": "Liquid_Hate_Train",
+        "content": "Why do you still have an appendix? It’s redundant and wasn’t worth getting rid of."
+      },
+      {
+        "author": "Late-Drama-360",
+        "content": "I agree with you. I think that's why the developers didn't remove it. They wanted the code to be as close to Firefox as possible so that it would be easier to port Firefox code to Tor Browser after each update."
+      },
+      {
+        "author": "axolotl_chirp",
+        "content": "To let the user knows that it is private."
+      },
+      {
+        "author": "76zzz29",
+        "content": "Because removing the private windows option would stop it from workingas it just start in a private windows. So removing this line is an unsless aditional work and may break something"
+      },
+      {
+        "author": "Life-Ad6389",
+        "content": "Always private is online but saves data to device. New private window deletes data from device which you close the tab."
+      },
+      {
+        "author": "Liquid_Hate_Train",
+        "content": "That should not be correct. Tor Browser by default shouldn’t cache data to your device."
+      },
+      {
+        "author": "Liquid_Hate_Train",
+        "content": "Correct. The cache is wiped on close anyway."
+      },
+      {
+        "author": "kansetsupanikku",
+        "content": "\"On close\" being crucial here. New private window can be made in runtime and have no access to it."
+      },
+      {
+        "author": "Mosk549",
+        "content": "It’s a fork of another browser"
+      }
+    ],
+    "thread_title": "\"If Tor Browser is always private, why does it even have a 'New Private Window' option?\"",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kf5qno/if_tor_browser_is_always_private_why_does_it_even/",
+    "username": "Late-Drama-360",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:13:17.353337"
+  },
+  {
+    "id": "1k8f7nk",
+    "title": "[Feedback Wanted] Building a 100% serverless, Tor-based Messenger with optional WebRTC mode: Introducing Privora (early stage, not launched yet)",
+    "author": "Privora",
+    "permalink": "https://old.reddit.com/r/u_Privora/comments/1k8c21z/feedback_wanted_building_a_100_serverless/",
+    "content": "",
+    "comments": [
+      {
+        "author": "one-knee-toe",
+        "content": "Naive question: How are you identifying and tracking every client? Is each client effectively an Onion Service?"
+      },
+      {
+        "author": "Privora",
+        "content": "Not a naive question at all — it’s actually the core of how Privora works! Yes, each client in Privora is its own Tor Onion Service. • When a user launches the app, it automatically spins up a hidden service in the background. • The .onion address acts as the user’s “identity” — but without any central registration or username system. • There’s no tracking server, no central directory — only the local app knows the private key tied to the onion address. • Communication happens peer-to-peer between two Onion Services over Tor (using mutual connections). Discovery and connection work like this: • Two users must meet at least once in real life (or through a trusted offline channel). • During this encounter, they exchange their Onion addresses securely (e.g., via QR code or encrypted short links). • After that, they can message each other directly over Tor — no servers, no IP addresses exposed, no third-party involved. So there’s no global “list” of users, no central lookup table, and no metadata leaks. The Onion address itself is enough to connect — and if a user wants to rotate identities, they can easily spin up a new one. Let me know if you want more technical details — like how we handle key persistence, encryption layering, or (future) ephemeral messaging! https://privora.netlify.app"
+      },
+      {
+        "author": "one-knee-toe",
+        "content": "Sounds promising... Quick observation: ... Two users must meet at least once in real life (or through a trusted offline channel) ... If I rotate identities, I would need to \"re-friend\" everyone on my list. You mentioned: handle key persistence Are you talking about the onion address, keeping it active in the DHT? encryption layering Do you mean within the app (on device) - to keep all conversation history encrypted? (future) ephemeral messaging! This would definitely be a nice feature, no conversation history to worry about. Possible Feature:"
+      },
+      {
+        "author": "Privora",
+        "content": "Thanks a lot for your incredibly thoughtful observations — exactly the kind of discussion that helps Privora become better. Let me go through your points carefully: Identity Rotation and Re-Friending: You’re absolutely right — if a user rotates their Onion address, they would need to re-establish trust with their contacts. • If a contact blocks unknown connections, the users would need to meet again offline (or via a trusted out-of-band channel) to exchange new addresses. • It’s very similar to the classic phone number change scenario you described. • There are plans to make re-establishing trust as smooth as possible, possibly by using signed contact references (with the old and new identities linked securely). Key Persistence: Yes, an Onion address itself does not expire after 24 hours. • Only the service descriptor (how your Onion address is advertised inside the Tor network) needs refreshing approximately every 24 hours. • The app will handle this by running lightweight heartbeat/background updates to keep the address alive. • If a device goes offline for an extended time, the descriptor may temporarily disappear from the network — but as soon as the device reconnects and republishes, the Onion address remains valid as long as the private key remains safe. Background Activity: • The app only needs small, infrequent background tasks to maintain hidden service registration. • No persistent background sockets or polling, keeping resource usage and battery impact minimal. Encryption Layering: Yes, there will be additional end-to-end encryption on the app level, completely independent of Tor’s transport layer encryption. • Every message will be encrypted with the recipient’s public key before being sent. • Even if Tor itself were compromised, the payload would remain unreadable without the recipient’s private key. (Future) Ephemeral Messaging: 100% agreed — ephemeral messaging is on the roadmap. • Conversations could automatically expire and delete themselves after delivery, after reading, or after a custom user-defined time. • No long-term storage of sensitive content. APNs (Apple Push Notifications) — Optional and Encrypted: • If a user is offline and cannot maintain a descriptor, Privora can optionally use APNs to alert the user that someone attempted to reach them. • This is strictly opt-in, and the user can enable or disable it at any time. • Even when using APNs, the push payload is fully encrypted asynchronously — meaning that Apple’s servers only handle meaningless ciphertext blobs, without metadata, message content, or sender/receiver info. Possible Future Feature (Compromise Detection): Your idea about automatic identity rotation and secure wiping in case of compromise detection is excellent. • Planned features would include: • Wiping local conversation history upon detection. • Securely deleting the local private key. • Deleting local copies of the contact list. • Forcing a new Onion service creation. • Warning users that trust must be re-established. This fits Privora’s philosophy perfectly and is absolutely something I’ll be working into future threat models. Again, I truly appreciate your engagement — the depth of your thinking is incredibly valuable. Thank you!"
+      },
+      {
+        "author": "MoshiMotsu",
+        "content": "It looks like the GitHub link on the website footer points to a GitHub user account with no public repos; where can we find the source code for this project? And, out of curiosity, how is this project licensed?"
+      },
+      {
+        "author": "Privora",
+        "content": "Hi! The app isn’t officially available yet, so that’s why there’s no open-source code at the moment. The GitHub account in the footer is just for testing purposes."
+      }
+    ],
+    "thread_title": "[Feedback Wanted] Building a 100% serverless, Tor-based Messenger with optional WebRTC mode: Introducing Privora (early stage, not launched yet)",
+    "thread_url": "https://old.reddit.com/r/u_Privora/comments/1k8c21z/feedback_wanted_building_a_100_serverless/",
+    "username": "Privora",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:13:26.255197"
+  },
+  {
+    "id": "1kj75nw",
+    "title": "Is it theoretically possible to trace an exit node back to an entry node?",
+    "author": "naffe1o2o",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kj75nw/is_it_theoretically_possible_to_trace_an_exit/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "Liquid_Hate_Train",
+        "content": "So assume a load of things which can’t happen, hack into other computers worldwide without any difficulty or bureaucracy, decode a load of high end encryption then wonder if they cando some timing? If you can magically ‘trace back’ to the middle node then magically access their magical logs, to magically trace back to the entry, why bother with timing correlation? Why not magically read the entry node logs and magically ‘trace back’ directly from the entry? TL:DR Sure, if you live in magic land then anything is possible. Thankfully we live in reality. Extra stillTL:stillDR- No."
+      },
+      {
+        "author": "naffe1o2o",
+        "content": "It is not breaking encryption when correlating time and volume traffic neither it is hacking if you gain a access to the middle node logs (forcibly) and it is very possible and fair to assume they keep logs. You are just speaking out of your ass. And btw this exact model did happen before, so it is not magical."
+      },
+      {
+        "author": "D0_stack",
+        "content": "Logs? What logs? Why do so many people assume there is resources and storage to store logs on devices with huge traffic flows? Try it sometime on just your PC. And remember that a lot of relays are just people at home with a PC. A relay is flowing data for a great many circuits at one time. In different directions - a middle relay doesn't take traffic from just one guard relay and send it to just one exit relay. You would need to record time in those logs with sub-microsecond accuracy between each point collecting those logs. And you are assuming that Tor engineers are stupid and don't take measures against timing attacks suck as shuffling traffic so that it doesn't leave a relay in a different order than it came in, or that they don't add random length Harris at random times. Oh, and of course you use the rando redditor response to a push-back - a personal insult. Using an insult in a technical discussion says all that needs to be said about you."
+      },
+      {
+        "author": "TboneKG",
+        "content": "Don't know why you both are being so purposefully obtuse. What OP asked is a perfectly reasonable question and it has been done before by intelligence agencies."
+      },
+      {
+        "author": "Liquid_Hate_Train",
+        "content": "No, actually. 'Tracing back' from just the exit node has in fact never been done. The moment it is, the whole network will collapse, as you've broken the entire logic. There's no 'obtuseness' here. They're demanding you assume things which cannot happen and imagine a scenario where in effect, everything is broken. It's catastrophizing, and doesn't even work as a hypothetical. It's just that unrealistic."
+      },
+      {
+        "author": "naffe1o2o",
+        "content": "You have to assume everything in a state of high threat. Not downplaying tor engineers im a fanboy of their project, this is just looking at all possibilities and attack surface. Tor makes it difficult but not impossible."
+      },
+      {
+        "author": "Logical_Count_7264",
+        "content": "nearly all tor nodes don’t keep logs tho. They are run by volunteers who value privacy just like you do. I run two tor nodes. I have taken extra steps to harden my nodes. But if I just kept them default then there’s still no logs. This is an odd thing to assume. Especially because in order for it to even matter you have to assume like three other magic steps."
+      },
+      {
+        "author": "Jealous-Traffic-3307",
+        "content": "The process of identifying when two network connections are likely part of the same Tor circuit using properties of the network traffic is doable. In academia this is often referred to as \"Tor Flow Correlation.\" Here is one such paper: https://www-users.cse.umn.edu/~hoppernj/deepcoffea.pdf Your bigger challenge as an adversary is constructing a system to collect and log all this data. If you want to be able to link any given exit connection to its end user, then you need to collect ALL network traffic going to every node in the network. If you collect only a subset of the traffic then it is increasingly likely that you will miss one of the connections you need for linking. A more feasible scenario is that you are monitoring a specific user and collecting just their entry traffic and all Tor exit traffic (still a crazy amount). But you'd need to be monitoring the user before the suspicious exit traffic occurs, as you cannot retrospectively know their traffic."
+      },
+      {
+        "author": "Gloomy-Policy5199",
+        "content": "Yes. It's also theoretically possible my balls are gonna be in your mouth at some point within the next week. Neither have happened and will happen as far as I know."
+      },
+      {
+        "author": "pdxamish",
+        "content": "Lol Also a 1 in a 101030 chance at any moment for an object to pass through another solid object due to quantum tunneling but also never going to happen. People think government cares about their ten strip."
+      },
+      {
+        "author": "0xKaishakunin",
+        "content": "Time correlation attacks already happened and were succesfull. just from controlling the exit node. Not possible. again assume the middle node was keeping logs If there are any logs, you could only see the entry and exit node, but not the final server and the device of the user connecting to the final server. Every payload would be encrypted, so good luck on breaking that."
+      },
+      {
+        "author": "naffe1o2o",
+        "content": "If you have entry node, can you not trace it back again with time correlation?"
+      },
+      {
+        "author": "TheOriginalWarLord",
+        "content": "Depending on the government agency, the amount of funding and time they put into the task of mass collection, collection of data via the entry and exit nodes if you only use public accessible nodes, then yes. Relatively easily. If you enter on a private node and bridge through a private node, it becomes significantly harder, but still do able. Most agencies, for most things, don’t or won’t waste the time and resources. Agencies that will spend the time and resources; CIA/SAD/Ground Branch, NSA/CSS, DIA/ DKA, FBI CTU/MaECT…. Outside of those, private industries like ORC or private intelligence sector like WarumaCG absolutely will and can. Now, that will depend on what you’re doing. If you just want privacy and small time crypto or small time criminal stuff then no. These guys go after the really bad guys."
+      },
+      {
+        "author": "naffe1o2o",
+        "content": "I wonder if there’s a solution to this, like some form of encryption/spoofing to time and the volume. Do you think that will fix it?"
+      },
+      {
+        "author": "JoplinSC742",
+        "content": "The solution is better opsec. You can have all the encryption in the world, but it will mean nothing if you don't tread carefully on the tor network. The best way to evade the alphabet boys on the tor network is to not become a target in the first place."
+      },
+      {
+        "author": "AllergicToBullshit24",
+        "content": "Yes it's absolutely possible to do, just not the way you think. Governments run thousands of Tor nodes, including entry, middle and exit nodes. As a user you play roulette with every connection. You may not land on at least one government controlled server every session, but over many sessions you're guaranteed to. There's even a small chance you land on a path that's entirely controlled by governments. If they control entry and exit nodes they can easily correlate traffic. Many governments share their data with each other and also receive port mirrors from cooperating ISPs and fiber backbone operators or they covertly tap them. Without hacking any servers and without cracking any encryption there's a non-trivial chance they can de-anonymize a user even without employing more advanced and well documented timing correlation attacks. Nevermind their ability to exploit software vulnerabilities."
+      },
+      {
+        "author": "ExpertPath",
+        "content": "Yes, this is being done: https://netzpolitik.org/2025/ip-catching-die-ueberwachungs-massnahme-die-geheim-bleiben-soll/#netzpolitik-pw Use a translator - this is a good read"
+      },
+      {
+        "author": "MrSozen",
+        "content": "Hi this was an interesting article but I’m a bit confused. They monitored his entry node and made his isp log everything, then correlated, that makes sense. But don’t entry nodes change..?"
+      },
+      {
+        "author": "ExpertPath",
+        "content": "I thought about it for a while and I believe some information was left out of the article: They knew the guy was using the same entry node (how they knew, I can't tell - maybe they were also waiting for the guy to randomly pick that no node). They monitored connections to this node. They also monitored the target server. In the end they correlated connections to the entry node with connections to the target."
+      },
+      {
+        "author": "one-knee-toe",
+        "content": "Yes -"
+      }
+    ],
+    "thread_title": "Is it theoretically possible to trace an exit node back to an entry node?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kj75nw/is_it_theoretically_possible_to_trace_an_exit/",
+    "username": "naffe1o2o",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:13:40.434273"
+  },
+  {
+    "id": "1ke6rey",
+    "title": "Previewing sites",
+    "author": "ThaUntalentedArtist",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1ke6rey/previewing_sites/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "JerichoTorrent",
+        "content": "Disable JavaScript do websites can’t serve you malicious content. You can use a tool to scrape meta tags from a website and generate a preview with meta title, meta description, etc"
+      },
+      {
+        "author": "ThaUntalentedArtist",
+        "content": "Do you know of any tools in particular?"
+      },
+      {
+        "author": "JerichoTorrent",
+        "content": "Not that I know of, sorry but I am sure they exist"
+      },
+      {
+        "author": "slumberjack24",
+        "content": "Technically, you could retrieve the source code in the terminal and parse the output for meta tags and their values. I've got a python script that does exactly that. You would need to run the script over Tor, for instance with torsocks. Realistically though, would it provide you with enough context to judge whether a site is reliable or worth visiting? If you think it would, and know how to run such a script with torsocks, I can provide the script here."
+      },
+      {
+        "author": "XFM2z8BH",
+        "content": "check github"
+      }
+    ],
+    "thread_title": "Previewing sites",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1ke6rey/previewing_sites/",
+    "username": "ThaUntalentedArtist",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:13:53.137189"
+  },
+  {
+    "id": "1kh9wcv",
+    "title": "I've made a PHP Tor Client",
+    "author": "phpsensei",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kh9wcv/ive_made_a_php_tor_client/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "New-Reply640",
+        "content": "Can you do Fortran and COBOL next?"
+      },
+      {
+        "author": "phpsensei",
+        "content": "I was thinking of making an ASM wrapper..."
+      },
+      {
+        "author": "arjuna93",
+        "content": "Fortran would be a bomb. I want that!"
+      },
+      {
+        "author": "AlessioDam",
+        "content": "Don't get me wrong but, don't you just have to set the socks5 proxy URL in your http client?"
+      },
+      {
+        "author": "phpsensei",
+        "content": "You do, but this also handles identity change, and other Tor features such as hosting an Onion service, managing the services that are running on your Tor node, etc."
+      }
+    ],
+    "thread_title": "I've made a PHP Tor Client",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kh9wcv/ive_made_a_php_tor_client/",
+    "username": "phpsensei",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:14:05.450171"
+  },
+  {
+    "id": "1kazz7j",
+    "title": "Market for Sponsoring a Relay?",
+    "author": "Mr-Incogneato",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kazz7j/market_for_sponsoring_a_relay/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "Mr-Incogneato",
+        "content": "[deleted]"
+      },
+      {
+        "author": "Mr-Incogneato",
+        "content": "This is true, though it is slightly different than being able to say \"I personally pay for x number of relays.\" If that's not something people care about, then it's not something they care about, and I'll have an answer to my question."
+      },
+      {
+        "author": "0xKaishakunin",
+        "content": "I already donate to Zwiebelfreunde e.V."
+      },
+      {
+        "author": "slumberjack24",
+        "content": "I'd even support them just for their name."
+      },
+      {
+        "author": "xiongchiamiov",
+        "content": "A few years ago I explored this under the idea people could sponsor their own specific relay rather than just money into the general pool of places like torservers. I never got any interest from anyone in the community and figured it wasn't worth setting up the legal structures to support it. I think the idea has merit in the same way aid agencies have folks sponsor a specific kid or donate a cow, but the tor community tends to be more abstract in thinking. Perhaps if you figure out the marketing."
+      }
+    ],
+    "thread_title": "Market for Sponsoring a Relay?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kazz7j/market_for_sponsoring_a_relay/",
+    "username": "Mr-Incogneato",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:14:16.940578"
+  },
+  {
+    "id": "1kd72ju",
+    "title": "New season. Fresh loot. Clean slates. It’s time to start dying again. Built by ex-Blizzard devs who were sick of safe games. Season 1 drops May 14th.",
+    "author": "notoriousstudios",
+    "permalink": "https://alb.reddit.com/cr?za=uULfixm0f2eUfc-BBGEzLULeTHDwVnjuhpWvmVMqkYqd6wpmaHka3lRG8C8ptCpPy3CQFoAdLdqbnjUvKTHsarcw5jmoInTD4JQqU_hrlvzXIHFm5qCR076J0WR0VYo1w8ATZ2aEheyp_uyG1edxS3MhrfuDLEJAoubgGrk26rZSCuAcnyNcXxgQ8lMNPS497xnf8vBayJTtbVifcLxzTVIJAechY4DopvoottHgqpbRfTBwZ9Vw9eunrpRGicPXareA1FdjV8Kyg7-y84V0A5actMZVixI6n1mL0y8fHslB97PrtLNUfYglw6uchpOgk6HHZ0ZlwyY7Isj2dMvKMo9WzxHMxhLuS4Uqk5PTonXB20X0WZubVEf8sQab6bYtZMVpstOofFt1r5OQ4W2WnUDacQAoGgT1tEUGRiFxbF8mgCX4SKe9IV9Az2F_NeydbrcdpyL08ZYaKJDdXlSuAqxVCSXRwfaHb7bC-_fm5ZZXr9WtGi5RYgOJGNAzdmKtwKawzB7HD68bSRlHOeXUGEqA1UAFF_7jdHd1o_wQ6ihzE2Lf0vkybg&zp=LOM1FQ1JcqYJRDm6nqzECq1URi_MygQbMjqDqAh372oVatFRj1tdQ8QairKPB-1Si5gcoKXPt0t5yDSqYX_2PJNMhEM6TZkhnpP-wapkqVBVhgLF26z9eH7Y2f98glAK8NIgXKX1XfNdktuJME9Y3Fv0CEETypZYokwIDXiDKJly8je2017qYHROqnF9Fuapub7D-jOV7uWFTh6l_ZFWG3CDfg3Nr-_Bk88lZjt37D2DuviI4H2Wxvc2v13vwI9yHbTndyxO1r34G3rOxJtJNdOcjLaW3RQP0O6essiN-8_VXF-_liNW78K4Z5n42qLAVR4sP1c_BySlz3TVUGJ1beG6zDwk_pwn-No",
+    "content": "",
+    "comments": [],
+    "thread_title": "New season. Fresh loot. Clean slates. It’s time to start dying again. Built by ex-Blizzard devs who were sick of safe games. Season 1 drops May 14th.",
+    "thread_url": "https://alb.reddit.com/cr?za=uULfixm0f2eUfc-BBGEzLULeTHDwVnjuhpWvmVMqkYqd6wpmaHka3lRG8C8ptCpPy3CQFoAdLdqbnjUvKTHsarcw5jmoInTD4JQqU_hrlvzXIHFm5qCR076J0WR0VYo1w8ATZ2aEheyp_uyG1edxS3MhrfuDLEJAoubgGrk26rZSCuAcnyNcXxgQ8lMNPS497xnf8vBayJTtbVifcLxzTVIJAechY4DopvoottHgqpbRfTBwZ9Vw9eunrpRGicPXareA1FdjV8Kyg7-y84V0A5actMZVixI6n1mL0y8fHslB97PrtLNUfYglw6uchpOgk6HHZ0ZlwyY7Isj2dMvKMo9WzxHMxhLuS4Uqk5PTonXB20X0WZubVEf8sQab6bYtZMVpstOofFt1r5OQ4W2WnUDacQAoGgT1tEUGRiFxbF8mgCX4SKe9IV9Az2F_NeydbrcdpyL08ZYaKJDdXlSuAqxVCSXRwfaHb7bC-_fm5ZZXr9WtGi5RYgOJGNAzdmKtwKawzB7HD68bSRlHOeXUGEqA1UAFF_7jdHd1o_wQ6ihzE2Lf0vkybg&zp=LOM1FQ1JcqYJRDm6nqzECq1URi_MygQbMjqDqAh372oVatFRj1tdQ8QairKPB-1Si5gcoKXPt0t5yDSqYX_2PJNMhEM6TZkhnpP-wapkqVBVhgLF26z9eH7Y2f98glAK8NIgXKX1XfNdktuJME9Y3Fv0CEETypZYokwIDXiDKJly8je2017qYHROqnF9Fuapub7D-jOV7uWFTh6l_ZFWG3CDfg3Nr-_Bk88lZjt37D2DuviI4H2Wxvc2v13vwI9yHbTndyxO1r34G3rOxJtJNdOcjLaW3RQP0O6essiN-8_VXF-_liNW78K4Z5n42qLAVR4sP1c_BySlz3TVUGJ1beG6zDwk_pwn-No",
+    "username": "notoriousstudios",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:14:24.460944"
+  },
+  {
+    "id": "1k7gm02",
+    "title": "Tails or Qubes OS ?",
+    "author": "Unlucky_Base316",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1k7gm02/tails_or_qubes_os/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "surinameclubcard",
+        "content": "Run Whonix in Qubes. It is installed by default."
+      },
+      {
+        "author": "AdamantisVir",
+        "content": "Run qubes and have a disposable tails qube that disposes itself when u shut it down"
+      },
+      {
+        "author": "lambda7016",
+        "content": "Please run Whonix in live mode on Kicksecure."
+      },
+      {
+        "author": "[deleted]",
+        "content": "Qubes OS is a more complex than TAILS. It is an OS only for those who know what they're doing. You are not running another OS only, you are rather isolating your tasks. Qubes lets you have various VMs that do the isolation - that is - that permit that while you are dealing with one task, another does not get in your way and does not deanonymize you. I would put Dread Pirate Roberts example, his GMAIL account got in his way because he was dealing with Silk Road on the same environment. Now TAILS is more simple, it's literally The Amnesiac Incognito Live System. If you use this, you are to expect to use it as a live system (not doing anything persistent), it means that if you have one task you use Tails for it and then GTFO. Wan't to use it again for something different or the same task? Save what you have securely (in this part persistence may not be so bad if limited) and use it live. To answer your question, you would use QubesOS if your OpSec needs persistence and/or is dealing with different tasks on a daily basis that require anonymity. But it also requires you to RTFM and learn it well, as to not do any mistakes. TAILS is simpler, easier and does the job. In other words, if you're asking this, Tails is the answer."
+      },
+      {
+        "author": "one-knee-toe",
+        "content": "I don't following your question: The big feature of Qubes is that it provide secure domains. The complexity of setting things up may be trivial for your overall configuration, but I am guessing you don't want to have to reconfigure Qubes every time you power-on the machine, especially if the configuration isn't trivial. Can you clarify how you want the amnesic feature of Tails to work for you with Qubes? Or how do you see this merging of features working? -- Edit -- I see others commenting to just run a Whonix Cube; Perhaps this is what you are looking for? Not that Qubes is amnesic but that the Cube from which you \"Tor\" is Amnesic. Running a Whonix Cube should do the trick as tearing down the VM \"wipes the slate clean\"."
+      },
+      {
+        "author": "B_A_Skeptic",
+        "content": "The problem with Tails is you literally can't save anything. You probably do want to save settings and files on your computer. Tails is not a daily driver."
+      },
+      {
+        "author": "froggythefish",
+        "content": "You can enable a persistent storage in Tails, which is encrypted and requires a password on boot. I think this is supposed to be useful to journalists or something, it’s not enabled by default, probably since it arguably defeats one of the biggest benefits of Tails which is that there’s nothing there once you shut it off. Qubes and Tails obviously have very different purposes and OP needs to specify what they’re using the OS for if they want a good suggestion."
+      },
+      {
+        "author": "B_A_Skeptic",
+        "content": "Really? I didn't know that was a thing."
+      },
+      {
+        "author": "Electrical-Run9926",
+        "content": "For security, Qubes and for anonymity Tails"
+      },
+      {
+        "author": "entrophy_maker",
+        "content": "Kodachi. All the same tools plus a VPN."
+      },
+      {
+        "author": "Several-Western6392",
+        "content": "Whonix on Qubes but when you create the VM use the version that's amnesiac"
+      }
+    ],
+    "thread_title": "Tails or Qubes OS ?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1k7gm02/tails_or_qubes_os/",
+    "username": "Unlucky_Base316",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:14:37.825827"
+  },
+  {
+    "id": "1kj8num",
+    "title": "How to use TOR in a safe way",
+    "author": "VjoxR",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kj8num/how_to_use_tor_in_a_safe_way/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "SubstantialTrust1154",
+        "content": "Tor does not help with paranoid schizophrenia"
+      },
+      {
+        "author": "VjoxR",
+        "content": "Then I suggested you try something else, like pills for example, still at least you acknowledge it, knowledge is the first step, you're on the way pal"
+      },
+      {
+        "author": "abofaza",
+        "content": "It is generally safe to use TOR from a security standpoint. You can alert yourself to fake captchas, or disable javascript altogether, but I really wouldn't worry about it. Clearnet is far worse with malware traps sitting in facebook and google ads alone, than the whole onion network. Also clearnet with TOR browser is also way safer."
+      },
+      {
+        "author": "VjoxR",
+        "content": "Thanks a lot, so you mean I don't have to uninstall all my apps?"
+      },
+      {
+        "author": "Sad-Reach7287",
+        "content": "What?"
+      },
+      {
+        "author": "VjoxR",
+        "content": "I'm asking if I don't have to be afraid that someone or something will hack into my apps"
+      },
+      {
+        "author": "Sad-Reach7287",
+        "content": "This question makes zero sense. You need to download malware first for someone to get remote access to your phone. TOR is just a browser that can view .onion links, there's more malware on the surface web than on the onion network as it's easier to trick grandmas on facebook than people who know about the onion network and its uses. But what are you trying to use TOR for?"
+      },
+      {
+        "author": "VjoxR",
+        "content": "It makes 0 sense to you cause you know the answer, I don't or I wouldn't have asked, I don't really know about the onion network and it's uses, again, that's why I'm asking, also I don't want to have anything to do with its uses, I just need a piece of info I can't find on the clearnet, it's not something illegal, just something you don't find there"
+      },
+      {
+        "author": "Realistic_Bee_5230",
+        "content": "Mate, it seems that you are REALLY confused as to what tor is. tor is just a network of computers (nodes) that encrypt your traffic and anonymise you (a very TLDR description). Tor does not come with a built in antivirus an antivirus is meant to be on the operating system, not on the internet. What you may be wanting is a DNS service that has malware blockers, I use quad9 DNS 9.9.9.11 , it works very well for me. You say you need to find a piece of info online, is that site a .onion site? if not, then it is on the clearnet and you can find it on here. You use tor to anonymise yourself so that governments and internet service providers and anyone else that wants your internet activity from finding you. You can use tor to access the clearnet. Hidden websites are .onion sites for TOR and .i2p sites for i2p (a different darknet). No one can hack into your apps directly through tor. what they would need to do is make you download something and then execute it. as long as you do not download anything that you do not trust, you should be good. you can also test if something has malware using a tool like virustotal (a website, just upload the file and it should test your data and then have an antivirus software on your computer to test it as well. TOR is an anonymising service."
+      },
+      {
+        "author": "VjoxR",
+        "content": "This too was very useful, now I believe have gained a better understanding of the whole thing, gotta admit I was much confused before The piece of info I need isn't on the clearnet so I'm hoping to find it on an onion site (a niche site, in the meanders of the web), basically I just need access to this kind of sites and I was hoping to be able to do it without something harmful coming my way I prefer to not be traced but what really concerns me are malwares, you recommend this quad9 DNS, then? Thanks mate for clearing my doubts and putting my mind at ease"
+      },
+      {
+        "author": "Realistic_Bee_5230",
+        "content": "Yep, I use quad9's 9.9.9.11 qs my dns, but it doesn't matter all that much, as long as they are privacy respecting, so don't use Google 8.8.8.8 lol. And btw there isn't really a search engine for onion sites. you will have to just know the link, you won't just stumble across a .onion site on a search engine like Google or Bing. there is a search engine but I don't think it has all that many solutions or is even that good, I forget what it is called. This info u are trying to find, are you sure it isnt on the clearnet? Can't you just use tor, make a throwaway reddit account and ask for sites on reddit?"
+      },
+      {
+        "author": "VjoxR",
+        "content": "Thank you, I understand, I searched on the clearnet but nothing"
+      },
+      {
+        "author": "foolishintj",
+        "content": "Just dm me and I'll get the info you want if you prefer not to think about this anymore. It's taking a noticeable amount of mental energy from you."
+      },
+      {
+        "author": "VjoxR",
+        "content": "If you'd allow me I'd thank you mate"
+      },
+      {
+        "author": "foolishintj",
+        "content": "No problem at all. Is it time sensitive?"
+      },
+      {
+        "author": "VjoxR",
+        "content": "The earlier the better"
+      },
+      {
+        "author": "CuK00",
+        "content": "Sorry, im complete noob but what is clearnet? I have installed tor browser but i not happy with the searches, results seems same as normal websearches. Please guide me through it 🙏"
+      },
+      {
+        "author": "Agile_Schedule_3305",
+        "content": "What the fuck"
+      },
+      {
+        "author": "AdventurousLimit4618",
+        "content": "you won't get hacked by visiting a page, only if you download smth and execute it"
+      },
+      {
+        "author": "VjoxR",
+        "content": "One is never too sure"
+      }
+    ],
+    "thread_title": "How to use TOR in a safe way",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kj8num/how_to_use_tor_in_a_safe_way/",
+    "username": "VjoxR",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:14:48.722472"
+  },
+  {
+    "id": "1khf22q",
+    "title": "Are Tor routing nodes often subject to DoS attacks?",
+    "author": "everyisoks",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1khf22q/are_tor_routing_nodes_often_subject_to_dos_attacks/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "D0_stack",
+        "content": "I am just guessing. But I would expect that most of their ISPs are probably good at mitigating Dos/DDoS attacks. They are quite common these days. Even our relatively unknown IP addresses used by employees and customers are attacked, and are behind CDNs mainly for this reason. A single script kiddie attack from one or two IP Address won't even be noticed. And I suspect that the Tor network knows when a relay is under attack (reduced bandwidth) and just doesn't use that relay."
+      },
+      {
+        "author": "everyisoks",
+        "content": "Yes, Tor routing nodes must be capable of defending against DoS attacks. Otherwise, an attacker could bring down the Tor network simply by using a traditional DoS attack on 9 authoritative directory servers. I'm just curious, with all the variety and effectiveness of traditional DoS attacks, why are the 9 authoritative directory servers so far safe and sound?"
+      },
+      {
+        "author": "D0_stack",
+        "content": "with all the variety and effectiveness of traditional DoS attacks, Well, not very effective when your network knows how to respond. Attacks are mitigated at the edge of networks, not on individual devices. DDoS mitigation is heavily automated and is performed at many levels on the Internet. It isn't up to the targeted server to deal with the attack. Attack mitigation is largely automated for many networks. There is a big difference between DoS and DDoS. I am not sure which you are referring to, because a DoS from a single source is easily handled with by most networks. ISP interconnects these days are frequently 400 or 800gbps. 800gbps routers are off-the-shelf. We have 100gbps ISP links at our two data centers. Very few people will have access to a single device with a fast enough connection that can't easily be black-holed. Someone trying to DoS from home won't even be noticed, and probably would be automatically blocked by the attacker's own ISP. DDoS is quite different, you need to block by the characteristics of the attack, not source address. But again, saturating modern ISP and data centers networks is quite difficult. Again, if a server is connected to a network and/or ISP that knows what they are doing, the server will be unaffected. The directory servers are distributed around the world, each behind different networks. Tor is robust and works around problems. You might find this interesting. Remember, Cloudflare is just one network, all networks are experiencing the same things. https://blog.cloudflare.com/ddos-threat-report-for-2024-q4/"
+      },
+      {
+        "author": "No-Establishment8457",
+        "content": "Any networks, servers, nodes, etc are possible targets of a DDoS attack. It is who is more likely to get hit. Tor should, by its nature, be harder to target directly."
+      },
+      {
+        "author": "everyisoks",
+        "content": "Yes, the Tor client or the Onion service may be safe with its IP address hidden, but Guard nodes and Exit nodes may not be so lucky."
+      },
+      {
+        "author": "No-Establishment8457",
+        "content": "Exactly"
+      },
+      {
+        "author": "everyisoks",
+        "content": "I have reviewed a number of papers and followed the iterations of Tor from version 0.4.4.x to 0.4.8.16, and I have found that the official Tor team has been focusing more on the impact of DoS attacks on the Tor network, e.g., by developing OnionBalance, the HS POW mechanism, and the Defence Against Circuit DoS mechanism. I can only guess that the official Tor team is focusing more on the availability of the Tor network. However, Tor is also at risk of de-anonymisation in addition to DoS threats. Although Tor has officially developed Guard mechanisms that make it difficult for attackers to control the entry point to a target (client or onion service), a large number of papers have proven that it is still possible to enforce de-anonymisation on a target. I'm curious to know if Tor has made any other fixes to enhance anonymity besides the Vanguard mechanism?"
+      },
+      {
+        "author": "Potential-Freedom909",
+        "content": "I used to read the tor node admin forums often. There would be frequent attacks, some novel and some not, but generally unique ways of full resource exhaustion and client disconnects, against a large number of nodes. It’s likely that they were targeting nodes suspects were connected to in order to get them in a 3-way position where the suspect was connected to all 3 of the attacker nodes. It was a very very common, multiple times per month occurrence. It’s become clear to me that tor is compromised now, whether inside or out."
+      },
+      {
+        "author": "CarloWood",
+        "content": "People doing DoS attacks aren't smart enough to figure out the IP numbers of routing nodes. And because doing that wouldn't give an INSTANTANEOUS feedback in terms of a verifiable disruption of what normal people use and need, like is the case with the typical vandalization of public property, they'd probably think it doesn't have any effect and get quickly back to torturing little kitties."
+      },
+      {
+        "author": "MonyWony",
+        "content": "When you run a Tor node (speaking from experience) there is built in DoS protection, which will block, reject, or kill suspicious connections as well as marking IP addresses which I believe are stored in a local file and prevent them from connecting in future. Tor also blocks compression bombs and it's rather funny to see my relay complaining about not being able to decompress an enormous file. Tor probably is subject to plenty of attempted DoS attacks daily, but the network is robust and expansive, and has protocols to prevent or block this stuff from happening; these attacks are likely ineffective 99% of the time."
+      }
+    ],
+    "thread_title": "Are Tor routing nodes often subject to DoS attacks?",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1khf22q/are_tor_routing_nodes_often_subject_to_dos_attacks/",
+    "username": "everyisoks",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:14:58.574563"
+  },
+  {
+    "id": "1kgubcv",
+    "title": "Tor Android not working",
+    "author": "LacriV",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kgubcv/tor_android_not_working/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "PsychedelicMagnetism",
+        "content": "I see the same thing"
+      }
+    ],
+    "thread_title": "Tor Android not working",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kgubcv/tor_android_not_working/",
+    "username": "LacriV",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:15:08.880470"
+  },
+  {
+    "id": "1kd3r70",
+    "title": "Hello, I kinda need your help.",
+    "author": "David_369",
+    "permalink": "https://i.redd.it/tsln2yyvzdye1.png",
+    "content": "",
+    "comments": [],
+    "thread_title": "Hello, I kinda need your help.",
+    "thread_url": "https://i.redd.it/tsln2yyvzdye1.png",
+    "username": "David_369",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:15:19.380781"
+  },
+  {
+    "id": "1kj8poi",
+    "title": "Debian Package",
+    "author": "lambda7016",
+    "permalink": "https://old.reddit.com/r/TOR/comments/1kj8poi/debian_package/",
+    "content": "Protect your privacy. Defend yourself against network surveillance and traffic analysis. Get Tor. This subreddit is for news, questions, opinions and tips about Tor. Please read our Frequently Asked Questions before posting. Community guidelines: This is a very frequently asked question we see in this subreddit. You generally do not need to use a VPN in conjunction with Tor, and you may even hurt your anonymity by doing so. However, a VPN may help if Tor is censored by your network. Please see the Tor Wiki for more details. The Tor Project recommends Onion Browser. See onionbrowser.com. If you can't access Tor Project's website: Send an email to gettor@torproject.org In the body of the mail, write the name of your operating system (such as Windows, macOS, or Linux). You will receive a reply with instructions. The proper capitalization is \"Tor\". The subreddit's name is incorrectly capitalized as \"TOR\" and cannot be changed due to Reddit's technical limitations. Please read the Tor Project FAQ for more information. /r/tor is not managed or endorsed by The Tor Project.",
+    "comments": [
+      {
+        "author": "KOGifter",
+        "content": "On debian I think it’s sudo apt install torbrowser-launcher"
+      },
+      {
+        "author": "lambda7016",
+        "content": "succesed. THX!"
+      },
+      {
+        "author": "gold-rot49",
+        "content": "thats an out of date version of tor"
+      },
+      {
+        "author": "Huehnchen_Gott",
+        "content": "It downloads the new version directly from torproject.org though?"
+      },
+      {
+        "author": "babiulep",
+        "content": "Perhaps your first concern and 'quest' should be sorting out how applications are packaged and distributed. You are a beginner... Get proper knowledge about your system and linux in general. There is plenty of time to 'using the Tor Browser' (question remains: why?)."
+      },
+      {
+        "author": "doxx-o-matic",
+        "content": "Compile the source from binary. You should probably learn your system first and how a package manager works. Apt and Nala work great. You just have to learn how to use them first."
+      }
+    ],
+    "thread_title": "Debian Package",
+    "thread_url": "https://old.reddit.com/r/TOR/comments/1kj8poi/debian_package/",
+    "username": "lambda7016",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:15:34.733205"
+  }
+]

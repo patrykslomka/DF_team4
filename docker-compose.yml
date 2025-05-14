@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  forum-analysis:
+    build: .
+    container_name: forum-analysis
+    working_dir: /app
+    volumes:
+      - .:/app
+    tty: true  # Keeps the container open for interactive use
+    # command: ["bash"]  # Default is bash, can be overridden 

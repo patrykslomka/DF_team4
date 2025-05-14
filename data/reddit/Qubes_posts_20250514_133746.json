@@ -1,0 +1,957 @@
+[
+  {
+    "id": "1kic3vc",
+    "title": "Invisible Things Lab is hiring a Linux graphics stack developer to work on Qubes OS",
+    "author": "andrewdavidwong",
+    "permalink": "https://www.qubes-os.org/news/2025/05/08/invisible-things-lab-hiring-linux-graphics-stack-developer/",
+    "content": "",
+    "comments": [],
+    "thread_title": "Invisible Things Lab is hiring a Linux graphics stack developer to work on Qubes OS",
+    "thread_url": "https://www.qubes-os.org/news/2025/05/08/invisible-things-lab-hiring-linux-graphics-stack-developer/",
+    "username": "andrewdavidwong",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:32:56.692259"
+  },
+  {
+    "id": "1k36ciu",
+    "title": "Considering using QubeOS as a daily driver OS. Thoughts?",
+    "author": "Phd_Death",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1k36ciu/considering_using_qubeos_as_a_daily_driver_os/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "dchidelf",
+        "content": "You can allow qubes to have full screen windows, though it is disabled by default when creating a Qube. The biggest challenge I have using it as my daily driver is where my data lives. It tends to be siloed as I segregate my qubes down beyond “personal” to “creative” - with apps like gimp, inkscape, etc. “comms” with zoom, obs, etc. “3d” with blender, openscad, etc. and more Because of that, most of my permanent data lives in an offline data Qube and I move files in and out of that. This is still an improvement to my original daily driver which was a PC with VMWare Workstation and similarly siloed vms."
+      },
+      {
+        "author": "jcandrews",
+        "content": "Long time qubes user here. Be aware that it definitely is slower than bare metal, particularly on intel laptops. This is because all graphics will be done in software without hardware acceleration. This causes the cpu to run hotter, causing throttling and also occupies cpu resource you would otherwise be able to utilise. It’s time for the community to come clean on this. Qubes is an awesome tool for a narrow range of tasks. Daily driving is not without compromises."
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "For most applications, the software rendering doesn't matter, they don't need a GPU. What you are describing sounds more like Xen power management issues, which are much more noticeable on laptops. When you are running multiple VMs, the cores rarely get to idle, and when they do, the hypervisor doesn't use the lower power states. This is not really a Qubes OS issue, this is just the reality of running a bare-metal hypervisor on a laptop."
+      },
+      {
+        "author": "jcandrews",
+        "content": "The issue is that in the last 10 years more and more desktop applications have evolved to leverage the GPU. Most of your web browser experience is GPU accelerated. Qubes emulates a GPU on the CPU, which is 100x slower and dramatically impacts available CPU performance. Most people daily drive a web browser, those people will be disappointed IF they don’t have another use case for Qubes that is worth the trade-off. Facts."
+      },
+      {
+        "author": "jcandrews",
+        "content": "I should also point out that I love Qubes OS. We need to recognise that security is a spectrum, where each position represents benefit/compromise. Qubes is at a far end of that spectrum. Most users are better served by other solutions when they figure out they can compromise on some aspects of security and admit that they themselves are the biggest security risk, not the OS. I wish things were different. I wish sr-iov was standard on all consumer cards, if it was qubes would be a far more compelling solution to a far wider user base."
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "Just because a browser can use a GPU doesn't mean everything needs a GPU, or that tasks like video decoding can't easily be done on CPU. On my Qubes OS system, play a YouTube video in full-screen takes around 2-3% CPU resources. Also, Qubes OS doesn't emulate the GPU, but it's funny you seem to think that is a fact."
+      },
+      {
+        "author": "jcandrews",
+        "content": "I get screen-tearing playing YouTube on a VM with 4 cores and 16gb of ram. Most modern GPU drivers expose hardware decode support for most of the widely used video and audio codecs. Even though CPUs can also do hardware decode, we miss out on the opportunistic offload to the GPU. Nothing comes for free, you would have a hard time convincing engineers otherwise."
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "I've used Qubes OS on a X230, T480, I9 12900, I9 13900, and Ryxen9 9950X. I've been able to use YouTube on every single PC I've used, without any issues."
+      },
+      {
+        "author": "jcandrews",
+        "content": "Me too, in a utilitarian way. I can tell it’s in a VM. Full screen, i can tell it’s dropping frames. Whatever works for you. I have a second computer running fedora with cosmic de , at the moment. Compariable hardware, but the performance difference for anything that can use the GPU is night and day. I would hate to set up someone for disappointment if they just want qubes as a daily driver just for the sake of something different."
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "If it's dropping frames, it's most likely because you don't disable \"Ambient mode\", in the YouTube player settings. Disabling \"Stable volume\", also seems to improve performance in Qubes OS."
+      },
+      {
+        "author": "jcandrews",
+        "content": "Semantics. Software video driver, if that’s terminology that you are more comfortable with. I’m wording my responses in a way that newbies to the qubes platform would be able to easily digest 👍"
+      },
+      {
+        "author": "matheusd_tech",
+        "content": "Agreed. I'm increasingly having trouble navigating sites. Even something as simple as a blur effect added behind a modal window will significantly slow down an AppVM for me. Unfortunately, GPUs are becoming mandatory even for browsing more advanced sites."
+      },
+      {
+        "author": "Geilokowski",
+        "content": "This is a privacy / security focused distro. To achieve this high privacy, some sacrifices were made (primarily user friendliness). If you are a „normal person“ and neither like tinkering with Linux, living privacy-first as a lifestyle or need it for your personal security: Don’t use Qubes. If you want your computer to only launch a „VM manager“ / Hypervisor, look at something like Proxmox or VMware. Qubes uses Xen. In regards to your questions: Yes, there will be a performance drop. No, I don’t know what % but I have a pretty expensive Desktop and it feels pretty slow. Performance was never a priority for the developers. And honestly, I wouldn’t even try gaming on Qubes (Indie games might somewhat work). Apps will generally not care if they run in a VM. I didn’t had the case yet. But Anticheats are obviously a no go. However, if you use Tor, those IPs are blacklisted so get accustomed to solving captchas."
+      },
+      {
+        "author": "Phd_Death",
+        "content": "If you want your computer to only launch a „VM manager“ / Hypervisor, look at something like Proxmox or VMware. Qubes uses Xen. So there are more OS that dedicate themselves as an \"OS manager\"? I've never heard of any of them, is compared to them QubesOS more secure or something?"
+      },
+      {
+        "author": "vandennar",
+        "content": "Hypervisors are low-level software that are designed to run multiple operating systems. They're used on everything from a laptop (VMware Workstation, etc), to giant cloud providers. Basically, instead of booting to Windows or Linux, the computer boots to the hypervisor, and then it runs lots of operating systems. Because virtual machines are strongly isolated, Qubes uses a hypervisor (Xen), to keep everything safe if a web browser or other software gets compromised. It basically tries to make the experience of using a bunch of virtual machines for security, much more pleasant. Generally the answer to the question \"should I use QubesOS\" is NO. By the time you need it, you'll know. If you're asking, it's probably not a good fit. If you are interested in trying multiple operating systems without having to reboot, why don't you try a regular virtual machine on your existing system? VMware Workstation is free for both Windows and Linux, or Windows has Hyper-V built in, and Linux has KVM/QEMU. This allows you to rapidly create & test operating system setups without having to erase things."
+      },
+      {
+        "author": "Phd_Death",
+        "content": "I get the basic gist of how a VM work, what I mean is if there's more than one (QubesOS) OS that works by being a \"VM Manager\" on which you install OS in."
+      },
+      {
+        "author": "Background_Lemon_981",
+        "content": "I really like the concept of Qubes. Tried it a bit but ultimately didn’t end up with it. Some things to know:"
+      },
+      {
+        "author": "Phd_Death",
+        "content": "It needs good to excellent compute power or you’ll hate how slow it is. Does that mean that there's a serious performance downside if running, say, Debian or Ubuntu through Qubes rather than directly installed into the drive, or there's like a \"treshold\" which after you get through things run smoothly?"
+      },
+      {
+        "author": "Geilokowski",
+        "content": "There is probably a performance downside, yes. Why do you care? If it’s gaming, it might work, but driver support will likely be a nightmare. I would only try Indie games and even those are probably not worth the hassle. Just keep in mind that privacy and security is the main focus. If there was a way to get 1% more secure at 10% performance cost, the developers did their best to reduced it to 8% and then took the hit. It’s simply not a priority. All my windows open somewhat slow (in comparison to raw linux / windows). The start menu and launcher isn’t great, I never tried Windows and my custom keyboard won’t work at boot. But it’s secure, and that’s all that matters to me and all the other users. If you expect an experience on par with normal Ubuntu, forget it."
+      },
+      {
+        "author": "preland",
+        "content": "I was in your boat, so I’m going to be very direct: If you are okay with/want to learn more about the inner workings of operation systems, kernels, networking, virtual machine management (specifically in Xen), networking (this one deserves to be listed twice), I/O…….then go for it, because this is exactly what you will get. If you are not interested in diving deep into even a single one of these topics (plus some bonus topics that will pop up depending on your usage), then I recommend some caution before proceeding. The majority of support on the forums and elsewhere online is tailored towards ultra-high user security use-cases. If your model strays even slightly out of bounds of this, you will be doing a lot of stuff on your own or with outdated documentation. Not trying to be a downer, just trying to be as honest as I can."
+      }
+    ],
+    "thread_title": "Considering using QubeOS as a daily driver OS. Thoughts?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1k36ciu/considering_using_qubeos_as_a_daily_driver_os/",
+    "username": "Phd_Death",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:33:08.414025"
+  },
+  {
+    "id": "1kanmml",
+    "title": "Even pauze van het scrollen? Trakteer jezelf op iets lekkers. Van hamburger tot pizza en fried chicken: je lievelingsgerechten staan klaar in de Uber Eats app. 📲🍔🍕 Waarom moeilijk doen als het ook lekker kan? Eerst iets lekkers. Lekker Uber Eats.",
+    "author": "ubereats",
+    "permalink": "https://alb.reddit.com/cr?za=L49dXhN68mf0qA-ebSYnQuD9fzL3eC1doNXIDMQSZpxvnY-RcYG2hGtrMeR_2FQWxj6CwKKH5fDd3wRVYTANQET8oAmZRW3LXNlVENGWW4z5cAzdVPuzOL3fSXalCPbVhN225vEOxL5NSYz3HC7HpiIgZmTwERawAhlJh2I1rSOWTlBIxhWA43hpS4nPMBKrqp-NzBIs0IFqRuIBNpD-A3EJmcsxGx17sJfVAx-jfSYx_09GD2qLNVKCpBGIm5lrMiUv-_MfaIN6ekHaHxoMQiweP5OM6KFLXDzAjNxO8uS8UVjoLJEL3yhkHJ-ZZeemkRmLXbbEjq-BxFxmdGnUGhsPf0CdM75VwHGqf0DEwAEy8BakEkLATlpbAQ2DK2L_EVyGSGr186D0RHP48KiJlPuxAd622PTfx1nfJbbk6-Qgs_P3jmoIm0FdyVqRrZy9RyGrkmrJxm3Rz8luWWGgcgaZp-1fR7g6AoWknh8pcySn2bTvmHue0i-vvuA6qsRjlGIpX0Ym56N_g3FK2j1V5HIzwp6BPZEb8KCfIgev4Q5XvL5YExNCDg&zp=MsHlIkxG7zH5uOBopKdT4--8-4G3r4z2kFaRJUm7AoVzrNdYDleV_lPDaHuWxvVF-TTLWjigD-_rCmaeN202_0H7hFBeR4O2pp9ABotEFiyLVso3W3eRkmmlTuaYRUp7H4xM9MQkcFTYv3gC9LMZW6Trvu8dhokwp6uZa5MlHoGz9YOew8UG-aQYkmKc61zhyT1InNT9dgvxycMo054tAE8XKUnInS3giEUfOpgSEpnzZOTm-E-zb3yO47E53HwUNUZVxHJZgZ-rAoSiKwP8_ZpZP9tN2yLvoYtSHQEJzI955SZYYiFq00qf1gRjwLNhWxaw0HEuO7QZ532BEhuFkuK4A-NclmVV2PSWMOMBpA-KT7zzcxvakU6mzSmXp8a31iS9_psqE7h35-4q8O93SACgYRwtyAYAYi8I5SEkRLuW67ijASinrvUuYn4U95DiVk_sHq6bYQms-BMwgYYjWCEHNtBqv27pUc_hXHlWn74HvTTYWQ",
+    "content": "",
+    "comments": [],
+    "thread_title": "Even pauze van het scrollen? Trakteer jezelf op iets lekkers. Van hamburger tot pizza en fried chicken: je lievelingsgerechten staan klaar in de Uber Eats app. 📲🍔🍕 Waarom moeilijk doen als het ook lekker kan? Eerst iets lekkers. Lekker Uber Eats.",
+    "thread_url": "https://alb.reddit.com/cr?za=L49dXhN68mf0qA-ebSYnQuD9fzL3eC1doNXIDMQSZpxvnY-RcYG2hGtrMeR_2FQWxj6CwKKH5fDd3wRVYTANQET8oAmZRW3LXNlVENGWW4z5cAzdVPuzOL3fSXalCPbVhN225vEOxL5NSYz3HC7HpiIgZmTwERawAhlJh2I1rSOWTlBIxhWA43hpS4nPMBKrqp-NzBIs0IFqRuIBNpD-A3EJmcsxGx17sJfVAx-jfSYx_09GD2qLNVKCpBGIm5lrMiUv-_MfaIN6ekHaHxoMQiweP5OM6KFLXDzAjNxO8uS8UVjoLJEL3yhkHJ-ZZeemkRmLXbbEjq-BxFxmdGnUGhsPf0CdM75VwHGqf0DEwAEy8BakEkLATlpbAQ2DK2L_EVyGSGr186D0RHP48KiJlPuxAd622PTfx1nfJbbk6-Qgs_P3jmoIm0FdyVqRrZy9RyGrkmrJxm3Rz8luWWGgcgaZp-1fR7g6AoWknh8pcySn2bTvmHue0i-vvuA6qsRjlGIpX0Ym56N_g3FK2j1V5HIzwp6BPZEb8KCfIgev4Q5XvL5YExNCDg&zp=MsHlIkxG7zH5uOBopKdT4--8-4G3r4z2kFaRJUm7AoVzrNdYDleV_lPDaHuWxvVF-TTLWjigD-_rCmaeN202_0H7hFBeR4O2pp9ABotEFiyLVso3W3eRkmmlTuaYRUp7H4xM9MQkcFTYv3gC9LMZW6Trvu8dhokwp6uZa5MlHoGz9YOew8UG-aQYkmKc61zhyT1InNT9dgvxycMo054tAE8XKUnInS3giEUfOpgSEpnzZOTm-E-zb3yO47E53HwUNUZVxHJZgZ-rAoSiKwP8_ZpZP9tN2yLvoYtSHQEJzI955SZYYiFq00qf1gRjwLNhWxaw0HEuO7QZ532BEhuFkuK4A-NclmVV2PSWMOMBpA-KT7zzcxvakU6mzSmXp8a31iS9_psqE7h35-4q8O93SACgYRwtyAYAYi8I5SEkRLuW67ijASinrvUuYn4U95DiVk_sHq6bYQms-BMwgYYjWCEHNtBqv27pUc_hXHlWn74HvTTYWQ",
+    "username": "ubereats",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:33:20.802778"
+  },
+  {
+    "id": "1kdryr9",
+    "title": "Is there public QubesOS roadmap published somewhere ?",
+    "author": "Heavy-Diver",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1kdryr9/is_there_public_qubesos_roadmap_published/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "OrwellianDenigrate",
+        "content": "There is a GitHub project for R4.3 https://github.com/orgs/QubesOS/projects/26"
+      },
+      {
+        "author": "Heavy-Diver",
+        "content": "Helpful, thanks, solved."
+      }
+    ],
+    "thread_title": "Is there public QubesOS roadmap published somewhere ?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1kdryr9/is_there_public_qubesos_roadmap_published/",
+    "username": "Heavy-Diver",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:33:30.479294"
+  },
+  {
+    "id": "1k92z8o",
+    "title": "Does qubes have GRUB bootloader?",
+    "author": "b20jk",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1k92z8o/does_qubes_have_grub_bootloader/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "ethicalhumanbeing",
+        "content": "I think the whole point is to have virtual OS inside qubes, but it should be possible still."
+      },
+      {
+        "author": "ArneBolen",
+        "content": "I have tested installing and running Windows 10 in a qube and it works well. I don't know if Windows 11 will work."
+      },
+      {
+        "author": "ethicalhumanbeing",
+        "content": "Windows 11 is a glorified windows 10, it should work."
+      },
+      {
+        "author": "plushpun",
+        "content": "what about the gaming performances of the qube? what are your specs if you don't mind, i'm working on a dual boot qube system where you wouldn't have to go through that ugly menu to switch os, just open up a new qube"
+      },
+      {
+        "author": "ArneBolen",
+        "content": "what about the gaming performances of the qube? Qubes OS is an operating system based on security, and it's not meant for gaming."
+      },
+      {
+        "author": "plushpun",
+        "content": "Yes I know that but it still is capable to run games even though that is not its forte, I'm just asking what does it look like to game on a qube"
+      },
+      {
+        "author": "ArneBolen",
+        "content": "I'm just asking what does it look like to game on a qube Some games may work fine but others not. When you install an operating system in a qube it will not have direct access to the hardware and that might cause an issue with some games. Also be aware of potential latencies as all qubes are sharing CPU, GPU, RAM and other hardware."
+      },
+      {
+        "author": "Kriss3d",
+        "content": "It does yes"
+      },
+      {
+        "author": "desci1",
+        "content": "I use Windows 11 and Qubes OS in the UEFI boot manager, but I remember having the option to use grub instead in the installation."
+      },
+      {
+        "author": "Refractant",
+        "content": "Install a second hard disk, then install Qubes on it. Use the BIOS boot screen to choose the device you're booting from."
+      }
+    ],
+    "thread_title": "Does qubes have GRUB bootloader?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1k92z8o/does_qubes_have_grub_bootloader/",
+    "username": "b20jk",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:33:40.739889"
+  },
+  {
+    "id": "1kjrekn",
+    "title": "Thoughts on QubesOS, Privacy, Security, Trust, and Software Supply Chain",
+    "author": "Electronic_Grape_749",
+    "permalink": "https://v.redd.it/19i40dink20f1",
+    "content": "",
+    "comments": [],
+    "thread_title": "Thoughts on QubesOS, Privacy, Security, Trust, and Software Supply Chain",
+    "thread_url": "https://v.redd.it/19i40dink20f1",
+    "username": "Electronic_Grape_749",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:33:47.948521"
+  },
+  {
+    "id": "1ki83ju",
+    "title": "Most Capable Mini PC to boot Qubes and Windows",
+    "author": "danloveslola",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1ki83ju/most_capable_mini_pc_to_boot_qubes_and_windows/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "Kriss3d",
+        "content": "It certainly should yes."
+      },
+      {
+        "author": "GooeyGlob",
+        "content": "For running Qubes full-time, you really can't go wrong with a modern Intel CPU like this, unless the BIOS happens to be locked down. I've not noticed this to be a problem with the GMKtec systems I've tried, but others may know better about this specific system. As long as you can enable the CPU virtualization options (https://www.qubes-os.org/doc/installation-guide/#pre-installation) it'll probably run well. Just to clarify though, advanced GPU stuff is pretty difficult and not officially supported for almost all brands of GPU under Qubes. I assume that's what the mentioned Windows dual boot is option for though. Unfortunately on that front, strictly in terms of gaming, the system seems quite limited in several ways. Intel iGPUs are still best for low/mid range games at best, and the system does not seem to support OcuLink or even Thunderbolt in order to even hook up an external GPU to be able to handle better. If you want to to do any sort of modern AAA gaming (1080p 100+ FPS in 3D games), in general a mini PC is unfortunately a pretty bad option, with the exception of systems with a discrete GPU (Minisforum HX99g / HX100g or AceMagic Tank 03)."
+      },
+      {
+        "author": "Sad-Head4491",
+        "content": "IGPU is recommended, as discrete GPU isn’t fully supported. There are ways but it’s pretty finicky and not worth the headache. You could however dual boot with bazzite and skip windows altogether. Bazzite is an image from Universal Blue based on Fedora Atomic. It comes with Steam pre-installed, HDR & VRR support, improved CPU schedulers for responsive gameplay. This way you have 2 very capable systems each serving their own purpose. That’s how i would’ve done it."
+      }
+    ],
+    "thread_title": "Most Capable Mini PC to boot Qubes and Windows",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1ki83ju/most_capable_mini_pc_to_boot_qubes_and_windows/",
+    "username": "danloveslola",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:33:56.489669"
+  },
+  {
+    "id": "1kavf4j",
+    "title": "Am I cooked?",
+    "author": "Oportbis",
+    "permalink": "https://i.redd.it/dseeflpdrqxe1.png",
+    "content": "",
+    "comments": [],
+    "thread_title": "Am I cooked?",
+    "thread_url": "https://i.redd.it/dseeflpdrqxe1.png",
+    "username": "Oportbis",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:34:09.142998"
+  },
+  {
+    "id": "1klariw",
+    "title": "Should i hit continue??",
+    "author": "Senior_Stock_slayer",
+    "permalink": "https://i.redd.it/e4cdwxp8lg0f1.jpeg",
+    "content": "",
+    "comments": [],
+    "thread_title": "Should i hit continue??",
+    "thread_url": "https://i.redd.it/e4cdwxp8lg0f1.jpeg",
+    "username": "Senior_Stock_slayer",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:34:21.793201"
+  },
+  {
+    "id": "1kfia60",
+    "title": "Best Practice for Multiple “personas” using Whonix?",
+    "author": "Slight-Ad416",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1kfia60/best_practice_for_multiple_personas_using_whonix/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "barrulus",
+        "content": "Why go to that level of isolation if you’re making use of Thunderbird? Means you’re using email somewhere along the way. I guess you can run it secure but it’s email… haha. Ok, what is your simultaneous usage like? Will each appvm be active at the same time? You could easily set up a whonix gateway per persona for guaranteed isolation. each gateway will negotiate a new connection to a different tor node so those streams will not be easy to correlate at all. You will need multiple whonix gateways, not extra sys-net/sys-firewall. As you are in control o the service appvm’s, you know they are not logging internals. In your described scenario, compromise is going to happen at Thunderbird, tor browser or feather wallet. I wouldn’t run thunderbird, kleo and feather on one appvm. I’d run sys-net -sys-firewall -whonix-gateway-1 —whonix-desktop-1 |_tor1 |_thunderbird-1 -whonix-gateway-2 —whonix-desktop-tor2 |_tor2 |_thunderbird-2 -whonix-gateway-3 —whonix-desktop-3 |_tor3 |_thunderbird-3 debian-minimal |_kleo/gpa Keep your keys separate completely, no network. If you’re anticipating do hose thing that breaches one of your appvms where your personas are active, don’t leave keys anywhere near them. You could set up a key system similar to split ssh or just copy paste. but if the workstation is compromised, it won’t have any visibility of that process or the other workstations. What is your threat model?"
+      },
+      {
+        "author": "Slight-Ad416",
+        "content": "Thunderbird was only an example lol I didn’t wanna get too specific in my examples. But my plan as of now is to have each persona have its own apps, and each app to have its own app vm. For example, I’d have something like: Clone Whonix-Workstation-17 to make [Billy-Workstation-17 Template] —> [Billy-Tor-App-vm]/[Billy-Kleo-APPVM] —> [Billy-Email-APPVM] and use the same layout for each as I’ve read it’s best to use different app VMs for each app I’d like to use. I don’t really plan on using more than one persona at a time, maybe two max (likely both using tor browser and MAYBE a messaging service of some sort) but overall I would be using one at a time. So you think I should do the same with the Gateways? My threat model isn’t that high, I’m not a seller or admin of a darkmarket or anything. I honestly enjoy malware analysis and enjoy looking at weird and obscure forums to find that malware. I also enjoy scam baiting, and do believe that would be where my highest risk would be associated. Not necessarily allowing anyone to connect to my machine (until I’m more comfy with it at least) but definitely talking to weird people in weird areas of the clear net / tor. I’ve been using tails up until now, but that gets to be a headache to keep organized. There are times I use discord and telegram to find these people as well, so I would like that to be as low risk as I can make it (though I know it isn’t risk free, not by a long shot)"
+      },
+      {
+        "author": "factorioishard",
+        "content": "I think there's actually two questions here. First part is, preventing information from leaking between different VMs on the same computer, second is what information appears from external fingerprints and internet access to identify traffic from the VMs. The former is more a qubes docs question which I can't answer super well. But the latter, that comes down to the actual hardware for your TOR entry point. So for instance the first entrance node will see a unique Mac for both connections. So I mean you could run your own relay to help with that, but that's the primary \"vulnerability\" is traffic analysis on the entry point"
+      },
+      {
+        "author": "Multicorn76",
+        "content": "The entry node never sees a MAC address, that is OSI layer 2, not 3. Traffic analysis on the entry point is a non issue as the whonix-gateway has Vanguard and stream isolation, and selfhosting a node and configuring it to always be the guard would actually remove one layer of protection, not add one."
+      },
+      {
+        "author": "factorioishard",
+        "content": "Yeah, whoever is hosting the entry node can't, but you're ignoring the route to the actual entry node itself. You have to assume the ISP route itself is vulnerable, which means yes, all the hardware leading up to the entry node is an issue because it's unique and fingerprinted outside of your control. I'm pretty sure as far as I remember that self hosting a node will always be better for privacy, especially because it mixes in traffic, but tor docs are going to have most up to date info. I'm very surprised by your response, can you please provide more information as to why you think it's worse ?"
+      },
+      {
+        "author": "Multicorn76",
+        "content": "OP is using Whonix. That means that they were prompted to use bridges. If OP is in a situation where the ISP is a concern, they are probably using bridges. MAC addresses have always been a non issue if you are smart. If you are on a public WiFi you just spoof it, on your home WiFi you just put whatever modem your ISP gave you into bridge mode if you don't trust it. And that if is a big if. Those things are barely scraping by with a few megs of ram and some old SPARC or more recently ARM CPU. These things are never gonna do DPI, at most they would have a backdoor to retrieve mac addresses... and if the police is invoking a backdoor on a specific router to get the MAC address it's already to late. If the ISP is a concern, like in your theory, then hosting a Tor node on their network might not be the smartest plan as you are immediately outing yourself as a Tor user, drawing attention. You can curb that by simply hosting your Tor node on some far away VPS.... but in that case you are most likely sacrificing good money OR payment info while you could just use a bridge. If instead the ISP is no concern, selfhosting a node is a great idea. You just should not connect to it. Why do that if you can just connect to a normal Tor node and still have all your traffic mixed while retaining 3 actual hops."
+      },
+      {
+        "author": "factorioishard",
+        "content": "Thank you for the information, so as far as I can tell: https://www.whonix.org/wiki/Host_a_Bridge_or_Tor_Relay https://support.torproject.org/relay-operators/#relay-operators_better-anonymity These are the most 'official' doc recommendations, I didn't realize it was a more open question than I was assuming (prior statements I'm assuming of course you're not running a full exit node.) I actually want to try to get the most ideal whonix setup myself so any info is appreciated. Re: ISP / wifi networks, yeah I mean I know about MAC spoofing, I guess the real point is there's always going to be hardware in your route no matter what. So for instance you can use silent.link or another Monero accepting cell phone ISP, or a public wifi, but you're still at risk of hardware in between in either case. In some countries, changing the IMEI for an anon internet plan is illegal, and there's tons of analysis patterns for finding the traffic otherwise (I mean if it's a stable MVNO plan they'll get it that way no matter what usually.) And on public wifi, yeah they're not going to use DPI I agree, but even a persistent connection is still going to leave lots of traces / metadata upstream of the wifi. It's very hard to assume a user is going to a different public wifi every time, most people are gonna be on consumer ISP or an anon cell phone plan at best. So it seems summary from docs is \"there isn't a totally clear answer.\" I think I just like the idea of adding relay mostly because it generates a lot of 'false' traffic (again read the caveats in the docs...) and it also helps out the network at the same time, so it seems like a nice thing to do."
+      },
+      {
+        "author": "Multicorn76",
+        "content": "I speak from my own experiences when I say: You're overthinking it. The ideal setup does not exist. Ross Ulbricht was able to run a billion dollar marketplace while just running the Tor browser on his Ubuntu laptop? The thing that got him caught was advertising the silk road with his personal email address. You may think that surely law enforcement has become much more competent, and you'd not be wrong, but even more recent arrests barely use zero days at all, not to speak of backdoored ISPs or timing attacks through Tor. You are focusing so much on the little technical details that you lost sight of the big picture. Hope that's food for thought, and would love to hear your opinion on the matter"
+      },
+      {
+        "author": "factorioishard",
+        "content": "I think you might be correct. I'm a programmer and really into this stuff specifically for the technical details, but I'm less interested in the actual usage of it than just finding the right setup. I keep seeing a lot of new Tor-like networks pop up, and I've been trying to find if there's an \"ideal\" design for this -- but I'm not the intended \"end-user\", so it's most likely the wrong advice to tell someone to setup a Tor node now that I think about it if they're just trying to do silly darknet stuff. As far as what I can tell (for people who actually are into programming and want customization,) the best latest research I've seen involves using a lot of Monero VPS + multiple networks apart from Tor. Since there's new alternatives to Tor (whether or not they are 'correct' is something only time will tell.) I've specifically been looking into setting up proper wireguard proxychains + Monero VPS + Opnsense routing rules + multiple tor equivalents. I think the biggest problem I see right now, it's very difficult to have a setup that includes both a headscale/nebula/netmaker like internal VPN for your own servers, plus also supporting multiple Whonix clients, plus also dealing with multiple types of routing networks. Since there's now at least a few alternatives to Tor (especially those that require anonymous forms of payment for routing / bandwidth,) and many many anonymous VPS providers, I don't think I've yet seen a full answer as to the ideal \"standard\" deployment. There seems to be a LOT of different opinions about security models for tor vs. other networks, timing attacks, etc. etc. (every other network than them is smaller though so...) and then there's ideas related to VPS chains and what is the ideal order (i.e. using VPS chains to make multiple routes thru router networks -- or should you skip VPS entirely and never use them -- or how do you deal with running a service?) I think this is much less important for a conventional user, vs. someone trying to run an application, or a whole routing service connecting your own VPN subnet. But really, all of this stuff is typically far less important than 'conventional' opsec re: anonymity (like not doing super dumb stuff.) And then the reaity is, if you create a ton of 'noise' traffic, like self-hosting a relay, you're at risk of increased dragnet scrutiny."
+      },
+      {
+        "author": "Beneficial_Board_997",
+        "content": "If you're serious about isolating “Bobby,” “Will,” and “Frank,” then one sys-whonix won’t cut it. Why? Tor circuits aren’t static—they rotate. But when all your Workstations route through the same gateway, you’re exposing correlation risks: Same entry guard Same circuit timing Same behavior fingerprint Same DNS leaks if one slips It’s not full compartmentalization—it’s shared anonymity. What I’d do: Each uses its own Tor daemon = unique circuits, unique entry guards. Clone from a hardened base and tweak per role. bobby-kleo → sys-whonix-bobby will-thunderbird → sys-whonix-will Full vertical stacks. Strip metadata, don’t leave fingerprints. Use custom netvm MAC addresses (check qvm-prefs and qvm-features). Mostly for censorship or extra obfuscation. Not required for persona separation unless your adversary controls or monitors guard nodes. If one persona gets popped, attacker sees only that environment. No shared circuits = no lateral correlation. Add split-GPG, split-SSH, no clipboard between VMs, etc. Bonus tip: Use qvm-prefs to restrict inter-VM communication (netvm, kernel, qrexec, etc.) And never reuse USB qubes, storage devices, or files between personas. In short: One persona, one stack, one Tor identity. Anything less is blending—don’t blend."
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "You should read the Whonix documentation https://www.whonix.org/wiki/Tor_Entry_Guards#Increase_Protection_from_Malicious_Entry_Guards:_One_Guard_per_Application"
+      },
+      {
+        "author": "Slight-Ad416",
+        "content": "Could you inform me exactly where the documentation refers to using multiple identities and keeping them separate, while having those identities running simultaneously ? The only thing I’m seeing that seems to be relevant to what I am asking is saying I could potentially clone sys-Whonix, which is the complete opposite of everything else I’ve read / have been replied to about this topic. That is the first area I looked for an answer to my question, but could be misinterpreting things."
+      },
+      {
+        "author": "Beneficial_Board_997",
+        "content": "For real ask chat gpt"
+      }
+    ],
+    "thread_title": "Best Practice for Multiple “personas” using Whonix?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1kfia60/best_practice_for_multiple_personas_using_whonix/",
+    "username": "Slight-Ad416",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:34:29.344581"
+  },
+  {
+    "id": "1kboyuv",
+    "title": "Thinking of moving from Bitwarden to KeepassXC, do you think it is unwise to use a company's cloud to sync passwords ?",
+    "author": "Heavy-Diver",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1kboyuv/thinking_of_moving_from_bitwarden_to_keepassxc_do/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "OrwellianDenigrate",
+        "content": "Do you think syncing passwords on the cloud can be a problem ? Yes, see LastPass, there is a chance someone might get access to the vault. I personally don't think using Bitwarden is a problem, if you use a strong password."
+      },
+      {
+        "author": "Heavy-Diver",
+        "content": "Yes, see LastPass, there is a chance someone might get access to the vault. True..."
+      },
+      {
+        "author": "EducationNeverStops",
+        "content": "Last place you want to put your vital information. Count the number of breaches they have had. The archives are massive."
+      },
+      {
+        "author": "Heavy-Diver",
+        "content": "Last place you want to put your vital information You mean any company's cloud, even if e2ee ?"
+      },
+      {
+        "author": "EducationNeverStops",
+        "content": "Copy and pasted from below and adding a reply to your question at the bottom: Would you mind if I send you some advanced, academic cryptography discussing this subject? To say that a corporation is legit with ... let's say all your banking information means that you somehow audited the company as a whole, including their staff, supply chain and disaster recovery plan and have obtained enough of a guarantee that you can hand them your private assets, like a safety deposit box at a bank. And that you have scanned the future to make sure that nobody or group will ever break into their infrastructure. I guess you don't know about their January scandal in which they were placing pixels in emails sent to customers to track them and were fined for violation of privacy. For $3/month you could host their software yourself on a VPS. Essentially you sre delegating all your trust to a name which you have never seen what they are really like behind closed doors. E2EE You forget that the Snowden documents revealed that the NSA had produced means of cleanly breaking into thousands of https/ssl/tls (websites) and had infiltrated over 300 commercial VPNs and this was how long ago?"
+      },
+      {
+        "author": "goldcakes",
+        "content": "No. It’s more about reputation. I will happily use Bitwarden (they’re legit and security minded), public clouds like S3, or even Google Drive; but I won’t use LastPass as they were a clown show and you get one reputation."
+      },
+      {
+        "author": "EducationNeverStops",
+        "content": "Would you mind if I send you some advanced, academic cryptography discussing this subject? To say that a corporation is legit with ... let's say all your banking information means that you somehow audited the company as a whole, including their staff, supply chain and disaster recovery plan and have obtained enough of a guarantee that you can hand them your private assets, like a safety deposit box at a bank. And that you have scanned the future to make sure that nobody or group will ever break into their infrastructure. I guess you don't know about their January scandal in which they were placing pixels in emails sent to customers to track them and were fined for violation of privacy. For $3/month you could host their software yourself on a VPS. Essentially you sre delegating all your trust to a name which you have never seen what they are really like behind closed doors. At the same time your data can now be subject to analysis - this I would have to send you documentation on."
+      },
+      {
+        "author": "goldcakes",
+        "content": "Please do share"
+      },
+      {
+        "author": "NuggetNasty",
+        "content": "If you don't need the syncing function there's a reason tails comes with keepassXC, but that's too much of a necessity for most people, include myself"
+      },
+      {
+        "author": "Chahan_The_Great",
+        "content": "Tails Works With a USB Already, Why Would You Sync Your Passwords? Whonix Also Comes With KeePassXC By The Way."
+      },
+      {
+        "author": "NuggetNasty",
+        "content": "You would sync your passwords across multiple computers and phone. And cool! Haven't used it yet but am excited to"
+      },
+      {
+        "author": "EducationNeverStops",
+        "content": "If you are using Qubes you have not fully grasped the fundamental nature of Qubes. Your passwords stay air-gapped on hardware that you own and control."
+      },
+      {
+        "author": "Heavy-Diver",
+        "content": "I have yet to use Qubes :) Still researching"
+      },
+      {
+        "author": "KeyMechanic42",
+        "content": "That comment might bite a little, don't give up or get distracted by it, Qubes is very worth the effort of learning but does take some patience as well as time! Adjusting habits is ultimately the hardest part, imo, not the technology!"
+      },
+      {
+        "author": "EducationNeverStops",
+        "content": "Ok, this is all coming out of respect. I hate reddit and the belittling by downvotes. Especially if what you know is something you can't disclose the reference of to the OP. Imagine, reading a VPN discussion and a reply, \"actually an an employee of the NSA, I beg to differ....\" Ok, do not think of Qubes as an operating system. Think of it as a type 1 hypervisor. When you look at Debian Fedora Whonix do not think they are on your desktop. View them with the perspective that they are other people's computers on a server in a datacenter. They are isolated and compartmentalized from each other. Qubes is not about security. Qubes is about creating an ecosystem that is entirely abstracted from the things you visually see. There is supposed to be no connection from one entity to another. In one vm you are James Bond. In another vm you are a family man. In another vm you do not allow internet access and store sensitive information. Passwords. Keys. Seeds. The cloud is someone else's computer. LastPass and WordPress have been hacked so many times they suffer from trauma. The mindset is to have 100% control, possession, ownership of the things in your life. Putting anything on the cloud means you are no longer the owner. It means a rogue employee has not been factored in. It means the unpredictable can now happen. Each vm doesn't know it has neighbors. It becomes a purely conceptual game where you architect and design what is allowed to take place and what is forbidden. VMx can print but VMy cannot. VMz has a VPN but VMq does not. VMa can access the local NAS. And only VMa. VMc is combustible and runs off RAM. The minute you are done with it it never existed and has no history. Enjoy."
+      },
+      {
+        "author": "Heavy-Diver",
+        "content": "Thanks ! Solved."
+      },
+      {
+        "author": "EducationNeverStops",
+        "content": "Anytime. We're supposed to bring the best out any chance we get. I just re-read your post and realized something crucial. I've been using KeePassXC for over 6 years. I now have a habit of saving a new database each time an entry is added. Because these databases do get corrected and one thing that will corrupt it is when it is being written to or read by different machines. It is not a guarantee but if you ask people who have been using any database, especially a shared database there is a great likelihood of corruption. So, really simple. I just date each database. One similar example is when QuickBooks is shared over a network. It comes with a software called QuickBooks Doctor. Anything that is encrypted wants a \"graceful shutdown\"."
+      },
+      {
+        "author": "KripaaK",
+        "content": "If you're concerned about cloud syncing for password managers, you're not alone as it's a common debate. While cloud-based managers like Bitwarden do encrypt everything end-to-end, the worry often lies in potential implementation flaws or centralized attack surfaces. Open-source code is great in theory, but as you rightly pointed out, regular audits aren’t guaranteed unless there’s an active and well-funded community. That’s where offline or self-hosted tools like KeePassXC gain favor for their full control, no reliance on third-party clouds. But they do come with tradeoffs in terms of usability, updates, and syncing across devices. If your use case is for personal use, it really comes down to your risk tolerance and how comfortable you are managing the infrastructure yourself. However, if you’re exploring this setup for organizational or business needs, you might want to look into dedicated enterprise solutions like Securden Password Vault. It’s designed for enterprises that need secure, self-hosted password management without any dependency on cloud sync that ensures total data residency and internal control. https://www.securden.com/password-manager/index.html Ultimately, there’s no one-size-fits-all answer. It’s about choosing the model (cloud vs. on-prem) that aligns with your threat model and operational comfort."
+      },
+      {
+        "author": "DanRanCan",
+        "content": "You should never store your password database on the cloud unless you are using crypromator which provides end to end encryption on any cloud service."
+      },
+      {
+        "author": "Heavy-Diver",
+        "content": "I was just using the default and free Bitwarden sync service; it's e2ee, but I think I'll switch to local only KeepassXC"
+      }
+    ],
+    "thread_title": "Thinking of moving from Bitwarden to KeepassXC, do you think it is unwise to use a company's cloud to sync passwords ?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1kboyuv/thinking_of_moving_from_bitwarden_to_keepassxc_do/",
+    "username": "Heavy-Diver",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:34:44.696190"
+  },
+  {
+    "id": "1k9uoci",
+    "title": "Cheap AliExpress N100 box with Qubes still safe if BIOS or hardware is compromised?",
+    "author": "Xcessiv46",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1k9uoci/cheap_aliexpress_n100_box_with_qubes_still_safe/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "xalibr",
+        "content": "No, also 16GB RAM is no fun with Qubes"
+      },
+      {
+        "author": "TheAutisticSlavicBoy",
+        "content": "don't people use it it with 8?"
+      },
+      {
+        "author": "BobbySchwab",
+        "content": "yes with half the fun"
+      },
+      {
+        "author": "TheAutisticSlavicBoy",
+        "content": "you forgot about squaring that two so quater the fun :)"
+      },
+      {
+        "author": "Kriss3d",
+        "content": "Im pretty sure it would work. Yes 16GB isnt going to be awesome but enough for use with a VM or two."
+      },
+      {
+        "author": "DryEntertainment5113",
+        "content": "I mean I have 16gb and I can comfortably run 4 app VMS and maybe a standalone. It's not fun but it's safe and doable"
+      },
+      {
+        "author": "purplemagecat",
+        "content": "No, Qubes keeps net and usb controllers isolated from the host. It will not protect you if your bios is pre pawned. Which has direct hardware access. I've ready all you need to if bios is pawned is disconnect battery and Flash bios. Not sure if this helps if the intel management system is pawned though."
+      },
+      {
+        "author": "TheAutisticSlavicBoy",
+        "content": "ME can't be backdoored by OEM, only Intel. If you suspect that AMD is you only bet. Maybe emulation. BUT can be misconfigured. which can be checked. BIOS can be vulnerable or backdoored. If not an official Windows OEM even Boot Guard (part of ME) may be inactive, which would allow Coreboot. Reading the BIOS ROM is possible ofc"
+      },
+      {
+        "author": "Francis_King",
+        "content": "You need 16 GB of memory (check!) but also VT-X and VT-D (or AMD equivalent). Does the processor allow for VT-X and VT-D?"
+      },
+      {
+        "author": "Xcessiv46",
+        "content": "Yes it does support both VTs."
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "In theory the VM isolation + IOMMU should cage anything user-land, but if the BIOS/firmware or some sketchy component ships pre-pwned, can Qubes still keep the attacker bottled up, or does a firmware-level backdoor punch right through the whole security model? Yes, it would bypass the Qubes OS security model, by having access to dom0."
+      },
+      {
+        "author": "someonestarget",
+        "content": "If they know how to compromise your bios, they have the skillset to compromise your os. Just start over homie."
+      },
+      {
+        "author": "bst82551",
+        "content": "I would be much more concerned about security flaws in the BIOS than a bootkit or a malicious hardware module. These manufacturers are just trying to make a quick buck. They have no interest in providing firmware updates when flaws are found. Programming at the BIOS or kernel level takes serious skills and is highly likely to introduce instability, so most hackers avoid it if they can. UEFI has made it even harder these days, assuming it's configured properly. Assuming you do find evidence of infection, I would still say you should assume incompetence instead of overt maliciousness."
+      }
+    ],
+    "thread_title": "Cheap AliExpress N100 box with Qubes still safe if BIOS or hardware is compromised?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1k9uoci/cheap_aliexpress_n100_box_with_qubes_still_safe/",
+    "username": "Xcessiv46",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:34:57.996893"
+  },
+  {
+    "id": "1k7lx2o",
+    "title": "Speel de game en win een gouden Doritos!",
+    "author": "DoritosBenelux",
+    "permalink": "https://alb.reddit.com/cr?za=wTSbIxVmOh8jL3frrcI6Ustj_s5RmpVVq9UjKx88eiH9jMrzq71TtC6FC8Ry6O3dlZVg8HQ55It-Q3qJbJszPuiXV6jNWOSipPYdf3r1y4G304HP8YJZaF1Rkc1jWbMoelLLT713INeiPMuEA3vc9csQNze7OQlpIbhkc4xo0Zdn6zaS4noMUkXRRUYWHc3kBNzQrF8TORvQ0VOLRyrS0t_hioHzJIMkG2AIdy6m0V3I_TyzqxFnynxz2u7nCwCdlWBvlNn7omkbkIKVR5LfYt8XrMGEXgtQ1CG1idltZfVNjpV1tQzwZuKCMJ-3xxu3axG5iK0Z5VKKcj8F2kJ7_JtoXExGMftAXW0ChQy1ds4Os0PF68E98SKLGbYwECp4ILxjS1zgRRO-C4xQTd4G1aTtMbXpObU1MPvYxLQ106Xvd8Ipt1hlUIjnQokA7dtYKxRhiNo86Sj6LhdVBZELrEQUFRIWjMLn_s3oD2ebIh2rEt3oJFfBA4Jb9bNDxJbJFCrcMl8MIt6tvOzzAOKdTK55qsd_xtPJ8umjweWU-kiIEFRsMCa2RJM&zp=XGF9DA7cY8CpD-EE4tafJl8QzKZY9busMpyI06PJA1Hx87MswX5rJs0aUkaUmdHAVoQVqpLGZ664Nw7Nt_aT4j_2LDmGVTwGwCm3XhuKpyhImkIGdYjU6UcSDITFmkoG8tcWNqzk0stXtyiXDPexa5MyblTCstSxBfWY0P6wLx6NXl64gFa8UaAOoK_EqWySJt0z3XDECQ06aewgdpv47pbxKUTJFVbf_15iY2oKobTMdBCHcXAU1LZBPUrxEz8Q9688hOfFwZ3OSLoALp_62JwAwL2EwrNACSrzLM0syaa0kpZ7PhKi2J5D5-xxHUgE_3QkLZDzRAEuAC23zX6FUSUfc_lHVZNz49UJTPJpVq4gA4R7DMcOjHYeAr4LKXCIfw",
+    "content": "",
+    "comments": [],
+    "thread_title": "Speel de game en win een gouden Doritos!",
+    "thread_url": "https://alb.reddit.com/cr?za=wTSbIxVmOh8jL3frrcI6Ustj_s5RmpVVq9UjKx88eiH9jMrzq71TtC6FC8Ry6O3dlZVg8HQ55It-Q3qJbJszPuiXV6jNWOSipPYdf3r1y4G304HP8YJZaF1Rkc1jWbMoelLLT713INeiPMuEA3vc9csQNze7OQlpIbhkc4xo0Zdn6zaS4noMUkXRRUYWHc3kBNzQrF8TORvQ0VOLRyrS0t_hioHzJIMkG2AIdy6m0V3I_TyzqxFnynxz2u7nCwCdlWBvlNn7omkbkIKVR5LfYt8XrMGEXgtQ1CG1idltZfVNjpV1tQzwZuKCMJ-3xxu3axG5iK0Z5VKKcj8F2kJ7_JtoXExGMftAXW0ChQy1ds4Os0PF68E98SKLGbYwECp4ILxjS1zgRRO-C4xQTd4G1aTtMbXpObU1MPvYxLQ106Xvd8Ipt1hlUIjnQokA7dtYKxRhiNo86Sj6LhdVBZELrEQUFRIWjMLn_s3oD2ebIh2rEt3oJFfBA4Jb9bNDxJbJFCrcMl8MIt6tvOzzAOKdTK55qsd_xtPJ8umjweWU-kiIEFRsMCa2RJM&zp=XGF9DA7cY8CpD-EE4tafJl8QzKZY9busMpyI06PJA1Hx87MswX5rJs0aUkaUmdHAVoQVqpLGZ664Nw7Nt_aT4j_2LDmGVTwGwCm3XhuKpyhImkIGdYjU6UcSDITFmkoG8tcWNqzk0stXtyiXDPexa5MyblTCstSxBfWY0P6wLx6NXl64gFa8UaAOoK_EqWySJt0z3XDECQ06aewgdpv47pbxKUTJFVbf_15iY2oKobTMdBCHcXAU1LZBPUrxEz8Q9688hOfFwZ3OSLoALp_62JwAwL2EwrNACSrzLM0syaa0kpZ7PhKi2J5D5-xxHUgE_3QkLZDzRAEuAC23zX6FUSUfc_lHVZNz49UJTPJpVq4gA4R7DMcOjHYeAr4LKXCIfw",
+    "username": "DoritosBenelux",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:35:13.075973"
+  },
+  {
+    "id": "1kiuyr3",
+    "title": "What VM patterns are you using for software development?",
+    "author": "quonyone",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1kiuyr3/what_vm_patterns_are_you_using_for_software/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "OrwellianDenigrate",
+        "content": "You can set up the environment in the appVM, and when you know everything works, install the same software in the template."
+      },
+      {
+        "author": "password03",
+        "content": "But isn't that just a massive duplication of effort?"
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "No, I don't think so. If it's something that just requires a lot of packages to be installed, I normally just keep the terminal for the appVM and template open at the same time. Then I run the command first in the appVM, and copy it to the template. I don't need to constantly restart the appVM to reload the template, and if I happen to install some packages I don't need, then I don't added them to the template, and they are removed when I reboot the appVM. If it's something that also require changing config files, I normally just set up everything and copy bash_history and the files I've changed to the template. Then I just repeat the steps from the history file, and use the config files I already have made."
+      },
+      {
+        "author": "quonyone",
+        "content": "I'm not trying to be snyde here... but isn't having two terminal windows open and copy/pasting commands as close to the definition of \"duplication of effort\", tough? Seriously.. that doesn't sound like a lot of fun... although I do agree it's a workable solution, just sounds painful."
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "They said massive duplication of effort. We are talking about something that is maybe 5-10 min extra work, and it's a one time thing while you set up the environment, I don't think that is a massive effort."
+      },
+      {
+        "author": "quonyone",
+        "content": "Ok fair enough. I guess it's just not what I had in mind.. as it was what I was kind of doing yesterday and it didn't feel right."
+      },
+      {
+        "author": "Beneficial_Board_997",
+        "content": "Dev Workflows in Qubes – The Practical Patterns Welcome aboard. You’re spot on—Qubes is brilliant for compartmentalization, but dev workflows can feel like wrestling an octopus blindfolded. The Pain You Felt? Normal. That constant TemplateVM → install → reboot AppVM → something still missing → rinse/repeat is exactly why many of us end up with hybrid workflows. You’re not alone. And you're not wrong for eyeing a StandaloneVM. In fact, here's the short version: Dev Patterns That Work in Qubes Create a dev-standalone from a trusted template Treat it like a regular dev box: install IDEs, node/npm, docker, whatever Use git, SSH, etc., as needed Bonus: Clone before major upgrades. Snapshot before stupid things. When to use: You need fluidity, not friction Your threat model is moderate You value sanity Why it works: No package juggling between template/app You can iterate without jumping through hoops Build a minimal dev-template with just your base stack (e.g., python3, npm, git, curl) Create multiple AppVMs: dev-api, dev-ui, dev-tests For volatile tools like nvm, poetry, etc.—install those in the AppVMs (persist in ~/) Why use this? Clean rollback (edit template → all AppVMs benefit) Excellent isolation Ideal when dealing with untrusted or external code Downside: You’ve already hit it: friction, restarts, versioning hell Create a template with everything pre-installed Fire off Disposables from it for stateless coding, testing scripts, etc. Use case: Quick PoC work Messy bash sessions Exploit testing So what do I do? Mix #1 and #2. I use a dev-standalone for daily coding and AppVMs for projects that need tighter boundaries or long-term compartmentalization. I also keep a dev-build AppVM that’s locked down, no net access, for compiling third-party stuff. Git repos are synced using qvm-copy or shared via a vault-dev VM. Disposables are reserved for quick testing of sketchy code or APIs. Final Thoughts Qubes is a toolbox, not a religion. Use the parts that work. If a StandaloneVM makes your life easier—do it. It’s still a box within a box, and you’re still compartmentalized from your work, browser, crypto wallet, whatever. Security through usability trumps purity. Always."
+      },
+      {
+        "author": "TheAutisticSlavicBoy",
+        "content": "it sounded a bit ai, but i don't think so"
+      },
+      {
+        "author": "factorioishard",
+        "content": "Personally I use provisioning scripts. I mean if you're a programmer it's trivial to setup a qvm exec command, tar your provisioning and then dual run on template and app VM. Yes it's a little annoying, but you should be writing reproducible environment setup shell scripts anyways so someone else can build your env or for CI. This is entirely solvable. Note there's caveats about using qvm run pass io in dom0 etc, and better ways to handle setup, but you should just get a script that works and run it in both. The app VM will discard root changes. For instance I just run the NVM installer on both template and app VM, the env variables it installs in the app home dir persist, and the system libs persist in the template"
+      },
+      {
+        "author": "factorioishard",
+        "content": "Oh also, there's huge benefits to reusing template VMs for giant dependencies, because it reuses the disk space so .. way better than cloning the whole VM"
+      },
+      {
+        "author": "T0ysWAr",
+        "content": "I would setup a docker environment in a single appVM. The power of docker is reproducible builds. Once you’re happy with your dev you can they script the deployment into your target infrastructure either with docker if security is not your main concern or on VMs. If you have enough ram, you could play with cloud based dev infra such as Coder (IDE in one app VM and K8S cluster in 3-4 I suspect. Do you want to leverage the security functionality of qubes for a particular threat model or is qubes just your daily driver and are struggling? I wrote some blog post long time ago on how to deploy an atlassian stack on qubes on blogger. Maybe look for it if you are interested. Principle was to install in template the basics (ie db or app server), and have the deployment done on startup in /rw/etc/ scripts (can’t remember the details it was few years back)."
+      }
+    ],
+    "thread_title": "What VM patterns are you using for software development?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1kiuyr3/what_vm_patterns_are_you_using_for_software/",
+    "username": "quonyone",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:35:26.440842"
+  },
+  {
+    "id": "1k5u6dq",
+    "title": "Post install freezes, can I skip it and set up everything manually?",
+    "author": "Common-Subject-5284",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1k5u6dq/post_install_freezes_can_i_skip_it_and_set_up/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "OrwellianDenigrate",
+        "content": "Did you select latest kernel? You can also try installing without creating sys-usb automatically."
+      },
+      {
+        "author": "Common-Subject-5284",
+        "content": "I’m starting to believe there is something wrong with my hardware. I managed to complete installation with only one template + whonix. Then after as while the laptop freezes. Installed thinkfan on dom0 and all works but as soon as I do something (ie updates, download template etc) I need to have the fan on “disengaged” otherwise it will freeze. Having the fan on that setting isn’t optimal in the long run so I guess no Qubes on that machine."
+      }
+    ],
+    "thread_title": "Post install freezes, can I skip it and set up everything manually?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1k5u6dq/post_install_freezes_can_i_skip_it_and_set_up/",
+    "username": "Common-Subject-5284",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:35:35.615555"
+  },
+  {
+    "id": "1kgk65s",
+    "title": "Dark mode icons?",
+    "author": "Ornery-You-5937",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1kgk65s/dark_mode_icons/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "TwoEggsAndAToast",
+        "content": "I have not seen anything official. Maybe a good side project for one of the enthusiastic users? That said there were cases where theme packs and such contained malware (rm -rf) so I would be careful and definitely manually review whatever icon pack you are installing."
+      },
+      {
+        "author": "No_Holiday8469",
+        "content": "It's better Matte theme. Or Twilight theme color. Too dark color is feels lonely."
+      },
+      {
+        "author": "Ornery-You-5937",
+        "content": "Anything dark-ish looks not so good because the icons don’t have transparent backgrounds If they were just given default transparent backgrounds it’s like 90% better instantly. 4 of the 7 default icons have transparent backgrounds but the remaining 3 do not for whatever reason."
+      },
+      {
+        "author": "FearlessLie8882",
+        "content": "Make a pull request!"
+      }
+    ],
+    "thread_title": "Dark mode icons?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1kgk65s/dark_mode_icons/",
+    "username": "Ornery-You-5937",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:35:45.032310"
+  },
+  {
+    "id": "1kcxt2u",
+    "title": "What can I do?",
+    "author": "Oportbis",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1kcxt2u/what_can_i_do/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "CommunicationOdd866",
+        "content": "Maybe, just maybe, you have to install some packages which will help you to read lvm2 partitions, cause just maybe now you don’t have a program/library which can help your app to read lvm2 type of file systems."
+      },
+      {
+        "author": "Hizonner",
+        "content": "First of all, both of the other comments are wrong. Ignore them. You can't mount /dev/sdb3 directly; it's an encrypted LUKS partition. You definitely can't just mount /dev/sdb. And you have all of LVM installed, and it's not a library. LVM is kernel-level code plus some control programs. It is, however, true that giving things names like \"disk\" and \"encrypted\" can be really confusing. It looks like you have an encrypted LVM member: LVM over LUKS over a partition. The LVM volume may have other members on other devices. To assemble the volume group, LVM needs all of those members available at the same time. If the one on /dev/sdb3 is encrypted, then any others are probably also encrypted, so you have to be sure that they've all been opened (in some sense \"decrypted\") before you run the scan. There's no way to tell what other members you may have from your incomplete lsblk output. If there's really only one member, I would expect vgchange to find it... if the LUKS partition had been set up when you ran it. If you ran vgchange before you manually \"decrypted\" /dev/sdb3 to create /dev/mapper/encrypted, then vgchange wouldn't be able to find the volume. Also, my memory could be faulty and it might not know to scan LUKS pseudodevices for members. The right approach to this is to go read the documentation for LUKS and LVM (not Q-and-As, not howtos), so that you understand what's going on. Short of that, you might try pasting your whole question into an LLM, asking it for a next step, pasting back whatever output that produced, and so forth. They're actually pretty good at multistep troubleshooting. Better than trying to do back-and-forth on Reddit, anyway. If you ask either an LLM or a human for further help, you should provide the full output of lsblk, and ideally a unified, in-order log of everything you typed and the resulting output."
+      },
+      {
+        "author": "Major_Degenerate",
+        "content": "You're trying to mount \"disk\".. but that's futile since \"disk\" doesn't exist. You're \"disk\" is called sdb. Try mounting that.. or sdb1, 2 or 3."
+      },
+      {
+        "author": "brokensyntax",
+        "content": "They are trying to mount to a mount point called disk. But they need to unlock the encrypted partition before mounting so the filesystem can be recognized."
+      },
+      {
+        "author": "Hizonner",
+        "content": "They did. Read the lsblk output. The thing is that the content of the encrypted partition is an LVM member. You can't mount an LVM member; you have to assemble the volume group and mount one of its volumes."
+      }
+    ],
+    "thread_title": "What can I do?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1kcxt2u/what_can_i_do/",
+    "username": "Oportbis",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:36:00.478717"
+  },
+  {
+    "id": "1k108ww",
+    "title": "Installing 3isec templates for a dumb dumb",
+    "author": "jmarcf",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1k108ww/installing_3isec_templates_for_a_dumb_dumb/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "DMTryptaminesx",
+        "content": "It would be better if you listed the commands you used and what the output was. What guide did you use?"
+      }
+    ],
+    "thread_title": "Installing 3isec templates for a dumb dumb",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1k108ww/installing_3isec_templates_for_a_dumb_dumb/",
+    "username": "jmarcf",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:36:13.660493"
+  },
+  {
+    "id": "1kanzvz",
+    "title": "sys-usb not starting on boot",
+    "author": "Accomplished-Bar-472",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1kanzvz/sysusb_not_starting_on_boot/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "Kriss3d",
+        "content": "Are you by any chance using sys-usb for both network and usb ? And are you on a laptop by any chance ?"
+      },
+      {
+        "author": "Accomplished-Bar-472",
+        "content": "no not using sys-usb for networking, not using a Laptop have it in a qemu VM, with vIOMMU, sys-net starts and works I also allowed tablets to be attached ( is not a real tablet just the qemu mouse ), it also works when I start the vm manually"
+      },
+      {
+        "author": "Kriss3d",
+        "content": "And the sys-USB is set to auto start? It has a box to enable it."
+      },
+      {
+        "author": "Accomplished-Bar-472",
+        "content": "yes it's on autostart, but works now seems like the VM had not enough cores"
+      },
+      {
+        "author": "Kriss3d",
+        "content": "Ah ok"
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "Sys-usb normally doesn't require a lot of CPU resources, or extra cores, you might want to keep an eye on the CPU usage of sys-usb. Sys-usb can getting flooded with events, which can result in extreme high CPU usage. Adding more cores can mitigate that problem, but it might not be the solution."
+      },
+      {
+        "author": "Accomplished-Bar-472",
+        "content": "I added the cores to the vm the whole qubes ran in, maybe a race condition occuring at boot time ( https://github.com/QubesOS/qubes-issues/issues/7954 ), but will not further look into it as 2 cores are not enough anyway."
+      }
+    ],
+    "thread_title": "sys-usb not starting on boot",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1kanzvz/sysusb_not_starting_on_boot/",
+    "username": "Accomplished-Bar-472",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:36:25.744829"
+  },
+  {
+    "id": "1kk2hi7",
+    "title": "Recreating default-dvm",
+    "author": "Gullible_Drummer_246",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1kk2hi7/recreating_defaultdvm/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "Beneficial_Board_997",
+        "content": "Ah yes, the classic Day 1 dance—poke at default-dvm until it’s no longer default or a dvm. Let’s clean slate this the proper way. Step 1: Recreate the Disposable Template You don’t \"reset\" a DVM—you recreate it from a clean TemplateVM (e.g., fedora-41-xfce). Open a terminal in dom0: qvm-create --class DispVM --label gray --template fedora-41-xfce fedora-41-dvm Boom—clean disposable VM template based on fedora-41-xfce. Step 2: Set as the New Default Still in dom0: qubes-prefs default_dispvm fedora-41-dvm Optional but smart: qvm-features fedora-41-dvm appmenus-dispvm 1 This ensures apps from this template are marked \"disposable.\" Step 3: Cleanup Old Baggage (optional) If you want to delete the wreckage: qvm-remove default-dvm Just make sure nothing depends on it anymore. Bonus: DispVM vs AppVM clarity TemplateVM (e.g. fedora-41-xfce) = The golden image. AppVM = Persistent VM based on Template. DispVM = Ephemeral clone spawned from DispVM template (fedora-41-dvm)."
+      },
+      {
+        "author": "Gullible_Drummer_246",
+        "content": "Thank you a lot, now I’m grabbing a third GPU for a sys-GPU server running VirtualGL. Any advice on setting up a sys-audio for Bluetooth audio?"
+      },
+      {
+        "author": "OrwellianDenigrate",
+        "content": "There is nothing special about the default-dvm, except for it being the dvm selected as default in the global settings. You can just make a new appVM, set \"Disposable template\" option to true in the qube settings, and select it as default it in the global settings."
+      },
+      {
+        "author": "Gullible_Drummer_246",
+        "content": "Thank you, got it done with a command that waited, changed the templates of the sys Qubes and then deleted the original. This resolved the issue."
+      },
+      {
+        "author": "Gullible_Drummer_246",
+        "content": "Solved!"
+      },
+      {
+        "author": "Ornery-You-5937",
+        "content": "You could just reinstall. I messed with a bunch of stuff on my first install to learn how everything worked then just did a fresh reinstall afterwards."
+      },
+      {
+        "author": "Gullible_Drummer_246",
+        "content": "Thank you, but I’d rather learn to fix it instead lol"
+      }
+    ],
+    "thread_title": "Recreating default-dvm",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1kk2hi7/recreating_defaultdvm/",
+    "username": "Gullible_Drummer_246",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:36:33.365012"
+  },
+  {
+    "id": "1k9zorh",
+    "title": "Telegram logging out",
+    "author": "FeatureDue3600",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1k9zorh/telegram_logging_out/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "Kriss3d",
+        "content": "Try setting up a standalone and see if it works."
+      },
+      {
+        "author": "m00mba",
+        "content": "You are running Telegram from the actual template? You need to set up an Appvm qube and run it in there instead. Drawing from the template that it's installed on."
+      },
+      {
+        "author": "Beneficial_Board_997",
+        "content": "Telegram logging out randomly in Qubes? Seen it. Here’s the likely cause: Ephemeral filesystems. Unless your AppVM is set to persist data, Telegram’s session data (stored under ~/.TelegramDesktop) gets nuked every time the VM shuts down. That means: No session cookies No saved auth tokens You're back at square one on every reboot What to check: Is Telegram installed in a TemplateVM? Bad idea. Templates reset on every update, and AppVMs don’t retain app data unless explicitly configured. Are you running Telegram in a disposable VM or stateless AppVM? That’s the problem. Disposables = zero persistence. Fix it: Create a dedicated AppVM: telegram-vm Set it to use a persistent home volume (qvm-create --class AppVM --label green --template debian-12 telegram-vm) Run Telegram in there. It’ll remember your session. Bonus: Telegram's paranoia can also kick in if your IP, MAC, or hostname change too frequently. If you're routing through Tor or bouncing between gateways, you may trigger auth challenges. Stick to one gateway per session for stability."
+      }
+    ],
+    "thread_title": "Telegram logging out",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1k9zorh/telegram_logging_out/",
+    "username": "FeatureDue3600",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:36:44.051304"
+  },
+  {
+    "id": "1k84fgb",
+    "title": "Stuck on grey screen and cursor?",
+    "author": "Ed_oo2",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1k84fgb/stuck_on_grey_screen_and_cursor/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "Ed_oo2",
+        "content": "Fixed my issue, the drive was bad also if you run into this same problem give it like 5-10 min for it to fully boot into the installation media."
+      }
+    ],
+    "thread_title": "Stuck on grey screen and cursor?",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1k84fgb/stuck_on_grey_screen_and_cursor/",
+    "username": "Ed_oo2",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:36:59.705323"
+  },
+  {
+    "id": "1kgsvuj",
+    "title": "Kies het luchtruim op de nieuwe, vurige Mecha-draak of bestuur de krachtige Mech en sla demonen aan gort. Alleen de Slayer kan deze allesverwoestende tools van chaos gebruiken. DOOM: The Dark Ages 15 mei leverbaar op Game Pass, Xbox Series X|S, PC en PlayStation®5.",
+    "author": "bethesda_nl",
+    "permalink": "https://alb.reddit.com/cr?za=Cy0b92VP-clzXe37Wu8vHMmU9ZB0l7AN3pNCL1TKg2YmfE4XYp-108r1IzyibwwsdFFpfnDhjse6fzCQ-yAdpb4m62q70tNE3rbDDf253kOcgy5QAn_QZRcvVGrq2KpfVcCunQbIdHLQBSAclh7iGMr0dJ0Ac90b3XauDyd_Q7_nCrxgUlMYZ71pHlfDJRRR5Va7cYsrxcG9RuPn2BYxmMGD0H7zGLquIhI9iJe90pA-whyV3GyH6lMurwIGZVr7lyxeon6w7bTt-S7SGY0KZjpTMoIDBHkNwTxyA3rTbj2A-nWsh06qMWWbP5FDbZbeCKVx2B9SIiuNbcFPwssl2DqRksDV9XFcs7Qadso-_-leM4u67WiMwH8zmED38by31eYS1SsP6OPNvUKkyvQ7MoAnnmY81OYyPnD7O3H1AYMpS4ff_DsNPM4M6czrF0V-xrzwWhz6LSa_hFfaPHlpzmQoz6JOtBncY35J6QZkbNE2mMp22aD32mFbc_qPYua-SLPBctrCJTPTC6ZIPhkHjtDHh7nWyYD1e1XS63X7snuCSeUb8NNG1Jv1cyTkgvTOLwHBkv_LtKyPDifaLu8C1Kr1McjELd1hR95PotdDVy86p_i3wq84tHkTByuIhilUAE8CE9jfQMYaFzEhZJDJCZ9OqeFjIevTzofzJYGIdgv6w188cHU28j_Z3E-gK7yDh_RZlWrpDpeRgmt3KchnhA_M_P_K5l0yV1giu1kvnyE3e_5x3Ukg0RB5rDRE--dYaTdhU5T7hyEwLM3I4LJyrhnnvcS9Li0bN1Cmih-gqsJkwHulmtoP0hzQjGY0375t0GH9TTc7lpWLmhurdGsIRvDFFMkVNrPLfAkim3JryAYIBxzlbNAIcbJradgMEmTEIw&zp=ZjDKCJrwIHMHd1BwRIJZTtPUQAY6NzLMsnRsEx8pknBMq_nDmn-K5klzVGtBOJNPdkMkDAtHywkj1R7mHk0f9lQiEKqky17WzTL9TjPgqK9LZqUWdzGxeb6e7l2EP2fZII2hi7_CkxxHU-ORwY1PLncYMrszh1GkD_mywq6wZxaLuCW3AQGqn8cGs0I7qJb7YNs9-nyk015mUcHXNSxCW_6t_KnNTbuHBVSYHwiMgWqNsv499vTEuofr3z00qcCoSlBuf_fWlpurAeGP2hQqPVgAF0_MTplHwXd9",
+    "content": "",
+    "comments": [],
+    "thread_title": "Kies het luchtruim op de nieuwe, vurige Mecha-draak of bestuur de krachtige Mech en sla demonen aan gort. Alleen de Slayer kan deze allesverwoestende tools van chaos gebruiken. DOOM: The Dark Ages 15 mei leverbaar op Game Pass, Xbox Series X|S, PC en PlayStation®5.",
+    "thread_url": "https://alb.reddit.com/cr?za=Cy0b92VP-clzXe37Wu8vHMmU9ZB0l7AN3pNCL1TKg2YmfE4XYp-108r1IzyibwwsdFFpfnDhjse6fzCQ-yAdpb4m62q70tNE3rbDDf253kOcgy5QAn_QZRcvVGrq2KpfVcCunQbIdHLQBSAclh7iGMr0dJ0Ac90b3XauDyd_Q7_nCrxgUlMYZ71pHlfDJRRR5Va7cYsrxcG9RuPn2BYxmMGD0H7zGLquIhI9iJe90pA-whyV3GyH6lMurwIGZVr7lyxeon6w7bTt-S7SGY0KZjpTMoIDBHkNwTxyA3rTbj2A-nWsh06qMWWbP5FDbZbeCKVx2B9SIiuNbcFPwssl2DqRksDV9XFcs7Qadso-_-leM4u67WiMwH8zmED38by31eYS1SsP6OPNvUKkyvQ7MoAnnmY81OYyPnD7O3H1AYMpS4ff_DsNPM4M6czrF0V-xrzwWhz6LSa_hFfaPHlpzmQoz6JOtBncY35J6QZkbNE2mMp22aD32mFbc_qPYua-SLPBctrCJTPTC6ZIPhkHjtDHh7nWyYD1e1XS63X7snuCSeUb8NNG1Jv1cyTkgvTOLwHBkv_LtKyPDifaLu8C1Kr1McjELd1hR95PotdDVy86p_i3wq84tHkTByuIhilUAE8CE9jfQMYaFzEhZJDJCZ9OqeFjIevTzofzJYGIdgv6w188cHU28j_Z3E-gK7yDh_RZlWrpDpeRgmt3KchnhA_M_P_K5l0yV1giu1kvnyE3e_5x3Ukg0RB5rDRE--dYaTdhU5T7hyEwLM3I4LJyrhnnvcS9Li0bN1Cmih-gqsJkwHulmtoP0hzQjGY0375t0GH9TTc7lpWLmhurdGsIRvDFFMkVNrPLfAkim3JryAYIBxzlbNAIcbJradgMEmTEIw&zp=ZjDKCJrwIHMHd1BwRIJZTtPUQAY6NzLMsnRsEx8pknBMq_nDmn-K5klzVGtBOJNPdkMkDAtHywkj1R7mHk0f9lQiEKqky17WzTL9TjPgqK9LZqUWdzGxeb6e7l2EP2fZII2hi7_CkxxHU-ORwY1PLncYMrszh1GkD_mywq6wZxaLuCW3AQGqn8cGs0I7qJb7YNs9-nyk015mUcHXNSxCW_6t_KnNTbuHBVSYHwiMgWqNsv499vTEuofr3z00qcCoSlBuf_fWlpurAeGP2hQqPVgAF0_MTplHwXd9",
+    "username": "bethesda_nl",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:37:10.704868"
+  },
+  {
+    "id": "1kli59z",
+    "title": "Laptop",
+    "author": "Ok-Swordfish-2928",
+    "permalink": "https://old.reddit.com/r/Qubes/comments/1kli59z/laptop/",
+    "content": "Qubes OS is a free and open-source operating system that allows you to compartmentalize your data and activities into securely-isolated environments called \"qubes\" so that a single cyberattack can't take down your entire digital life in one fell swoop. https://www.qubes-os.org/",
+    "comments": [
+      {
+        "author": "Francis_King",
+        "content": "Short version: Any laptop that can run Linux, with 16 GB or more of memory. More detail: The laptop must support virtualisation, VT-X and VT-D, or AMD equivalent. Some cheaper processors don't support virtualisation. Some processors support full virtualisation, but the BIOS doesn't enable VT-D (very annoying!) QubesOS user reports: Hardware compatibility list (HCL) | Qubes OS Certified hardware: Certified hardware | Qubes OS"
+      },
+      {
+        "author": "ArneBolen",
+        "content": "NovaCustom V56 Series 16.0 inch coreboot laptop Full support and certification for Qubes OS https://novacustom.com/product/v56-series/ You can't find a better Qubes OS laptop than this laptop."
+      },
+      {
+        "author": "DSpry",
+        "content": "Thx for this! Didn’t know I could buy a prebuilt QubesOS"
+      },
+      {
+        "author": "Ok-Swordfish-2928",
+        "content": "Thank you"
+      },
+      {
+        "author": "Multicorn76",
+        "content": "Any Linux compatible Laptop with a recent CPU will do. Bonus for Coreboot. Make sure you have more than 16GB ram for a better experience. Hardware switches for Mic/Camera are also a nice feature. System76 Framework Novacustom (just modied System76 laptops with different config options and firmware) Purism (Have not updated their laptop lineup in quite some time now) In that order All good choices. If you want to employ a hardware key during Bootup it's not a bad idea to buy a Laptop from Nitrokey, as you won't have to configure a thing if you buy with them, and even have your Laptop and Key shipped separately. (They are also modified System76 and Clevo laptops btw)"
+      },
+      {
+        "author": "Ok-Swordfish-2928",
+        "content": "Thanks for your response"
+      },
+      {
+        "author": "Kriss3d",
+        "content": "Pretty much most modern laptops will work. But a good Lenovo T models will pretty much always work."
+      },
+      {
+        "author": "Ok-Swordfish-2928",
+        "content": "I have Lenovo Thinkpad with intel Core i5 will it work?"
+      },
+      {
+        "author": "Multicorn76",
+        "content": "It will definitely work, but might not be as fast as others. Could you give more specifics? Core i5 is just a marketing term, it has little to do with actual performance. How much ram do you have?"
+      },
+      {
+        "author": "Ok-Swordfish-2928",
+        "content": "It’s fast but nothing is seems to be working 😌"
+      },
+      {
+        "author": "Multicorn76",
+        "content": "Well that's an oxymoron"
+      }
+    ],
+    "thread_title": "Laptop",
+    "thread_url": "https://old.reddit.com/r/Qubes/comments/1kli59z/laptop/",
+    "username": "Ok-Swordfish-2928",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:37:24.287279"
+  },
+  {
+    "id": "1kdy04h",
+    "title": "TOR over VPN",
+    "author": "MrSozen",
+    "permalink": "https://old.reddit.com/r/Whonix/comments/1kdwmpg/tor_over_vpn/",
+    "content": "Whonix Homepage Screenshots Documentation Download",
+    "comments": [
+      {
+        "author": "Mobile-Breakfast8973",
+        "content": "It all depends on your adversarial profile, risk tolerance and technical proficiency First and foremost, good VPN's like Mullvad, Proton, iVPN and a few others are not an anonymity tool. They're a security-tool, which gives you partial privacy too. To really be private, secure and anonymous, you have to use several tools like: An onion router like TOR or I2P A hardened browser like TOR/Mullwad browser Tails, Quobes or Whonix A trusted VPN Bridges Common sense. Each one of the above tools have attack surfaces, but i think of it in terms of a swiss cheese. Every slice has holes But when you combine the slices into one big block, there's little to no permiation. For most people, who just want to not have their passwords swiped on the coffeeshop WiFI, getting fingerprinted by Canvas or ISP logging them. Mullvad and Mullvad browser should suffice. If IT-criminals or private detectives are on your ass - or if you're the private detective - adding TOR might be a good idea If your government has a national firewall or internet control - bridges, obfus8 tor/i2p, a VPN and a secure OS is probably a good idea. If NSA/CIA/FSB/MI6/Mossad/Chinese intelligence is out to get you - they'll probably find you somehow"
+      },
+      {
+        "author": "MrSozen",
+        "content": "Great post and analogy"
+      },
+      {
+        "author": "InsultedNevertheless",
+        "content": "Regardless of whether or not you believe these businesses will have your back, what it comes down to is are you worth the considerable resources and amount of time it will take, even with lots of logs,, for them to put in the efforts to understand the pattern various activities will make. The vast majority of people are nowhere near the threshold that makes them worth going after. And the trouble with deciding what's best for you, is that it's the internet and there is plenty of solid sounding advice, from people who have valid experience and a clear perspective.... ...except a shocking number of them are complete morons. Good luck all😉"
+      },
+      {
+        "author": "Ethereal-Elephant",
+        "content": "So, where should we look to maximize our cost threshold."
+      },
+      {
+        "author": "InsultedNevertheless",
+        "content": "Honestly, I don't have any advice that comes from a deep understanding of this stuff. Don't get yourself noticed by ordering a kilo of flake to your house. That's an obvious one, if that sort of thing is your thing. Actually, the one and only aspect of opsec we have 100% control over is our determination to keep learning as much about securing networks as you can absorb. Only trust vpn's you can pay for anonymously. I don't use one personally. And never get lazy with the basics. You may be a low value target, but if you're also low hanging fruit, you're not doing yourself any favours."
+      },
+      {
+        "author": "barrulus",
+        "content": "even a kilo of flake wouldn’t make you a person of interest enough for the resources required for LE to start investigating you at that level. While there are folk with access to that level of stuff, they are very few and already very busy. It’s fair to say that orgs like CIA/NSA/Ministry of State Security etc, are sitting on enough zero days, bios hacks, provider rootkits etc, that they could access anyone’s machine. They just have teams that are too small to oversee everything so you have to be an extremely significant person of interest to steer their gaze toward you."
+      },
+      {
+        "author": "InsultedNevertheless",
+        "content": "Thats all true, but the point I was getting at is being so dumb as to use your home address for that sort of stuff would make you, potentially, an easier bust than most and the kind that earns LE some media glory to bask in. Low value targets do still get picked up, and it's more often than not because of an unforced error."
+      },
+      {
+        "author": "ArtichokeRelevant211",
+        "content": "Is it really that difficult to search for \"is it a good idea to use tor with a VPN like mullvad?\"."
+      },
+      {
+        "author": "Ethereal-Elephant",
+        "content": "If you want to get 1,000 conflicting answers, nah, not hard at all."
+      },
+      {
+        "author": "jexukay",
+        "content": "Hahaha"
+      },
+      {
+        "author": "ArtichokeRelevant211",
+        "content": "Skill issue"
+      },
+      {
+        "author": "[deleted]",
+        "content": "[removed]"
+      },
+      {
+        "author": "[deleted]",
+        "content": "[removed]"
+      },
+      {
+        "author": "triple6dev",
+        "content": "ISPs are vulnerable, as if someone skilled enough, they will literally take many information and expose it from just the ISP. VPN is another topic, companies say no-log policy while many of them lie. So imagine if you initiated “something” that you don’t want it to be traced and then wake up and see the FBI knocking on your door. So an important point when using VPNs and most people do not know about it is using a VPN that is not in the 14 eyes countries. Now tor, tor is simply the manual option, depending on how u use it and configure it, it will be helpful for you. Now if you combined trustworthy, no 14-eyes VPN with proxychains, there will be no trace, anyone that tries to trace you will be in a loop, and even if the person tries, maybe on end can comply but the others can’t. Eventually they might trace you but after long long time."
+      },
+      {
+        "author": "MrSozen",
+        "content": "Can you explain more on why you should avoid vpns located in the 14 eyes? Specifically mullvad. Secret gag orders? Sigint?"
+      },
+      {
+        "author": "triple6dev",
+        "content": "14 eyes is a surveillance alliance. These countries share surveillance intelligence between each other. They also collect many information about you as much as they can. So if you moved to another country and it is in the 14 eyes, everything would be there. For the other VPNs in the 14 eyes, they can and will comply with their requests and the mandatory laws, and some regulations buried deeply. So the other VPNs not in the 14 eyes will not have the same laws and cannot comply to the requests of the 14 eyes countries or similar. Which eventually will enhance your security and privacy. Edit: I forgot to reply here 🤦‍♂️"
+      },
+      {
+        "author": "MrSozen",
+        "content": "iVPN is a strong alternative to mullvad"
+      },
+      {
+        "author": "franktrollip",
+        "content": "Glad you mentioned that because I was thinking that your use of Mullvad as an example of a \"perfect\" VPN had spoiled your otherwise good question. I heard recently that not only is Mullvad based in Sweden, a 14 eyes collaboration country, but that they claim that they are audited to verify that for example they don't keep logs. But the audit is apparently not fully independent and the criteria not clear. So, unfortunately, you can't trust them if they aren't independently audited, and in Sweden they are subject to police intervention like seizing equipment or logs (which may or may not exist). Sweden is also a country with very sensitive laws, so I'm guessing the police could easily get a subpoena based on things like \"posting hateful comments online\". \"Hateful\" = you called a stupid woman a \"stupid woman\" online. H/She reported you for misgendering him (he's \"a man\" undergoing metamorphosis). He's also provided a Victim Statement and wants to press charges. So the police need to speak to you about that urgently. And they'll get a dump of all your online activity from Mullvad to find other hate crimes, plus they're sure you're guilty of other stuff, because you're clearly a hateful person \"Hateful\" = you don't want more unskilled migrants to claim asylum and then feed off your tax money. Or \"Hateful\" = you don't want people from war torn countries to come to live in your country, in case they tear it apart with war like they did back home. \"Hateful\" = you don't want to pay more than 10% tax so you want the government shrunk down by 90% and you only want handouts for native citizens who paid into the system, or if their families did in previous generations if they're too young to have been able to have worked \"Hateful\" = you are a libertarian and believe that people should do things for themselves, not have a nanny or big brother government. You also prefer to think for yourself and don't agree with most of what the two or three main political parties want you to believe (big tax, big government, big business and big banks, and big mass immigration to supply cheap labour and keep everyone voting leftist so they get more free stuff). There's no escape"
+      },
+      {
+        "author": "triple6dev",
+        "content": "Exactly. That’s why using a no 14-eyes VPN and using proxychains, and configuring it correctly; forget about anyone trying to expose you or your data. There are some things that also need to be taken care of like DNS leaks or even WebRTC."
+      },
+      {
+        "author": "triple6dev",
+        "content": "iVPN is a nice alternative, I hear good things about it. There is also VPNs like proton which is based in Switzerland, as well as some other VPNs."
+      }
+    ],
+    "thread_title": "TOR over VPN",
+    "thread_url": "https://old.reddit.com/r/Whonix/comments/1kdwmpg/tor_over_vpn/",
+    "username": "MrSozen",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:37:33.815472"
+  }
+]

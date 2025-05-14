@@ -36,15 +36,21 @@
         "privacy",
         "cybersecurity",
         "privacytoolsIO",
-        "encryption",
-        "TOR",
-        "VPN",
         "netsec",
+        "ThePirateBay",
+        "VPN",
+        "TOR",
+        "AskNetsec",
+        "hacking",
         "security",
+        "infosec",
+        "darknet",
+        "Qubes",
         "tails",
-        "anonymity",
-        "InfoSec",
-        "darknetdiaries"
+        "linux",
+        "computersecurity",
+        "malware",
+        "reverseengineering"
       ],
       "keywords": [
         "opsec",
@@ -62,13 +68,8 @@
       ],
       "use_playwright": false,
       "scraping_params": {
-        "limit": 100,
-        "time_filter": "month",
-        "sort": "top",
-        "comments_limit": 50,
-        "delay_min": 5,
-        "delay_max": 10,
-        "keyword_filter": true
+        "limit": 50,
+        "time_filter": "month"
       }
     }
   ],

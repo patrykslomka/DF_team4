@@ -1,0 +1,10 @@
+vpn piracy: 0.606
+censorship bittorrent: 0.598
+vpn torrenting: 0.594
+bittorrent censorship: 0.588
+say iptorrents: 0.587
+blocking torrenting: 0.587
+vpns mainstream: 0.575
+vpns torrent: 0.575
+block piracy: 0.573
+vpn pirate: 0.571

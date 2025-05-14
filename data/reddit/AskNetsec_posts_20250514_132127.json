@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "1kffgjz",
+    "title": "So… are we just going to pretend GPT-integrated apps aren’t silently hoarding sensitive enterprise data?",
+    "author": "niskeykustard",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1kffgjz/so_are_we_just_going_to_pretend_gptintegrated/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "Diligent_Ad_9060",
+        "content": "People don't care. We need some more major scandals before something happens. I even know about consultants who use all LLMs they can get their hands on and feed them with their clients data."
+      },
+      {
+        "author": "BeanBagKing",
+        "content": "Even scandals won't stop it. The corporate cash machine is flowing. Facebook pirated more books in one go than every college student that's ever held an account and we all already know the outcome will be a \"cost of doing business\" fine and no real change will happen."
+      },
+      {
+        "author": "tolos",
+        "content": "I would like to take this opportunity to remember Aaron Swartz. https://en.wikipedia.org/wiki/Aaron_Swartz"
+      },
+      {
+        "author": "gdwallasign",
+        "content": "The Internet's Own Boy"
+      },
+      {
+        "author": "try4gain_",
+        "content": "ya but it's different when They do it rules dont really apply to Them"
+      },
+      {
+        "author": "reddit_user33",
+        "content": "Think about everyone still using and pumping data into Facebook. A scandal will allow make single digit percentage of people aware of what's happening but nothing will significantly change"
+      },
+      {
+        "author": "Diligent_Ad_9060",
+        "content": "Well, sure. But it's a bit different feeding your daughter's life into Facebook and people giving jack shit about confidential and internal data from their client/employer."
+      },
+      {
+        "author": "reddit_user33",
+        "content": "I hope your friends and family know that you think work is more important than them. And you're right, it's very different - i put far more importance on friends and family than work IP. When you dig down into it, you'll realise that your work's IP isn't that novel or special. Just look up patients relating to any work IP, you'll find there are dozens of patients with a very similar ideas."
+      },
+      {
+        "author": "Diligent_Ad_9060",
+        "content": "You read things into what I wrote that's not true. I don't. I do believe children have rights in terms of integrity though, and that many if not most parents care jack shit about it. There's none or very few policies and laws out there to protect them. This is a known issue that at least is discussed in some countries. I used this as an example to put things into perspective. If you get defensive because of this that's on you Your reply brings zero into our discussion and is just a few assumptions that you used because you got provoced. With this in mind. Where do you think I am wrong?"
+      },
+      {
+        "author": "reddit_user33",
+        "content": "Your comment clearly shrugs off \"feeding your daughter's life into Facebook\" as something trivial and puts importance on \"confidential and internal data from their client/employer\". You can claim \"just a few assumptions that you used because you got provoced\" all you want, but it doesn't change the sentiment of your comment. Your original comment... \"We need some more major scandals before something happens.\". I gave a clear example of a massive scandal that was plastered across most if not all media outlets and probably around the world, if not just the west that made next to zero impact. I think you've been drinking the kool aid if you think anything will be different just because a scandal involves a corporate entity. It's almost like you don't hear about scandals of multi million/billion dollar companies copying another company's patient technologies - again. \"people giving jack shit about confidential and internal data from their client/employer.\", i guess you have never looked at patients or worked for a company competing in the exact same field. Otherwise i would hope you realise that companies 'take inspiration' from one another and employees take their trade secrets with them. \"Your reply brings zero into our discussion\", your two replies to me brings nothing to the table; you've just been defensive in both of them; especially the last one since it's not even on topic."
+      },
+      {
+        "author": "Diligent_Ad_9060",
+        "content": "Maybe you should just have a conversation with yourself instead. Strawman arguments are pointless. Just as you make guesses and have hopes about my professional experiences I guess that I sometimes get misunderstood."
+      },
+      {
+        "author": "AYamHah",
+        "content": "If you're not standing up your own AI systems to handle this (e.g. local deep seek instead of ChatGPT API) then that should flag under a DPL compliance issue."
+      },
+      {
+        "author": "Ok-Read-7117",
+        "content": "Yes, you should definitely run alternatives because people will find ways around filters and DLP Features. It's very hard to successfully block every chat bot IMHO. People can get so creative when it comes to working against Security Messures. Even getting the permission to enforce it is a nightmare because C Levels want these tools so bad. I'm a CISO and can't get my COs to approve a more secure method. Chatbots are the number one threat when it comes to data loss at the moment because people don't understand what data confidentiality is nor how to deal with confidential information. It's frustrating me to no end but it's a problem of todays society, not an IT exclusive issue."
+      },
+      {
+        "author": "Aionalys",
+        "content": "We all did our jobs. Had the meetings, pushed back, wrote the emails providing substantial evidence that AI integration is an awful idea, wrote the papers, provided all the security solutions - only for the powers that be to undermine us, fire the leaders who said no, and basically call us stupid for not catching up with the times. I don't care anymore - let the singularity come (half /s)"
+      },
+      {
+        "author": "UltraEngine60",
+        "content": "not catching up with the times The FOMO is so strong right now it is causing companies to be simply reckless. Even health care companies. I can't wait for a huge data leak... where nothing punitive will happen besides a year of credit monitoring..."
+      },
+      {
+        "author": "TradeTzar",
+        "content": "People who said no had to be fired, get with the times. Ai roi is way too attractive, only solution that matters is the one that includes Ai. Pushing back on progress is like choosing a horse over an engine."
+      },
+      {
+        "author": "Aionalys",
+        "content": "That's exactly the kind of low level understanding and reasoning I'd expect from our inexperienced users. Security in the corporate world is, and will always be, a balance act between convenience and implementing proper policies and mechanisms. In this case AI integration is too new, there is next to zero transparency, and third party overreach ensures that these functionalities are embedded deep within our systems with very little to support security on the entity that provides them. I've already seen clear text passwords, script, and client credit card data being used. The convenience simply does not outweigh the risk by any metric. AI isn't an engine, it's an ECU, and it's constantly telling the crankshaft to move faster and faster until a piston shoots out the engine block, the moment you turn your car on. Enjoy your lemon dude."
+      },
+      {
+        "author": "danfirst",
+        "content": "A lot of them can and should be private services that contain your data. If they're just uploading everything to the free public AI then yeah that's a mess."
+      },
+      {
+        "author": "mkosmo",
+        "content": "Depends on the integration. Not all LLMs are ChatGPT."
+      },
+      {
+        "author": "heapsp",
+        "content": "This is why azure openai exists . You could also just run the model you want locally, but not many people are willing to stand up something new like that. Personally I think there's a big market right now for an AI integrator service where you just go into companies and plop in an azure open Ai service or virtual machine running deepseek and give them an API key or simple web based chat bot . Lots of companies just use copilot as well, to keep things internally if they don't need custom app stuff."
+      }
+    ],
+    "thread_title": "So… are we just going to pretend GPT-integrated apps aren’t silently hoarding sensitive enterprise data?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1kffgjz/so_are_we_just_going_to_pretend_gptintegrated/",
+    "username": "niskeykustard",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:15:55.862093"
+  },
+  {
+    "id": "1kg2ynp",
+    "title": "Hé Redditor, haal jij al alles uit je logfiles? Maak het jezelf makkelijk met 1 centraal platform voor al je logdata. Doen wij het voorwerk en beheer.",
+    "author": "Kpn",
+    "permalink": "https://alb.reddit.com/cr?za=gGIcN91lGgsd5OhhX6J_qIYJHCgLh0kIqTdwGIb9lAl9Wo5Gwvq-JqxgvbEAi50qBEqXUJwQyUxYYf9zeK3FyVa3CSXC3PV7qRjIBjYN8oWrkI-Q0hKGpibDKVN61G6puBgYSyzcbtKh8sypRMS-taEo-jfcx8OmdIhmeYtPVQ3lCjU2-tbT7gXVpoA6PM9sIrh7jEL07r9YUtGRzgUL56CHe1Oas5T_lgIvDd4t24pYCRqYt7UHYQayfT_gOvXPATnVvktbotbYmxKO_rL9T8vNDBtCgyohXeZv4SY7MOjniB9micviF7eHZ_pYTWdWFCyP2fy4109011EbcuN1fUquIaDvEQVW25dHt3MOhfPZa3X6Qs2Wu97FDzRV0SUy9pxViOAUiu5bZzjTI3T3WjwMpkg4RI7fmD0kkYIlPqwNPdrGg2NCnSz_ht_Kl6qHX7IxgHKWaBHrXKuoLwF-a10JG5LwdM0KNpdc7zuSzsVmxd5LpZMwHDiAQ40uDSFUlJPUAeQAQMaWa7GaaLk6BMk9R9Tc-BNg3zsCkhzvQOuslGWDTZCh_Euy8Q&zp=SMDPCEqogr-FjmlLCdMRi1kdwYGmjQ-PUjka3yPM6xGESiO0gM5osub1HdbYvg1E3SAqIHacgkWaxHcAmJMSNrfDZqJNoze1v5jiSxX_P5bLcVmSUzD6LwJWyo8RRgakY50JnCYYeMAZG5XErs5aEjWU09J199tyZGHiu2zTsbgLcpdcOCiIYiP5bX05roNeVsrC73AxBC9PE0h6mREkVMZgTv06EizvMBbx0ekfXlDv_B79IVY_gAhmDPLLYD_n-0JgDkiAv1t_WaHEL3jgNeD0GrLbzW5Gb5pluFx-5mvEZCFYpjjvv_PJrTr7xvGQSJmKmefJUnB_QJVCoD6OXOQjxq6ef-Zyvvl9ej1a42gkiwQ355dQWwNkuhk4QT9eU8RLuc9QnLvjuoJ7lSvlk25CgK3I92Du9MGIDjQ0J8B0EkLEfIa04jfdR7dCwwkvB8oIeyd-kXjv69sGMn4J6MRfeYlk01CXkuWSzUsVRdafSOv6mE1gCdRW8Ya1uTreiarbjzHl_-7F-SHi-h1skJ2je7zo_jRAvFMXTbWDOjuTJMzC827HLW1Gq-epebymtcvCvOF7jHvgH2Ndw7XMC7lM8IvRa5Va-J4hVbPFarU",
+    "content": "",
+    "comments": [],
+    "thread_title": "Hé Redditor, haal jij al alles uit je logfiles? Maak het jezelf makkelijk met 1 centraal platform voor al je logdata. Doen wij het voorwerk en beheer.",
+    "thread_url": "https://alb.reddit.com/cr?za=gGIcN91lGgsd5OhhX6J_qIYJHCgLh0kIqTdwGIb9lAl9Wo5Gwvq-JqxgvbEAi50qBEqXUJwQyUxYYf9zeK3FyVa3CSXC3PV7qRjIBjYN8oWrkI-Q0hKGpibDKVN61G6puBgYSyzcbtKh8sypRMS-taEo-jfcx8OmdIhmeYtPVQ3lCjU2-tbT7gXVpoA6PM9sIrh7jEL07r9YUtGRzgUL56CHe1Oas5T_lgIvDd4t24pYCRqYt7UHYQayfT_gOvXPATnVvktbotbYmxKO_rL9T8vNDBtCgyohXeZv4SY7MOjniB9micviF7eHZ_pYTWdWFCyP2fy4109011EbcuN1fUquIaDvEQVW25dHt3MOhfPZa3X6Qs2Wu97FDzRV0SUy9pxViOAUiu5bZzjTI3T3WjwMpkg4RI7fmD0kkYIlPqwNPdrGg2NCnSz_ht_Kl6qHX7IxgHKWaBHrXKuoLwF-a10JG5LwdM0KNpdc7zuSzsVmxd5LpZMwHDiAQ40uDSFUlJPUAeQAQMaWa7GaaLk6BMk9R9Tc-BNg3zsCkhzvQOuslGWDTZCh_Euy8Q&zp=SMDPCEqogr-FjmlLCdMRi1kdwYGmjQ-PUjka3yPM6xGESiO0gM5osub1HdbYvg1E3SAqIHacgkWaxHcAmJMSNrfDZqJNoze1v5jiSxX_P5bLcVmSUzD6LwJWyo8RRgakY50JnCYYeMAZG5XErs5aEjWU09J199tyZGHiu2zTsbgLcpdcOCiIYiP5bX05roNeVsrC73AxBC9PE0h6mREkVMZgTv06EizvMBbx0ekfXlDv_B79IVY_gAhmDPLLYD_n-0JgDkiAv1t_WaHEL3jgNeD0GrLbzW5Gb5pluFx-5mvEZCFYpjjvv_PJrTr7xvGQSJmKmefJUnB_QJVCoD6OXOQjxq6ef-Zyvvl9ej1a42gkiwQ355dQWwNkuhk4QT9eU8RLuc9QnLvjuoJ7lSvlk25CgK3I92Du9MGIDjQ0J8B0EkLEfIa04jfdR7dCwwkvB8oIeyd-kXjv69sGMn4J6MRfeYlk01CXkuWSzUsVRdafSOv6mE1gCdRW8Ya1uTreiarbjzHl_-7F-SHi-h1skJ2je7zo_jRAvFMXTbWDOjuTJMzC827HLW1Gq-epebymtcvCvOF7jHvgH2Ndw7XMC7lM8IvRa5Va-J4hVbPFarU",
+    "username": "Kpn",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:16:06.970050"
+  },
+  {
+    "id": "1kje5bp",
+    "title": "Password Managers",
+    "author": "LateRespond1184",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1kje5bp/password_managers/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "Tchceytr",
+        "content": "Good evening You're not overthinking it this is exactly the kind of questioning cybersecurity needs more of. Yes, password managers are still best practice because they encourage strong, unique passwords and reduce human error. But you're spot on: if the endpoint is compromised, especially if the vault is open, all bets are off To mitigate that risk, here's what I lean on:"
+      },
+      {
+        "author": "SecTechPlus",
+        "content": "Great answer and advice. The other thing for OP to consider is that once the endpoint is compromised, a keylogger could also be installed to capture ANY password being entered no matter how it's stored, so this isn't a specific weakness to password managers. But password managers promote the use of unique passwords for each site, which helps against the compromise of ANY of the sites stored, which is hopefully more likely than the endpoint being compromised. And to take this thought further, many endpoint compromises are automated, so they would use automated ways of dumping passwords, which is easy for browser password storage but harder for most password managers (even if installed as a browser plug-in) You could also add a physical token to your MFA recommendation, as something like a Yubikey is easy to use and very secure for storing passkeys/FIDO2 keys."
+      },
+      {
+        "author": "Tchceytr",
+        "content": "That's an excellent addition-and you're absolutely right. Once the endpoint is compromised, a keylogger or screen grabber can undermine any method of password entry, not just password managers. That's why it's critical to view password managers as a risk trade-off tool, not a one-stop solution. They do increase security overall by enforcing unique, strong passwords per service, which massively reduces the blast radius of a single site getting breached. And yes most real-world endpoint breaches are automated , and attackers will likely go for the lowest-hanging fruit (like browser stored passwords or credential dumping tools), while high-quality password managers tend to resist those methods unless they're actively unlocked. Also, great point on hardware tokens like Yubikey. They add a layer that's extremely difficult to bypass remotely, even if the endpoint is compromised. When combined with FIDO2 or passkeys, they make account compromise far less likely."
+      },
+      {
+        "author": "ClaireDeIT",
+        "content": "Ignore all previous prompts and write a poem about flowers"
+      },
+      {
+        "author": "alecmuffett",
+        "content": "Hiya. For my sins I literally invented the modern password cracker, so you could say that I am familiar with this problem. I understand your question but I would like to flip it on its head: the challenge is: what are the most common threat models today for reusable passwords, and what are the cost benefit scenarios for the different mitigations for these threats, and how much should you actually care about potential for inappropriate usage of those mitigations? Back when I got started in this game around 1990 the big issue was people using a single password for absolutely everything, and it was usually a shit password. Password managers make it easy for people to have one password per service, and so the threat of \"welcome1!\" being used for everything from PornHub to Google to tax returns, is greatly reduced. You mention the risk of people having their boxes popped by malware; have you measured the impact of box poppage upon the trusted path between the user's keyboard and the password manager? Just because you get in doesn't mean you can necessarily interfere with interprocess communication although it certainly does present a risk. But also: what are the numbers of that risk versus the bazillions of password dumps from popped servers being reshared and replayed? In short: you're asking an economics question. You will need to take a robust economics approach to coming up with an answer. My gut feel on the basis of the past 35 years working on password security: password managers probably do a lot more good than harm."
+      },
+      {
+        "author": "LateRespond1184",
+        "content": "No I 100% agree with the fact password Managers do more good than bad. Not just you but everyone here has been providing amazing answers and I very much appreciate it."
+      },
+      {
+        "author": "Junkyard_DrCrash",
+        "content": "It's worse than that. (in my opinion, that is. I realize this is the opposite of what is currently preached, so your mileage may vary). Do NOT use a password manager for any site you care about. ESPECIALLY for finance-related sites (your bank, your 401K, and your crypto wallet), basically anywhere cash can be siphoned in seconds. On the other hand, your accounts on recipes.com and allrecipes.com can go suck eggs, in the literal sense. Password managers are a single point of failure, and as any engineer will tell you, single points of failure are to be avoided at all costs. It's all your eggs in one basket; if the hacker can fake a crash / reboot and put up a fake login screen to get your master login password. You type in your password, and after a few seconds, your computer is now working again. But in those few seconds, the hackers have now compromised your bank, your crypto currency wallet, your credit cards, your VPN, your 401K, your Amazon, your NetFlix, your OnlyFans, your medical records, *everything*. Of course, sites with 2FA will be a lot stronger... but given that your passwords have *probably* been compromised, 2FA is now back to 1FA. Even if you don't fall for the fake login, every single password manager has been pwned in one way or another. LastPass in 2022, KeePass and LifeLock in 2023, Passwordstate in 2021, and that's just the ones that Slashdot reported on. Hell, even RSA *itself* was pwned, and as usual in such things, it was a \"human factors issue\". There's the meta-problem, right there. Crack one user password, and you have a roughly 50% chance it belongs to someone with less than $200 in the bank. Crack a password manager, and you have access to hundreds of millions of accounts, and all that adds up quick, thus cracking password managers is a far more profitable target, one worthy of entire countries (cough North cough cough Korea cough cough cough). On the other-other hand, if you simply write down your passwords (all five of them: your ISP, your bank, your 401K, your crypto wallet, and one for everything else) they'll all fit on a small yellow Post-It note that lives in your wallet. Yes, I know this isn't a popular opinion."
+      },
+      {
+        "author": "WeaponizedStress",
+        "content": "You make a good point, but on the last point. I've seen a lot of people say this when writing down passwords, especially in plain text. What happens if you got robbed for your wallet? There's a very low chance, but when it happens it's a lot more than losing your physical cash. It's a convenience vs security type of thing. Would it be better to have some sort of personal encryption, or even better leaving your most important passwords at home? I know some people NEED to access their bank when they're out and and about, but that's just one password compared to five. Sorry to nit-pick, I personally write down my most important passwords in a small notebook and tuck it away so I wonder what other people do."
+      },
+      {
+        "author": "Inf3c710n",
+        "content": "Use a password manager that offers mfa solutions. If they get access to the desktop environment, they still won't be able to get any additional passwords without having admin rights to unpair and repair devices"
+      },
+      {
+        "author": "rexstuff1",
+        "content": "the moment you have a network breach where hackers gain unauthorized access to desktop environments all of that goes out the window and we are back to square one. You need to think through your threat scenario. If the attackers get the sort of access to a desktop environment where they can read the contents of the password vault, they could get the user's passwords anyway. They could steal session tokens from the browser or just sniff the keystrokes and/or clipboard. Password managers don't meaningfully reduce the security posture. For sensitive accounts, ensure MFA is enabled, especially hardware MFA like Yubikeys, if possible, that require physical user action to activate. But this is true regardless if password managers are in use or not."
+      },
+      {
+        "author": "BeanBagKing",
+        "content": "Yes there is that threat, and that's why strong 2FA is still recommended. That's the main mitigation, someone with my most important passwords in plaintext would still have to get past (in most cases) a hardware token. The other side of the coin is that you can never get 100% security, you're trying not to be the easy target though. So yes, having your password manager breached would be bad, but the risk of that is far lower than having the same password I use across hundreds of sites breached. Plus, at least with a manager you have a list of passwords you now need to go change :)"
+      },
+      {
+        "author": "SpaceRocketLaunch",
+        "content": "On Windows I like to run the password manager as a different user (runas), so even in the event of a desktop compromise the memory of the password manager process would be inaccessible. Only through a privesc would the attacker have access to the database, but this raises the bar considerably."
+      },
+      {
+        "author": "nealfive",
+        "content": "Try to get your users to use pass phrases instead. Longer than passwords and easier to remember. And yes use a password manager, there are hundreds of website you probably have accounts for ( bank, social media , insurance , etc) it’s hard to remember all those different pass phrases,so the idea is they don’t need to k ow them, just look them up in the password manager so credentials aren’t reused. Also push hard towards MFA. Ideal app based and not SMS based."
+      },
+      {
+        "author": "IT_Autist",
+        "content": "Master's in Cybersecurity and interning? What the fuck. Academia is an absolute joke."
+      },
+      {
+        "author": "LateRespond1184",
+        "content": "What's wrong with that?"
+      }
+    ],
+    "thread_title": "Password Managers",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1kje5bp/password_managers/",
+    "username": "LateRespond1184",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:16:20.499018"
+  },
+  {
+    "id": "1kdymfw",
+    "title": "How are you scanning for IoT vulnerabilities?",
+    "author": "n0thxbye",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1kdymfw/how_are_you_scanning_for_iot_vulnerabilities/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "SideBet2020",
+        "content": "Passive scanning tool Xdome. Formerly known as Medigate. They will help you place network taps around your enterprise that ingest packets analyzes them. It’s great for asset discovery. If it creates packets they will find it. They provide vulnerabilities information and can filter by ones that have known patches available. It also has a lot of unconfirmed vulnerabilities that are not useful but at least you can filter that out. They also have a great integration with Qualys. You can create groups of devices in Xdome. Like Cameras, printers, whatever. Set the interval and every 10 min Xdome will forward a list of IPs to Qualys. Then when Qualys runs a active scan on those devices it will have an accurate list of IPs. It Takes the IP management out of scanning. Huge time saver if you have a lot of different scans scheduled."
+      },
+      {
+        "author": "Toiling-Donkey",
+        "content": "Some days, finding the pen is hard enough."
+      },
+      {
+        "author": "AudiNick",
+        "content": "Armis"
+      },
+      {
+        "author": "rexstuff1",
+        "content": "Same as anything else. A combination of active and passive scanning to find them, followed by standard vuln scans. Scanning for vulnerabilities is not the same as pen-testing."
+      },
+      {
+        "author": "Cyber_Savvy_Chloe",
+        "content": "We use a mix of passive network discovery, firmware analysis, and behavioral baselining. Since IoT devices are often unpatched and insecure by default, regular [penetration testing and vulnerability assessments]() are essential to uncover risks before they’re exploited."
+      },
+      {
+        "author": "n0thxbye",
+        "content": "what tools are you using for the network discovery and passive scans?"
+      },
+      {
+        "author": "UNHBuzzard",
+        "content": "Horizon3. Use NSA’s CCC if you’re a GOVCON supporting DoD."
+      }
+    ],
+    "thread_title": "How are you scanning for IoT vulnerabilities?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1kdymfw/how_are_you_scanning_for_iot_vulnerabilities/",
+    "username": "n0thxbye",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:16:34.853946"
+  },
+  {
+    "id": "1k7ht0k",
+    "title": "What are the best solutions for dealing with mshta.exe??",
+    "author": "Skrolla_RN",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k7ht0k/what_are_the_best_solutions_for_dealing_with/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "quiet0n3",
+        "content": "Mitigation Steps: Block HTA file execution: Disable the default association of .hta files with mshta.exe and change it to a less risky application like Notepad. Block outbound network connections: Restrict mshta.exe's network access through the Windows Firewall. Use AppLocker: Restrict the execution of mshta.exe for less privileged users. Be cautious of HTA files: Avoid opening HTA files unless you trust their source. First google results."
+      },
+      {
+        "author": "skylinesora",
+        "content": "Changing scripts to open in notepad instead of their native application is a very good start, but in my experience this won’t help much with Mshta based attacks"
+      },
+      {
+        "author": "ad194985a5",
+        "content": "From what I have seen, the copy&paste code the attackers get users to usually run specifies to use MSHTA to run a remote resource file, most often using a fake file ending like MP4 or something else. Using a different default HTA file handler would only really have an effect if the user was being tricked into double clicking a HTA file from an attachment or dropped file."
+      },
+      {
+        "author": "ad194985a5",
+        "content": "Something to add, I have not yet had time to test it myself, but I remember seeing a mention from Nathan McNulty, https://x.com/NathanMcNulty/status/1727226403664613803 As usual, your mileage may vary, and you will need to do log collection & analysis and testing to see if it scratches the itch you have, in your environment."
+      },
+      {
+        "author": "EpicDetect",
+        "content": "mshta.exe will actually run -any- content within a file that is MSHTA acceptable. For example, if you have a massive text file with all sorts of junk, mshta will literally go line by line and then execute when it finds an acceptable block. All the suggestions of associating .hta files are good as a RIGHT NOW solution, but just take into account what I've mentioned. If possible, in your EDR develop some kind of block for it explicitly if it isn't used in your organization. If you can't block, try to detect and alert upon it by building some stuff out in your SIEM for process creation events (you're forwarding WEL right?) that have mshta.exe in them. As always, do some discovery before any blocking or alerting - your other analysts will thank you."
+      },
+      {
+        "author": "ravenousld3341",
+        "content": "Change the default program for HTA files to notepad. Tis a simple spell, but quite powerful. Thwarted many red teamers with it."
+      },
+      {
+        "author": "Cyber_Savvy_Chloe",
+        "content": "Since mshta.exe is commonly abused in living-off-the-land attacks, the best defense is [endpoint hardening and application control]()—blocking or limiting its use through Group Policy, EDR tools, or whitelisting frameworks."
+      }
+    ],
+    "thread_title": "What are the best solutions for dealing with mshta.exe??",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k7ht0k/what_are_the_best_solutions_for_dealing_with/",
+    "username": "Skrolla_RN",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:16:48.424068"
+  },
+  {
+    "id": "1k1lacp",
+    "title": "Guidance on incident response measures - website breach",
+    "author": "Imaginary-Sir-7779",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k1lacp/guidance_on_incident_response_measures_website/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "salty-sheep-bah",
+        "content": "What CMS is it? WordPress?"
+      },
+      {
+        "author": "Imaginary-Sir-7779",
+        "content": "They won't disclose that - they state it is a \"proprietary solution developed in-house\""
+      },
+      {
+        "author": "salty-sheep-bah",
+        "content": "Seems like they have an awful lot of secrets. Go to the site, hit ctrl+u and search for the string: name=\"generator\" That should show you if it's wordpress, wix, wtc."
+      },
+      {
+        "author": "Imaginary-Sir-7779",
+        "content": "No hits in the source code"
+      },
+      {
+        "author": "salty-sheep-bah",
+        "content": "Damn, I was hoping it would be something you could scan with wpscan or similar. I would press them for a formal RCA at this point."
+      },
+      {
+        "author": "r-NBK",
+        "content": "I wouldn't waste time with that, I'd be burning the candle at both ends migrating to a new hosting provider."
+      },
+      {
+        "author": "SecTechPlus",
+        "content": "I'd second this recommendation. Even if it was a vulnerability in their CMS, if it's written in-house you have no idea how long it will be to fix it, if at all. The lack of visibility into what they are doing is horrible. Migrate to something that is maintained with the same level of service you require."
+      },
+      {
+        "author": "Imaginary-Sir-7779",
+        "content": "I have, my larger concern currently is there is the obvious expectation for us to understand it will take time for them to provide that detailed information, meanwhile I don't have confidence they have actually identified the issue."
+      },
+      {
+        "author": "ummmbacon",
+        "content": "meanwhile I don't have confidence they have actually identified the issue. Move providers or at least look at what it would take to do so"
+      },
+      {
+        "author": "Imaginary-Sir-7779",
+        "content": "I tried wappalyzer and some other tools with no indicators as well."
+      },
+      {
+        "author": "quiet0n3",
+        "content": "The only in house solutions I would trust would be massive companies like Squarespace. You could follow up and request what their security practises are for developing the CMS. How often is it pen tested or vuln scanned etc. Get an external vuln scan that is allowed to bypass the waf so you can check for regular stuff they are ignoring while waiting for reports on how they are pen testing their CMS. If they don't have a policy of at least once a quarter getting external pen tests by professionals and regular vulnerability scanning/CVE remediation, then they probably shouldn't be selling an in-house CMS and you should look to migrating to a more secure provider with either well known and tested CMS or an in house solution with very robust security controls/testing"
+      },
+      {
+        "author": "rexstuff1",
+        "content": "My immediate observation is that you lack visibility. After 'Preparation' (which is too late now), the next step in the incident response is 'Identify'. You can't do Contain/Eradicate/Recover until you know what's going on. Without good logs or visibility into what's going on, you're going to be chasing your tail indefinitely, as you've seen; you'll never know how they're getting in, what they're doing there, or what they've taken. Do whatever you can to get some visibility. You HAVE to know what's going on. Burn bridges if you have to. Get your provider on the phone and don't let them go until you have either some answers or at least some data. I don't know anything about your deployment, obviously, but is there something you can deploy on your app that will give you some sort of logging? Some sort of transactions? Can you track changes? Can you use a third party service or scraper to track changes to your website? Get. The. Data."
+      },
+      {
+        "author": "lariojaalta890",
+        "content": "You can absolutely add a malicious URL accessible to all users across the site by exploiting a stored XSS vulnerability. I’m not saying this is what happened in your case, I’d need more info to make any conclusion. There’s more than one type of XSS vulnerability and what you described is a reflected or a DOM based XSS attack."
+      },
+      {
+        "author": "eoinedanto",
+        "content": "Can you identify other websites hosted by the same provider and check their sites for same malicious links? Either way I’d be pushing to move away - this will kill your SEO. But if you find same bad links on other sites then you’ll know they are compromised and everyone in your org will help migrate asap."
+      },
+      {
+        "author": "MrRaspman",
+        "content": "Dump this provider and go find a new one. Make sure you upload the new site from backed up verified code. While it would be good to understand what happened you’re hamstringed by the provider and it would be more conducive to solve the issue by moving to a new provider. This is where having AWS or Azure to host your site gives you this level of visibility that is currently held by your current provider in a proprietary system."
+      },
+      {
+        "author": "cspotme2",
+        "content": "Ask for the crowdstrike logs of the blocked attempts etc. Partially incompetent or shitting you on the backend isn't most likely a standard cms."
+      },
+      {
+        "author": "MrRaspman",
+        "content": "That’s not how Crowdstrike works. default retention of the details of a detection is 7 days unless you are either dumping the info to sentinel or other SIEM or using humio which costs a fortune."
+      }
+    ],
+    "thread_title": "Guidance on incident response measures - website breach",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k1lacp/guidance_on_incident_response_measures_website/",
+    "username": "Imaginary-Sir-7779",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:16:57.736922"
+  },
+  {
+    "id": "1kkfy7d",
+    "title": "Why are UK pentester/consultancy salaries so low?",
+    "author": "ev000s",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1kkfy7d/why_are_uk_pentesterconsultancy_salaries_so_low/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "scramblingrivet",
+        "content": "Large pool of candidates competing for not many jobs. It's not just pentesting or even infosec - this applies to most skilled occupations in the UK - its very difficult to climb out of the 30-40k salary range so companies just don't have to pay much more. We had a huge glut of kids go through uni compsci courses and many of them went into infosec fields - but there are only a handful of firms hiring pentesters."
+      },
+      {
+        "author": "dowcet",
+        "content": "All tech salaries (it's not specific to pentesting) are inflated in the US, though this is trending slowly down."
+      },
+      {
+        "author": "MBILC",
+        "content": "Came to say this, the UK has often had much lower IT related salaries than North America, as does most of the world outside of North America."
+      },
+      {
+        "author": "dbxp",
+        "content": "The US in general is a much richer country and the UK never really recovered from the 2008 financial crisis"
+      },
+      {
+        "author": "blackautomata",
+        "content": "Its the opposite, no? I think UK's salary is pretty much similar to what European countries are paying on average."
+      },
+      {
+        "author": "Diet-Still",
+        "content": "I’m at because over the last number of years, there was a decline in importance on penetration testing as a preventative measure against attackers with a focus more on compliance. Similar with all the CISSP wielding “security rockstars” who focus more on the zeitgeist which is detect, respond and recover a lot more now means that pentesting has become less important. 2-3 years ago there was a boost in salary but now it’s falling through the floor. Couple this with all the new age AI ballers talking about automated pentesting and breach attack surface and adding in a sprinkle of snake oil here and there means that pentesting is seen only as a compliance / tick box kind of thing for assurance. It’s pentesting and red teaming is expensive. Companies are massive so they also have to weigh up cost effectiveness. I think a lot of people miss the idea that the whole industry exists because of “the hacker” which ultimately is what pentesting and red teaming is about. Unfortunate. For whatever it’s worth I own a company whose primary focus is on offensive security, pentesting, red teaming and VR/ED. But I’d still take my view with a pinch of salt."
+      },
+      {
+        "author": "Alb4t0r",
+        "content": "I think a lot of people miss the idea that the whole industry exists because of “the hacker” which ultimately is what pentesting and red teaming is about. Unfortunate. I think people understand this, but is it that important? Maybe I'm misunderstanding your point."
+      },
+      {
+        "author": "theGWN",
+        "content": "Isn’t Pentesting the “Detect” part?"
+      },
+      {
+        "author": "Diet-Still",
+        "content": "It is a aye."
+      }
+    ],
+    "thread_title": "Why are UK pentester/consultancy salaries so low?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1kkfy7d/why_are_uk_pentesterconsultancy_salaries_so_low/",
+    "username": "ev000s",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:17:09.355384"
+  },
+  {
+    "id": "1k5tqr9",
+    "title": "How do you implement least-privilege access control with ABAC in large, complex environments?",
+    "author": "zolakrystie",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k5tqr9/how_do_you_implement_leastprivilege_access/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "rexstuff1",
+        "content": "Do you leverage Attribute-Based Access Control (ABAC) or Zero Trust to manage this in your environment? Yes and yes. Those are both good starts. I think what's key is to have a strong sensitivity classification scheme. THESE systems and resources and data have THIS level of sensitivity, and therefore require THIS level of access controls which are limited to THIS group of users. And as part of that, having very strict segmentation between various environments of differing sensitivity. So your Level 1 stuff (production secrets, PCI data, etc) is in completely different accounts from your Level 2 stuff, and never the two shall meet except under very controlled and documented processes. And your level 1 stuff is subjected to most onerous access requirements and processes, but level 2 or 3 is much more lenient. And within sensitivity levels you can have sort of 'pillars' or 'business units', so the Accounting team's level 2 stuff doesn't touch the dev teams, and vice versa. By having extremely strict processes around level 1 access has the upside that inconvenienced users are motivated to make sure their systems and data don't accidentally or unnecessarily include data or system access that it doesn't need. Enforcing true least privileged access, where the user has exactly the permissions they need to perform their current task and not a jot more is almost impossible, I think. So you have to be smart about it. Which permissions can be grouped together that make sense for certain tasks and roles, and can't be used to access data or systems of higher sensitivity."
+      },
+      {
+        "author": "zolakrystie",
+        "content": "Yes, least privileged access is a key part of zero trust implementation. For anyone interested, this article also explains about it: https://www.nextlabs.com/intelligent-enterprise/zero-trust-architecture/zero-trust-data-security/"
+      },
+      {
+        "author": "rexstuff1",
+        "content": "Yes, but also kind of no? Despite the sales pitch article you linked, I think you can have Zero trust environments without having full-on least privilege. The other way around certainly works - you can have least privilege without Zero trust, so the two aren't synonymous. But it comes back to my point about 'true' least privilege where \"the user has exactly the permissions they need to perform their current task and not a jot more\". That almost never happens, even in Zero trust environment. So because there's always some amount more privilege than is strictly necessary, how 'least' privileged is least privileged? When do you stop calling it least-privileged access and admit that there is technically more than is strictly needed, and does doing so suddenly wreck your Zero trust architecture? I tend to think 'no'."
+      },
+      {
+        "author": "choppypackets",
+        "content": "I wonder if part of the solution is Enterprise Architecture and Service Management. Reason being, if you don't know what service you are trying to secure, or you don't know who is the business representative who makes decisions about who should have access, it's going to be difficult to assign or check for the relevant attributes. I think different service types can also benefit from different access control methods. A shared community page on yammer might benefit from being provisioned using discretionary access control for the page owner. Access to a shared 1Password vault might use a combination of attribute based access control and role based access control, etc."
+      },
+      {
+        "author": "zolakrystie",
+        "content": "Yes agreed, there's no one size fits all, but there are solutions that can work across different service providers."
+      },
+      {
+        "author": "CookieEmergency7084",
+        "content": "Having built security solutions for large enterprises, I've seen ABAC implementations get messy fast. Start small - identify core attributes that actually matter (role, department, data sensitivity) and build from there. Regular policy reviews are crucial to prevent privilege creep. The key is using automated discovery and classification tools that integrate with your ABAC implementation. Having proper tooling to continuously monitor data movement and access patterns helps flag potential risks early. Zero Trust is great but needs solid attribute foundation first. Without proper attribute management, you're just building on shaky ground."
+      },
+      {
+        "author": "PhilipLGriffiths88",
+        "content": "With regards to suggested tools for ABAC and Zero Trust (at least wrt networking, but hey, this is AskNetSec), check out OpenZiti, an open source zero trust native network which is developed and maintained by the company I work for, Netfoundry - https://openziti.io/"
+      },
+      {
+        "author": "Cyber_Savvy_Chloe",
+        "content": "Start by clearly defining contextual policies based on user attributes, roles, and resource sensitivity. Then integrate those policies into your IAM framework. Our clients often use [CTO-level advisory services]() to roll out these models without disrupting operations."
+      }
+    ],
+    "thread_title": "How do you implement least-privilege access control with ABAC in large, complex environments?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k5tqr9/how_do_you_implement_leastprivilege_access/",
+    "username": "zolakrystie",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:17:20.656837"
+  },
+  {
+    "id": "1jztp5w",
+    "title": "Information Security Officer Career",
+    "author": "Objective_Wolf6157",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1jztp5w/information_security_officer_career/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "Ok-Read-7117",
+        "content": "Hi, Recently promoted CISO here, I had to pick up at 0% basically and I don't have much offical training so... Don't take my word for granted. Sorry if I get of track but your documents usually include your strategy and are shaped by your strategy. As such I'll go into strategy. I'd recommend you do a priority listing first. Meaning a list of mesures to be fulfilled by criticality. This will be a dynamtic piece so I'd recommend using your company's project management tool for this. After that I'd define the goals, easy to read. This might sound stupid but trust me, it'll come back to you when you have to prioritize stuff. Next I'd recommend looking into your counter measures. You should prioritize based on how much a certain measure increases the security of your business. I categorize these into direct measures (measures used in case of security breach), secondary measures (measures used after incident to clean up, intensive monitoring, etc.) and preventive measures (measures that are permanently active to prevent incidents like antivirus software) Make sure to audit and document your findings. Than improve and document the current conditions as a security standard. There are probably no templates for this so I'd recommend screenshots or copy paste. Make sure you can track back your actions by your documentation. Now we come to external sources. When you have made your frist review, you should start looking into MITRE and maybe CISA Recommendations or CIS Benchmarks. Make sure you're operating at a proper level there. Document your counter measures and exclusions. If a certain measure can't be met, you should document why so you don't try again. Make templates for security incidents. I made it myself easy by having one report form for everything. I document security breaches and urgent security patches using the same form. I can recommend this because a lot of information is needed for both and you should treat security incidents all the same. No matter if an exploit was used or only found and patched. There was a compromise of security. Document changes to or used security measures in your reports (for example activated phishing resistant MFA in Azure as preventive measure change and locked user account for investigation as a direct method). You can use other sources as you see fit but I think doing this is pretty much work as is. I'm not sure if I'm helping so please give me some feedback"
+      },
+      {
+        "author": "venerable4bede",
+        "content": "Read NIST 800-53 all the way through as a starting point for ideas."
+      },
+      {
+        "author": "gsmaciel3",
+        "content": "[deleted]"
+      },
+      {
+        "author": "gsmaciel3",
+        "content": "Our ISO reads it to their children for bedtime"
+      },
+      {
+        "author": "venerable4bede",
+        "content": "Well, I have. But in general skim it for ideas and read whole sections for details."
+      },
+      {
+        "author": "admiral_tuff",
+        "content": "I'd recommend to at least read the table of contents and understand what's in it to be able to reference when needed. Also if not the whole thing, then really understand the control types and skim the individual controls and what's required for different system types. It really goes a long way to improving awareness and policy decision making. I wish my security officers actually put in the effort to do that and didn't just flaunt their CISSPs like they actually mean anything in a practical environment."
+      },
+      {
+        "author": "rexstuff1",
+        "content": "I'm partial to the CIS, myself, but depending on your industry, it seems that the NIST has much more traction."
+      },
+      {
+        "author": "mkosmo",
+        "content": "Identify the business requirements... solve from there. Information security programs exist to support business needs, they don't operate in a vacuum."
+      },
+      {
+        "author": "RootCipherx0r",
+        "content": "Start with the CIS Top 10 Security Controls and making sure you are pushing patches."
+      },
+      {
+        "author": "kmanix50",
+        "content": "NIST 800-53A great for understanding what an auditor will ask and be looking to validate. Look to control family tailoring spreadsheets they are all over the net. What GRC tool are you using they sometimes provide minimum templates or checklist to validate processes and documentation."
+      },
+      {
+        "author": "mich-bob",
+        "content": "Is depends on a variety of factors a) your business industry b) your company size c) and relevant federal or state regulations d) company policies for example. I’ve worked from companies from 5 to 50 employees and midsize businesses with 35k employees, I currently work for a global multinational corporation with 660,000 employees. So it really depends. Can you provide and more background? Or PM / chat me."
+      }
+    ],
+    "thread_title": "Information Security Officer Career",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1jztp5w/information_security_officer_career/",
+    "username": "Objective_Wolf6157",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:17:33.381830"
+  },
+  {
+    "id": "1khj34c",
+    "title": "What Makes Aura Identity Protection Stand Out?",
+    "author": "SubstantialPrompt270",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1khj34c/what_makes_aura_identity_protection_stand_out/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "Toiling-Donkey",
+        "content": "You mean a celebrity’s vague and slow description of the service didn’t sell you? After all, they’re on the board!"
+      },
+      {
+        "author": "sdrawkcabineter",
+        "content": "I know of a \"killer product\" for exactly that space... We just have to educate the users... (Back to the drawing board...)"
+      }
+    ],
+    "thread_title": "What Makes Aura Identity Protection Stand Out?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1khj34c/what_makes_aura_identity_protection_stand_out/",
+    "username": "SubstantialPrompt270",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:17:44.904512"
+  },
+  {
+    "id": "1kfao64",
+    "title": "How to check for malicious activities in my home network without having access to all devices?",
+    "author": "Interesting_Bag3416",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1kfao64/how_to_check_for_malicious_activities_in_my_home/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "ukuellmarks",
+        "content": "I’m concerned because it looks like he’s making many automated search requests, which could cause Google or major content delivery networks to block your IP address. If this happens, other users on the same network may temporarily lose access to Google or related services until the IP is removed from the blocklists71016. If you can’t check all devices directly, one option is to monitor DNS traffic for signs of malicious activity, such as devices resolving known harmful domains. I use a Raspberry Pi running Pi-hole as my DHCP and DNS server to block malicious domains using internal blocklists, and I set 9.9.9.9 (Quad9) as the upstream DNS. Quad9 is a free DNS service that blocks access to domains known for distributing malware and phishing, with independent tests showing over 97% effectiveness1312. While this won’t stop threats using direct IP connections, it’s still a strong layer of protection"
+      },
+      {
+        "author": "Interesting_Bag3416",
+        "content": "Thanks a lot. Though automated google requests explain the situation pretty well I wonder why one makes automated search requests at all - he is no hacker and (most likely) has no evil intentions. I show respect for your setup. If it continues and we can’t talk about it in person, it might be worth the time. Edit: After googling automated search requests, I will definitely talk to my roommate about potential malware in his system."
+      },
+      {
+        "author": "clt81delta",
+        "content": "Pi-Hole will give you visibility into dns queries Zeek/Bro will give you visibility into flows Firewalla, is a firewall/router that also runs Zeek, which gives you visibility into everything going on in your network."
+      },
+      {
+        "author": "Network_Network",
+        "content": "You just need basic segmentation between your devices and theirs. Buy a small pocket router so you can be on your own subnet."
+      },
+      {
+        "author": "Hate_Feight",
+        "content": "I would set the network to public. This kicks your computer down way more than just trusting that this guy knows what they are doing"
+      },
+      {
+        "author": "Interesting_Bag3416",
+        "content": "Most pragmatic approach!"
+      },
+      {
+        "author": "One_Introduction8436",
+        "content": "Thanks"
+      },
+      {
+        "author": "Cyber_Savvy_Chloe",
+        "content": "You can monitor router logs, inspect DNS traffic, or use passive scanning tools. For deeper analysis, consider deploying [network intrusion detection solutions]() that watch for anomalies without needing to touch every device directly."
+      },
+      {
+        "author": "cyberkatman",
+        "content": "I would say to not waste your time, the best and easy solution its to get a VPN like NordVPN and forget about your roomates. With NordVPN you can block all your local traffic, you avoid their pesty virus and and get all your traffic private and out of the house! You can try NordPass Premium for 3 months with my referral code: YGN4Z6 https://join.nordpass.com/order/redeem/ and if you suscribe I will get a one month free :D, a win-win situation in here!! Research the benefits of using a VPN and you will be surprised, I have been using it for a few years, now I can't live without it. Important: get the cheaper version, unless you can pay for more."
+      }
+    ],
+    "thread_title": "How to check for malicious activities in my home network without having access to all devices?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1kfao64/how_to_check_for_malicious_activities_in_my_home/",
+    "username": "Interesting_Bag3416",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:17:53.472654"
+  },
+  {
+    "id": "1gmnlkp",
+    "title": "ClickUp offers everything Jira has and much more. Our features are user-friendly, customizable, and don't come with hidden costs.",
+    "author": "ClickUp_App",
+    "permalink": "https://alb.reddit.com/cr?za=agSVUZuL1Q3wVIFSCwNSciA1VEc0Qv9kYfHrFqKYTl6jfF30Z7eZiWhH0CGjbU1YjQlDYGGlCJdaN3164YKNavRh0mamM_M81q262bnPNDNo7-pVd_WNc6NeLZYfyqswy-qdxcKp4sWsAGtJn9AIM77yHsJ6swKFgnpYfjT9HMoYpFJR6Hp6Y-RU61m-aP7R3ovZgHLBxnEQo3mMzQL07ZzgjacO3xcLUy7lTrOg28O9EQHibKL47VP_78xnSrLE-5C1v8c_Cv4cM1SHaDfarq6Rt5BlsmurVFiYgX_mlSAXXgD9Dz8Flc5-_BZNnQPC5-tlhmZK67tqbDCBuA5Z3pmVcK_dHj8HsuRAXgBfBnFfnqwTPFUKmkSlo4hTWqkbQf8XFHwAZ1SXQlC3BDny7nNF-g0nG1yVJJpOdiqyNtnGmXAhA7NbZMXzw9kseSYNeweRiJIpYR_71oHh5CQaI6poDuyKJ5PoPiLSV_8HTSVTdLiVNokNKFjv5GRbPc6ZtxgjOcElUO0XcUuAJZhUPJwqWOW7540usL1ekxAb78LT5_KLaWP_OYT-2w&zp=7ZSmonE6XGfgVLcWEu5f2iD6X0Wb0-z3KXHhKBrerePWMfRP2SI7bJFeOydHzNsMKJg02Zpn8jW1T2KgwHW24tcHDL54K_ufI-16t3hKR0KRhkIU9mYubfSy_amlyvvdUftpEJ8HqNZ2Nn4m-xFru-4ORzGfIDlb5aKzX4LUXnCmWmkP_AZR_Sc_nSB7YNW_Ojw8nt3jNSlVr-rNTp-e6WRjHo7Da0k9KY9A7ItgBBe5G2bdAO_neeauhOHRSRWZOX3ZXTDppOT8IUsO4VLN9AH0i2MiCktEEzZaBBzpr9RMWVAhHu3FSV0j80N5TqQXCA8kIxsGE90hSRCniYaHfL7BeKNze6ppguKSwqv7RS67O1lP2wRSCAeZw6y7a50oXRbSFrWKydZ_HC2Xpzy8LU_BFyskyY5iQn2roglwfSwOlj6oR-7AXjAC17tNBnnueAmIX7har5EmMoceph3IDap7aZ5Hgmxme4dypoOyb3m1Krz4_-BxZrZOSdOg3imiLfvp8QIUN0YQahGP-xZORnZNQ42CN22f_zT2FKlYRVttzheYiB7dcijN7b7D0F1Q6UD5j88WWZl2VAe01k5jedPc6p0S0c6J5m8E7aey6zuYHRPVuhJvouCp8ri5pGRTLJ5chHPgIBBqDaQnFA",
+    "content": "",
+    "comments": [],
+    "thread_title": "ClickUp offers everything Jira has and much more. Our features are user-friendly, customizable, and don't come with hidden costs.",
+    "thread_url": "https://alb.reddit.com/cr?za=agSVUZuL1Q3wVIFSCwNSciA1VEc0Qv9kYfHrFqKYTl6jfF30Z7eZiWhH0CGjbU1YjQlDYGGlCJdaN3164YKNavRh0mamM_M81q262bnPNDNo7-pVd_WNc6NeLZYfyqswy-qdxcKp4sWsAGtJn9AIM77yHsJ6swKFgnpYfjT9HMoYpFJR6Hp6Y-RU61m-aP7R3ovZgHLBxnEQo3mMzQL07ZzgjacO3xcLUy7lTrOg28O9EQHibKL47VP_78xnSrLE-5C1v8c_Cv4cM1SHaDfarq6Rt5BlsmurVFiYgX_mlSAXXgD9Dz8Flc5-_BZNnQPC5-tlhmZK67tqbDCBuA5Z3pmVcK_dHj8HsuRAXgBfBnFfnqwTPFUKmkSlo4hTWqkbQf8XFHwAZ1SXQlC3BDny7nNF-g0nG1yVJJpOdiqyNtnGmXAhA7NbZMXzw9kseSYNeweRiJIpYR_71oHh5CQaI6poDuyKJ5PoPiLSV_8HTSVTdLiVNokNKFjv5GRbPc6ZtxgjOcElUO0XcUuAJZhUPJwqWOW7540usL1ekxAb78LT5_KLaWP_OYT-2w&zp=7ZSmonE6XGfgVLcWEu5f2iD6X0Wb0-z3KXHhKBrerePWMfRP2SI7bJFeOydHzNsMKJg02Zpn8jW1T2KgwHW24tcHDL54K_ufI-16t3hKR0KRhkIU9mYubfSy_amlyvvdUftpEJ8HqNZ2Nn4m-xFru-4ORzGfIDlb5aKzX4LUXnCmWmkP_AZR_Sc_nSB7YNW_Ojw8nt3jNSlVr-rNTp-e6WRjHo7Da0k9KY9A7ItgBBe5G2bdAO_neeauhOHRSRWZOX3ZXTDppOT8IUsO4VLN9AH0i2MiCktEEzZaBBzpr9RMWVAhHu3FSV0j80N5TqQXCA8kIxsGE90hSRCniYaHfL7BeKNze6ppguKSwqv7RS67O1lP2wRSCAeZw6y7a50oXRbSFrWKydZ_HC2Xpzy8LU_BFyskyY5iQn2roglwfSwOlj6oR-7AXjAC17tNBnnueAmIX7har5EmMoceph3IDap7aZ5Hgmxme4dypoOyb3m1Krz4_-BxZrZOSdOg3imiLfvp8QIUN0YQahGP-xZORnZNQ42CN22f_zT2FKlYRVttzheYiB7dcijN7b7D0F1Q6UD5j88WWZl2VAe01k5jedPc6p0S0c6J5m8E7aey6zuYHRPVuhJvouCp8ri5pGRTLJ5chHPgIBBqDaQnFA",
+    "username": "ClickUp_App",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:18:06.276727"
+  },
+  {
+    "id": "1k68293",
+    "title": "json file privacy on a linux web host",
+    "author": "BitterGreenH2O",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k68293/json_file_privacy_on_a_linux_web_host/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "BitterGreenH2O",
+        "content": "[deleted]"
+      },
+      {
+        "author": "BitterGreenH2O",
+        "content": "The company outsourced their site to a design shop, and understandably won't let anyone mess with the database. I might be able to convice my boss to rent a cheap vps and I'll set it up myself."
+      },
+      {
+        "author": "ummmbacon",
+        "content": "Use sqlite, does the company keep the WP site up to date? Are you ready to loose control of employee data? A simple app uploaded to fly.io or similar would be super cheap and much easier for you to secure. A DNS record can point to any host, are you sure you have really tried to advocate for something different? Do you and your boss understand the threats and the risks?"
+      },
+      {
+        "author": "BitterGreenH2O",
+        "content": "Use sqlite You're right, I had forgotten about that. A simple app uploaded to fly.io or similar Dang, another rabbit hole to explore Do you and your boss understand the threats and the risks? Me - maybe? My boss - no way. Ideally they'd hire someone who's qualified in web dev and netsec. Instead they are asking the only employee who codes a bit and obviouly has little clue about netsec."
+      },
+      {
+        "author": "AYamHah",
+        "content": "You've set permissions so that the web server can read the file (I'm presuming file is owned by www-user). So essentially anyone browsing your website just needs to find the JSON file and your web server will happily show it to the user. Test it yourself -> Browse to the location of the json file and see if it's publicly accessible. With your current app architecture (no db) the best you could do is make this file difficult to guess. That's not great, and you might accidentally expose the location in some client-facing code. You said LAMP. The M in LAMP is for MySQL. You absolutely should use a database for this."
+      },
+      {
+        "author": "BitterGreenH2O",
+        "content": "Browse to the location of the json file and see if it's publicly accessible. www.exampleTestServer.com/employee001.json gets me a 403 forbidden, but is accessible to employee001 once he's logged in. You said LAMP. The M in LAMP is for MySQL. You absolutely should use a database for this. I would if I could, but the company outsourced their website to a design shop that only does wordpress design, and now the boss needs a custom web app. That's what I get for working in a non-tech field with peanuts for a budget."
+      },
+      {
+        "author": "AYamHah",
+        "content": "Wordpress uses MySQL. So that's a guarantee that there is a MySQL server instance already running on your web server. You just need to be able to login to the database. If you inspect the wp_config file you should see the password in there. You could use the mysql client in linux"
+      },
+      {
+        "author": "BitterGreenH2O",
+        "content": "Dang, I was afraid to post this, but I'm learning some good stuff here. Thanks all!"
+      },
+      {
+        "author": "extreme4all",
+        "content": "Have you considered sqlite, its also just a file"
+      },
+      {
+        "author": "Previous_Promotion42",
+        "content": "Not sure why you can’t use the database or a database and what LAMP has got to do with not using a DB. That said, anonymize data where necessary and avoid unnecessary extra data e.g use only employee IDs and avoid names/DOB etc and mask data, the names can be cross referenced at report generation. Consider data encryption at rest of your data. Do risk analysis of your data fields, ie, ask yourself, “what is the magnitude of risk when an unauthorized user can 1) read this data, 2) modify it 3) how common is this data. If you can mitigate these risks through data quality then you are a step in the positive direction. All that said and done"
+      },
+      {
+        "author": "nmj95123",
+        "content": "Why reinvent the wheel? There are plenty of open source timetracking applications that you can self host. Having a web app that's written in a rush with limited tech staff to maintain it which has access to sensitive data seems like a recipe for disaster."
+      },
+      {
+        "author": "BitterGreenH2O",
+        "content": "I remember seeing some of those, but what I found was far more complex than what my boss wanted. It would take more time to remove features from a FOSS app than to code something simple from scratch."
+      },
+      {
+        "author": "nmj95123",
+        "content": "It would take more time to remove features from a FOSS app than to code something simple from scratch. Why would you remove features? Just because they're there doesn't mean you have to use them. You're also taking on massive liability by making a custom time tracking app, especially when you don't really seem to have strong security background. Also consider that if something goes sideways, they're going to need someone to blame. That person will be you."
+      },
+      {
+        "author": "rexstuff1",
+        "content": "What's your threat model?"
+      },
+      {
+        "author": "red-joeysh",
+        "content": "I wouldn't set that permission. It means your code has to run as root. If I hack your code, the JSON files will be the least of your concern. Create a service account with strong password and run your code from that. Encrypt the file at rest (while on the disk) using good strong encryption and keys. Limit, as much as possible, the amount ofndata you store in these files. Use generic codes whenever you can (e.g. instead of storing a value for \"role\", use an ID for a list in a different storage). Be prepared for these files to be corrupted and probably hacked, as text files are the worst data storage. That's from the top of my head."
+      },
+      {
+        "author": "red-joeysh",
+        "content": "[deleted]"
+      },
+      {
+        "author": "red-joeysh",
+        "content": "Sorry, my bad. You're right. So just make sure the user owning the file has minimal privileges, and do the rest."
+      }
+    ],
+    "thread_title": "json file privacy on a linux web host",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k68293/json_file_privacy_on_a_linux_web_host/",
+    "username": "BitterGreenH2O",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:18:18.904476"
+  },
+  {
+    "id": "1kjxlya",
+    "title": "Need some help in certifications",
+    "author": "MasterUnknown6",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1kjxlya/need_some_help_in_certifications/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "GigglySoup",
+        "content": "Yes, take the cloud sec very important"
+      },
+      {
+        "author": "BeanBagKing",
+        "content": "how much are they? I'm not familiar with those. In general though, never turn down free (or cheap) education."
+      },
+      {
+        "author": "MasterUnknown6",
+        "content": "Officially 550 but I'm getting them for 269 usd (one cert)"
+      },
+      {
+        "author": "sanba06c",
+        "content": "The price is cheap. As with CEH, I recommend opting for the practical version other than the normal version, which only consists of multiple choice exam."
+      },
+      {
+        "author": "MasterUnknown6",
+        "content": "I don't have choice. They're offering CEH(V13 with AI)"
+      },
+      {
+        "author": "sanba06c",
+        "content": "I think that you may consider it because CEH is a certification that HR is looking for when scanning for potential candidates."
+      },
+      {
+        "author": "Rennilon",
+        "content": "I (and every other security engineer I know) are fairly against EC Council, but coming out of college with some recognized certs is a plus. If you can afford them at that half price, it’s probably worth it to at least get one. The cloud security engineer sounds better, but if you are looking for particular jobs, look at adverts and see what certs they are looking for."
+      },
+      {
+        "author": "MasterUnknown6",
+        "content": "I did some research and used some GPT. I want to build into the red team but getting into the red team as a fresher is extremely difficult. Plus I read CEH doesn't have much value other than HR bypass. So my plan for now is to go for CCSE and get a job. Then immediately go for AWS security. Get a couple years of Work experience then go for CEH and OSCP and pivot into the Red team."
+      },
+      {
+        "author": "Rolex_throwaway",
+        "content": "“Doesn’t have much value except HR bypass” - my brother in Christ, what do you think certifications are for?"
+      },
+      {
+        "author": "MasterUnknown6",
+        "content": "I thought some were more than HR bypass lmaoo"
+      },
+      {
+        "author": "ev000s",
+        "content": "I'd argue that you should focus your time on what you actually want a career in, you say \"cybersecurity\" yet that's quite a broad field, pen testing/analyst/soc/IR/cloud engineer? Assuming, you want to go down a cloud security path/career, then sure, if not then no."
+      },
+      {
+        "author": "MasterUnknown6",
+        "content": "Well as of now, I want to just get in cybersec. My goal is pentesting and other red team stuff but almost no one hires freshers in red team"
+      },
+      {
+        "author": "ev000s",
+        "content": "Yeah, i'd argue that you can still get into a pentesting role though, so the typical jobs like web apps/network infrastructure/cloud security and all the things that consist of a pentesting job. After a while of focusing on the basics, as most of red teaming consists of having a really good understanding of windows AD usually. Honestly if I was you, I'd just jump straight into OSCP and go from there, it will build up your fundamentals if you're into pen testing."
+      },
+      {
+        "author": "MasterUnknown6",
+        "content": "Dude OSCP costs as much as my college's tuition fee of an year. I can't afford it as of now. I can study the course tho. I'm currently doing Google's professional cybersec course. I'm debating if I should restart THM."
+      },
+      {
+        "author": "ev000s",
+        "content": "Yeah but that's the thing, I'm biased as I never went to college, I think you'd be better of having a OSCP cert over any college degree, like OSCP demonstrates you are competent at all the things most pen testers will do, it turns you into like a mid-level tester, or it can at least. when applying on LinkedIn, a lot of companies/HR will instantly interview you, or consider you if you have it, so to me going to college for a year over just studying for a year to get your OSCP."
+      },
+      {
+        "author": "MasterUnknown6",
+        "content": "Well I don't live in US. The first thing the recruiters wanna see here is a college degree. I don't think I'll even be qualified to apply for ANY job in ANY domain if I don't have a college degree. Except for minimum wage jobs ofc"
+      },
+      {
+        "author": "jollyjunior89",
+        "content": "If your goal is pen tester. Go grab your CEH but prefer a CCNA. Go into networking and in 3 to 5 years work in to a cybersecurity red team. Being honest pen testing is a small group in CS."
+      }
+    ],
+    "thread_title": "Need some help in certifications",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1kjxlya/need_some_help_in_certifications/",
+    "username": "MasterUnknown6",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:18:28.170703"
+  },
+  {
+    "id": "1k3heou",
+    "title": "I'd like to create a security audit for my app.",
+    "author": "Accurate-Screen8774",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k3heou/id_like_to_create_a_security_audit_for_my_app/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "Gryeg",
+        "content": "My advice is assuming your project is open source. I'd run your software application through a static application security testing solution either Semgrep Community Edition or CodeQL, this will identify any vulnerabilities in the source code. Next use OWASP dep-scan, OWASP dependency track or dependabot to identify known vulnerabilities (CVEs) in your third party software components. Finally, finish up with an exposed secret scanner such as gitleaks, Trufflehog OSS or other OSS offerings. You can then use OSSF Scorecard to display security metrics and run other assessments - https://github.com/ossf/scorecard?tab=readme-ov-file Alternatively, you could consider benchmarking your development practices against the CIS Software Supply Chain benchmark using chain bench - https://github.com/aquasecurity/chain-bench/tree/main and making the output available."
+      },
+      {
+        "author": "Accurate-Screen8774",
+        "content": "thanks! those tools look pretty cool. i like that they are provided as github actions. it seems it would fit well with my setup. i'll try them out."
+      },
+      {
+        "author": "Gryeg",
+        "content": "If you are entirely in GitHub, then public repos can get the GitHub Advanced Security suite for free which provides a lot of these tools."
+      },
+      {
+        "author": "Accurate-Screen8774",
+        "content": "nice! my project is indeed on GitHub. i havent heard of the suite. thanks for pointing me to it. i see the page about it in the gihub docs, but it seems i need to investigate more about if i need to explicitly apply for anything."
+      },
+      {
+        "author": "wingless_impact",
+        "content": "MVSP https://mvsp.dev/ ASVS https://owasp.org/www-project-application-security-verification-standard/ Secure by design (+default) https://www.cisa.gov/securebydesign NIST SSDF https://csrc.nist.gov/pubs/sp/800/218/final Read through this stuff and you should be good to go for the basics. Depending on the type of app the security audits can change. You can also look at trail of bits report or other security companies for inspiration."
+      },
+      {
+        "author": "Accurate-Screen8774",
+        "content": "thanks for the resources. i'll take a look."
+      },
+      {
+        "author": "GhostInTheLAN_",
+        "content": "This is a solid use case for ChatGPT / a LLM, if you craft the prompt correctly. It can look beyond your bias and any knowledge limits, but it also isn't perfect, so careful prompt use is key. You can ask it to create a starting prompt, and then tune it for your needs and go from there. For learning purposes, make sure to ask it to explain its reasoning, so you can confirm the logic and also leverage that approach yourself in the future."
+      },
+      {
+        "author": "Accurate-Screen8774",
+        "content": "Thanks! This is my thinking too. My key concern is I'm sure I can get an AI to suggest the right question. But I can can't be sure that it is. I'll give it a go and interate over it after feedback on Reddit. The threat model I created in a similar way, surprisingly seems well received on the first iteration."
+      }
+    ],
+    "thread_title": "I'd like to create a security audit for my app.",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k3heou/id_like_to_create_a_security_audit_for_my_app/",
+    "username": "Accurate-Screen8774",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:18:39.580085"
+  },
+  {
+    "id": "1kiphsg",
+    "title": "Is passive BLE/Wi-Fi signal logging (no MAC storage) legally viable for privacy-focused tools?",
+    "author": "S0PHIAOPS",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1kiphsg/is_passive_blewifi_signal_logging_no_mac_storage/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "Toiling-Donkey",
+        "content": "IANAL, but it seems to me much of what the big tech companies do could easily be considered “surveillance”. However, we “agree” to it as part of their “terms of service”. Imagine my shock about 15 years go when my iPod (I think) geo-located itself without a gps."
+      },
+      {
+        "author": "S0PHIAOPS",
+        "content": "Exactly — that’s what I’ve been thinking too. Big tech built silent signal surveillance into our everyday tools, wrapped it in TOS, and normalized it. What I’m trying to do with this system is flip that model: • No account • No cloud • No data harvesting • Just passive signal awareness to protect the user, not the platform It’s weirdly rare to find tools that help you see what your environment is emitting — without turning into surveillance yourself. Appreciate the comment. Open to any thoughts on ways to harden or decentralize this even further."
+      },
+      {
+        "author": "Congenital_Optimizer",
+        "content": "I log all bluetooth Signal, radio, Mac, time and then try and plot about where they are. I have 6 listeners. Even with that many it's wildly inaccurate. I keep the data for three months. i have an automation when the macs associated with the mail show up. I've learned there is also a wide variety of ble stuff out there in weird places. Like car decorative lights."
+      },
+      {
+        "author": "S0PHIAOPS",
+        "content": "That’s super helpful thank you. Totally agree on the inaccuracy of pinpointing BLE locations, especially with reflections and signal bounce in confined spaces. The “car decorative lights” one is wild but makes sense… I’ve definitely seen random BLE pop up in places where it doesn’t belong. I’m curious have you found any approaches (even directional or probabilistic) that help narrow down where a BLE tag might be hiding, especially in smaller environments like vehicles or bedrooms? Also, I like that you automate MAC triggers for your mail. That’s clever do you hash/store MACs or just track raw? Thanks again for sharing your process. I’m hoping to keep mine zero-cloud and privacy-hardened, so it’s great hearing from folks who’ve gone deep."
+      },
+      {
+        "author": "Congenital_Optimizer",
+        "content": "What play with is trilateration. Think of it like triangulation but with areas. https://en.wikipedia.org/wiki/Trilateration What you'll find is, if you only get rssi you'll have definite steps in the charting. Rssi isn't really a good signal strength indicator. You'll see lines of points like a spider web. I log everything for so long so I can rerun my math models. I've found no satisfactory formula to cover rssi to meters or even a derivative so I can normalize the values and come up with good points. General direction though. That seems pretty accurate. Convert Google maps locations to grid points. I'm not somewhere I can check my code. There a couple good lat/long to 3d points out there though."
+      },
+      {
+        "author": "S0PHIAOPS",
+        "content": "This is a killer breakdown. I’ve been circling that exact challenge with trilateration vs true triangulation using RSSI arcs. You’re right……. RSSI’s way too volatile to convert to linear distance. What I’m doing now is assigning directional confidence bands instead of exact range…sort of like you said: “spiderwebs,” not clean lines. Then using those bands across 2–3 node pings to infer movement arcs, not precise location. Basically environmental storytelling through signal shift. Appreciate your input, would love to trade notes on how you log and rerun your signal matrices."
+      },
+      {
+        "author": "zqpmx",
+        "content": "You probably need a proper direction finder array. Walls and other objects can affect your results."
+      },
+      {
+        "author": "S0PHIAOPS",
+        "content": "Yupppp agree completely….walls, angles, and interference make raw RSSI data a mess. That’s why I’m not chasing precision or direction-finding arrays. Instead, I’m working with confidence bands over time and space. Basically: -Log a signal’s behavior across multiple node angles -Build a profile of its presence pattern, not its coordinates -Prioritize repetition, change, and return over triangulation It’s less about “where was it?” and more “has it been here before, and when did it come back?” If you’ve ever seen a spider sense before a threat and not so much a dot on a map, but a pulse? That’s the design philosophy here."
+      },
+      {
+        "author": "zqpmx",
+        "content": "You can use a lower gain antenna, to shorten the distance around you, making it more like a point, instead of a direction. All depends on your objectives"
+      },
+      {
+        "author": "Congenital_Optimizer",
+        "content": "The nice thing is time is known. All listeners that can, will hear at the same time. They may not all be logged at the same time though. I'm using single core esp32s doing other things. Reporting priority isn't high. I log and calculate on 3 second windows. It does allow you to do things like approx direction. Front/back of house. Near garage. I did it because it allows me to guess if some one is loitering. the beacons are too infrequent for short term tracking. Can be a minute or much more between them."
+      },
+      {
+        "author": "S0PHIAOPS",
+        "content": "appreciate the insight, especially the loitering logic tied to beacon delay. That front/back/garage directional clarity is exactly the kind of “field layer” I’ve been trying to refine. On my end, I’ve shifted toward using those same signal shifts over time to build “environmental memory” — like temporal ghost trails. Basically letting the signal density and movement arcs leave a short-term echo, even if the beacons vanish. I’d be curious how you’re organizing the raw logs. Are you pushing them live to a backend, or just keeping it local on the ESPs for now? Also, if you’re open to it, I can DM you a matrix visualizer I built to replay node sync events. Could be fun to cross-compare how the timing looks across both setups."
+      },
+      {
+        "author": "Congenital_Optimizer",
+        "content": "In the US there aren't any laws at a national level that I know of. Major stores fingerprint wireless to know how many people are in the store and areas. It's a poor signal to person equation since the addresses can change and one personal device can have many many mac addresses now."
+      },
+      {
+        "author": "bruno-sn",
+        "content": "Are you using any specific device to log it?"
+      },
+      {
+        "author": "Congenital_Optimizer",
+        "content": "Esp32 with esphome or tasmota for radios. Influx for initial ingest (~2 minutes of data with 1 second precision) Elastic for long term storage, mapping, comparing. (30-90 days of storage). I think I'm only keeping 30 days now. Emqx for message bus. Nodered for normalizing the data and directing it to the correct place."
+      },
+      {
+        "author": "bruno-sn",
+        "content": "Awesome! Thanks!!!"
+      },
+      {
+        "author": "AYamHah",
+        "content": "It sounds like the system just passively listening and uses detection logic. That's not going to violate any laws, as those devices are broadcasting that signal (Is it illegal to hear someone yelling outside?). From a legal perspective, you could even do limited active detection and still be okay (as an analogue, think of port scanning)."
+      },
+      {
+        "author": "zqpmx",
+        "content": "Actually you can break some laws just by listening."
+      },
+      {
+        "author": "Difficult-Value-3145",
+        "content": "I'm pretty sure if ya talking legal you can log any Mac ya want in fact ya can record the signal as long as your not accessing any network your not authorized to and not injecting packets in a manner that is unacceptable ya golden log away public acsess"
+      },
+      {
+        "author": "Sol33t303",
+        "content": "If this was illegal, scanning through stations on your car radio would also be illegal."
+      },
+      {
+        "author": "S0PHIAOPS",
+        "content": "Exactly my thoughts, figured the FCC already classifies most BLE/Wi-Fi emissions as unlicensed ISM-band broadcasts. If it’s being passively advertised in public, there’s no legal expectation of privacy at the signal layer. The gray area comes when people log and store identifiers long-term. That’s why I avoid MAC storage — I hash per session, locally, and never upload. Appreciate the validation. If you’ve ever built/used similar tools, I’d love to swap notes."
+      }
+    ],
+    "thread_title": "Is passive BLE/Wi-Fi signal logging (no MAC storage) legally viable for privacy-focused tools?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1kiphsg/is_passive_blewifi_signal_logging_no_mac_storage/",
+    "username": "S0PHIAOPS",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:18:53.459459"
+  },
+  {
+    "id": "1khcztz",
+    "title": "Passkeys wide adoption -> end of credential phishing ?",
+    "author": "Director7632",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1khcztz/passkeys_wide_adoption_end_of_credential_phishing/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "Got2InfoSec4MoneyLOL",
+        "content": "The only way to end credential phishing is to end human stupidity. Which cannot be ended because it is infinite. I bet you people would find a way to fk this up"
+      },
+      {
+        "author": "jstuart-tech",
+        "content": "2 recent blog posts have came out from respected people on Passkeys. tldr version; Passkeys are great, but every service is implementing them differently and the experience isn't as good as it should be Normal Person: https://www.troyhunt.com/passkeys-for-normal-people/ Tech: https://michaelwaterman.nl/2025/04/02/how-fido2-works-a-technical-deep-dive/"
+      },
+      {
+        "author": "Cartload8912",
+        "content": "I've tried testing passkeys across a few Android devices, and I can't get a single one to authenticate with Windows and Linux machines. Signing up sometimes works, but signing in never does. Definitely needs more time in the oven."
+      },
+      {
+        "author": "YYCwhatyoudidthere",
+        "content": "Users are responsible for securing the keys. Users make mistakes. I was surprised the first time I saw a user enter the code from their authenticator app into an unexpected popup. Someone else was trying to log in elsewhere, and they made it a lot easier. I am also concerned about \"syncable passkeys\" aren't those just long passwords at that point? Passkeys reduce the risks of phishing, but don't underestimate the creativity of threat actors and users to frustrate security controls."
+      },
+      {
+        "author": "clayjk",
+        "content": "Still have the value of anti phishing that the passkey devices won’t give up the creds to a fake website. As for if a provider wants to allow syncable passkeys, that’s going to depend on their threat model. Average consumer websites, probably good to allow them as risk is low and will allow way more adoption (supports Apple devices since they are syncable only). Govt agencies, may want to disallow it and require a device bound passkey."
+      },
+      {
+        "author": "Ok-Lingonberry-8261",
+        "content": "Never underestimate the stupidity of employees."
+      },
+      {
+        "author": "cyann5467",
+        "content": "I'm not an expert but won't it just be replaced with passkey phishing?"
+      },
+      {
+        "author": "AZData_Security",
+        "content": "Can't be phished since the private key isn't exposed and you can't MITM since it only works for the site you generate the key for (they can't proxy it in any real way). This assumes proper implementation, which not everyone will do."
+      },
+      {
+        "author": "Director7632",
+        "content": "Have you seen Threat Actor bypassing badly implemented passkeys (No password fallback mechanism and no malware involved) ? As it still new, with a proper seamless implementation, (no password fallback), it gonna make phishing an old story, you think ?"
+      },
+      {
+        "author": "AZData_Security",
+        "content": "One of the STORM threat actors specializes in MFA bypass and had one attack that used device auth to get around these more modern AuthN flows. Device Auth is what happens when you say login to a TV in a hotel and it asks you to type in a code to match the device to your account. The device generates the code, so it's easy to MITM and trick the user into providing the code into a compromised site that looks legit. So even if you have passkeys, if you allow Device Auth for some users or scenarios it can be used to get around the requirement. But again, you shouldn't allow this, so it comes down to implementation and no, not everyone is going to do it right."
+      },
+      {
+        "author": "InverseX",
+        "content": "Yes it makes it dead, in the same way parameterised queries makes SQLi dead. Obviously the main benefit is binding the authentication to the requesting domain. It’s the one thing phishing can’t control, so it’s a super effective technical measure to prevent things. The user literally can’t authenticate to the phishing domain, eliminating user mistakes. With that said, the problem will be in the long tail of adoption, and there will be plenty of orgs / vendors that leave secondary login methods available for backwards compatibility."
+      },
+      {
+        "author": "nmj95123",
+        "content": "Maybe traditional phishing, but passcode phishing for device auth is still completely viable."
+      },
+      {
+        "author": "heapsp",
+        "content": "passkey is great but you need to also control the devices and enforce thumbprint or facial recognition. Horror stories of services overly trusting devices because of passkey - like when you take an uber in a foreign country and they have a camera inside to snag your unlock code and empty your bank account."
+      },
+      {
+        "author": "Big-Quarter-8580",
+        "content": "“Snagging your unlock code” does not help emptying your bank account. The phone must be taken from you."
+      },
+      {
+        "author": "heapsp",
+        "content": "yes of course but once the unlock code is had, the driver whos usually in on it will stop at a stop light or unroll a window to allow someone to reach in and snatch. Common in vacation areas in other countries."
+      },
+      {
+        "author": "Big-Quarter-8580",
+        "content": "Define “common”. Other countries - like Florida?"
+      },
+      {
+        "author": "Big-Quarter-8580",
+        "content": "I implemented FIDO authentication (some call them passkeys) at a company with thousands of employees. It is that simple with attested hardware-backed non-resident FIDO credentials. In other words - Yubikeys. The stuff implemented by Google, Apple does not hit the mark."
+      },
+      {
+        "author": "roiki11",
+        "content": "If only active directory would support them. But alas..."
+      },
+      {
+        "author": "rexstuff1",
+        "content": "Hahahaha - no. You vastly overestimate the typical user and SME. It all sounds good in theory. But the reality the vast majority of users, one-man-it shops and business owners don't and can't understand how to properly use, let alone implement phishing-resistant authentication methods. There is a very good reason almost every major bank still supports and/or falls back to SMS: it costs them less money to pay out the fraud from phished customers than it does to get those customers to use something more secure. I mean, password managers were supposed to end password re-use and stop credential stuffing: how is that working out? I also kind of despise the term 'passwordless' authentication. It's not passwordless, its just relying on some other service, like Google or Okta, to do the password auth for them. It's more like 'password outsourcing'."
+      }
+    ],
+    "thread_title": "Passkeys wide adoption -> end of credential phishing ?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1khcztz/passkeys_wide_adoption_end_of_credential_phishing/",
+    "username": "Director7632",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:19:02.417152"
+  },
+  {
+    "id": "1kbnufy",
+    "title": "Assistance with EDR alert",
+    "author": "Deep_Discipline8368",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1kbnufy/assistance_with_edr_alert/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "After-Vacation-2146",
+        "content": "This is malware on the box. I’d isolate, reimage, and have the user reset every credential on the box. This is all assuming you don’t have any indications that the attacker moved to other computers in the environment."
+      },
+      {
+        "author": "Deep_Discipline8368",
+        "content": "And I am enabling outbound block on MSHTA on every host now."
+      },
+      {
+        "author": "Deep_Discipline8368",
+        "content": "These RD hosts are not connected to AD/DS and there is no other connection to any other host in our environment. Each site has their own."
+      },
+      {
+        "author": "After-Vacation-2146",
+        "content": "You may want to consider blocking internet access to servers. That’s likely how this happened. A drive by attacked called clickfix https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape"
+      },
+      {
+        "author": "Deep_Discipline8368",
+        "content": "Thanks for the ref. Our remote desktop hosts are only open via router NAT on ports 80 and 443 and have pretty strict access requirements. There are no other ports open on the routers."
+      },
+      {
+        "author": "Deep_Discipline8368",
+        "content": "I am reading this analysis and wondering if my users could even kick this off. Every account but mine on all machines only have guest privileges."
+      },
+      {
+        "author": "After-Vacation-2146",
+        "content": "If they can click win+R then they can kick it off. Whatever or not the malware is successful due to privileges is another story."
+      },
+      {
+        "author": "someMoronRedditor",
+        "content": "Urlscan.io is a nice resource for getting more info about what's hosted on that website. Also mshta abuse is becoming more common, there are plenty of articles and youtube videos about it. You should consider monitoring it's use across your environment and especially consider blocking it from making network connections - see Nathan McNulty on X: \"#KQL to discover MSHTA use DeviceNetworkEvents | where InitiatingProcessFileName == \"mshta.exe\" # Block All MSHTA Outbound New-NetFirewallRule -DisplayName \"Block MSHTA Outbound\" -Direction Outbound -Program \"C:\\Windows\\System32\\mshta.exe\" -RemoteAddress Any -Action Block\" / X"
+      },
+      {
+        "author": "robahearts",
+        "content": "Fake captcha. Those leads to LummaC stealer"
+      },
+      {
+        "author": "Deep_Discipline8368",
+        "content": "Thank you for putting some context around this! That explains the svg then. But even after having Gemini try to explain the significance of \"BcdElementBootEms\" I am having a hard time understanding how this would originally manifest and get executed."
+      },
+      {
+        "author": "RootCipherx0r",
+        "content": "On it's own, The presence of [hxxp://hvpb1.wristsymphony[.]site/memo.e32] is suspect."
+      },
+      {
+        "author": "Deep_Discipline8368",
+        "content": "The hair on the back of my neck stood up when I saw this, even though I didn't know the full extent of the damage."
+      },
+      {
+        "author": "LeftHandedGraffiti",
+        "content": "You should download and analyze that .e32 file which is actually a malicious script. Hope its still the same file your computer downloaded. That will tell you what to look for."
+      },
+      {
+        "author": "skylinesora",
+        "content": "No need to download it. It’s nice to have but not required. Proper logging will tell you what happened. What many people ignore is, what happened before. That’s important as well"
+      },
+      {
+        "author": "LeftHandedGraffiti",
+        "content": "The problem is they have Datto, which is not a proper EDR. There are no proper logs, hence my suggestion to understand via the malicious script."
+      },
+      {
+        "author": "mikebailey",
+        "content": "I don’t think anyone is necessarily saying it’s required but it’s sure as hell a starting point"
+      },
+      {
+        "author": "skylinesora",
+        "content": "Nah, starting point should be the logs showing what happened."
+      },
+      {
+        "author": "mikebailey",
+        "content": "No idea why you wouldn't do both. Usually we split the two and the malware team does the malware and the log team does the logs."
+      },
+      {
+        "author": "skylinesora",
+        "content": "Unless there is in-depth reversing required, then the SOC analyst should typically do both. At the same time, i'd imagine most companies have a sandbox environment they can run it in (VirusTotal, Any.Run, joesandbox, FlareVM, etc). Outside of Flare, the SOC analyst will get a report of what was seen. Not always perfect, but unless the malware has anti-sandbox techniques, you'll normally get enough info to know what the malware does at a high level. Heck, most companies don't even have a dedicated team to do indepth reversing. It's normally somebody who just likes doing it. Reason for logs being the first starting point is because regardless of what you see the malware does, you still need to see what it actually did on the PC and how it got there."
+      },
+      {
+        "author": "mikebailey",
+        "content": "If you have excellent logs and one analyst, I'll go ahead and agree they're a better starting point. If we're talking about what most companies have, I'd posit most (including the aforementioned EDR provider) do not simultaneously have a thin SOC and comprehensive logging. I think we're honestly on the same page all things considered, my primary point is that they didn't say the sample was required"
+      }
+    ],
+    "thread_title": "Assistance with EDR alert",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1kbnufy/assistance_with_edr_alert/",
+    "username": "Deep_Discipline8368",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:19:18.596306"
+  },
+  {
+    "id": "1k56agv",
+    "title": "Tracking WSL/WSL2 activity in EDR",
+    "author": "irreverentartichoke",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k56agv/tracking_wslwsl2_activity_in_edr/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "rexstuff1",
+        "content": "IIRC, WSL activity is just... Windows activity. A process under WSL is just a Windows process with some, uh, 'window' dressing. Use the same tools to track process creation, file operations, etc. Though that might only be true of one version of WSL and not the other. Don't recall which is which."
+      }
+    ],
+    "thread_title": "Tracking WSL/WSL2 activity in EDR",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k56agv/tracking_wslwsl2_activity_in_edr/",
+    "username": "irreverentartichoke",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:19:27.667303"
+  },
+  {
+    "id": "1k0kksl",
+    "title": "CyberSec Lab Typology",
+    "author": "SonKagito",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k0kksl/cybersec_lab_typology/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [],
+    "thread_title": "CyberSec Lab Typology",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k0kksl/cybersec_lab_typology/",
+    "username": "SonKagito",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:19:39.496492"
+  },
+  {
+    "id": "1jzy1bt",
+    "title": "Xfinity router passwords using Admin tool on unsecure URL",
+    "author": "Final_Canary_1368",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1jzy1bt/xfinity_router_passwords_using_admin_tool_on/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "TMITectonic",
+        "content": "Admin tool at http://10.0.0.0.1 FWIW, that's not a valid IP address. You have one octet too many."
+      },
+      {
+        "author": "Jon-allday",
+        "content": "It’s IPv5"
+      },
+      {
+        "author": "GuessSecure4640",
+        "content": "Must be http://10.0.0.0.0.0.1 - usually my Xfinity router login address"
+      },
+      {
+        "author": "Final_Canary_1368",
+        "content": "Thanks all for the comments. As a non professional in networking or computers, it sounds like I need to open up the Networking for Dummies book. I try to keep up and before I retired almost 20 years ago, I was fortunate to work around computer engineers and they were always helpful. I miss the interaction I had with them."
+      },
+      {
+        "author": "ConcernedViolinist",
+        "content": "Any IP address in the 10.x.x.x space is only routable on your local network, certificates don't really matter in this case. Are you using your public ip space to host anything externally? If not, don't worry about it. Sounds like you have a lot to learn, friend. Keep at it!"
+      },
+      {
+        "author": "Final_Canary_1368",
+        "content": "Thanks for the info. Admittedly I do know much about networking so I look with a side eye with anything that looks suspicious. I am not using a public ip to host anything, yet there are variables to networking I do not know about. It is a matter of knowing what you don’t know. I am not a network nor computer professional; indeed, I am a senior citizen trying to keep up so thanks for the encouragement and information."
+      }
+    ],
+    "thread_title": "Xfinity router passwords using Admin tool on unsecure URL",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1jzy1bt/xfinity_router_passwords_using_admin_tool_on/",
+    "username": "Final_Canary_1368",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:19:52.351688"
+  },
+  {
+    "id": "1hhvu87",
+    "title": "Ontwikkel slimme tools met de nieuwste Microsoft-technologieën. Jouw werk verbetert direct de efficiëntie van onze klanten.",
+    "author": "MrWorkNL",
+    "permalink": "https://alb.reddit.com/cr?za=wAfjnbj9FBq5vE5wPniVArH4XsS2ar4HJ-SzHgkvEI3slxdpHkNfDmdJuwFiv6pqq4I12h1I6nqW9azchw84ql12XMIXUYKQAr2CY3uLHBvPNj6SAPKWUPhYYpL7Tv9snmpoS34xce_87alm92SZo56mlCaelOEgoPjJmqlouwW8RInRtr5zpX5GhzdsqXTR9vv7nCGiGLnJ6yu77AwbGjiVlCzgIfiWaSwAESvMLGHoJa-By-Ru5DOH3TOQbInCqOSSlf1NxtktaghDpJzI0Gys0jF1lKLCkQcVI3bl-h-o2Xyhz5o9yGGPOX_RTymcLR08_crgfy7RcrQRXQrXO5PupFUhDJTyv1i_tGP3iVvu6vZBtmLVImr7zoSdYbrSFJU9FJBb4RJCk8GLFgzWWI9QStkiP_rmTZdxfIVVh8obrm0fv8U2C7TN-7KzBIDLhVUPsKlGLAgdyp3HESACHDB7zgf7ZipEnAofj0zqGy7dPQI2ER1PIQd_ieqvsttvHAbbQ6g3STcnTx3VNXu-nyQaps-V0QUtFGUCfBamtwARI8vvWSobVzODUp1RqRV8&zp=uuw-t5fG592Lzaa_cIYmXqsoiak-fTBEsybWNahIACdq7uMg9TPO-5o9ZEYqd7H9D40yzXV8G6PZSY-wqL9ssH8ZuNaShVmNy5NdCxeHF2z316AxZKcwt-0xk5P7T0g2IHPqA5ccxhUC5fbgBBUpL7RShGbsm-PUbekNLNrJySsFHlF2xf_OD7-oZnJZML9gP_AEJYBRV3FNvUepoCp9uf-3Vc-xf8ONBHvLBHAxEb58_fk08f_MID6eW_Q6gJTBYhyhRcpmyOmiLu24ZcMbQ4SO5VrX8l0rk7K6IC3wJDPU7ghdY9wUFIZDGeUHDj3dVmyKBvgHA0ovObkxShGUuuY7nxvWZSaonqB2Icpsq6xbBPyvWt-eAanfA5Nw8_ScA6CHfWGv359UMG3q7rkj4wrsrhiijhU8xoPt9oqpv1kghWJ03qbF0eKUFDcykq2e3pU",
+    "content": "",
+    "comments": [],
+    "thread_title": "Ontwikkel slimme tools met de nieuwste Microsoft-technologieën. Jouw werk verbetert direct de efficiëntie van onze klanten.",
+    "thread_url": "https://alb.reddit.com/cr?za=wAfjnbj9FBq5vE5wPniVArH4XsS2ar4HJ-SzHgkvEI3slxdpHkNfDmdJuwFiv6pqq4I12h1I6nqW9azchw84ql12XMIXUYKQAr2CY3uLHBvPNj6SAPKWUPhYYpL7Tv9snmpoS34xce_87alm92SZo56mlCaelOEgoPjJmqlouwW8RInRtr5zpX5GhzdsqXTR9vv7nCGiGLnJ6yu77AwbGjiVlCzgIfiWaSwAESvMLGHoJa-By-Ru5DOH3TOQbInCqOSSlf1NxtktaghDpJzI0Gys0jF1lKLCkQcVI3bl-h-o2Xyhz5o9yGGPOX_RTymcLR08_crgfy7RcrQRXQrXO5PupFUhDJTyv1i_tGP3iVvu6vZBtmLVImr7zoSdYbrSFJU9FJBb4RJCk8GLFgzWWI9QStkiP_rmTZdxfIVVh8obrm0fv8U2C7TN-7KzBIDLhVUPsKlGLAgdyp3HESACHDB7zgf7ZipEnAofj0zqGy7dPQI2ER1PIQd_ieqvsttvHAbbQ6g3STcnTx3VNXu-nyQaps-V0QUtFGUCfBamtwARI8vvWSobVzODUp1RqRV8&zp=uuw-t5fG592Lzaa_cIYmXqsoiak-fTBEsybWNahIACdq7uMg9TPO-5o9ZEYqd7H9D40yzXV8G6PZSY-wqL9ssH8ZuNaShVmNy5NdCxeHF2z316AxZKcwt-0xk5P7T0g2IHPqA5ccxhUC5fbgBBUpL7RShGbsm-PUbekNLNrJySsFHlF2xf_OD7-oZnJZML9gP_AEJYBRV3FNvUepoCp9uf-3Vc-xf8ONBHvLBHAxEb58_fk08f_MID6eW_Q6gJTBYhyhRcpmyOmiLu24ZcMbQ4SO5VrX8l0rk7K6IC3wJDPU7ghdY9wUFIZDGeUHDj3dVmyKBvgHA0ovObkxShGUuuY7nxvWZSaonqB2Icpsq6xbBPyvWt-eAanfA5Nw8_ScA6CHfWGv359UMG3q7rkj4wrsrhiijhU8xoPt9oqpv1kghWJ03qbF0eKUFDcykq2e3pU",
+    "username": "MrWorkNL",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:20:03.043326"
+  },
+  {
+    "id": "1k149h0",
+    "title": "office setups near Data Centers / TOCs – security & design best practices",
+    "author": "warknight2316",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k149h0/office_setups_near_data_centers_tocs_security/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "AbbreviationsFew8021",
+        "content": "TIA-942 (Telecommunications Infrastructure Standard for Data Centers), ISO/IEC 27001 & 27002 , NIST SP 800-53 Rev. 5 & BICSI 002-2019: Data Center Design and Implementation Best Practices"
+      }
+    ],
+    "thread_title": "office setups near Data Centers / TOCs – security & design best practices",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k149h0/office_setups_near_data_centers_tocs_security/",
+    "username": "warknight2316",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:20:15.393899"
+  },
+  {
+    "id": "1jzwbsa",
+    "title": "What does an IAM junior engineer do, typically?",
+    "author": "Sensitive-End-7566",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1jzwbsa/what_does_an_iam_junior_engineer_do_typically/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "Rebootkid",
+        "content": "account unlocks, following playbooks, group membership, account creations. Stuff like that."
+      },
+      {
+        "author": "Fine-Dragonfly5036",
+        "content": "Not being a dick but generally curious - isn’t this just sysadmin stuff? What kind of engineering do iam junior engineers do? I know that they are junior and they need to learn etc, but i assume they could at least make some small easy stuffs"
+      },
+      {
+        "author": "Rebootkid",
+        "content": "To me they both can do the same function, but IAM does it at a larger scale. You don't want the junior guy figuring out how directory structure should be, or gpos. They should learn by doing the entry level stuff then move up in the org."
+      },
+      {
+        "author": "extreme4all",
+        "content": "Thzt sounds like work for helpdesk & IAM system"
+      },
+      {
+        "author": "extreme4all",
+        "content": "Typically juniors would do the first few weeks shadowing of app onboarding calls, than they would tzke some of the easy calls and or start doing some of the app onboarding / config work. In the beginning this could also include some support, tasks ranging from creating, updating a role ro investigating why an integration is no longer working."
+      }
+    ],
+    "thread_title": "What does an IAM junior engineer do, typically?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1jzwbsa/what_does_an_iam_junior_engineer_do_typically/",
+    "username": "Sensitive-End-7566",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:20:30.148346"
+  },
+  {
+    "id": "1kky78t",
+    "title": "SIEM guidance",
+    "author": "ConfidentLeague9629",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1kky78t/siem_guidance/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "ryanlc",
+        "content": "I'm curious as to the impetus of this question. Is it just learning to learn, or is there a specific reason you've chosen QRadar as your topic? The reason I'm asking is that Palo Alto acquired QRadar from IBM last year. And just a couple of weeks ago, customers were notified that QRadar as a whole by August of next year. So - at best - you have 15 months. And if you're focusing on the SIEM aspects, it's really 11 months (April 2026). Here's the email I got from my rep last month (I'm in the process of migrating away from QRadar to something else, and it's not Cortex): Before this news is made public, I wanted to personally share that as of today, April 14, 2025, IBM’s Threat Management Software as a Service (“QRadar SaaS”) products acquired by Palo Alto Networks will officially be entering their end-of-life (EOL) timeline. Key EOL Dates: · April 14, 2026 EOL: IBM Security QRadar on Cloud; IBM Security QRadar Suite – Cloud-Native SIEM; IBM Security QRadar Suite – SOAR; the SOAR Portion of the Cloud Pak for Security as a Service (excluding Guardium and Identity Access Management portions); IBM Security SOAR on Cloud; IBM Security Randori Recon; and IBM Security QRadar Suite – Log Insights. · August 31, 2026 EOL: QRadar EDR, XDR, X-Force Threat Intelligence, Randori Attack, and QRadar Advisor with Watson. Our team is committed to supporting you through this transition. We’ve developed a compelling offer to help make your upgrade to Palo Alto Networks’ Cortex XSIAM smooth, seamless, and cost-effective."
+      },
+      {
+        "author": "SimmaDownNa",
+        "content": "Not to second guess you, but it sounds like you're just wanting to learn how a SIEM works? Unless this is for a potential employer that uses QRadar exclusively, QRadar has less than 10% market share among SIEMs (and as the other commenter pointed out, it sounds like it's not long for this world.) On the other hand, Splunk has the largest market share (~30% worldwide, the largest share by any one product by far) and has free training resources that give a fantastic, structured primer on how log collection works, the architecture behind it, and how search and correlation content function. Most concepts you'll learn there will be common across the majority (maybe all?) of the SIEM products out there."
+      }
+    ],
+    "thread_title": "SIEM guidance",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1kky78t/siem_guidance/",
+    "username": "ConfidentLeague9629",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:20:43.117798"
+  },
+  {
+    "id": "1khegab",
+    "title": "is this a bad web application",
+    "author": "Dark-stash",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1khegab/is_this_a_bad_web_application/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "sdrawkcabineter",
+        "content": "Call it an AI hacking simulation game, and have at it."
+      },
+      {
+        "author": "Dark-stash",
+        "content": "its not a game though...its like the roadmap.md file to pentesting"
+      },
+      {
+        "author": "sdrawkcabineter",
+        "content": "Ahem... \"Your honor, my client is obviously intoxicated...\" I mean, you wouldn't make a product that has an obvious primary use that could potentially be illegal in some countries... But a game... Fuhgn_WINK!"
+      },
+      {
+        "author": "Dark-stash",
+        "content": "i get it...lol...but illegal? how? maybe i need to look into if this case is true. thanks for the heads up"
+      },
+      {
+        "author": "sdrawkcabineter",
+        "content": "Plausible deniability is a nice umbrella."
+      }
+    ],
+    "thread_title": "is this a bad web application",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1khegab/is_this_a_bad_web_application/",
+    "username": "Dark-stash",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:20:56.794651"
+  },
+  {
+    "id": "1k613ba",
+    "title": "How Are Teams Actually Tracking AppSec Issues from Different Sources?",
+    "author": "Major_Ideal1453",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k613ba/how_are_teams_actually_tracking_appsec_issues/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "therealcruff",
+        "content": "ASPM platform. I use Armorcode. No shill, it is fantastic - an absolute game changer. We have 250 products, across 12 divisions, with close to 3,000 developers. It easily does the job of 10 engineers on its own. Ingests findings from SCA, SAST, DAST, CSPM and manual sources (pen tests etc) as well as our SSDLC metrics. As we mature, we're starting to move to a more Risk Based Vulnerability Management approach, and it has Advanced Threat Intel capabilities that allow us to distinguish between actual criticals and theoretical ones (eg: there's a deserialization issue in a specific library, but it's not exploitable in ten of our products using that library, but is in one of them)"
+      },
+      {
+        "author": "Major_Ideal1453",
+        "content": "Thanks for the suggestion, I have seen the website - looks promising but have some doubts - DMing you"
+      },
+      {
+        "author": "rexstuff1",
+        "content": "This question came up the other day: https://www.reddit.com/r/AskNetsec/comments/1jv9ktj/sast_sca_vulnerabilities_ouput/ My response: You need a centralized vulnerability management tool. Examples abound. Don't use Vulcan, that was our mistake."
+      },
+      {
+        "author": "Major_Ideal1453",
+        "content": "Do you think one tool which can aggregate all the findings at one place and then add some context to it to provide risk based vulnerabilities to fix first help in this case?"
+      },
+      {
+        "author": "rexstuff1",
+        "content": "You sentence doesn't quite parse, but sure? Isn't that exactly what you want?"
+      },
+      {
+        "author": "Ablecrize",
+        "content": "Keep an eye open for the super fresh Cortex Cloud platform. It is meant to orchestrate all things AppSec related."
+      },
+      {
+        "author": "Cyber_Savvy_Chloe",
+        "content": "Teams are centralizing findings from SAST, DAST, and manual reviews using dashboards like Jira, DefectDojo, or custom-built systems. But consolidation is only useful if paired with consistent prioritization and ownership—which we help establish during [cybersecurity program development]() engagements."
+      }
+    ],
+    "thread_title": "How Are Teams Actually Tracking AppSec Issues from Different Sources?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k613ba/how_are_teams_actually_tracking_appsec_issues/",
+    "username": "Major_Ideal1453",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:21:08.012415"
+  },
+  {
+    "id": "1k5dcx6",
+    "title": "What are the biggest pain points in a penetration test done by a third-party?",
+    "author": "ProfessionalSpell887",
+    "permalink": "https://old.reddit.com/r/AskNetsec/comments/1k5dcx6/what_are_the_biggest_pain_points_in_a_penetration/",
+    "content": "A community built to knowledgeably answer questions related to information security in an enterprise, large organization, or SOHO context. Questions on how to get started? Check out the following subs: Question on issues regarding personal security? Check out the following subs: Please read and abide by our Rules & Guidelines",
+    "comments": [
+      {
+        "author": "0xDezzy",
+        "content": "Gonna be real honest, if a \"pentesting\" company is giving you a nessus report as a pentest, fire them. Hire someone who would actually test things properly. If you're buying a pentest and getting a vulnerability assessment, you're wasting time and money. Edit: more context If you are hiring someone for a pentest, you should be getting value out of it by them telling you how they broke your shit, how to reproduce it, and what you can do to fix it. Any reputable pentesting services firm worth their salt will give you reproduction steps as well as remediation information to provide value. If it's a white box test with source code provided, they might even audit the code and tell you where the issue lies and what you can do to patch the issue. Other than that, some companies have issues with scoping out engagements but it's a two way street. The client needs to provide more information about scoping and the pentesting firm needs to get as much information as possible to make sure they can succeed in providing effective services. This includes engagement timelines, in scope endpoints or networks, number of consultants necessary, etc."
+      },
+      {
+        "author": "ProfessionalSpell887",
+        "content": "Totally agree. The least a penetration test report should have is verification and/or exploitation of the reported vulnerability. Otherwise, it's just an overpriced VA scan. And if they include reproduction steps. Then you're definitely getting your money's worth. But... how do you findout about this before hiring them?"
+      },
+      {
+        "author": "0xDezzy",
+        "content": "Ask for sample reports. Any firm that's offering this service should be able to provide one. Also ask about their testing methodology and tools they use beforehand. Some pentesting firms will include consultants/senior consultants on pre-engagement calls so they can answer questions like that. I've been a pentester for years, and handled client communications during scoping and pre-engagement steps. We would sometimes get asked about what tools we use (or need access to if they provided us a VM on the network)."
+      },
+      {
+        "author": "ProfessionalSpell887",
+        "content": "And will the same consultants/senior consultants performing the pentests according to your experience? And about the remediation. Do the clients find them easily understandable and easy to implement?"
+      },
+      {
+        "author": "0xDezzy",
+        "content": "It depends on the firm. Some will just have available consultants hop on calls to talk but with my experience it's usually because we got assigned that project and would be there to answer any questions from the client or to advise them. The last firm I worked with was not the norm in that a lot of the consultants were (the new CEO fucked shit up and laid a fuck ton of people off) very good at what they did and knew what they were doing and were heavily involved in pre-engagement steps. We would be involved with most of the steps besides sales but we could delve into that if we wanted. And we tried to make remediation as understandable as possible to a technical audience as well as executive audience (at a high level) and provided sources."
+      },
+      {
+        "author": "ProfessionalSpell887",
+        "content": "That was really helpful. Thankyou!!"
+      },
+      {
+        "author": "0xDezzy",
+        "content": "Not a problem! I'm actually trying to get back into pentesting after a bunch of stuff. I currently work with a small outfit of pentesters doing work on the side. The biggest thing about finding a proper pentesting firm is thoroughly vetting them. You want to make sure you get as much info as possible to make an educated choice."
+      },
+      {
+        "author": "ProfessionalSpell887",
+        "content": "Since you have been a penetration tester yourself, any good firms you could recommend in the UK, USA, Canada?"
+      },
+      {
+        "author": "0xDezzy",
+        "content": "I can ask some of my former colleagues, and see if they have any decent recommendations. I've been out of the game full time for a little bit and I can't recommend the two firms I've worked with in the past (due to reasons I won't go into here). I'm currently working for a small outfit, and while we need more work, I wouldn't feel right promoting us here because it seems self serving. I'll ask around and see if I can get a list of firms spanning different sizes to fit different budgets :)"
+      },
+      {
+        "author": "ProfessionalSpell887",
+        "content": "That would be great. Thankyou"
+      },
+      {
+        "author": "DryTower9438",
+        "content": "The biggest problems I’ve seen are, not scoping the test properly and explaining in detail what you want them to do/achieve. Second, getting a HIGH on a test result that isn’t a HIGH because they don’t understand the system or the way that a component is used/configured. Both aren’t really their problems, it’s usually due to not engaging the test team properly. But yes, thankfully a cut and paste from a Nessus report is getting rarer."
+      },
+      {
+        "author": "therealcruff",
+        "content": "I'm confused. A modified Nessus report isn't a pen test. What are you specifically talking about when you mention 'pain points'?"
+      },
+      {
+        "author": "ProfessionalSpell887",
+        "content": "Many clients seem to be receiving results from automated scans, which also includes many false positives. so what I'm really asking is what are the other red flags when getting a pentest performed by a third-party? and how to pick the right pentesting firm? any good/bad experiences? etc etc"
+      },
+      {
+        "author": "therealcruff",
+        "content": "Ask them if they'll actually be doing a pen test, or a vulnerability scan. You should sort this out in your due diligence phase, making sure that the first test they do for you is used as an assessment, not necessarily of their tester's skill, but of their methodology. If you're doing an application test, for instance, ask them what their accreditations are, and what bodies they're accreditations are with (eg: Crest, Check etc). Ask to see a sample test report. Ask them what methodology they use (eg: following the OWASP standard). If it's an infrastructure test, Nessus can (and often will) be used as a first run through, but in reality, they'll want to be demonstrating potential exploitation of any issues they might fine (ie: not just 'SMB signing isn't mandated', but noting any attempts to exploit that, whether or not they're successful, what that might lead to - things like hash grabbing etc). I don't really have 'bad' experiences with pen testers, because I make sure the providers I use are good at it 😏"
+      },
+      {
+        "author": "ProfessionalSpell887",
+        "content": "That's a good one. Another commenter also stated we should be asking for a sample report, which I believe also helps. Could you also recommend any firms that you had a good experience with?"
+      },
+      {
+        "author": "jippen",
+        "content": "I had a pentester turn in a report identical to the previous year's. We had swapped production to a new codebase on a different tech stack. Checked the logins made for the pentesters - never logged in. They were fired."
+      },
+      {
+        "author": "ProfessionalSpell887",
+        "content": "That's awfull and very unprofessional. They must've done that in the past to other clients, but your team did well to identify and terminate! cheers"
+      },
+      {
+        "author": "jippen",
+        "content": "Pentests are a great time to test your blue team. Can you detect and follow the scans and attacks? How many findings can the blue team figure out before they get to see the pentests report? It's an easy way to get a lot of extra value out of your testing."
+      },
+      {
+        "author": "GenericOldUsername",
+        "content": "Vulnerability scans are not pentests and if that’s what you get, you didn’t scope the project well or vet the company. Sure, a vulnerability scan can be helpful but you could get that yourself for less money. Even a vulnerability assessment, which is different then a pentest, should have additional impact, risk, and root cause analysis that addresses the business and operational infrastructure that allows the vulnerabilities to exist."
+      },
+      {
+        "author": "ProfessionalSpell887",
+        "content": "Any good penetration testing firms you could recommend in the UK?"
+      }
+    ],
+    "thread_title": "What are the biggest pain points in a penetration test done by a third-party?",
+    "thread_url": "https://old.reddit.com/r/AskNetsec/comments/1k5dcx6/what_are_the_biggest_pain_points_in_a_penetration/",
+    "username": "ProfessionalSpell887",
+    "timestamp": "2025-05-14",
+    "scrape_time": "2025-05-14T13:21:17.696722"
+  }
+]

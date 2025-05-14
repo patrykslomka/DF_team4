@@ -1,10 +1,3 @@
-"""
-Fixed Reddit Scraper Module
--------------------------
-This module provides functions for scraping Reddit content without using the API.
-It fixes the "string indices must be integers, not 'str'" error.
-"""
-
 import os
 import time
 import json
@@ -15,7 +8,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-# Configure logging
+# Configuring logging in case of errors
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -27,14 +20,14 @@ logging.basicConfig(
 logger = logging.getLogger("reddit_scraper")
 
 class RedditScraper:
-    """Specialized scraper for Reddit without using API"""
+    """Scraper for Reddit without using API"""
 
     def __init__(self, output_dir="data/reddit", delay=(3, 8)):
         """Initialize the Reddit scraper"""
         self.output_dir = output_dir
         self.delay = delay
         
-        # Create session with browser-like headers
+        # Creating a session with browser-like headers
         self.session = requests.Session()
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36',
@@ -42,11 +35,11 @@ class RedditScraper:
             'Accept-Language': 'en-US,en;q=0.9'
         })
         
-        # Ensure output directory exists
+        # Ensuring the output directory exists
         os.makedirs(output_dir, exist_ok=True)
 
     def random_delay(self):
-        """Add a random delay between requests to avoid rate limiting"""
+        """Adding a random delay between requests to avoid rate limiting"""
         delay_time = random.uniform(self.delay[0], self.delay[1])
         logger.info(f"Waiting {delay_time:.2f} seconds before next request...")
         time.sleep(delay_time)
@@ -55,14 +48,14 @@ class RedditScraper:
         """Clean text by removing HTML and extra whitespace"""
         if not text:
             return ""
-        # Remove HTML tags
+        # Removing HTML tags
         clean = re.sub(r'<.*?>', ' ', text)
-        # Remove extra whitespace
+        # Removing extra whitespace
         clean = re.sub(r'\s+', ' ', clean).strip()
         return clean
 
     def save_data(self, data, filename):
-        """Save scraped data to a JSON file"""
+        """Saving scraped data to a JSON file"""
         output_file = os.path.join(self.output_dir, filename)
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
@@ -70,7 +63,7 @@ class RedditScraper:
 
     def scrape_subreddit(self, subreddit, limit=25, time_filter='month'):
         """
-        Scrape posts from a subreddit
+        Scraping posts from a subreddit
         
         Args:
             subreddit (str): Subreddit name without r/
@@ -83,7 +76,7 @@ class RedditScraper:
         logger.info(f"Scraping r/{subreddit}...")
         posts = []
         
-        # Convert time_filter to Reddit's format if needed
+        # Converting time_filter to Reddit's format if needed
         if time_filter == 'hour':
             time_param = 't=hour'
         elif time_filter == 'day':
@@ -97,21 +90,21 @@ class RedditScraper:
         else:
             time_param = 't=all'
             
-        # Construct URL
-        url = f"https://old.reddit.com/r/{subreddit}/top/?{time_param}"
+        # Constructing URL
+        url = f"https://old.reddit.com/r/{subreddit}/top/?{time_param}" # old.reddit.com is the only way to scrape without using API due to its simple HTML structure
         
         logger.info(f"Starting with URL: {url}")
         
         try:
-            # Get the main page
+            # Getting the main page
             response = self.session.get(url)
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # Find all post elements
+            # Finding all post elements
             post_elements = soup.select('div.thing.link')
             logger.info(f"Found {len(post_elements)} posts on the first page")
             
-            # Process posts
+            # Processing posts
             posts_processed = 0
             
             for post_element in post_elements:
@@ -119,38 +112,38 @@ class RedditScraper:
                     break
                 
                 try:
-                    # Extract post ID
+                    # Extracting post ID
                     post_id = post_element.get('data-fullname', '').replace('t3_', '')
                     
-                    # Extract post title
+                    # Extracting post title
                     title_element = post_element.select_one('a.title')
                     title = title_element.text.strip() if title_element else "No title"
                     
-                    # Extract permalink
+                    # Extracting permalink
                     permalink = title_element.get('href', '') if title_element else ''
                     if permalink.startswith('/r/'):
                         permalink = f"https://old.reddit.com{permalink}"
                     
-                    # Extract author
+                    # Extracting author
                     author_element = post_element.select_one('a.author')
                     author = author_element.text.strip() if author_element else "[deleted]"
                     
-                    # Create post data
+                    # Creating post data
                     post_data = {
                         "id": post_id,
                         "title": title,
                         "author": author,
                         "permalink": permalink,
-                        "content": "", # We'll populate this after visiting the post page
+                        "content": "",
                         "comments": [],
-                        "thread_title": title,  # For compatibility with the analyzer
-                        "thread_url": permalink,  # For compatibility
-                        "username": author,  # For compatibility
-                        "timestamp": datetime.now().strftime("%Y-%m-%d"),  # Approximate timestamp
+                        "thread_title": title,  
+                        "thread_url": permalink,  
+                        "username": author,  
+                        "timestamp": datetime.now().strftime("%Y-%m-%d"),  
                         "scrape_time": datetime.now().isoformat()
                     }
                     
-                    # Visit the post page to get content and comments
+                    # Visiting the post page to get content and comments
                     if permalink:
                         logger.info(f"Visiting post: {title[:30]}...")
                         self.random_delay()
@@ -159,7 +152,7 @@ class RedditScraper:
                             post_response = self.session.get(permalink)
                             post_soup = BeautifulSoup(post_response.text, 'html.parser')
                             
-                            # Get post content
+                            # Getting post content
                             selftext_element = post_soup.select_one('div.usertext-body')
                             selftext = ""
                             if selftext_element:
@@ -171,17 +164,17 @@ class RedditScraper:
                             
                             post_data["content"] = self.clean_text(selftext)
                             
-                            # Get comments
+                            # Getting comments
                             comment_elements = post_soup.select('div.comment')
                             comments = []
                             
-                            for comment_element in comment_elements[:20]:  # Limit to 20 comments per post
+                            for comment_element in comment_elements[:20]:  # Limiting to 20 comments per post
                                 try:
-                                    # Extract author
+                                    # Extracting author
                                     author_element = comment_element.select_one('a.author')
                                     author = author_element.text.strip() if author_element else "[deleted]"
                                     
-                                    # Extract content
+                                    # Extracting content
                                     content_element = comment_element.select_one('div.usertext-body')
                                     content = ""
                                     if content_element:
@@ -214,7 +207,7 @@ class RedditScraper:
                 
                 self.random_delay()
             
-            # Save the data
+            # Saving the data
             if posts:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 filename = f"{subreddit}_posts_{timestamp}.json"
@@ -229,7 +222,7 @@ class RedditScraper:
 
 def scrape_reddit(config, skip_reddit=False):
     """
-    Scrape data from Reddit subreddits
+    Scraping data from Reddit subreddits
 
     Args:
         config (dict): Configuration dictionary
@@ -245,9 +238,9 @@ def scrape_reddit(config, skip_reddit=False):
     try:
         logger.info("Starting Reddit scraping...")
         
-        # Get Reddit configuration
+        # Getting Reddit configuration
         if isinstance(config, str):
-            # If config is a file path, load it
+            # If config is a file path, loading it
             with open(config, 'r') as f:
                 config = json.load(f)
         
@@ -266,14 +259,14 @@ def scrape_reddit(config, skip_reddit=False):
         limit = scraping_params.get('limit', 25)
         time_filter = scraping_params.get('time_filter', 'month')
         
-        # Create output directory if it doesn't exist
+        # Creating output directory if it doesn't exist
         output_dir = os.path.join('data', 'reddit')
         os.makedirs(output_dir, exist_ok=True)
 
-        # Initialize the Reddit scraper
+        # Initializing the Reddit scraper
         reddit_scraper = RedditScraper(output_dir=output_dir)
 
-        # Scrape each subreddit
+        # Scraping each subreddit
         for subreddit in subreddits:
             try:
                 logger.info(f"Scraping subreddit: r/{subreddit}")
@@ -282,7 +275,7 @@ def scrape_reddit(config, skip_reddit=False):
                     limit=limit, 
                     time_filter=time_filter
                 )
-                # Add a delay between subreddits
+                # Adding a delay between subreddits
                 time.sleep(random.uniform(5, 10))
             except Exception as e:
                 logger.error(f"Error scraping subreddit r/{subreddit}: {e}")

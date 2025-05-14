@@ -1,0 +1,10 @@
+security enterprise: 0.542
+security check: 0.503
+personal security: 0.502
+guideline security: 0.491
+include security: 0.477
+security research: 0.474
+operation security: 0.458
+security issue: 0.454
+security analysis: 0.452
+analyzes security: 0.451
