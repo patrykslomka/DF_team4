@@ -179,7 +179,7 @@ class ForumAnalyzer:
                 ("BERTOPIC", bertopic_word_importance, bertopic_word_names)
             ]:
                 self.plot_top_words_bar(word_importance, word_names, source, model)
-            # Topic prevalence and wordclouds (optional, keep for context)
+            # Topic prevalence and wordclouds
             self.plot_topic_prevalence(lda_doc_topics, nmf_doc_topics, n_topics, n_topics, "LDA_NMF")
             self.plot_wordcloud(lda_topics, source, "LDA")
             self.plot_wordcloud(nmf_topics, source, "NMF")
