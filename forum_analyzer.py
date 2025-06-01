@@ -14,6 +14,8 @@ from plotly.subplots import make_subplots
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import numpy as np
+import gensim
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("forum_analyzer")
